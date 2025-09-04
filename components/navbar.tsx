@@ -23,7 +23,7 @@ export function Navbar({ active = "Home", onNavClick }: NavbarProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100)
+      setIsScrolled(window.scrollY > 300)
     }
 
     window.addEventListener("scroll", handleScroll)
