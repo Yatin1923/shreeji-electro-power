@@ -5,7 +5,6 @@ import Toolbar from "@mui/material/Toolbar"
 import Container from "@mui/material/Container"
 import Stack from "@mui/material/Stack"
 import Link from "@mui/material/Link"
-import Typography from "@mui/material/Typography"
 import { cn } from "@/lib/utils"
 import NextLink from "next/link"
 
@@ -35,21 +34,14 @@ export function Navbar({ active = "Home", onNavClick }: NavbarProps) {
       position={isScrolled ? "fixed" : "static"} // Conditionally apply fixed position based on scroll
       elevation={0}
       color=""
-      className={cn(
-        "bg-white shadow-md z-50", 
-        "transition-all duration-200"
-      )}
+      className={cn("bg-white shadow-md z-50", "transition-all duration-200")}
     >
       <Toolbar disableGutters className="min-h-[72px]">
         <Container maxWidth="xl" className="w-full">
           <div className="flex items-center justify-between gap-6 py-4">
             {/* Left: Logo + Brand */}
             <div className="flex items-center gap-4">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-I8cISOWNnsD4QG4tvGcUiXZpBieyoy.png"
-                alt="Shreeji Electro Power Pvt. Ltd. Logo"
-                className="h-12 w-auto"
-              />
+              <img src="/assets/logo.png" alt="Shreeji Electro Power Pvt. Ltd. Logo" className="h-12 w-auto" />
             </div>
 
             {/* Right: Navigation */}
