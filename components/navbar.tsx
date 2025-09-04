@@ -37,7 +37,7 @@ export function Navbar({ active = "Home", onNavClick }: NavbarProps) {
       color="transparent"
       className={cn(
         "bg-white shadow-md z-50", // Always white background with box shadow
-        isScrolled && "transition-all duration-200", // Smooth transition when becoming fixed
+        "transition-all duration-200", // Smooth transition when becoming fixed
       )}
     >
       <Toolbar disableGutters className="min-h-[72px]">
