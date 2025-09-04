@@ -32,8 +32,6 @@ export function Navbar({ active = "Home", onNavClick }: NavbarProps) {
   return (
     <AppBar
       position={isScrolled ? "fixed" : "static"} // Conditionally apply fixed position based on scroll
-      elevation={0}
-      color=""
       className={cn("bg-white shadow-md z-50", "transition-all duration-200")}
     >
       <Toolbar disableGutters className="min-h-[72px]">
