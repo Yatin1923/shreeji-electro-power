@@ -20,7 +20,7 @@ const NAV_ITEMS: NavItem[] = ["Home", "Blog", "Product", "Testimonial", "Contact
 
 export function Navbar({ active = "Home", onNavClick }: NavbarProps) {
   return (
-    <AppBar position="static" elevation={0} color="transparent" className="bg-slate-50">
+    <AppBar position="fixed" elevation={0} color="transparent" className="bg-slate-50 z-50">
       <Toolbar disableGutters className="min-h-[72px]">
         <Container maxWidth="xl" className="w-full">
           <div className="flex items-center justify-between gap-6 py-4">
