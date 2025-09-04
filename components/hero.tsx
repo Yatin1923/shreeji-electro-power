@@ -26,7 +26,7 @@ function BrandTile({ i }: { i: number }) {
 
   return (
     <Card elevation={1} className="rounded-xl" style={{ backgroundColor }}>
-      <CardContent className="p-6 flex items-center justify-center min-h-[120px]">
+      <CardContent className="p-6 flex items-center justify-center min-h-[180px]">
         <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="max-w-full max-h-16 object-contain" />
       </CardContent>
     </Card>
@@ -35,9 +35,9 @@ function BrandTile({ i }: { i: number }) {
 
 export function Hero() {
   return (
-    <section className="bg-slate-50">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-1 gap-10 py-10 md:grid-cols-2 md:gap-12 md:py-12">
+    <section className="bg-slate-50 min-h-screen">
+      <div className="mx-auto max-w-6xl px-6 flex items-center min-h-screen">
+        <div className="grid grid-cols-1 gap-10 py-10 md:grid-cols-2 md:gap-12 md:py-12 w-full">
           {/* Left copy */}
           <div className="flex flex-col justify-center">
             <h1 className="text-pretty text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
