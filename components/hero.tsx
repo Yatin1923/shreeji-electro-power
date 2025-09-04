@@ -6,10 +6,10 @@ function BrandTile({ i }: { i: number }) {
   const companyLogos = [
     { src: "/assets/company-cards/cabseal.png", alt: "Cabseal" },
     { src: "/assets/company-cards/neptune.png", alt: "Neptune" },
-    { src: "/assets/company-cards/lauritz-knudsen.png", alt: "Lauritz Knudsen" },
-    { src: "/assets/company-cards/polycab.png", alt: "Polycab" },
     { src: "/assets/company-cards/dowells.png", alt: "Dowell's" },
+    { src: "/assets/company-cards/lauritz-knudsen.png", alt: "Lauritz Knudsen" },
     { src: "/assets/company-cards/hager.png", alt: "Hager" },
+    { src: "/assets/company-cards/polycab.png", alt: "Polycab" },
   ]
 
   const logo = companyLogos[i % companyLogos.length]
@@ -67,10 +67,10 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right brand grid (staggered 2 x 3) */}
+          {/* Right brand grid (clean 2 x 3) */}
           <div className="grid grid-cols-2 items-start gap-4 sm:gap-5">
             {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className={i % 2 ? "mt-8" : ""}>
+              <div key={i}>
                 <BrandTile i={i} />
               </div>
             ))}
