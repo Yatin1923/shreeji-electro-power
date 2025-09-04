@@ -67,10 +67,10 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right brand grid (clean 2 x 3) */}
+          {/* Right brand grid (staggered 2 x 3) */}
           <div className="grid grid-cols-2 items-start gap-4 sm:gap-5">
             {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i}>
+              <div key={i} className={i % 2 ? "mt-8" : ""}>
                 <BrandTile i={i} />
               </div>
             ))}
