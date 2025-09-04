@@ -3,15 +3,21 @@
 import { Button, Card, CardContent } from "@mui/material"
 
 function BrandTile({ i }: { i: number }) {
-  const tints = ["bg-rose-50", "bg-sky-50", "bg-slate-50"]
+  const companyLogos = [
+    { src: "/assets/company-cards/cabseal.png", alt: "Cabseal" },
+    { src: "/assets/company-cards/neptune.png", alt: "Neptune" },
+    { src: "/assets/company-cards/lauritz-knudsen.png", alt: "Lauritz Knudsen" },
+    { src: "/assets/company-cards/polycab.png", alt: "Polycab" },
+    { src: "/assets/company-cards/dowells.png", alt: "Dowell's" },
+    { src: "/assets/company-cards/hager.png", alt: "Hager" },
+  ]
+
+  const logo = companyLogos[i % companyLogos.length]
+
   return (
     <Card elevation={1} className="rounded-xl">
-      <CardContent className={`p-5 md:p-6 ${tints[i % tints.length]}`}>
-        <img
-          src={"/placeholder.svg?height=48&width=220&query=brand%20logo%20tile"}
-          alt={`Brand ${i}`}
-          className="mx-auto h-12 w-full object-contain"
-        />
+      <CardContent className="p-5 md:p-6">
+        <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="mx-auto h-12 w-full object-contain" />
       </CardContent>
     </Card>
   )
