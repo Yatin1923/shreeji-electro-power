@@ -6,7 +6,6 @@ import Container from "@mui/material/Container"
 import Stack from "@mui/material/Stack"
 import Link from "@mui/material/Link"
 import Typography from "@mui/material/Typography"
-import Box from "@mui/material/Box"
 import { cn } from "@/lib/utils"
 import NextLink from "next/link"
 
@@ -46,15 +45,11 @@ export function Navbar({ active = "Home", onNavClick }: NavbarProps) {
           <div className="flex items-center justify-between gap-6 py-4">
             {/* Left: Logo + Brand */}
             <div className="flex items-center gap-4">
-              {/* You can replace this box with your own logo.
-                 If you'd like to embed the provided reference image directly, use the Source URL below.
-                 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TDMQfkRUF7nTvHf8ArvlOQCS5DZOUR.png" alt="Brand logo" className="h-10 w-auto" /> */}
-              <Box
-                aria-hidden
-                className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#00a0da]/70"
-              >
-                <div className="h-6 w-6 rounded-full bg-slate-300" />
-              </Box>
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-I8cISOWNnsD4QG4tvGcUiXZpBieyoy.png"
+                alt="Shreeji Electro Power Pvt. Ltd. Logo"
+                className="h-12 w-auto"
+              />
               <Typography
                 component="span"
                 className={cn("text-pretty text-xl font-extrabold uppercase tracking-wide", "text-[#008bd1]")}
