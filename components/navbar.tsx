@@ -1,4 +1,5 @@
 "use client"
+import { useState, useEffect } from "react" // Added React hooks for scroll detection
 import AppBar from "@mui/material/AppBar"
 import Toolbar from "@mui/material/Toolbar"
 import Container from "@mui/material/Container"
@@ -19,8 +20,27 @@ export interface NavbarProps {
 const NAV_ITEMS: NavItem[] = ["Home", "Blog", "Product", "Testimonial", "Contact"]
 
 export function Navbar({ active = "Home", onNavClick }: NavbarProps) {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <AppBar position="fixed" elevation={0} color="transparent" className="bg-slate-50 z-50">
+    <AppBar
+      position={isScrolled ? "fixed" : "static"} // Conditionally apply fixed position based on scroll
+      elevation={0}
+      color="transparent"
+      className={cn(
+        "bg-white shadow-md z-50", // Always white background with box shadow
+        isScrolled && "transition-all duration-200", // Smooth transition when becoming fixed
+      )}
+    >
       <Toolbar disableGutters className="min-h-[72px]">
         <Container maxWidth="xl" className="w-full">
           <div className="flex items-center justify-between gap-6 py-4">
