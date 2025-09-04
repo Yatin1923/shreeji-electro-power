@@ -4,12 +4,12 @@ import { Button, Card, CardContent } from "@mui/material"
 
 function BrandTile({ i }: { i: number }) {
   const companyLogos = [
-    { src: "/assets/company-cards/cabseal.png", alt: "Cabseal" },
-    { src: "/assets/company-cards/neptune.png", alt: "Neptune" },
-    { src: "/assets/company-cards/dowells.png", alt: "Dowell's" },
-    { src: "/assets/company-cards/lauritz-knudsen.png", alt: "Lauritz Knudsen" },
-    { src: "/assets/company-cards/hager.png", alt: "Hager" },
-    { src: "/assets/company-cards/polycab.png", alt: "Polycab" },
+    { src: "/assets/companyLogos/dowells.png", alt: "Dowell's" },
+    { src: "/assets/companyLogos/hager.png", alt: "Hager" },
+    { src: "/assets/companyLogos/neptune.png", alt: "Neptune" },
+    { src: "/assets/companyLogos/cabseal.png", alt: "Cabseal" },
+    { src: "/assets/companyLogos/lauritz-knudsen.png", alt: "Lauritz Knudsen" },
+    { src: "/assets/companyLogos/polycab.png", alt: "Polycab" },
   ]
 
   const cardColors = [
@@ -26,8 +26,8 @@ function BrandTile({ i }: { i: number }) {
 
   return (
     <Card elevation={1} className="rounded-xl" style={{ backgroundColor }}>
-      <CardContent className="p-0 m-0">
-        <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="mx-auto h-full w-full object-contain" />
+      <CardContent className="p-6 flex items-center justify-center min-h-[120px]">
+        <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="max-w-full max-h-16 object-contain" />
       </CardContent>
     </Card>
   )
