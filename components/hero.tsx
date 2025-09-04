@@ -27,7 +27,7 @@ function BrandTile({ i }: { i: number }) {
   return (
     <Card elevation={1} className="rounded-xl" style={{ backgroundColor }}>
       <CardContent className="">
-        <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="max-w-full max-h-16 object-contain flex-col justify-center items-center" />
+        <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="max-w-full max-h-16 object-contain" />
       </CardContent>
     </Card>
   )
