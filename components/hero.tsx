@@ -12,10 +12,20 @@ function BrandTile({ i }: { i: number }) {
     { src: "/assets/company-cards/polycab.png", alt: "Polycab" },
   ]
 
+  const cardColors = [
+    "#FCDFED", // Position 0 - light pink
+    "#F7DCD7", // Position 1 - peach
+    "#D9F2FB", // Position 2 - light blue
+    "#C8D3E7", // Position 3 - lavender blue
+    "#C7DBE6", // Position 4 - soft blue
+    "#FBE0E0", // Position 5 - light rose
+  ]
+
   const logo = companyLogos[i % companyLogos.length]
+  const backgroundColor = cardColors[i % cardColors.length]
 
   return (
-    <Card elevation={1} className="rounded-xl">
+    <Card elevation={1} className="rounded-xl" style={{ backgroundColor }}>
       <CardContent className="p-0 m-0">
         <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="mx-auto h-full w-full object-contain" />
       </CardContent>
