@@ -36,8 +36,8 @@ export function Navbar({ active = "Home", onNavClick }: NavbarProps) {
       elevation={0}
       color=""
       className={cn(
-        "bg-white shadow-md z-50", // Always white background with box shadow
-        "transition-all duration-200", // Smooth transition when becoming fixed
+        "bg-white shadow-md z-50", 
+        "transition-all duration-200"
       )}
     >
       <Toolbar disableGutters className="min-h-[72px]">
