@@ -50,12 +50,6 @@ export function Navbar({ active = "Home", onNavClick }: NavbarProps) {
                 alt="Shreeji Electro Power Pvt. Ltd. Logo"
                 className="h-12 w-auto"
               />
-              <Typography
-                component="span"
-                className={cn("text-pretty text-xl font-extrabold uppercase tracking-wide", "text-[#008bd1]")}
-              >
-                SHREEJI ELECTRO POWER PVT. LTD.
-              </Typography>
             </div>
 
             {/* Right: Navigation */}
