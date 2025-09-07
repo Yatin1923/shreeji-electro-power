@@ -43,12 +43,12 @@ export function Hero() {
             <Typography variant="h2" className="text-pretty font-extrabold text-9xl leading-tight text-slate-900 md:text-4xl">
               Tired of managing multiple vendors for electrical supply?
             </Typography>
-            <Typography variant="h6" className="max-w-prose text-slate-600">
+            <Typography variant="h6" color="primary" className="max-w-pros">
               We bring India&apos;s top electrical brands under one roof — with seamless service and expert support.
             </Typography>
 
             <div className="mt-6 flex items-center gap-3">
-              <Button variant="contained" className="!bg-sky-600 !px-5 !py-2.5 !normal-case hover:!bg-sky-700">
+              <Button variant="contained" className="!bg-sky-600 font-extrabold text-9xl !px-5 !py-2.5 !normal-case hover:!bg-sky-700">
                 Contact us
               </Button>
               <Button
@@ -67,9 +67,9 @@ export function Hero() {
                 { k: "3000+", v: "Clients Served",img:"/assets/stats/clientserved.png" },
               ].map((s, idx) => (
                 <div key={s.k} className="flex items-center gap-3">
-                  <img src={s.img} alt="" className="h-7 w-7 opacity-80" />
+                  <img src={s.img}  className="h-12 w-12 opacity-80" />
                   <div>
-                    <div className="text-base font-semibold text-slate-900">{s.k}</div>
+                    <Typography variant="h6" className="text-base font-bold text-slate-900">{s.k}</Typography>
                     <div className="text-slate-600">{s.v}</div>
                   </div>
                 </div>

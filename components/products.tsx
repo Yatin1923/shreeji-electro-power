@@ -36,7 +36,7 @@ function ProductTile({ i }: { i: number }) {
 export function Products() {
   return (
     <section className="bg-slate-50">
-      <div className="mx-auto container py-15">
+      <div className="mx-auto container py-10 md:py-12">
         <Typography variant="h4" className="text-center text-lg font-semibold text-slate-900">Our Products</Typography>
         <div className="mt-15 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
         {Array.from({ length: 6 }).map((_, i) => (
