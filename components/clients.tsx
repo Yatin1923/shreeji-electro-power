@@ -4,15 +4,25 @@ import { Box, Typography } from "@mui/material"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { motion } from "motion/react";
+import { fadeInUp } from "./animations";
 export function Clients() {
   return (
     <section className="bg-white">
       <div className="mx-auto container py-10 md:py-12">
-        <div className="text-center">
+        <motion.div className="text-center" variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          custom={0.2} >
           <Typography variant="h4" typeof="h1" className="text-lg font-semibold text-slate-900">Our Clients</Typography>
           <p className="mt-1 text-sm text-slate-600">We have been working with 500+ clients</p>
-        </div>
-        <AutoCarousel></AutoCarousel>
+        </motion.div>
+        <motion.div variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          custom={0.2} >
+          <AutoCarousel></AutoCarousel>
+        </motion.div>
       </div>
     </section>
   )

@@ -1,7 +1,7 @@
 "use client"
 
 import { Box, Button, Card, CardContent, Typography } from "@mui/material"
-
+import { motion } from "motion/react"
 function BrandTile({ i }: { i: number }) {
   const companyLogos = [
     { src: "/assets/companyLogos/dowells.png", alt: "Dowell's" },
@@ -36,10 +36,10 @@ function BrandTile({ i }: { i: number }) {
 export function Hero() {
   return (
     <section className="bg-slate-50 ">
-    <Box className="container mx-auto min-h-[95vh] flex items-center">
-        <div className="flex justify-center items-center h-full">
+    <Box className="container mx-auto min-h-[95vh] flex items-center py-10">
+        <div className="xl:flex justify-center items-center h-full">
           {/* Left copy */}
-          <div className="flex flex-col justify-center gap-5">
+          <motion.div initial={{ opacity: 0, y:20}} animate={{opacity:1, y:0, transition: { duration: 0.5 }}} className="flex flex-col justify-center gap-5">
             <Typography variant="h2" className="text-pretty font-extrabold text-9xl leading-tight text-slate-900 md:text-4xl">
               Tired of managing multiple vendors for electrical supply?
             </Typography>
@@ -75,16 +75,16 @@ export function Hero() {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right brand grid (staggered 2 x 3) */}
-          <div className="grid grid-cols-2 items-start gap-4 sm:gap-5 w-[50%]">
+          <motion.div initial={{ opacity: 0, y:20}} animate={{opacity:1, y:0, transition: { duration: 0.5 }}}  className="hidden  xl:grid grid-cols-2 items-start gap-4 sm:gap-5 w-[50%]">
             {Array.from({ length: 6 }).map((_, i) => (
               <div key={i} className={i % 2 ? "mt-8" : ""}>
                 <BrandTile i={i} />
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
     </Box>
 

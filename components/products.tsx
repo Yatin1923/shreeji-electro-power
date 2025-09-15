@@ -1,6 +1,8 @@
 "use client"
 
 import { Card, CardContent, Typography } from "@mui/material"
+import { hover, motion } from "motion/react"
+import { fadeInUp } from "./animations"
 
 function ProductTile({ i }: { i: number }) {
   const companyLogos = [
@@ -34,23 +36,40 @@ function ProductTile({ i }: { i: number }) {
 }
 
 export function Products() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // delay between tiles
+      },
+    },
+  };
+  
+  const item = {
+    hidden: { opacity: 0, y: 40 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hover: { scale: 1.5, transition: { duration: 0.3 } }
+  };
   return (
     <section className="bg-slate-50">
       <div className="mx-auto container py-10 md:py-12">
+      <motion.div className="text-center"  variants={fadeInUp}
+      initial="hidden"
+      whileInView="show"
+      custom={0.2} >
         <Typography variant="h4" className="text-center text-lg font-semibold text-slate-900">Our Products</Typography>
-        <div className="mt-15 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
-        {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i}>
-                <ProductTile i={i} />
-              </div>
-            ))}
-          {/* <ProductTile  />
-          <ProductTile  />
-          <ProductTile  />
-          <ProductTile  />
-          <ProductTile  />
-          <ProductTile /> */}
-        </div>
+      </motion.div>
+        <motion.div  variants={container}
+          initial="hidden"
+          whileInView="show"
+          className="mt-15 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6 justify-items-center">
+          {Array.from({ length: 6 }).map((_, i) => (
+                <motion.div key={i} variants={item} whileHover={{scale: 1.1}} className="">
+                  <ProductTile i={i} />
+                </motion.div>
+              ))}
+        </motion.div>
       </div>
     </section>
   )
