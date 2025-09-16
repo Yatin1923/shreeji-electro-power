@@ -1,21 +1,102 @@
 "use client"
 
-function TestimonialCard() {
+import { Typography } from "@mui/material"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination, Navigation, Autoplay } from "swiper/modules"
+
+// Import Swiper styles
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+
+type Testimonial = {
+  id: number
+  name: string
+  role: string
+  avatar: string
+  rating: number
+  title: string
+  content: string
+}
+
+const testimonials: Testimonial[] = [
+  {
+    id: 1,
+    name: "Leo",
+    role: "Lead Designer",
+    avatar: "/assets/testimonials/avatar1.png",
+    rating: 5,
+    title: "It was a very good experience",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius, nunc nec turpis molestie, massa nibh iaculis.",
+  },
+  {
+    id: 2,
+    name: "Sophia",
+    role: "Project Manager",
+    avatar: "/assets/testimonials/avatar1.png",
+    rating: 4,
+    title: "Professional and reliable team",
+    content:
+      "The team delivered the project on time and exceeded our expectations. Communication was excellent throughout.",
+  },
+  {
+    id: 3,
+    name: "David",
+    role: "CTO",
+    avatar: "/assets/testimonials/avatar1.png",
+    rating: 5,
+    title: "Highly recommend them!",
+    content:
+      "From start to finish, everything went smoothly. The final product was top-notch, and support has been great.",
+  },
+  {
+    id: 1,
+    name: "Leo",
+    role: "Lead Designer",
+    avatar: "/assets/testimonials/avatar1.png",
+    rating: 5,
+    title: "It was a very good experience",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius, nunc nec turpis molestie, massa nibh iaculis.",
+  },
+  {
+    id: 2,
+    name: "Sophia",
+    role: "Project Manager",
+    avatar: "/assets/testimonials/avatar1.png",
+    rating: 4,
+    title: "Professional and reliable team",
+    content:
+      "The team delivered the project on time and exceeded our expectations. Communication was excellent throughout.",
+  },
+  {
+    id: 3,
+    name: "David",
+    role: "CTO",
+    avatar: "/assets/testimonials/avatar1.png",
+    rating: 5,
+    title: "Highly recommend them!",
+    content:
+      "From start to finish, everything went smoothly. The final product was top-notch, and support has been great.",
+  },
+]
+
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-      <div className="flex items-center gap-3">
-        <img src={"/placeholder.svg?height=40&width=40&query=avatar"} alt="Avatar" className="h-10 w-10 rounded-full" />
+    <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-md">
+      <div className="flex items-center gap-4">
+        <img src={testimonial.avatar} alt="Avatar" className="h-14 w-14 rounded-full" />
         <div>
-          <div className="text-sm font-semibold text-slate-900">Leo</div>
-          <div className="text-xs text-slate-500">Lead Designer</div>
+          <div className="text-base font-semibold text-slate-900">{testimonial.name}</div>
+          <div className="text-sm text-slate-500">{testimonial.role}</div>
         </div>
-        <div className="ml-auto text-xs text-amber-500">★★★★★</div>
+        <div className="ml-auto text-sm text-amber-500">
+          {"★".repeat(testimonial.rating)}{"☆".repeat(5 - testimonial.rating)}
+        </div>
       </div>
-      <h3 className="mt-4 text-base font-semibold text-slate-900">It was a very good experience</h3>
-      <p className="mt-2 text-sm text-slate-600">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius, nunc nec turpis molestie, massa nibh
-        iaculis.
-      </p>
+      <h3 className="mt-5 text-lg font-semibold text-slate-900">{testimonial.title}</h3>
+      <p className="mt-3 text-base text-slate-600">{testimonial.content}</p>
     </div>
   )
 }
@@ -23,19 +104,35 @@ function TestimonialCard() {
 export function Testimonials() {
   return (
     <section id="testimonials" className="bg-slate-50">
-      <div className="mx-auto max-w-6xl px-6 py-14">
-        <h2 className="text-center text-xl font-semibold text-slate-900">What Our Clients Say About Us</h2>
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-        </div>
+      <div className="mx-auto max-w-7xl px-6 py-16 relative">
+        <Typography variant="h4" className="text-center text-2xl font-bold text-slate-900">
+          What Our Clients Say About Us
+        </Typography>
 
-        <div className="mt-6 flex items-center justify-center gap-2 text-slate-400">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <span key={i} className={`h-2 w-2 rounded-full ${i === 2 ? "bg-slate-600" : "bg-slate-300"}`} />
+        <Swiper
+          modules={[Pagination, Navigation, Autoplay]}
+          pagination={{ clickable: true }}
+          navigation
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          loop
+          spaceBetween={32}
+          slidesPerView={1}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="mt-10"
+        >
+          {testimonials.map((t) => (
+            <SwiperSlide key={t.id}>
+              <TestimonialCard testimonial={t} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
+
       </div>
     </section>
   )

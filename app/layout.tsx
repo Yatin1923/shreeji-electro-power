@@ -19,10 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+    <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
-      </body>
-    </html>
+    </body>
+  </html>
   )
 }

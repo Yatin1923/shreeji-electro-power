@@ -7,19 +7,23 @@ import { Blogs } from "@/components/blogs"
 import { Testimonials } from "@/components/testimonials"
 import { Contact } from "@/components/contact"
 import { SiteFooter } from "@/components/site-footer"
+import { Providers } from "./app-theme"
 
 export default function Page() {
   return (
-    <main className="bg-white">
-      <Navbar active="Home" />
-      <Hero />
-      <Clients />
-      <Products />
-      <WhyChooseUs />
-      <Blogs />
-      <Testimonials />
-      <Contact />
-      <SiteFooter />
-    </main>
+    <Providers>
+      <main className="bg-white">
+        <Navbar active="Home" />
+        <Hero />
+        <Clients />
+        <Products />
+        <WhyChooseUs />
+        <Blogs />
+        <Testimonials />
+        <Contact />
+        <SiteFooter />
+      </main>
+    </Providers>
+
   )
 }
