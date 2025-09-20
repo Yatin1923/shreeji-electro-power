@@ -27,8 +27,8 @@ function ProductTile({ i }: { i: number }) {
   const backgroundColor = cardColors[i % cardColors.length]
 
   return (
-    <Card elevation={12} className="!rounded-[20px] max-w-[220px] shadow-2xl" style={{ backgroundColor }}>
-      <CardContent className="flex justify-center items-center min-h-[250px] ">
+    <Card elevation={12} className="!rounded-[20px] shadow-2xl w-full max-w-[220px] aspect-[220/250]" style={{ backgroundColor }}>
+      <CardContent className="flex justify-center items-center h-full ">
         <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="max-w-full max-h-80" />
       </CardContent>
     </Card>
@@ -53,7 +53,7 @@ export function Products() {
   };
   return (
     <section className="bg-slate-50">
-      <div className="mx-auto container py-10 md:py-12">
+      <div className="mx-auto container px-4 py-10 md:py-12">
       <motion.div className="text-center"  variants={fadeInUp}
       initial="hidden"
       whileInView="show"

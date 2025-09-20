@@ -33,7 +33,7 @@ function Feature({
 export function WhyChooseUs() {
   return (
     <section className="bg-white">
-      <div className="mx-auto container py-10 md:py-12">
+      <div className="mx-auto container px-4 py-10 md:py-12">
         <motion.div className="text-center" variants={fadeInUp}
           initial="hidden"
           whileInView="show"

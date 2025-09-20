@@ -30,7 +30,7 @@ export function Contact() {
             </form>
 
             {/* quick contacts */}
-            <div className="mt-6 flex justify-between text-slate-300">
+            <div className="mt-6 md:flex justify-between text-slate-300">
               <div>
                 <Typography className="font-semibold text-white">Phone</Typography>
                 <Typography>+91 9420654539</Typography>

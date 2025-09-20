@@ -13,20 +13,20 @@ function BrandTile({ i }: { i: number }) {
   ]
 
   const cardColors = [
-    "#FCDFED", 
+    "#FCDFED",
     "#F7DCD7",
-    "#D9F2FB", 
-    "#C8D3E7", 
-    "#C7DBE6", 
-    "#FBE0E0", 
+    "#D9F2FB",
+    "#C8D3E7",
+    "#C7DBE6",
+    "#FBE0E0",
   ]
 
   const logo = companyLogos[i % companyLogos.length]
   const backgroundColor = cardColors[i % cardColors.length]
 
   return (
-    <Card elevation={12} className="!rounded-[20px] max-w-[220px] shadow-2xl" style={{ backgroundColor }}>
-      <CardContent className="flex justify-center items-center min-h-[280px] ">
+    <Card elevation={12} className="cursor-pointer !rounded-[20px] max-w-[220px] aspect-[220/250] shadow-2xl" style={{ backgroundColor }}>
+      <CardContent className="flex justify-center items-center h-full">
         <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="max-w-full max-h-80" />
       </CardContent>
     </Card>
@@ -36,10 +36,10 @@ function BrandTile({ i }: { i: number }) {
 export function Hero() {
   return (
     <section className="bg-slate-50 ">
-    <Box className="container mx-auto min-h-[95vh] flex items-center py-10">
+      <Box className="container mx-auto min-h-[95vh] flex items-center px-4 py-10">
         <div className="xl:flex justify-center items-center h-full">
           {/* Left copy */}
-          <motion.div initial={{ opacity: 0, y:20}} animate={{opacity:1, y:0, transition: { duration: 0.5 }}} className="flex flex-col justify-center gap-5">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }} className="flex flex-col justify-center gap-5">
             <Typography variant="h2" className="text-pretty font-extrabold text-9xl leading-tight text-slate-900 md:text-4xl">
               Tired of managing multiple vendors for electrical supply?
             </Typography>
@@ -62,12 +62,12 @@ export function Hero() {
             {/* Stats */}
             <div className="mt-8 flex gap-5">
               {[
-                { k: "20+", v: "Years of Expertise",img:"/assets/stats/experience.png" },
-                { k: "500+", v: "Products",img:"/assets/stats/totalproducts.png" },
-                { k: "3000+", v: "Clients Served",img:"/assets/stats/clientserved.png" },
+                { k: "20+", v: "Years of Expertise", img: "/assets/stats/experience.png" },
+                { k: "500+", v: "Products", img: "/assets/stats/totalproducts.png" },
+                { k: "3000+", v: "Clients Served", img: "/assets/stats/clientserved.png" },
               ].map((s, idx) => (
                 <div key={s.k} className="flex items-center gap-3">
-                  <img src={s.img}  className="h-12 w-12 opacity-80" />
+                  <img src={s.img} className="h-12 w-12 opacity-80" />
                   <div>
                     <Typography variant="h6" className="text-base font-bold text-slate-900">{s.k}</Typography>
                     <div className="text-slate-600">{s.v}</div>
@@ -78,15 +78,35 @@ export function Hero() {
           </motion.div>
 
           {/* Right brand grid (staggered 2 x 3) */}
-          <motion.div initial={{ opacity: 0, y:20}} animate={{opacity:1, y:0, transition: { duration: 0.5 }}}  className="hidden  xl:grid grid-cols-2 items-start gap-4 sm:gap-5 w-[50%]">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className={i % 2 ? "mt-8" : ""}>
-                <BrandTile i={i} />
-              </div>
-            ))}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+            className="hidden xl:grid grid-cols-2 items-start gap-4 sm:gap-5 w-[50%]"
+          >
+            {Array.from({ length: 6 }).map((_, i) => {
+              const isStaggered = i % 2 === 1 // cards with mt-8
+              return (
+                <motion.div
+                  key={i}
+                  className={isStaggered ? "mt-8" : ""}
+                  // animate={{
+                  //   y: isStaggered ? [0, 20, 0] : [0, -20, 0],
+                  // }}
+                  transition={{
+                    duration: 4, // speed of float
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    ease: "easeInOut",
+                  }}
+                >
+                  <BrandTile i={i} />
+                </motion.div>
+              )
+            })}
           </motion.div>
+
         </div>
-    </Box>
+      </Box>
 
     </section>
   )

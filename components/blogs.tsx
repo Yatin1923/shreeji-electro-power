@@ -73,7 +73,7 @@ function BlogCard({ blog, index }: { blog: Blog; index: number }) {
 export function Blogs() {
   return (
     <section id="blogs" className="bg-white">
-      <div className="container mx-auto my-40">
+      <div className="container mx-auto my-40 px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Left section */}
           <div className="md:col-span-1">

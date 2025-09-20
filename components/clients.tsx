@@ -9,7 +9,7 @@ import { fadeInUp } from "./animations";
 export function Clients() {
   return (
     <section className="bg-white">
-      <div className="mx-auto container py-10 md:py-12">
+      <div className="mx-auto container px-4 py-10 md:py-12">
         <motion.div className="text-center" variants={fadeInUp}
           initial="hidden"
           whileInView="show"
@@ -46,6 +46,17 @@ export function Clients() {
             delay: 0,
             disableOnInteraction: false,
           }}
+          breakpoints={{
+            0: {
+              slidesPerView: 4, // 👈 Mobile (default from 0px)
+            },
+            640: {
+              slidesPerView: 6, // 👈 Tablet
+            },
+            1024: {
+              slidesPerView: 8, // 👈 Desktop
+            },
+          }}     
         >
           {logosRow1.map((src, index) => (
             <SwiperSlide key={index}>
@@ -68,6 +79,17 @@ export function Clients() {
             reverseDirection: true,
             disableOnInteraction: false,
           }}
+          breakpoints={{
+            0: {
+              slidesPerView: 4, // 👈 Mobile (default from 0px)
+            },
+            640: {
+              slidesPerView: 6, // 👈 Tablet
+            },
+            1024: {
+              slidesPerView: 8, // 👈 Desktop
+            },
+          }}        
         >
           {logosRow2.map((src, index) => (
             <SwiperSlide key={index}>
