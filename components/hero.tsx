@@ -40,19 +40,24 @@ export function Hero() {
         <div className="xl:flex justify-center items-center h-full">
           {/* Left copy */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }} className="flex flex-col justify-center gap-5">
-            <Typography variant="h2" className="text-pretty font-extrabold text-9xl leading-tight text-slate-900 md:text-4xl">
+            <Typography
+              variant="h2"
+              className="text-pretty font-extrabold !text-5xl leading-tight text-slate-900 md:!text-5xl lg:!text-6xl"
+            >
               Tired of managing multiple vendors for electrical supply?
             </Typography>
+
             <Typography variant="h6" color="primary" className="max-w-pros">
               We bring India&apos;s top electrical brands under one roof — with seamless service and expert support.
             </Typography>
 
             <div className="mt-6 flex items-center gap-3">
-              <Button variant="contained" className="!bg-sky-600 font-extrabold text-9xl !px-5 !py-2.5 !normal-case hover:!bg-sky-700">
+              <Button variant="contained" href="#contact" className="!bg-sky-600 font-extrabold text-9xl !px-5 !py-2.5 !normal-case hover:!bg-sky-700">
                 Contact us
               </Button>
               <Button
                 variant="outlined"
+                href="product"
                 className="!border-slate-900 !text-slate-900 !px-4 !py-2.5 !normal-case hover:!bg-slate-900 hover:!text-white"
               >
                 Our Products
@@ -67,7 +72,9 @@ export function Hero() {
                 { k: "3000+", v: "Clients Served", img: "/assets/stats/clientserved.png" },
               ].map((s, idx) => (
                 <div key={s.k} className="flex items-center gap-3">
-                  <img src={s.img} className="h-12 w-12 opacity-80" />
+                  <div>
+                    <img src={s.img} className="h-full !min-h-8 !max-h-12 w-full !min-w-8 !max-w-12 opacity-80" />
+                  </div>
                   <div>
                     <Typography variant="h6" className="text-base font-bold text-slate-900">{s.k}</Typography>
                     <div className="text-slate-600">{s.v}</div>

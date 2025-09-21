@@ -51,7 +51,7 @@ const testimonials: Testimonial[] = [
       "From start to finish, everything went smoothly. The final product was top-notch, and support has been great.",
   },
   {
-    id: 1,
+    id: 4,
     name: "Leo",
     role: "Lead Designer",
     avatar: "/assets/testimonials/avatar1.png",
@@ -61,7 +61,7 @@ const testimonials: Testimonial[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius, nunc nec turpis molestie, massa nibh iaculis.",
   },
   {
-    id: 2,
+    id: 5,
     name: "Sophia",
     role: "Project Manager",
     avatar: "/assets/testimonials/avatar1.png",
@@ -71,7 +71,7 @@ const testimonials: Testimonial[] = [
       "The team delivered the project on time and exceeded our expectations. Communication was excellent throughout.",
   },
   {
-    id: 3,
+    id: 6,
     name: "David",
     role: "CTO",
     avatar: "/assets/testimonials/avatar1.png",
@@ -84,7 +84,7 @@ const testimonials: Testimonial[] = [
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-md">
+    <div className="rounded-2xl border border-slate-200 bg-white p-8">
       <div className="flex items-center gap-4">
         <img src={testimonial.avatar} alt="Avatar" className="h-14 w-14 rounded-full" />
         <div>
@@ -112,7 +112,6 @@ export function Testimonials() {
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           pagination={{ clickable: true }}
-          navigation
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -121,8 +120,8 @@ export function Testimonials() {
           spaceBetween={32}
           slidesPerView={1}
           breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 2,navigation: true },
+            1024: { slidesPerView: 3 ,navigation:true },
           }}
           className="mt-10"
         >

@@ -4,7 +4,7 @@ import { Button, TextField, Typography } from "@mui/material"
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-slate-900 text-slate-200 rounded-t-[8srem]">
+    <section id="contact" className="bg-slate-900 text-slate-200 rounded-t-4xl">
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
         <Typography variant="h4" className="text-3xl font-bold leading-tight">
           Get in <span className="text-sky-400">Touch</span>
