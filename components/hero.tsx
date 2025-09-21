@@ -42,12 +42,12 @@ export function Hero() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }} className="flex flex-col justify-center gap-5">
             <Typography
               variant="h2"
-              className="text-pretty font-extrabold !text-5xl leading-tight text-slate-900 md:!text-5xl lg:!text-6xl"
+              className="text-pretty font-extrabold !text-3xl leading-tight text-slate-900 md:!text-5xl lg:!text-6xl"
             >
               Tired of managing multiple vendors for electrical supply?
             </Typography>
 
-            <Typography variant="h6" color="primary" className="max-w-pros">
+            <Typography variant="h6" color="primary" className="max-w-pros !text-lg md:!text-2xl">
               We bring India&apos;s top electrical brands under one roof — with seamless service and expert support.
             </Typography>
 
