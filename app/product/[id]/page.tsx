@@ -1,9 +1,11 @@
 import Link from "next/link"
 import Navbar from "@/components/navbar"
-import { getProductBySlug, getRelated } from "@/lib/products"
+import { getProductById, getRelated } from "@/lib/products"
+import { Key } from "react"
 
-export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  const product = getProductBySlug(params.slug)
+export default function ProductDetailPage({ params }: { params: { id: number } }) {
+  const product = getProductById(params.id)
+  console.log(product)
 
   if (!product) {
     return (
@@ -19,7 +21,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
     )
   }
 
-  const related = getRelated(product.slug)
+  const related = getRelated(product.id)
 
   return (
     <main className="bg-slate-50">
@@ -37,7 +39,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               Products
             </Link>
             <span className="text-gray-400">›</span>
-            <span className="text-gray-700">{product.title}</span>
+            <span className="text-gray-700">{product.name}</span>
           </nav>
         </div>
       </div>
@@ -51,7 +53,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={product.images[0] || "/placeholder.svg"}
-                alt={product.title}
+                alt={product.name}
                 className="mx-auto aspect-square w-full max-w-[460px] object-contain"
               />
               <div className="absolute left-3 top-3 flex flex-col gap-2">
@@ -66,12 +68,11 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
             {/* Thumbnails */}
             <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
-              {product.images.slice(1).map((src, i) => (
+              {product.images.slice(1).map((src: any, i: Key | null | undefined) => (
                 <div key={i} className="overflow-hidden rounded-lg bg-white p-3 shadow-sm ring-1 ring-gray-200">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={src || "/placeholder.svg"}
-                    alt={`${product.title} ${i + 2}`}
                     className="mx-auto h-28 object-contain"
                   />
                 </div>
@@ -81,8 +82,8 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
           {/* Right: details */}
           <div>
-            <h1 className="text-3xl font-extrabold tracking-wide text-sky-700">{product.title}</h1>
-            <div className="mt-1 text-sm text-gray-500">1230mm Sweep • {product.specs.blades} Aluminium Blades</div>
+            <h1 className="text-3xl font-extrabold tracking-wide text-sky-700">{product.name}</h1>
+            {/* <div className="mt-1 text-sm text-gray-500">1230mm Sweep • {product.specs.blades} Aluminium Blades</div> */}
             <div className="mt-2 flex items-center gap-2">
               <span className="text-xs text-gray-500">1,238 Sold</span>
               <span className="text-gray-300">•</span>
@@ -105,7 +106,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                 Color: <span className="font-semibold text-gray-800">Royal Brown</span>
               </h3>
               <div className="mt-3 flex items-center gap-3">
-                {product.colorOptions.map((c, i) => (
+                {/* {product.colorOptions.map((c, i) => (
                   <button
                     key={c.name}
                     className={`overflow-hidden rounded-md border p-1 ${
@@ -113,10 +114,9 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                     }`}
                     aria-label={c.name}
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={c.image || "/placeholder.svg"} alt={c.name} className="h-14 w-20 object-contain" />
                   </button>
-                ))}
+                ))} */}
               </div>
             </div>
 
@@ -140,7 +140,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         {/* Specifications */}
         <section className="mt-12">
           <h3 className="text-base font-bold text-sky-700">Specifications</h3>
-          <div className="mt-4 overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-gray-200">
+          {/* <div className="mt-4 overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-gray-200">
             {(
               [
                 ["BEE Star Rating", product.specs.beeStar],
@@ -165,7 +165,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                 <div className="text-right text-gray-800">{value as any}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </section>
 
         {/* Related Products */}
@@ -177,23 +177,21 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             </Link>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {related.map((rp) => (
+            {/* {related.map((rp) => (
               <Link
-                key={rp.slug}
-                href={`/product/${rp.slug}`}
+                key={rp.id}
+                href={`/product/${rp.id}`}
                 className="rounded-xl bg-white shadow-sm ring-1 ring-black/5"
               >
                 <div className="px-4 pt-6">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={rp.images[0] || "/placeholder.svg"}
-                    alt={rp.title}
+                    alt={rp.name}
                     className="mx-auto aspect-square w-full object-contain"
                   />
                 </div>
                 <div className="px-4 pb-4">
-                  <div className="text-sm font-semibold text-sky-700">{rp.title}</div>
-                  <p className="mt-1 text-[11px] leading-5 text-gray-600">{rp.subtitle}</p>
+                  <div className="text-sm font-semibold text-sky-700">{rp.name}</div>
                   <div className="mt-2 flex items-center gap-1">
                     <svg className="h-4 w-4 text-amber-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z" />
@@ -203,7 +201,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                   </div>
                 </div>
               </Link>
-            ))}
+            ))} */}
           </div>
         </section>
       </div>
