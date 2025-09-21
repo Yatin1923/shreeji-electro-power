@@ -44,7 +44,13 @@ export function Navbar({ active = "Home", onNavClick }: NavbarProps) {
           <div className="flex items-center justify-between gap-6 py-4">
             {/* Left: Logo */}
             <div className="flex items-center gap-4">
-              <img src="/assets/logo.png" alt="Shreeji Electro Power Pvt. Ltd. Logo" className="h-12 w-auto" />
+              <Link href="/">
+                <img
+                  src="/assets/logo.png"
+                  alt="Shreeji Electro Power Pvt. Ltd. Logo"
+                  className="h-12 w-auto cursor-pointer"
+                />
+              </Link>
             </div>
 
             {/* Desktop Navigation */}

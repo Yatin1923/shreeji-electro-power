@@ -21,16 +21,8 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft"
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight"
 import SortIcon from "@mui/icons-material/Sort"
 import React from "react"
-import { products as productData } from "@/lib/products"
+import productData  from "@/data/products.json"
 
-type Product = {
-  id: number
-  title: string
-  model: string
-  spec1: string
-  spec2: string
-  img: string
-}
 
 const brands = ["Dowell's", "Polycab", "Hager", "Cabcseal", "Lauritz Knudsen"]
 const categories = [
@@ -155,20 +147,20 @@ export default function ProductPage() {
           <section>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {productData.map((p) => {
-                const parts = p.subtitle.split("•").map((s) => s.trim())
-                const primaryImg = p.images?.[0] || "/diverse-products-still-life.png"
+                // const parts = p.subtitle.split("•").map((s) => s.trim())
+                const primaryImg = p.images?.[0]
                 return (
                   <Card key={p.id} elevation={0} className="rounded-xl border border-neutral-200 shadow-sm bg-white">
                     <div className="relative p-4">
                       <IconButton className="!absolute right-2 top-2" size="small" aria-label="favorite">
                         <FavoriteBorderIcon fontSize="small" />
                       </IconButton>
-                      <Link href={`/product/${p.slug}`} className="block">
+                      <Link href={`/product/${p.id}`} className="block">
                         <div className="mx-auto h-[180px] w-full overflow-hidden rounded-md bg-[#f4f6f8] flex items-center justify-center">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             src={primaryImg || "/placeholder.svg"}
-                            alt={p.title}
+                            alt={p.name}
                             className="h-[160px] w-auto object-contain"
                           />
                         </div>
@@ -176,14 +168,14 @@ export default function ProductPage() {
                     </div>
                     <CardContent className="pt-0">
                       <Link
-                        href={`/product/${p.slug}`}
+                        href={`/product/${p.id}`}
                         className="text-[14px] font-semibold text-sky-700 hover:underline"
                       >
-                        {p.title}
+                        {p.name}
                       </Link>
-                      <div className="mt-1 text-[11px] uppercase text-neutral-500">{parts[0]}</div>
+                      {/* <div className="mt-1 text-[11px] uppercase text-neutral-500">{parts[0]}</div>
                       <div className="mt-1 text-[11px] text-neutral-600">{parts[1]}</div>
-                      <div className="text-[11px] text-neutral-600">{parts[2]}</div>
+                      <div className="text-[11px] text-neutral-600">{parts[2]}</div> */}
                       <div className="mt-2 flex items-center gap-1 text-[12px] text-neutral-600">
                         <StarIcon className="text-amber-400" fontSize="small" />
                         <span>{p.rating.toFixed(1)}</span>
