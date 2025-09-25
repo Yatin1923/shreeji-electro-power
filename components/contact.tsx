@@ -30,15 +30,15 @@ export function Contact() {
             </form>
 
             {/* quick contacts */}
-            <div className="mt-6 md:flex justify-between text-slate-300">
+            <div className="mt-6 md:flex md:gap-4 text-slate-300">
               <div>
                 <Typography className="font-semibold text-white">Phone</Typography>
                 <Typography>+91 9420654539</Typography>
               </div>
-              <div>
+              {/* <div>
                 <Typography className="font-semibold text-white">Fax</Typography>
                 <Typography>+91 265 1234</Typography>
-              </div>
+              </div> */}
               <div>
                 <Typography className="font-semibold text-white">Email</Typography>
                 <Typography>support@shreejielectropower.com</Typography>
