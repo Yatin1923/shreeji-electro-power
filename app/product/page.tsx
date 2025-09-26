@@ -338,7 +338,7 @@ export default function ProductPage() {
 
             {/* Pagination */}
             <div className="mt-8 flex items-center justify-between sticky bottom-0 bg-[#f5f8fb] py-4">
-              <Button
+              {/* <Button
                 variant="outlined"
                 size="medium"
                 endIcon={<KeyboardArrowRightIcon />}
@@ -347,7 +347,7 @@ export default function ProductPage() {
                 disabled={page === totalPages}
               >
                 Next page
-              </Button>
+              </Button> */}
 
               <div className="flex items-center gap-2">
                 <Button
