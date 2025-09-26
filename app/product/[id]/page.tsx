@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Navbar from "@/components/navbar"
-import { getProductById, getRelated } from "@/lib/products"
+import { getProductById, getRelated } from "@/services/productService"
 import { Key } from "react"
 
 export default function ProductDetailPage({ params }: { params: { id: number } }) {
@@ -21,7 +21,6 @@ export default function ProductDetailPage({ params }: { params: { id: number } }
     )
   }
 
-  const related = getRelated(product.id)
 
   return (
     <main className="bg-slate-50">

@@ -2,404 +2,449 @@
   {
     "id": 1,
     "name": "Cable Joints & Termination",
+    "brand": "CABSEAL",
     "category": "CABSEAL",
-    "subcatergory": "CABSEAL",
+    "description": "Heat-shrink and cold-shrink cable jointing and termination kits up to 33 kV, CPRI-approved.",
     "images": [],
-    "rating": 1,
-    "reviews": 44
+    "rating": 3,
+    "reviews": 1
   },
   {
     "id": 2,
     "name": "BI-METALLIC CABLE LUGS & CONNECTORS",
+    "brand": "DOWELL'S",
     "category": "DOWELL'S",
-    "subcatergory": "DOWELL'S",
+    "description": "Friction-welded bi‑metallic lugs and connectors for joining aluminum conductors to copper.",
     "images": [],
     "rating": 1,
-    "reviews": 18
+    "reviews": 6
   },
   {
     "id": 3,
     "name": "DOWELL'S BRASS CABLE GLANDS & ACCESSORIES",
+    "brand": "DOWELL'S",
     "category": "DOWELL'S",
-    "subcatergory": "DOWELL'S",
+    "description": "Double-compression brass glands and accessories for armoured cables, weatherproof DBW and flameproof DBF series.",
     "images": [],
-    "rating": 3,
-    "reviews": 54
+    "rating": 2,
+    "reviews": 58
   },
   {
     "id": 4,
     "name": "Dowell's CONNECTORS",
+    "brand": "DOWELL'S",
     "category": "DOWELL'S",
-    "subcatergory": "DOWELL'S",
+    "description": "Range of copper, aluminium, and sector in-line connectors for reliable cable terminations.",
     "images": [],
     "rating": 5,
-    "reviews": 72
+    "reviews": 96
   },
   {
     "id": 5,
     "name": "SECTOR CABLE LUGS & CONNECTORS",
+    "brand": "DOWELL'S",
     "category": "DOWELL'S",
-    "subcatergory": "DOWELL'S",
+    "description": "Sector-shaped lugs and connectors engineered for secure power distribution terminations.",
     "images": [],
-    "rating": 1,
-    "reviews": 35
+    "rating": 2,
+    "reviews": 67
   },
   {
     "id": 6,
     "name": "HAGER h3+ 630 Technical",
+    "brand": "HAGERS",
     "category": "HAGERS",
-    "subcatergory": "HAGERS",
+    "description": "h3+ MCCBs up to 630 A, 3/4 poles, breaking capacity up to 70 kA.",
     "images": [],
-    "rating": 2,
-    "reviews": 0
+    "rating": 5,
+    "reviews": 77
   },
   {
     "id": 7,
     "name": "HAGER Air circuit breakers HW",
+    "brand": "HAGERS",
     "category": "HAGERS",
-    "subcatergory": "HAGERS",
+    "description": "HW series air circuit breakers, 630–4000 A, robust protection and maintainability for LV systems.",
     "images": [],
-    "rating": 3,
-    "reviews": 6
+    "rating": 2,
+    "reviews": 81
   },
   {
     "id": 8,
     "name": "HAGER Motor Control and Protection Range",
+    "brand": "HAGERS",
     "category": "HAGERS",
-    "subcatergory": "HAGERS",
+    "description": "Comprehensive motor control and protection devices: MPCBs, starters, auxiliaries for efficient motor management.",
     "images": [],
     "rating": 5,
-    "reviews": 50
+    "reviews": 81
   },
   {
     "id": 9,
     "name": "HAGERS H3 MCCB",
+    "brand": "HAGERS",
     "category": "HAGERS",
-    "subcatergory": "HAGERS",
+    "description": "Hager h3 MCCBs offer reliable overload and short-circuit protection across wide current ratings.",
     "images": [],
-    "rating": 3,
-    "reviews": 55
+    "rating": 4,
+    "reviews": 60
   },
   {
     "id": 10,
     "name": "Hager Manual Changeover Switch",
+    "brand": "HAGERS",
     "category": "HAGERS",
-    "subcatergory": "HAGERS",
+    "description": "Modular manual changeover switches for secure power transfer in single or three-phase installations.",
     "images": [],
-    "rating": 1,
-    "reviews": 99
+    "rating": 2,
+    "reviews": 81
   },
   {
     "id": 11,
     "name": "HAGERS Auto Transfer Switch",
+    "brand": "HAGERS",
     "category": "HAGERS",
-    "subcatergory": "HAGERS",
+    "description": "Automatic transfer switches for seamless source changeover, available up to 1600 A.",
     "images": [],
-    "rating": 1,
-    "reviews": 35
+    "rating": 4,
+    "reviews": 13
   },
   {
     "id": 12,
     "name": "HAGERS Air Circuit Breaker",
+    "brand": "HAGERS",
     "category": "HAGERS",
-    "subcatergory": "HAGERS",
+    "description": "Air circuit breakers with advanced trip units for reliable low-voltage distribution protection.",
     "images": [],
-    "rating": 2,
-    "reviews": 4
+    "rating": 3,
+    "reviews": 49
   },
   {
     "id": 13,
     "name": "HAGERS H3+ MCCB",
+    "brand": "HAGERS",
     "category": "HAGERS",
-    "subcatergory": "HAGERS",
+    "description": "h3+ MCCBs: compact frames, 25–630 A, up to 70 kA breaking capacity.",
     "images": [],
-    "rating": 2,
-    "reviews": 29
+    "rating": 1,
+    "reviews": 86
   },
   {
     "id": 14,
     "name": "HAGERS Novello Plus",
+    "brand": "HAGERS",
     "category": "HAGERS",
-    "subcatergory": "HAGERS",
+    "description": "Novello+ distribution boards combine innovative features, aesthetics, and safety for modern installations.",
     "images": [],
-    "rating": 2,
-    "reviews": 28
+    "rating": 4,
+    "reviews": 55
   },
   {
     "id": 15,
     "name": "HAGERS Vector",
+    "brand": "HAGERS",
     "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 5,
-    "reviews": 40
-  },
-  {
-    "id": 16,
-    "name": "HAGERS Golf",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 2,
-    "reviews": 18
-  },
-  {
-    "id": 17,
-    "name": "HAGERS APTIS",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 2,
-    "reviews": 42
-  },
-  {
-    "id": 18,
-    "name": "HAGERS Time Switches",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 4,
-    "reviews": 46
-  },
-  {
-    "id": 19,
-    "name": "HAGERS Detectors",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 2,
-    "reviews": 75
-  },
-  {
-    "id": 20,
-    "name": "HAGERS WIRING ACCESSORIES-insysta™",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 2,
-    "reviews": 6
-  },
-  {
-    "id": 21,
-    "name": "HAGERS Berker switches and systems",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 2,
-    "reviews": 35
-  },
-  {
-    "id": 22,
-    "name": "HAGERS Miniature Circuit Breaker",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 2,
-    "reviews": 16
-  },
-  {
-    "id": 23,
-    "name": "HAGERS Auxiliaries and Accessories",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 5,
-    "reviews": 39
-  },
-  {
-    "id": 24,
-    "name": "HAGERS Residual Current Circuit Breaker",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 3,
-    "reviews": 29
-  },
-  {
-    "id": 25,
-    "name": "HAGERS SURGE PROTECTION DEVICES",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 2,
-    "reviews": 34
-  },
-  {
-    "id": 26,
-    "name": "HAGERS Fuse Carrier",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 2,
-    "reviews": 83
-  },
-  {
-    "id": 27,
-    "name": "HAGERS Cartridge Fuse",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 4,
-    "reviews": 0
-  },
-  {
-    "id": 28,
-    "name": "HAGERS Isolating Switches",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 2,
-    "reviews": 52
-  },
-  {
-    "id": 29,
-    "name": "HAGERS Changeover Switches",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 1,
-    "reviews": 20
-  },
-  {
-    "id": 30,
-    "name": "HAGERS Indicating Lights",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 5,
-    "reviews": 35
-  },
-  {
-    "id": 31,
-    "name": "HAGERS Push Buttons",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 1,
-    "reviews": 93
-  },
-  {
-    "id": 32,
-    "name": "HAGERS Modular Bells and Buzzers",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 2,
-    "reviews": 86
-  },
-  {
-    "id": 33,
-    "name": "HAGERS Modular Contactor",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 4,
-    "reviews": 6
-  },
-  {
-    "id": 34,
-    "name": "HAGERS Latching Relay",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 4,
-    "reviews": 87
-  },
-  {
-    "id": 35,
-    "name": "HAGERS AU Solution",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 5,
-    "reviews": 89
-  },
-  {
-    "id": 36,
-    "name": "Presence and Movement Detector",
-    "category": "HAGERS",
-    "subcatergory": "HAGERS",
-    "images": [],
-    "rating": 1,
-    "reviews": 35
-  },
-  {
-    "id": 37,
-    "name": "L&T Electrical & Automation, Panel Accessories",
-    "category": "L & T SWITCHGEAR",
-    "subcatergory": "L&TSWITCHGEAR",
+    "description": "Vector waterproof enclosures, IP55, modular widths up to 54 modules for distribution.",
     "images": [],
     "rating": 4,
     "reviews": 97
   },
   {
-    "id": 38,
-    "name": "GT Connector Water Tight",
-    "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "id": 16,
+    "name": "HAGERS Golf",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Golf enclosures for residential distribution, designed for swift installation and ample wiring space.",
+    "images": [],
+    "rating": 1,
+    "reviews": 9
+  },
+  {
+    "id": 17,
+    "name": "HAGERS APTIS",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Aptis distribution and protection range: DBs, MCBs, RCCBs, SPDs for versatile installations.",
+    "images": [],
+    "rating": 2,
+    "reviews": 51
+  },
+  {
+    "id": 18,
+    "name": "HAGERS Time Switches",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Analog and digital modular time switches for day, week or year scheduling.",
     "images": [],
     "rating": 5,
-    "reviews": 0
+    "reviews": 14
+  },
+  {
+    "id": 19,
+    "name": "HAGERS Detectors",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Motion and presence detectors to enhance comfort, save energy, and improve safety.",
+    "images": [],
+    "rating": 3,
+    "reviews": 43
+  },
+  {
+    "id": 20,
+    "name": "HAGERS WIRING ACCESSORIES-insysta™",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Insysta wiring accessories: modular switches, sockets, regulators, front plates, and durable metal boxes.",
+    "images": [],
+    "rating": 5,
+    "reviews": 66
+  },
+  {
+    "id": 21,
+    "name": "HAGERS Berker switches and systems",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Premium switch ranges and smart building systems combining design, durability, and KNX compatibility.",
+    "images": [],
+    "rating": 5,
+    "reviews": 31
+  },
+  {
+    "id": 22,
+    "name": "HAGERS Miniature Circuit Breaker",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "DIN-rail MCBs providing reliable overload and short-circuit protection across multiple curves.",
+    "images": [],
+    "rating": 5,
+    "reviews": 75
+  },
+  {
+    "id": 23,
+    "name": "HAGERS Auxiliaries and Accessories",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Aux contacts, shunt trip, undervoltage releases, motor operators, interlocks for protection devices.",
+    "images": [],
+    "rating": 5,
+    "reviews": 24
+  },
+  {
+    "id": 24,
+    "name": "HAGERS Residual Current Circuit Breaker",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Residual current circuit breakers for AC/Type A protection, 2P/4P, various sensitivities and ratings.",
+    "images": [],
+    "rating": 3,
+    "reviews": 56
+  },
+  {
+    "id": 25,
+    "name": "HAGERS SURGE PROTECTION DEVICES",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Type 1 and Type 2 SPDs safeguarding installations from lightning and switching transients.",
+    "images": [],
+    "rating": 3,
+    "reviews": 49
+  },
+  {
+    "id": 26,
+    "name": "HAGERS Fuse Carrier",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "DIN-rail fuse holders and NH disconnectors for safe circuit protection and isolation.",
+    "images": [],
+    "rating": 5,
+    "reviews": 18
+  },
+  {
+    "id": 27,
+    "name": "HAGERS Cartridge Fuse",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "HRC cartridge fuses 10x38, 14x51, high breaking capacity for industrial protection.",
+    "images": [],
+    "rating": 3,
+    "reviews": 60
+  },
+  {
+    "id": 28,
+    "name": "HAGERS Isolating Switches",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Enclosed load break isolators IP65/66, AC-22A/AC-23A, 2–4 pole options.",
+    "images": [],
+    "rating": 3,
+    "reviews": 33
+  },
+  {
+    "id": 29,
+    "name": "HAGERS Changeover Switches",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Manual and motorized changeover switches for source transfer, 63–1600 A ratings.",
+    "images": [],
+    "rating": 3,
+    "reviews": 87
+  },
+  {
+    "id": 30,
+    "name": "HAGERS Indicating Lights",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Modular LED indicator lights for status signaling, available in various colors and voltages.",
+    "images": [],
+    "rating": 1,
+    "reviews": 39
+  },
+  {
+    "id": 31,
+    "name": "HAGERS Push Buttons",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "DIN-rail pushbutton modules with LED indication for control and signalling circuits.",
+    "images": [],
+    "rating": 5,
+    "reviews": 92
+  },
+  {
+    "id": 32,
+    "name": "HAGERS Modular Bells and Buzzers",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "DIN-rail bells and buzzers for audible alerts in panels and automation.",
+    "images": [],
+    "rating": 3,
+    "reviews": 8
+  },
+  {
+    "id": 33,
+    "name": "HAGERS Modular Contactor",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "ESC series modular contactors for lighting, heating, ventilation loads, silent operation.",
+    "images": [],
+    "rating": 4,
+    "reviews": 82
+  },
+  {
+    "id": 34,
+    "name": "HAGERS Latching Relay",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Impulse latching relays for centralized lighting control, low-noise, DIN-rail mounted.",
+    "images": [],
+    "rating": 5,
+    "reviews": 17
+  },
+  {
+    "id": 35,
+    "name": "HAGERS AU Solution",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Solutions tailored for Australian standards: protection, enclosures, metering, smart energy management.",
+    "images": [],
+    "rating": 1,
+    "reviews": 61
+  },
+  {
+    "id": 36,
+    "name": "Presence and Movement Detector",
+    "brand": "HAGERS",
+    "category": "HAGERS",
+    "description": "Motion and presence detectors for automation, energy savings, improved comfort and security.",
+    "images": [],
+    "rating": 1,
+    "reviews": 67
+  },
+  {
+    "id": 37,
+    "name": "L&K Electrical & Automation, Panel Accessories",
+    "brand": "L&K SWITCHGEAR",
+    "category": "L&K SWITCHGEAR",
+    "description": "Panel accessories and LV switchgear components from Lauritz Knudsen Electrical & Automation.",
+    "images": [],
+    "rating": 3,
+    "reviews": 43
+  },
+  {
+    "id": 38,
+    "name": "GT Connector Water Tight",
+    "brand": "NEPTUNE",
+    "category": "NEPTUNE",
+    "description": "IP67 watertight GT connectors for robust industrial connections, multiple pin configurations.",
+    "images": [],
+    "rating": 4,
+    "reviews": 77
   },
   {
     "id": 39,
     "name": "GT Connector with Cable Sleeve",
+    "brand": "NEPTUNE",
     "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "description": "GT connector with cable sleeve, IP44, enhanced strain relief and secure cable entry.",
+    "images": [],
+    "rating": 2,
+    "reviews": 63
+  },
+  {
+    "id": 40,
+    "name": "Modbox Enclosure & Junction Boxes",
+    "brand": "NEPTUNE",
+    "category": "NEPTUNE",
+    "description": "Modular IP65 enclosures and junction boxes for industrial distribution and control.",
+    "images": [],
+    "rating": 5,
+    "reviews": 31
+  },
+  {
+    "id": 41,
+    "name": "Panel Mounting Socket Outlet Straight",
+    "brand": "NEPTUNE",
+    "category": "NEPTUNE",
+    "description": "Panel-mount straight socket outlets, IP44/IP67 options, durable industrial-grade construction.",
+    "images": [],
+    "rating": 4,
+    "reviews": 2
+  },
+  {
+    "id": 42,
+    "name": "Panel Mounting Socket Outlet Angled",
+    "brand": "NEPTUNE",
+    "category": "NEPTUNE",
+    "description": "Angled panel-mount socket outlets for convenient wiring, available in IP44 and IP67.",
+    "images": [],
+    "rating": 1,
+    "reviews": 23
+  },
+  {
+    "id": 43,
+    "name": "Socket Outlet Straight",
+    "brand": "NEPTUNE",
+    "category": "NEPTUNE",
+    "description": "Straight industrial sockets, IP44/IP67, reliable connections for harsh environments.",
     "images": [],
     "rating": 1,
     "reviews": 53
   },
   {
-    "id": 40,
-    "name": "Modbox Enclosure & Junction Boxes",
-    "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
-    "images": [],
-    "rating": 2,
-    "reviews": 45
-  },
-  {
-    "id": 41,
-    "name": "Panel Mounting Socket Outlet Straight",
-    "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
-    "images": [],
-    "rating": 1,
-    "reviews": 26
-  },
-  {
-    "id": 42,
-    "name": "Panel Mounting Socket Outlet Angled",
-    "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
-    "images": [],
-    "rating": 3,
-    "reviews": 68
-  },
-  {
-    "id": 43,
-    "name": "Socket Outlet Straight",
-    "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
-    "images": [],
-    "rating": 1,
-    "reviews": 18
-  },
-  {
     "id": 44,
     "name": "Socket Outlet Angled",
+    "brand": "NEPTUNE",
     "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "description": "Angled industrial socket outlets offering ergonomic access and secure connections.",
     "images": [],
-    "rating": 3,
-    "reviews": 94
+    "rating": 2,
+    "reviews": 16
   },
   {
     "id": 45,
     "name": "Plug IP44",
+    "brand": "NEPTUNE",
     "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "description": "Industrial plugs rated IP44 for splash-proof protection, multiple currents and pin configurations.",
     "images": [],
     "rating": 5,
     "reviews": 96
@@ -407,1007 +452,1101 @@
   {
     "id": 46,
     "name": "Plug IP67",
+    "brand": "NEPTUNE",
     "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "description": "Rugged IP67 industrial plugs for dust-tight, watertight connections in demanding applications.",
     "images": [],
-    "rating": 2,
-    "reviews": 10
+    "rating": 1,
+    "reviews": 4
   },
   {
     "id": 47,
     "name": "Surface Mounting Socket Outlet with MCB Fused IP67",
+    "brand": "NEPTUNE",
     "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "description": "Surface-mount socket with integrated MCB, IP67, enhanced protection and convenience.",
     "images": [],
-    "rating": 2,
-    "reviews": 88
+    "rating": 4,
+    "reviews": 2
   },
   {
     "id": 48,
     "name": "Socket Outlet IP-44",
+    "brand": "NEPTUNE",
     "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "description": "Industrial socket outlets with IP44 splash protection for general-purpose indoor/outdoor use.",
     "images": [],
     "rating": 3,
-    "reviews": 7
+    "reviews": 97
   },
   {
     "id": 49,
     "name": "Socket Outlet IP-67",
+    "brand": "NEPTUNE",
     "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "description": "Heavy-duty socket outlets with IP67 ingress protection for harsh, wet environments.",
     "images": [],
-    "rating": 5,
-    "reviews": 75
+    "rating": 3,
+    "reviews": 94
   },
   {
     "id": 50,
     "name": "ENERGY METER (Dual Source)",
+    "brand": "NEPTUNE",
     "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "description": "Dual-source energy meter measuring consumption from two supplies, RS-485 options available.",
     "images": [],
-    "rating": 3,
-    "reviews": 19
+    "rating": 5,
+    "reviews": 97
   },
   {
     "id": 51,
     "name": "Harmonic Filters",
+    "brand": "NEPTUNE",
     "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "description": "Active and passive harmonic filters improving power quality, reducing THD and losses.",
     "images": [],
-    "rating": 1,
-    "reviews": 35
+    "rating": 2,
+    "reviews": 77
   },
   {
     "id": 52,
     "name": "DUCA POWER CAPACITOR",
+    "brand": "NEPTUNE",
     "category": "NEPTUNE",
-    "subcatergory": "NEPTUNE",
+    "description": "Duca Power XD capacitors, super heavy-duty APP technology for power factor correction.",
     "images": [],
-    "rating": 2,
+    "rating": 1,
     "reviews": 42
   },
   {
     "id": 53,
     "name": "Polycab Optical Fibre",
+    "brand": "POLYCAB",
     "category": "POLYCAB",
-    "subcatergory": "POLYCAB",
+    "description": "Single-mode and multimode fiber cables: duct, armored, aerial, FTTH designs.",
     "images": [],
-    "rating": 5,
-    "reviews": 11
+    "rating": 1,
+    "reviews": 75
   },
   {
     "id": 54,
     "name": "Polycab Uninyvin Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 13
-  },
-  {
-    "id": 55,
-    "name": "LAN Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 98
-  },
-  {
-    "id": 56,
-    "name": "CCTV CABLES",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 4,
-    "reviews": 8
-  },
-  {
-    "id": 57,
-    "name": "JELLY FLOODED COAXIAL CABLES",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 17
-  },
-  {
-    "id": 58,
-    "name": "POLYCAB BMS 300/500 Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 33
-  },
-  {
-    "id": 59,
-    "name": "POLYCAB'S CATHODIC PROTECTION CABLES",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 3,
-    "reviews": 26
-  },
-  {
-    "id": 60,
-    "name": "Polycab IGNIS Fire Survival Cables",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 3,
-    "reviews": 76
-  },
-  {
-    "id": 61,
-    "name": "POLYCAB CAT 6 & CAT 6A CABLE",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 75
-  },
-  {
-    "id": 62,
-    "name": "Polycab - LT XLPE Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 4,
-    "reviews": 66
-  },
-  {
-    "id": 63,
-    "name": "Polycab Telephone Wire",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 4,
-    "reviews": 91
-  },
-  {
-    "id": 64,
-    "name": "POLYCAB UNINYVIN Single Core Flexible Uninyvin Cables, 600V AC",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 13
-  },
-  {
-    "id": 65,
-    "name": "POLYCAB HIGH TENSION CABLE",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 4,
-    "reviews": 34
-  },
-  {
-    "id": 66,
-    "name": "POLYCAB Heavy Duty and Light Duty Cables",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 33
-  },
-  {
-    "id": 67,
-    "name": "Polycab Extra High Voltage (EHV) Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 4,
-    "reviews": 72
-  },
-  {
-    "id": 68,
-    "name": "POLYCAB LT XLPE INSULATED HEAVY DUTY CABLES 650/1100V",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 61
-  },
-  {
-    "id": 69,
-    "name": "POLYCAB RUBBER CABLE",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 3,
-    "reviews": 36
-  },
-  {
-    "id": 70,
-    "name": "POLYCAB PANEL BUILDERS",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 40
-  },
-  {
-    "id": 71,
-    "name": "POLYCAB OPTICAL FIBER CABLES & FRP RODS",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 85
-  },
-  {
-    "id": 72,
-    "name": "Polycab, CCTV (Closed Circuit Television) cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>COMMUNICATIONCABLE",
-    "images": [],
-    "rating": 3,
-    "reviews": 64
-  },
-  {
-    "id": 73,
-    "name": "Polycab, Jelly flooded Co-axial cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>COMMUNICATIONCABLE",
-    "images": [],
-    "rating": 4,
-    "reviews": 37
-  },
-  {
-    "id": 74,
-    "name": "Polycab, Speaker cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>COMMUNICATIONCABLE",
-    "images": [],
-    "rating": 5,
-    "reviews": 35
-  },
-  {
-    "id": 75,
-    "name": "POLYCAB LAN Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>COMMUNICATIONCABLE",
-    "images": [],
-    "rating": 1,
-    "reviews": 21
-  },
-  {
-    "id": 76,
-    "name": "POLYCAB HR-FR-LSH-LF GREEN WIRE Building wire, 1100 V AC",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 68
-  },
-  {
-    "id": 77,
-    "name": "POLYCAB HFFR-01Z-K/03XZ-K SC Building wire, 1100 V AC",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 65
-  },
-  {
-    "id": 78,
-    "name": "POLYCAB FR-LSH Building wire, 1100 V AC",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 93
-  },
-  {
-    "id": 79,
-    "name": "POLYCAB FR-LF Building wire, 1100 V AC",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 3,
-    "reviews": 83
-  },
-  {
-    "id": 80,
-    "name": "ETIRA FR Building wire, 1100 V AC",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 98
-  },
-  {
-    "id": 81,
-    "name": "ETIRA FR-LSH Building wire, 1100 V AC",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 54
-  },
-  {
-    "id": 82,
-    "name": "Polycab Extra High Voltage cables",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "High-temperature 105°C Uninyvin cables with tinned copper, PVC/nylon braiding, 600V rating.",
     "images": [],
     "rating": 5,
     "reviews": 49
   },
   {
-    "id": 83,
-    "name": "POLYCAB FIRE SURVIVAL CABLES – IGNIS SERIES",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 37
-  },
-  {
-    "id": 84,
-    "name": "POLYCAB Elastomeric Insulated Cable Confirming to BS EN 50525-2-21",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 77
-  },
-  {
-    "id": 85,
-    "name": "POLYCAB RUBBER INSULATED FLEXIBLE ELASTOMERIC CABLE CONFORMING TO IS 9968-1",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 3,
-    "reviews": 24
-  },
-  {
-    "id": 86,
-    "name": "POLYCAB Festoon Multicore Flat Flexible Cables",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 87
-  },
-  {
-    "id": 87,
-    "name": "Polycab Industrial Screened cable generally confirming to IEC 60227-7 standard",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 4,
-    "reviews": 56
-  },
-  {
-    "id": 88,
-    "name": "Polycab, PVC insulated and PVC sheathed control cable conforming to BS 6004 standard",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 65
-  },
-  {
-    "id": 89,
-    "name": "POLYCAB 6181B BS 7211 SC Lighting and Appliances wire",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 79
-  },
-  {
-    "id": 90,
-    "name": "Polycab Singlecore Thermoplastic insulated unsheathed cable BS EN 50525-2-31 standard",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 4,
-    "reviews": 14
-  },
-  {
-    "id": 91,
-    "name": "Polycab single core halogen free cross linked non-sheathed cable BS EN 50525-3-41 standard",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 46
-  },
-  {
-    "id": 92,
-    "name": "Polycab industrial cable BIS specification & standard",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 56
-  },
-  {
-    "id": 93,
-    "name": "Polycab offers a comprehensive range of HFFR industrial cable conforming to IS 17048 standard",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 4,
-    "reviews": 58
-  },
-  {
-    "id": 94,
-    "name": "POLYCAB MINING CABLE CONFORMING TO IS 14494 and generally conforming to IS 14494.",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 94
-  },
-  {
-    "id": 95,
-    "name": "POLYCAB H01N2-D BS EN 50525-2-81 Welding Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 3,
-    "reviews": 15
-  },
-  {
-    "id": 96,
-    "name": "POLYCAB Welding Cable  IS 9857",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 18
-  },
-  {
-    "id": 97,
-    "name": "POLYCAB Lighting Appliances Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 4,
-    "reviews": 82
-  },
-  {
-    "id": 98,
-    "name": "POLYCAB Aerial Bunched Cable (ABC) Overhead Power Distribution Cable IS 14255",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 4,
-    "reviews": 17
-  },
-  {
-    "id": 99,
-    "name": "POLYCAB LV Power Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 53
-  },
-  {
-    "id": 100,
-    "name": "POLYCAB LOW TENSION POWER CABLE  IS 7098-P1",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 29
-  },
-  {
-    "id": 101,
-    "name": "POLYCAB LV CONTROL CABLE",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 78
-  },
-  {
-    "id": 102,
-    "name": "POLYCAB Submersible Industrial cables",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 77
-  },
-  {
-    "id": 103,
-    "name": "POLYCAB flat Industrial Cords",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 99
-  },
-  {
-    "id": 104,
-    "name": "POLYCAB Rubber Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 21
-  },
-  {
-    "id": 105,
-    "name": "POLYCAB IS 9968-1 Rubber control Cable 1100 V AC",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 21
-  },
-  {
-    "id": 106,
-    "name": "POLYCAB Medium Voltage Rubber Flexible Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 93
-  },
-  {
-    "id": 107,
-    "name": "POLYCAB Switch gear and Control gear wiring Cable, 600/1000 V AC",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 52
-  },
-  {
-    "id": 108,
-    "name": "POLYCAB Panel Wires",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 3,
-    "reviews": 6
-  },
-  {
-    "id": 109,
-    "name": "Polycab HFFR Panel wire and cable IS 17048 standards",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 3,
-    "reviews": 16
-  },
-  {
-    "id": 110,
-    "name": "POLYCAB Aerial Bunched Cable (ABC) Overhead Power Distribution Cable IS 7098-2",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
+    "id": 55,
+    "name": "LAN Cable",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Cat6/Cat6A LAN cables supporting Gigabit Ethernet, reliable high-speed data transmission.",
     "images": [],
     "rating": 3,
     "reviews": 74
   },
   {
-    "id": 111,
-    "name": "POLYCAB MEDIUM VOLTAGE HIGH TENSION CABLE AS/NZS 1429.1",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
+    "id": 56,
+    "name": "CCTV CABLES",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "3+1 and 4+1 CCTV cables: RG59 coax plus power cores, jelly flooded options.",
     "images": [],
     "rating": 2,
-    "reviews": 15
+    "reviews": 97
   },
   {
-    "id": 112,
-    "name": "POLYCAB BS 5467 Power Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 47
-  },
-  {
-    "id": 113,
-    "name": "Polycab, XLPE insulated Round Wire armored Power cable  BS 6622.",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 26
-  },
-  {
-    "id": 114,
-    "name": "Polycab, XLPE insulated Round Wire armored LSZH Medium Voltage cable BS 7835",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 70
-  },
-  {
-    "id": 115,
-    "name": "Polycab, Medium Voltage Copper Wire Screened Power cable BS 7870-4-10",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 62
-  },
-  {
-    "id": 116,
-    "name": "POLYCAB MEDIUM VOLTAGE HIGH TENSION CABLE IEC 60502 - 2",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 92
-  },
-  {
-    "id": 117,
-    "name": "POLYCAB MEDIUM VOLTAGE HIGH TENSION CABLE IS 7098-P2",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 76
-  },
-  {
-    "id": 118,
-    "name": "POLYCAB SILICON RUBBER INSULATED CABLE CONFORMING TO BS EN 50525-2-41.",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 5,
-    "reviews": 87
-  },
-  {
-    "id": 119,
-    "name": "POLYCAB Instrumentation Cable",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>ENERGYCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 69
-  },
-  {
-    "id": 120,
-    "name": "POLYCAB BMS CABLE",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>SPECIALCABLES",
-    "images": [],
-    "rating": 1,
-    "reviews": 17
-  },
-  {
-    "id": 121,
-    "name": "Polycab Marine cables in compliance with IEC specification & standard",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>SPECIALCABLES",
-    "images": [],
-    "rating": 2,
-    "reviews": 94
-  },
-  {
-    "id": 122,
-    "name": "POLYCAB 02AYY – 2 CORE FLAT Service Cable, 1100 V AC",
-    "category": "POLYCAB",
-    "subcatergory": "CABLES>SPECIALCABLES",
-    "images": [],
-    "rating": 3,
-    "reviews": 72
-  },
-  {
-    "id": 123,
-    "name": "POLYCAB uPVC CONDUITS & FITTINGS",
-    "category": "POLYCAB",
-    "subcatergory": "CONDUITS&ACCESSORIES",
-    "images": [],
-    "rating": 2,
-    "reviews": 9
-  },
-  {
-    "id": 124,
-    "name": "POLYCAB AIR CIRCULATOR FANS",
-    "category": "POLYCAB",
-    "subcatergory": "FANS",
-    "images": [],
-    "rating": 4,
-    "reviews": 16
-  },
-  {
-    "id": 125,
-    "name": "POLYCAB BLDC CELING FANS",
-    "category": "POLYCAB",
-    "subcatergory": "FANS",
-    "images": [],
-    "rating": 3,
-    "reviews": 8
-  },
-  {
-    "id": 126,
-    "name": "POLYCAB EXHAUST FANS",
-    "category": "POLYCAB",
-    "subcatergory": "FANS",
-    "images": [],
-    "rating": 3,
-    "reviews": 7
-  },
-  {
-    "id": 127,
-    "name": "POLYCAB FARRATA FANS",
-    "category": "POLYCAB",
-    "subcatergory": "FANS",
-    "images": [],
-    "rating": 2,
-    "reviews": 69
-  },
-  {
-    "id": 128,
-    "name": "POLYCAB PEDESTAL FANS",
-    "category": "POLYCAB",
-    "subcatergory": "FANS",
-    "images": [],
-    "rating": 4,
-    "reviews": 78
-  },
-  {
-    "id": 129,
-    "name": "POLYCAB TABLE FANS",
-    "category": "POLYCAB",
-    "subcatergory": "FANS",
+    "id": 57,
+    "name": "JELLY FLOODED COAXIAL CABLES",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Coaxial cables flooded with jelly, improved moisture resistance, suitable for outdoor installations.",
     "images": [],
     "rating": 1,
     "reviews": 20
   },
   {
-    "id": 130,
-    "name": "POLYCAB WALL FANS",
-    "category": "POLYCAB",
-    "subcatergory": "FANS",
+    "id": 58,
+    "name": "POLYCAB BMS 300/500 Cable",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Shielded FR-LSH BMS cables rated 300/500 V for building automation systems.",
     "images": [],
     "rating": 5,
-    "reviews": 80
+    "reviews": 69
   },
   {
-    "id": 131,
-    "name": "POLYCAB CELING FANS - PREMIUM",
-    "category": "POLYCAB",
-    "subcatergory": "FANS",
-    "images": [],
-    "rating": 2,
-    "reviews": 17
-  },
-  {
-    "id": 132,
-    "name": "SMART LIGHTING SOLUTIONS",
-    "category": "POLYCAB",
-    "subcatergory": "HOHM-SMARTAUTOMATION",
+    "id": 59,
+    "name": "POLYCAB'S CATHODIC PROTECTION CABLES",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Fluoropolymer insulated, HMWPE sheathed cables for cathodic protection, abrasion and chemical resistant.",
     "images": [],
     "rating": 1,
-    "reviews": 32
+    "reviews": 25
   },
   {
-    "id": 133,
-    "name": "HOHM-MOORGEN Wired Smart House Whole Home System",
-    "category": "POLYCAB",
-    "subcatergory": "HOHM-SMARTAUTOMATION",
+    "id": 60,
+    "name": "Polycab IGNIS Fire Survival Cables",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Fire survival cables conforming to IEC/BS, maintain circuit integrity under fire conditions.",
+    "images": [],
+    "rating": 1,
+    "reviews": 41
+  },
+  {
+    "id": 61,
+    "name": "POLYCAB CAT 6 & CAT 6A CABLE",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Cat6 and Cat6A cables delivering high-speed, low-latency data and PoE performance.",
     "images": [],
     "rating": 2,
-    "reviews": 88
+    "reviews": 27
   },
   {
-    "id": 134,
-    "name": "COOLERS",
-    "category": "POLYCAB",
-    "subcatergory": "HOMEAPPLIANCE",
+    "id": 62,
+    "name": "Polycab - LT XLPE Cable",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "XLPE insulated LT power and control cables, 650/1100 V, superior current capacity.",
     "images": [],
     "rating": 5,
-    "reviews": 71
+    "reviews": 61
   },
   {
-    "id": 135,
-    "name": "POLYCAB HOME APPLIANCES , IRON",
-    "category": "POLYCAB",
-    "subcatergory": "HOMEAPPLIANCE",
+    "id": 63,
+    "name": "Polycab Telephone Wire",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Telephone switchboard cables per ITD specs, reliable voice/data transmission.",
+    "images": [],
+    "rating": 4,
+    "reviews": 29
+  },
+  {
+    "id": 64,
+    "name": "POLYCAB UNINYVIN Single Core Flexible Uninyvin Cables, 600V AC",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Single-core flexible Uninyvin cables, oil and abrasion resistant, 600 V rated.",
     "images": [],
     "rating": 2,
     "reviews": 64
   },
   {
-    "id": 136,
-    "name": "WATER HEATER",
-    "category": "POLYCAB",
-    "subcatergory": "HOMEAPPLIANCE",
-    "images": [],
-    "rating": 5,
-    "reviews": 14
-  },
-  {
-    "id": 137,
-    "name": "POLYCAB LIGHTING & LUMINAIRES DOMESTICO",
-    "category": "POLYCAB",
-    "subcatergory": "LIGHTSANDLUMINARIES",
-    "images": [],
-    "rating": 1,
-    "reviews": 20
-  },
-  {
-    "id": 138,
-    "name": "POLYCAB LIGHTING & LUMINAIRES MODERNIA",
-    "category": "POLYCAB",
-    "subcatergory": "LIGHTSANDLUMINARIES",
-    "images": [],
-    "rating": 5,
-    "reviews": 35
-  },
-  {
-    "id": 139,
-    "name": "POLYCAB LIGHTING & LUMINAIRES INDUSTRIA",
-    "category": "POLYCAB",
-    "subcatergory": "LIGHTSANDLUMINARIES",
-    "images": [],
-    "rating": 4,
-    "reviews": 52
-  },
-  {
-    "id": 140,
-    "name": "POLYCAB LIGHTING & LUMINAIRES URBANIA",
-    "category": "POLYCAB",
-    "subcatergory": "LIGHTSANDLUMINARIES",
-    "images": [],
-    "rating": 5,
-    "reviews": 35
-  },
-  {
-    "id": 141,
-    "name": "POLYCAB LIGHTING & LUMINAIRES ARENIA",
-    "category": "POLYCAB",
-    "subcatergory": "LIGHTSANDLUMINARIES",
-    "images": [],
-    "rating": 2,
-    "reviews": 21
-  },
-  {
-    "id": 142,
-    "name": "POLYCAB LIGHTING & LUMINAIRES GARDENIA",
-    "category": "POLYCAB",
-    "subcatergory": "LIGHTSANDLUMINARIES",
-    "images": [],
-    "rating": 3,
-    "reviews": 95
-  },
-  {
-    "id": 143,
-    "name": "POLYCAB LIGHTING & LUMINAIRES RESIDENCIAL LIGHTS",
-    "category": "POLYCAB",
-    "subcatergory": "LIGHTSANDLUMINARIES",
-    "images": [],
-    "rating": 5,
-    "reviews": 8
-  },
-  {
-    "id": 144,
-    "name": "POLYCAB Domestic & Agriculture Pumps",
-    "category": "POLYCAB, POLYCAB > PUMP",
-    "subcatergory": "PUMP",
-    "images": [],
-    "rating": 1,
-    "reviews": 39
-  },
-  {
-    "id": 145,
-    "name": "POLYCAB SOLAR",
-    "category": "POLYCAB, POLYCAB > SOLAR",
-    "subcatergory": "SOLAR",
-    "images": [],
-    "rating": 3,
-    "reviews": 81
-  },
-  {
-    "id": 146,
-    "name": "POLYCAB SOLAR REI",
-    "category": "POLYCAB, POLYCAB > SOLAR",
-    "subcatergory": "SOLAR",
-    "images": [],
-    "rating": 1,
-    "reviews": 33
-  },
-  {
-    "id": 147,
-    "name": "POLYCAB SWITCHES _ ACCESSORIES",
-    "category": "POLYCAB, POLYCAB > SWITCHES",
-    "subcatergory": "SWITCHES",
-    "images": [],
-    "rating": 5,
-    "reviews": 41
-  },
-  {
-    "id": 148,
-    "name": "POLYCAB IR TOUCH SCREEN",
-    "category": "POLYCAB, POLYCAB > SWITCHES",
-    "subcatergory": "SWITCHES",
-    "images": [],
-    "rating": 2,
-    "reviews": 62
-  },
-  {
-    "id": 149,
-    "name": "POLYCAB MODULAR PLATES",
-    "category": "POLYCAB, POLYCAB > SWITCHES",
-    "subcatergory": "SWITCHES",
+    "id": 65,
+    "name": "POLYCAB HIGH TENSION CABLE",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "HT XLPE power cables 3.3–33 kV for industrial and utility distribution.",
     "images": [],
     "rating": 3,
     "reviews": 12
   },
   {
-    "id": 150,
-    "name": "POLYCAB SWITCHGEAR",
-    "category": "POLYCAB, POLYCAB > SWITCHGEAR",
-    "subcatergory": "SWITCHGEAR",
+    "id": 66,
+    "name": "POLYCAB Heavy Duty and Light Duty Cables",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Comprehensive heavy-duty power/control and light-duty building wires portfolio.",
     "images": [],
     "rating": 3,
-    "reviews": 94
+    "reviews": 31
   },
   {
-    "id": 151,
-    "name": "POLYCAB TELECOM",
-    "category": "POLYCAB, POLYCAB > TELECOM",
-    "subcatergory": "TELECOM",
+    "id": 67,
+    "name": "Polycab Extra High Voltage (EHV) Cable",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "XLPE EHV cables 66–220 kV for underground transmission, copper or aluminium conductors.",
+    "images": [],
+    "rating": 1,
+    "reviews": 7
+  },
+  {
+    "id": 68,
+    "name": "POLYCAB LT XLPE INSULATED HEAVY DUTY CABLES 650/1100V",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "LT XLPE insulated heavy-duty cables, robust sheath options FR/FRLS/LSZH.",
+    "images": [],
+    "rating": 3,
+    "reviews": 86
+  },
+  {
+    "id": 69,
+    "name": "POLYCAB RUBBER CABLE",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "EPR/PCP rubber insulated welding and trailing cables for flexible, rugged applications.",
+    "images": [],
+    "rating": 5,
+    "reviews": 62
+  },
+  {
+    "id": 70,
+    "name": "POLYCAB PANEL BUILDERS",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Panel-building solutions using Polycab cables and accessories for reliable, compliant assemblies.",
+    "images": [],
+    "rating": 3,
+    "reviews": 91
+  },
+  {
+    "id": 71,
+    "name": "POLYCAB OPTICAL FIBER CABLES & FRP RODS",
+    "brand": "POLYCAB",
+    "category": "CABLES",
+    "description": "Optical fiber cables with FRP strength members; up to 144 fibers, robust non-metallic design.",
+    "images": [],
+    "rating": 2,
+    "reviews": 52
+  },
+  {
+    "id": 72,
+    "name": "Polycab, CCTV (Closed Circuit Television) cable",
+    "brand": "POLYCAB",
+    "category": "COMMUNICATION CABLES",
+    "description": "RG59-based CCTV cables with additional power cores; jelly flooded options for outdoor use.",
     "images": [],
     "rating": 4,
-    "reviews": 23
+    "reviews": 48
   },
   {
-    "id": 152,
-    "name": "PVC INSULATED INDUSTRIAL CABLES 1100 VOLTS (Green wire)",
-    "category": "POLYCAB, POLYCAB > WIRES",
-    "subcatergory": "WIRES",
+    "id": 73,
+    "name": "Polycab, Jelly flooded Co-axial cable",
+    "brand": "POLYCAB",
+    "category": "COMMUNICATION CABLES",
+    "description": "Coaxial cables flooded with jelly for moisture resistance; suitable for external installations.",
+    "images": [],
+    "rating": 3,
+    "reviews": 64
+  },
+  {
+    "id": 74,
+    "name": "Polycab, Speaker cable",
+    "brand": "POLYCAB",
+    "category": "COMMUNICATION CABLES",
+    "description": "Oxygen-free copper speaker cables with transparent PVC insulation for low-loss, clear audio.",
+    "images": [],
+    "rating": 5,
+    "reviews": 93
+  },
+  {
+    "id": 75,
+    "name": "POLYCAB LAN Cable",
+    "brand": "POLYCAB",
+    "category": "COMMUNICATION CABLES",
+    "description": "Cat6 and Cat6A LAN cables supporting Gigabit Ethernet, reliable high-speed data transmission.",
+    "images": [],
+    "rating": 2,
+    "reviews": 74
+  },
+  {
+    "id": 76,
+    "name": "POLYCAB HR-FR-LSH-LF GREEN WIRE Building wire, 1100 V AC",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Heat resistant, flame retardant, low smoke, low halogen 1100V building wire, flexible.",
+    "images": [],
+    "rating": 1,
+    "reviews": 57
+  },
+  {
+    "id": 77,
+    "name": "POLYCAB HFFR-01Z-K/03XZ-K SC Building wire, 1100 V AC",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Halogen-free, low smoke 1100V building wire for conduits and fixed protected installations.",
     "images": [],
     "rating": 4,
-    "reviews": 22
-  },
-  {
-    "id": 153,
-    "name": "ETRIRA FLAME RETARDANT",
-    "category": "POLYCAB, POLYCAB > WIRES",
-    "subcatergory": "WIRES",
-    "images": [],
-    "rating": 3,
-    "reviews": 28
-  },
-  {
-    "id": 154,
-    "name": "Optima Plus Wires",
-    "category": "POLYCAB, POLYCAB > WIRES",
-    "subcatergory": "WIRES",
-    "images": [],
-    "rating": 3,
     "reviews": 60
   },
   {
-    "id": 155,
-    "name": "FIBERGLASS CABLE TRAY SYSTEM",
-    "category": "SUMIP",
-    "subcatergory": "SUMIP",
+    "id": 78,
+    "name": "POLYCAB FR-LSH Building wire, 1100 V AC",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Flame retardant low smoke 1100V building wire for safer indoor installations.",
     "images": [],
-    "rating": 4,
-    "reviews": 28
+    "rating": 5,
+    "reviews": 32
   },
   {
-    "id": 156,
-    "name": "Fiberglass Ladders",
-    "category": "SUMIP",
-    "subcatergory": "SUMIP",
+    "id": 79,
+    "name": "POLYCAB FR-LF Building wire, 1100 V AC",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Flame retardant, low halogen 1100V building wire offering flexible, eco-friendly performance.",
+    "images": [],
+    "rating": 2,
+    "reviews": 98
+  },
+  {
+    "id": 80,
+    "name": "ETIRA FR Building wire, 1100 V AC",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "ETIRA FR 1100V building wire for reliable, flexible wiring per IS 694.",
+    "images": [],
+    "rating": 4,
+    "reviews": 16
+  },
+  {
+    "id": 81,
+    "name": "ETIRA FR-LSH Building wire, 1100 V AC",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "ETIRA FR-LSH low smoke building wire, 1100V, designed for safety-critical applications.",
+    "images": [],
+    "rating": 4,
+    "reviews": 12
+  },
+  {
+    "id": 82,
+    "name": "Polycab Extra High Voltage cables",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "XLPE EHV power cables, 66–220 kV, for underground transmission, copper or aluminium conductors.",
+    "images": [],
+    "rating": 2,
+    "reviews": 37
+  },
+  {
+    "id": 83,
+    "name": "POLYCAB FIRE SURVIVAL CABLES – IGNIS SERIES",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Fire survival cables maintaining circuit integrity under fire, compliant with IEC and BS.",
+    "images": [],
+    "rating": 5,
+    "reviews": 75
+  },
+  {
+    "id": 84,
+    "name": "POLYCAB Elastomeric Insulated Cable Confirming to BS EN 50525-2-21",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Cross-linked elastomer insulated flexible cables 300/500V, general-purpose heavy-duty applications for industrial equipment.",
+    "images": [],
+    "rating": 5,
+    "reviews": 14
+  },
+  {
+    "id": 85,
+    "name": "POLYCAB RUBBER INSULATED FLEXIBLE ELASTOMERIC CABLE CONFORMING TO IS 9968-1",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "EPR insulated, elastomer sheathed 1100V rubber cables for demanding low-voltage power applications.",
+    "images": [],
+    "rating": 2,
+    "reviews": 87
+  },
+  {
+    "id": 86,
+    "name": "POLYCAB Festoon Multicore Flat Flexible Cables",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Flat multicore cables for cranes, hoists, lifts; 1100V, highly flexible PVC construction.",
+    "images": [],
+    "rating": 4,
+    "reviews": 77
+  },
+  {
+    "id": 87,
+    "name": "Polycab Industrial Screened cable generally confirming to IEC 60227-7 standard",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "PVC insulated, braided screen control cables 300/500V for plant and machinery.",
+    "images": [],
+    "rating": 1,
+    "reviews": 5
+  },
+  {
+    "id": 88,
+    "name": "Polycab, PVC insulated and PVC sheathed control cable conforming to BS 6004 standard",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "PVC insulated and sheathed control cables per BS 6004, 300/500V and 450/750V.",
+    "images": [],
+    "rating": 2,
+    "reviews": 91
+  },
+  {
+    "id": 89,
+    "name": "POLYCAB 6181B BS 7211 SC Lighting and Appliances wire",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Single-core LSZH insulated/sheathed 450/750V surface wiring cable for lighting and appliances.",
+    "images": [],
+    "rating": 5,
+    "reviews": 36
+  },
+  {
+    "id": 90,
+    "name": "Polycab Singlecore Thermoplastic insulated unsheathed cable BS EN 50525-2-31 standard",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "PVC insulated single-core unsheathed 300/500V cables for fixed wiring and control circuits.",
+    "images": [],
+    "rating": 5,
+    "reviews": 20
+  },
+  {
+    "id": 91,
+    "name": "Polycab single core halogen free cross linked non-sheathed cable BS EN 50525-3-41 standard",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Halogen-free cross-linked insulated single core 300/500V cables, low smoke emissions.",
+    "images": [],
+    "rating": 3,
+    "reviews": 64
+  },
+  {
+    "id": 92,
+    "name": "Polycab industrial cable BIS specification & standard",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Industrial cables complying with BIS standards for 1100V applications across sectors and buildings.",
+    "images": [],
+    "rating": 4,
+    "reviews": 82
+  },
+  {
+    "id": 93,
+    "name": "Polycab offers a comprehensive range of HFFR industrial cable conforming to IS 17048 standard",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Halogen-free flame retardant industrial cables 1100V, low smoke, suitable for critical spaces.",
+    "images": [],
+    "rating": 5,
+    "reviews": 6
+  },
+  {
+    "id": 94,
+    "name": "POLYCAB MINING CABLE CONFORMING TO IS 14494 and generally conforming to IS 14494.",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "FT7 mining trailing cables 1.1kV, rugged flexible designs for mining equipment.",
+    "images": [],
+    "rating": 3,
+    "reviews": 29
+  },
+  {
+    "id": 95,
+    "name": "POLYCAB H01N2-D BS EN 50525-2-81 Welding Cable",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Cross-linked elastomer welding cable 100/100V for manual and robotic welding applications.",
+    "images": [],
+    "rating": 1,
+    "reviews": 47
+  },
+  {
+    "id": 96,
+    "name": "POLYCAB Welding Cable  IS 9857",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "HOFR rubber welding cables for machine and hand welding, durable in wet conditions.",
+    "images": [],
+    "rating": 2,
+    "reviews": 78
+  },
+  {
+    "id": 97,
+    "name": "POLYCAB Lighting Appliances Cable",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Flexible cables for domestic appliances and lighting, 1100V, PVC insulated.",
+    "images": [],
+    "rating": 3,
+    "reviews": 29
+  },
+  {
+    "id": 98,
+    "name": "POLYCAB Aerial Bunched Cable (ABC) Overhead Power Distribution Cable IS 14255",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Aerial bunched low-voltage distribution cables for overhead feeders, robust insulation per IS 14255.",
+    "images": [],
+    "rating": 2,
+    "reviews": 68
+  },
+  {
+    "id": 99,
+    "name": "POLYCAB LV Power Cable",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "LV PVC/XLPE power cables for efficient, safe power transmission up to 1.1kV.",
+    "images": [],
+    "rating": 4,
+    "reviews": 68
+  },
+  {
+    "id": 100,
+    "name": "POLYCAB LOW TENSION POWER CABLE  IS 7098-P1",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "XLPE insulated 650/1100V cables per IS 7098-1, higher current capacity and reliability.",
+    "images": [],
+    "rating": 1,
+    "reviews": 89
+  },
+  {
+    "id": 101,
+    "name": "POLYCAB LV CONTROL CABLE",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Multicore LV control cables, armoured or unarmoured, for automation and process control.",
+    "images": [],
+    "rating": 1,
+    "reviews": 92
+  },
+  {
+    "id": 102,
+    "name": "POLYCAB Submersible Industrial cables",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Flat and round submersible pump cables, waterproof, flexible, designed for immersion.",
+    "images": [],
+    "rating": 2,
+    "reviews": 65
+  },
+  {
+    "id": 103,
+    "name": "POLYCAB flat Industrial Cords",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Flat industrial cords for moving equipment, durable, flexible cable management.",
+    "images": [],
+    "rating": 3,
+    "reviews": 56
+  },
+  {
+    "id": 104,
+    "name": "POLYCAB Rubber Cable",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "EPR/PCP rubber cables for flexible power connections in harsh industrial environments.",
+    "images": [],
+    "rating": 3,
+    "reviews": 77
+  },
+  {
+    "id": 105,
+    "name": "POLYCAB IS 9968-1 Rubber control Cable 1100 V AC",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Rubber insulated 1100V control cables per IS 9968-1, for demanding control circuits.",
+    "images": [],
+    "rating": 2,
+    "reviews": 49
+  },
+  {
+    "id": 106,
+    "name": "POLYCAB Medium Voltage Rubber Flexible Cable",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "MV rubber flexible cables for mobile equipment, excellent abrasion, oil, and weather resistance.",
+    "images": [],
+    "rating": 1,
+    "reviews": 75
+  },
+  {
+    "id": 107,
+    "name": "POLYCAB Switch gear and Control gear wiring Cable, 600/1000 V AC",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "BS 6231 switchgear/control wiring cable, 600/1000V, PVC insulated single-core applications.",
+    "images": [],
+    "rating": 4,
+    "reviews": 65
+  },
+  {
+    "id": 108,
+    "name": "POLYCAB Panel Wires",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "PVC insulated flexible panel wires, IS 694, reliable for control panels and wiring.",
+    "images": [],
+    "rating": 2,
+    "reviews": 46
+  },
+  {
+    "id": 109,
+    "name": "Polycab HFFR Panel wire and cable IS 17048 standards",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Halogen-free flame retardant panel wires 1100V, low smoke, compliant with IS 17048.",
+    "images": [],
+    "rating": 1,
+    "reviews": 30
+  },
+  {
+    "id": 110,
+    "name": "POLYCAB Aerial Bunched Cable (ABC) Overhead Power Distribution Cable IS 7098-2",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Aerial bunched medium-voltage cables per IS 7098-2 for overhead distribution networks.",
+    "images": [],
+    "rating": 2,
+    "reviews": 97
+  },
+  {
+    "id": 111,
+    "name": "POLYCAB MEDIUM VOLTAGE HIGH TENSION CABLE AS/NZS 1429.1",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Medium voltage XLPE cables complying with AS/NZS 1429.1 for Australian/New Zealand networks.",
+    "images": [],
+    "rating": 3,
+    "reviews": 24
+  },
+  {
+    "id": 112,
+    "name": "POLYCAB BS 5467 Power Cable",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Armoured XLPE/PVC power cables to BS 5467, low voltage, robust mechanical protection.",
+    "images": [],
+    "rating": 1,
+    "reviews": 80
+  },
+  {
+    "id": 113,
+    "name": "Polycab, XLPE insulated Round Wire armored Power cable  BS 6622.",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "XLPE insulated round wire armoured MV power cables complying with BS 6622.",
+    "images": [],
+    "rating": 1,
+    "reviews": 36
+  },
+  {
+    "id": 114,
+    "name": "Polycab, XLPE insulated Round Wire armored LSZH Medium Voltage cable BS 7835",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "LSZH sheathed XLPE insulated MV cables to BS 7835 for low smoke environments.",
+    "images": [],
+    "rating": 3,
+    "reviews": 8
+  },
+  {
+    "id": 115,
+    "name": "Polycab, Medium Voltage Copper Wire Screened Power cable BS 7870-4-10",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Medium voltage copper wire screened power cables per BS 7870-4-10.",
+    "images": [],
+    "rating": 2,
+    "reviews": 91
+  },
+  {
+    "id": 116,
+    "name": "POLYCAB MEDIUM VOLTAGE HIGH TENSION CABLE IEC 60502 - 2",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "MV power cables per IEC 60502-2, XLPE insulation, screened, armoured options.",
+    "images": [],
+    "rating": 4,
+    "reviews": 59
+  },
+  {
+    "id": 117,
+    "name": "POLYCAB MEDIUM VOLTAGE HIGH TENSION CABLE IS 7098-P2",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Medium voltage XLPE power cables per IS 7098 Part 2 for utilities and industry.",
+    "images": [],
+    "rating": 4,
+    "reviews": 76
+  },
+  {
+    "id": 118,
+    "name": "POLYCAB SILICON RUBBER INSULATED CABLE CONFORMING TO BS EN 50525-2-41.",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Silicone rubber insulated flexible cables 300/500V for high temperature environments.",
+    "images": [],
+    "rating": 4,
+    "reviews": 12
+  },
+  {
+    "id": 119,
+    "name": "POLYCAB Instrumentation Cable",
+    "brand": "POLYCAB",
+    "category": "ENERGY CABLES",
+    "description": "Pairs/triads instrumentation cables for accurate signal transmission, overall/individual shielding options.",
+    "images": [],
+    "rating": 2,
+    "reviews": 13
+  },
+  {
+    "id": 120,
+    "name": "POLYCAB BMS CABLE",
+    "brand": "POLYCAB",
+    "category": "SPECIAL CABLES",
+    "description": "Shielded FR-LSH BMS cables rated 300/500 V for building automation systems.",
+    "images": [],
+    "rating": 2,
+    "reviews": 71
+  },
+  {
+    "id": 121,
+    "name": "Polycab Marine cables in compliance with IEC specification & standard",
+    "brand": "POLYCAB",
+    "category": "SPECIAL CABLES",
+    "description": "Marine and offshore cables complying with IEC 60092 series for power, control, instrumentation.",
+    "images": [],
+    "rating": 1,
+    "reviews": 66
+  },
+  {
+    "id": 122,
+    "name": "POLYCAB 02AYY – 2 CORE FLAT Service Cable, 1100 V AC",
+    "brand": "POLYCAB",
+    "category": "SPECIAL CABLES",
+    "description": "2-core flat service cable 1100V for power connections, durable PVC insulation and sheath.",
+    "images": [],
+    "rating": 5,
+    "reviews": 39
+  },
+  {
+    "id": 123,
+    "name": "POLYCAB uPVC CONDUITS & FITTINGS",
+    "brand": "POLYCAB",
+    "category": "CONDUITS & ACCESSORIES",
+    "description": "uPVC conduits and fittings per IS 9537, IS 3419; FRLS options, multiple sizes.",
     "images": [],
     "rating": 3,
     "reviews": 11
   },
   {
-    "id": 157,
-    "name": "GT Connector Water Tight",
+    "id": 124,
+    "name": "POLYCAB AIR CIRCULATOR FANS",
+    "brand": "POLYCAB",
+    "category": "FANS",
+    "description": "Heavy-duty air circulator fans with metal construction for high airflow in large spaces.",
+    "images": [],
+    "rating": 1,
+    "reviews": 93
+  },
+  {
+    "id": 125,
+    "name": "POLYCAB BLDC CELING FANS",
+    "brand": "POLYCAB",
+    "category": "FANS",
+    "description": "Energy-efficient BLDC ceiling fans offering higher air delivery with lower power consumption.",
+    "images": [],
+    "rating": 3,
+    "reviews": 0
+  },
+  {
+    "id": 126,
+    "name": "POLYCAB EXHAUST FANS",
+    "brand": "POLYCAB",
+    "category": "FANS",
+    "description": "Durable exhaust fans for ventilation, efficient air extraction for kitchens and bathrooms.",
+    "images": [],
+    "rating": 2,
+    "reviews": 8
+  },
+  {
+    "id": 127,
+    "name": "POLYCAB FARRATA FANS",
+    "brand": "POLYCAB",
+    "category": "FANS",
+    "description": "High-speed Farrata pedestal fans for powerful air circulation, heavy-duty metal body.",
+    "images": [],
+    "rating": 2,
+    "reviews": 86
+  },
+  {
+    "id": 128,
+    "name": "POLYCAB PEDESTAL FANS",
+    "brand": "POLYCAB",
+    "category": "FANS",
+    "description": "Pedestal fans with adjustable height and oscillation, high air delivery and stability.",
+    "images": [],
+    "rating": 3,
+    "reviews": 78
+  },
+  {
+    "id": 129,
+    "name": "POLYCAB TABLE FANS",
+    "brand": "POLYCAB",
+    "category": "FANS",
+    "description": "Compact table fans with directional airflow, efficient cooling and portable design.",
+    "images": [],
+    "rating": 3,
+    "reviews": 50
+  },
+  {
+    "id": 130,
+    "name": "POLYCAB WALL FANS",
+    "brand": "POLYCAB",
+    "category": "FANS",
+    "description": "Wall-mounted fans saving floor space, oscillating airflow for targeted cooling.",
+    "images": [],
+    "rating": 3,
+    "reviews": 52
+  },
+  {
+    "id": 131,
+    "name": "POLYCAB CELING FANS - PREMIUM",
+    "brand": "POLYCAB",
+    "category": "FANS",
+    "description": "Designer premium ceiling fans with powerful airflow, silent operation, advanced finishes for modern interiors.",
+    "images": [],
+    "rating": 2,
+    "reviews": 61
+  },
+  {
+    "id": 132,
+    "name": "SMART LIGHTING SOLUTIONS",
+    "brand": "POLYCAB",
+    "category": "HOME-SMARTAUTOMATION",
+    "description": "Wired home automation by HOHM-Moorgen: integrated lighting, climate, shading, security, voice control.",
+    "images": [],
+    "rating": 3,
+    "reviews": 89
+  },
+  {
+    "id": 133,
+    "name": "COOLERS",
+    "brand": "POLYCAB",
+    "category": "HOMEAPPLIANCE",
+    "description": "Personal and desert air coolers delivering high airflow, honeycomb pads, durable build.",
     "images": [],
     "rating": 5,
-    "reviews": 83
+    "reviews": 73
+  },
+  {
+    "id": 134,
+    "name": "POLYCAB HOME APPLIANCES , IRON",
+    "brand": "POLYCAB",
+    "category": "HOMEAPPLIANCE",
+    "description": "Dry and steam irons with non-stick soleplates, quick heating, efficient wrinkle removal.",
+    "images": [],
+    "rating": 4,
+    "reviews": 91
+  },
+  {
+    "id": 135,
+    "name": "WATER HEATER",
+    "brand": "POLYCAB",
+    "category": "HOMEAPPLIANCE",
+    "description": "Polycab water heaters with multi-safety systems, glasslined tanks, energy-saving insulation.",
+    "images": [],
+    "rating": 3,
+    "reviews": 27
+  },
+  {
+    "id": 136,
+    "name": "POLYCAB LIGHTING & LUMINAIRES DOMESTICO",
+    "brand": "POLYCAB",
+    "category": "LIGHTS & LUMINARIES",
+    "description": "Domestico range: downlights, panels, battens for homes; functional, elegant, efficient lighting.",
+    "images": [],
+    "rating": 1,
+    "reviews": 42
+  },
+  {
+    "id": 137,
+    "name": "POLYCAB LIGHTING & LUMINAIRES MODERNIA",
+    "brand": "POLYCAB",
+    "category": "LIGHTS & LUMINARIES",
+    "description": "Modernia series: sleek contemporary luminaires and tiles, stylish aesthetics with reliable performance.",
+    "images": [],
+    "rating": 3,
+    "reviews": 99
+  },
+  {
+    "id": 138,
+    "name": "POLYCAB LIGHTING & LUMINAIRES INDUSTRIA",
+    "brand": "POLYCAB",
+    "category": "LIGHTS & LUMINARIES",
+    "description": "Industria range: high-bay and industrial luminaires, rugged IP ratings for demanding environments.",
+    "images": [],
+    "rating": 1,
+    "reviews": 70
+  },
+  {
+    "id": 139,
+    "name": "POLYCAB LIGHTING & LUMINAIRES URBANIA",
+    "brand": "POLYCAB",
+    "category": "LIGHTS & LUMINARIES",
+    "description": "Urbania outdoor luminaires for streetscapes, efficient optics, durable construction, contemporary design.",
+    "images": [],
+    "rating": 2,
+    "reviews": 87
+  },
+  {
+    "id": 140,
+    "name": "POLYCAB LIGHTING & LUMINAIRES ARENIA",
+    "brand": "POLYCAB",
+    "category": "LIGHTS & LUMINARIES",
+    "description": "Arenia sports and area lighting delivering high lumen output, uniform illumination, robust build.",
+    "images": [],
+    "rating": 1,
+    "reviews": 17
+  },
+  {
+    "id": 141,
+    "name": "POLYCAB LIGHTING & LUMINAIRES GARDENIA",
+    "brand": "POLYCAB",
+    "category": "LIGHTS & LUMINARIES",
+    "description": "Gardenia landscape luminaires: garden, pathway, and façade lighting with weather-resistant designs.",
+    "images": [],
+    "rating": 3,
+    "reviews": 33
+  },
+  {
+    "id": 142,
+    "name": "POLYCAB LIGHTING & LUMINAIRES RESIDENCIAL LIGHTS",
+    "brand": "POLYCAB",
+    "category": "LIGHTS & LUMINARIES",
+    "description": "Residential lights portfolio: bulbs, downlights, panels, battens, ambient and task lighting.",
+    "images": [],
+    "rating": 2,
+    "reviews": 20
+  },
+  {
+    "id": 143,
+    "name": "POLYCAB Domestic & Agriculture Pumps",
+    "brand": "POLYCAB",
+    "category": "PUMP",
+    "description": "Domestic and agriculture pumps: openwell, monoblock, submersible variants for water supply and irrigation.",
+    "images": [],
+    "rating": 1,
+    "reviews": 60
+  },
+  {
+    "id": 144,
+    "name": "POLYCAB SOLAR",
+    "brand": "POLYCAB",
+    "category": "SOLAR",
+    "description": "Solar solutions: PV modules, inverters, DC cables, BOS components for complete systems.",
+    "images": [],
+    "rating": 5,
+    "reviews": 3
+  },
+  {
+    "id": 145,
+    "name": "POLYCAB SOLAR REI",
+    "brand": "POLYCAB",
+    "category": "SOLAR",
+    "description": "Showcased solar innovations at REI: modules, inverters, DC cables, end-to-end solutions.",
+    "images": [],
+    "rating": 2,
+    "reviews": 65
+  },
+  {
+    "id": 146,
+    "name": "POLYCAB SWITCHES _ ACCESSORIES",
+    "brand": "POLYCAB",
+    "category": "SWITCHES",
+    "description": "Levana modular switches, sockets, regulators, support modules, and accessories for stylish installations.",
+    "images": [],
+    "rating": 4,
+    "reviews": 39
+  },
+  {
+    "id": 147,
+    "name": "POLYCAB IR TOUCH SCREEN",
+    "brand": "POLYCAB",
+    "category": "SWITCHES",
+    "description": "Levana IR touch screen switches: gesture-enabled control, sleek plates, modern aesthetics.",
+    "images": [],
+    "rating": 1,
+    "reviews": 15
+  },
+  {
+    "id": 148,
+    "name": "POLYCAB MODULAR PLATES",
+    "brand": "POLYCAB",
+    "category": "SWITCHES",
+    "description": "Levana modular plates in multiple finishes and sizes, durable and easy to install.",
+    "images": [],
+    "rating": 4,
+    "reviews": 50
+  },
+  {
+    "id": 149,
+    "name": "POLYCAB SWITCHGEAR",
+    "brand": "POLYCAB",
+    "category": "SWITCHGEAR",
+    "description": "Comprehensive switchgear: MCBs, RCCBs, RCBOs, isolators, changeovers, ACCLs, and distribution boards.",
+    "images": [],
+    "rating": 4,
+    "reviews": 48
+  },
+  {
+    "id": 150,
+    "name": "POLYCAB TELECOM",
+    "brand": "POLYCAB",
+    "category": "TELECOM",
+    "description": "Telecom division: optical fiber cables, FTTH, FRP rods, passive networking accessories.",
+    "images": [],
+    "rating": 2,
+    "reviews": 71
+  },
+  {
+    "id": 151,
+    "name": "PVC INSULATED INDUSTRIAL CABLES 1100 VOLTS (Green wire)",
+    "brand": "POLYCAB",
+    "category": "WIRES",
+    "description": "Lead-free FR-LF green industrial wires, 1100V, flexible, eco-friendly, energy-efficient performance.",
+    "images": [],
+    "rating": 5,
+    "reviews": 92
+  },
+  {
+    "id": 152,
+    "name": "ETRIRA FLAME RETARDANT",
+    "brand": "POLYCAB",
+    "category": "WIRES",
+    "description": "ETIRA FR house wires, 1100V, high flexibility, flame retardant PVC insulation, reliable quality.",
+    "images": [],
+    "rating": 5,
+    "reviews": 51
+  },
+  {
+    "id": 153,
+    "name": "Optima Plus Wires",
+    "brand": "POLYCAB",
+    "category": "WIRES",
+    "description": "Optima+ FR-LF house wires: lead-free, high-purity copper, flexible, low smoke, energy saving.",
+    "images": [],
+    "rating": 5,
+    "reviews": 57
+  },
+  {
+    "id": 154,
+    "name": "FIBERGLASS CABLE TRAY SYSTEM",
+    "brand": "SUMIP",
+    "category": "SUMIP",
+    "description": "FRP/GRP cable tray systems with accessories; corrosion resistant, lightweight, high load capacity.",
+    "images": [],
+    "rating": 4,
+    "reviews": 66
+  },
+  {
+    "id": 155,
+    "name": "Fiberglass Ladders",
+    "brand": "SUMIP",
+    "category": "SUMIP",
+    "description": "SUMIP FRP ladders: electrically insulating, corrosion resistant, lightweight, robust for industrial use.",
+    "images": [],
+    "rating": 2,
+    "reviews": 42
   }
 ]

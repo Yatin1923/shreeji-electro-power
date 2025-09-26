@@ -5,8 +5,9 @@ import * as XLSX from "xlsx";
 export type Product = {
   id: number;
   name: string;
+  brand?: string;
   category?: string;
-  subcatergory?: string;
+  description?:string;
   images: string[];
   rating: number;
   reviews: number;
@@ -14,7 +15,7 @@ export type Product = {
 
 function main() {
   // 1. Load Excel file
-  const workbook = XLSX.readFile("data/Shreeji Total Products.xlsx");
+  const workbook = XLSX.readFile("data/Shreeji Total Products1.xlsx");
   const sheet = workbook.Sheets[workbook.SheetNames[0]];
   const rows = XLSX.utils.sheet_to_json<any>(sheet);
 
@@ -23,8 +24,9 @@ function main() {
   const products: Product[] = rows.map((row, i) => ({
     id: i + 1,
     name: row.Name,
-    category: row.Categories,
-    subcatergory:row.SubCategories,
+    brand: row.Brand,
+    category:row.Category,
+    description:row.ShortDescription,
     images:[],
     rating:Math.ceil(Math.random()*5),
     reviews:Math.floor(Math.random()*100)
