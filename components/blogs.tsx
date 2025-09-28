@@ -85,9 +85,9 @@ export function Blogs() {
                 Blogs
               </Typography>
             </Box>
-            <Button variant="contained" className="!mt-6 rounded-md !bg-slate-900 px-4 py-2 text-sm text-white">
+            {/* <Button variant="contained" className="!mt-6 rounded-md !bg-slate-900 px-4 py-2 text-sm text-white">
               View all
-            </Button>
+            </Button> */}
           </div>
 
           {/* Blog cards */}

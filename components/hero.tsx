@@ -1,35 +1,26 @@
 "use client"
 
-import { Box, Button, Card, CardContent, Typography } from "@mui/material"
+import { Box, Button, Card, CardContent, Link, Typography } from "@mui/material"
 import { motion } from "motion/react"
 function BrandTile({ i }: { i: number }) {
   const companyLogos = [
-    { src: "/assets/companyLogos/polycab.png", alt: "Polycab",backgroundColor:"#FBE0E0" },
-    { src: "/assets/companyLogos/lauritz-knudsen.png", alt: "Lauritz Knudsen",backgroundColor:"#C7DBE6" },
-    { src: "/assets/companyLogos/neptune.png", alt: "Neptune",backgroundColor:"#D9F2FB" },
-    { src: "/assets/companyLogos/dowells.png", alt: "Dowell's",backgroundColor:"#FCDFED" },
-    { src: "/assets/companyLogos/hager.png", alt: "Hager",backgroundColor: "#F7DCD7"},
-    { src: "/assets/companyLogos/cabseal.png", alt: "Cabseal",backgroundColor: "#C8D3E7"},
+    { src: "/assets/companyLogos/polycab.png", alt: "Polycab",brand: "Polycab",backgroundColor:"#FBE0E0" },
+    { src: "/assets/companyLogos/lauritz-knudsen.png", alt: "Lauritz Knudsen" ,brand: "L&K SWITCHGEAR",backgroundColor:"#C7DBE6" },
+    { src: "/assets/companyLogos/neptune.png", alt: "Neptune",brand: "Neptune",backgroundColor:"#D9F2FB" },
+    { src: "/assets/companyLogos/dowells.png", alt: "Dowell's",brand: "Dowell's",backgroundColor:"#FCDFED" },
+    { src: "/assets/companyLogos/hager.png", alt: "Hager",brand: "Hagers",backgroundColor: "#F7DCD7"},
+    { src: "/assets/companyLogos/cabseal.png", alt: "Cabseal",brand: "Cabseal",backgroundColor: "#C8D3E7"},
   ]
-
-  // const cardColors = [
-  //   "#FCDFED",
-  //   "#F7DCD7",
-  //   "#D9F2FB",
-  //   "#C8D3E7",
-  //   "#C7DBE6",
-  //   "#FBE0E0",
-  // ]
-
   const logo = companyLogos[i % companyLogos.length]
-  // const backgroundColor = cardColors[i % cardColors.length]
-
   return (
-    <Card elevation={12} className="cursor-pointer !rounded-[20px] max-w-[220px] aspect-[220/250] shadow-2xl" style={{ backgroundColor:logo.backgroundColor }}>
-      <CardContent className="flex justify-center items-center h-full">
-        <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="max-w-full max-h-80" />
-      </CardContent>
-    </Card>
+    <Link href={`/product?brand=${encodeURIComponent(logo.brand.toUpperCase())}`}>
+      <Card elevation={12} className="cursor-pointer !rounded-[20px] max-w-[220px] aspect-[220/250] shadow-2xl" style={{ backgroundColor:logo.backgroundColor }}>
+        <CardContent className="flex justify-center items-center h-full">
+          <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="max-w-full max-h-80" />
+        </CardContent>
+      </Card>
+    </Link>
+
   )
 }
 
