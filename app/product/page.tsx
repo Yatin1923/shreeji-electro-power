@@ -31,6 +31,7 @@ import { getProducts } from "@/services/productService"
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import ExpandLessIcon from "@mui/icons-material/ExpandLess"
+import { useSearchParams } from "next/navigation"
 
 
 // ⬇️ Import your product service
@@ -63,7 +64,10 @@ const categories = [
 
 
 export default function ProductPage() {
-  const [brandSel, setBrandSel] = React.useState<string[]>([])
+  const searchParams = useSearchParams()
+  const initialBrand = searchParams.get("brand")
+
+  const [brandSel, setBrandSel] = React.useState<string[]>(initialBrand ? [initialBrand] : [])
   const [catSel, setCatSel] = React.useState<string[]>([])
   const [page, setPage] = React.useState(1)
   const [products, setProducts] = React.useState<Product[]>([])
