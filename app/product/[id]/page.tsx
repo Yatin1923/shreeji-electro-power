@@ -1,7 +1,9 @@
+"use client"
 import Link from "next/link"
 import Navbar from "@/components/navbar"
 import { getProductById, getRelated } from "@/services/productService"
 import { Key } from "react"
+import { Breadcrumbs } from "@mui/material"
 
 export default function ProductDetailPage({ params }: { params: { id: number } }) {
   const product = getProductById(params.id)
@@ -27,23 +29,19 @@ export default function ProductDetailPage({ params }: { params: { id: number } }
       <Navbar active="Product" />
 
       {/* Breadcrumb */}
-      <div className="border-b border-gray-200/80 bg-white/70">
-        <div className="mx-auto max-w-6xl px-6 py-3 text-xs text-gray-500">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2">
-            <Link href="/" className="hover:underline">
-              Home
-            </Link>
-            <span className="text-gray-400">›</span>
-            <Link href="/product" className="hover:underline">
-              Products
-            </Link>
-            <span className="text-gray-400">›</span>
-            <span className="text-gray-700">{product.name}</span>
-          </nav>
+        <div className="mx-auto container px-6 py-3 text-xs text-gray-500">
+        <div className="py-6">
+            <Breadcrumbs separator="›" aria-label="breadcrumb" className="text-[13px] text-neutral-500">
+              <Link href="/" className="hover:underline">
+                Homepage
+              </Link>
+              <Link href="/product" className="hover:underline">
+                Products
+              </Link>
+              <span className="">{product.name}</span>
+            </Breadcrumbs>
         </div>
-      </div>
 
-      <div className="mx-auto max-w-6xl px-6 py-8">
         {/* Top section */}
         <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
           {/* Left: main image with small controls and thumbs */}
@@ -96,16 +94,15 @@ export default function ProductDetailPage({ params }: { params: { id: number } }
 
             <h2 className="text-sm font-bold text-sky-700">Description:</h2>
             <p className="mt-2 text-sm leading-6 text-gray-700">
-              Add a unique aura to your space with this exquisitely designed, remote-controlled fan. Its classy
-              underlight provides multi-colour illumination and is a stunning addition to any space.
+              {product.description}
             </p>
 
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <h3 className="text-sm font-bold text-sky-700">
                 Color: <span className="font-semibold text-gray-800">Royal Brown</span>
               </h3>
               <div className="mt-3 flex items-center gap-3">
-                {/* {product.colorOptions.map((c, i) => (
+                {product.colorOptions.map((c, i) => (
                   <button
                     key={c.name}
                     className={`overflow-hidden rounded-md border p-1 ${
@@ -115,9 +112,9 @@ export default function ProductDetailPage({ params }: { params: { id: number } }
                   >
                     <img src={c.image || "/placeholder.svg"} alt={c.name} className="h-14 w-20 object-contain" />
                   </button>
-                ))} */}
+                ))}
               </div>
-            </div>
+            </div> */}
 
             <div className="mt-6">
               <h3 className="text-sm font-bold text-sky-700">Highlights:</h3>
