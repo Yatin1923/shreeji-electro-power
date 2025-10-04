@@ -15,7 +15,7 @@ export type Product = {
 
 function main() {
   // 1. Load Excel file
-  const workbook = XLSX.readFile("data/Shreeji Total Products1.xlsx");
+  const workbook = XLSX.readFile("data/Shreeji Total Products.xlsx");
   const sheet = workbook.Sheets[workbook.SheetNames[0]];
   const rows = XLSX.utils.sheet_to_json<any>(sheet);
 
