@@ -26,7 +26,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft"
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight"
 import SortIcon from "@mui/icons-material/Sort"
 import React from "react"
-import { Product } from "@/scripts/convert-excel-to-json"
+import { EhvCable, Product } from "@/scripts/convert-excel-to-json"
 import { getProducts } from "@/services/productService"
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
@@ -71,6 +71,7 @@ export default function ProductPage() {
   const [catSel, setCatSel] = React.useState<string[]>([])
   const [page, setPage] = React.useState(1)
   const [products, setProducts] = React.useState<Product[]>([])
+  const [ehvCables, setEhvCables] = React.useState<EhvCable[]>([])
   const [total, setTotal] = React.useState(0)
 
   const toggle = (v: string, list: string[], set: (v: string[]) => void) =>
@@ -95,7 +96,8 @@ export default function ProductPage() {
       sortBy: "rating",
       sortOrder: "desc",
     })
-    setProducts(res.data)
+    // setProducts(res.data)
+    setEhvCables(res.data)
     setTotal(res.total)
   }, [page, brandSel, catSel,searchQuery])
   React.useEffect(() => {
@@ -301,7 +303,7 @@ export default function ProductPage() {
           {/* Product grid */}
           <section>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {products.map((p) => {
+              {ehvCables.map((p) => {
                 const primaryImg = p.images?.[0]
                 return (
                   <Card key={p.id} elevation={0} className="rounded-xl border border-neutral-200 shadow-sm bg-white">
@@ -328,7 +330,7 @@ export default function ProductPage() {
                         {p.name}
                       </Link>
                       <br />
-                      <Typography variant={"caption"} className="text-neutral-400">{p.description}</Typography>
+                      <Typography variant={"caption"} className="text-neutral-400">{p.shortDescription}</Typography>
                       <div className="mt-2 flex items-center gap-1 text-[12px] text-neutral-600">
                         <StarIcon className="text-amber-400" fontSize="small" />
                         <span>{p.rating.toFixed(1)}</span>

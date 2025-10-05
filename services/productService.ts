@@ -60,26 +60,26 @@ export function getProducts(options: GetProductsOptions = {}) {
   }
 
   // Apply sorting
-  if (sortBy) {
-    result.sort((a, b) => {
-      const aValue = a[sortBy];
-      const bValue = b[sortBy];
+  // if (sortBy) {
+  //   result.sort((a, b) => {
+  //     const aValue = a[sortBy];
+  //     const bValue = b[sortBy];
 
-      if (aValue === undefined || bValue === undefined) return 0;
+  //     if (aValue === undefined || bValue === undefined) return 0;
 
-      if (typeof aValue === "number" && typeof bValue === "number") {
-        return sortOrder === "asc" ? aValue - bValue : bValue - aValue;
-      }
+  //     if (typeof aValue === "number" && typeof bValue === "number") {
+  //       return sortOrder === "asc" ? aValue - bValue : bValue - aValue;
+  //     }
 
-      if (typeof aValue === "string" && typeof bValue === "string") {
-        return sortOrder === "asc"
-          ? aValue.localeCompare(bValue)
-          : bValue.localeCompare(aValue);
-      }
+  //     if (typeof aValue === "string" && typeof bValue === "string") {
+  //       return sortOrder === "asc"
+  //         ? aValue.localeCompare(bValue)
+  //         : bValue.localeCompare(aValue);
+  //     }
 
-      return 0;
-    });
-  }
+  //     return 0;
+  //   });
+  // }
 
   // Pagination
   const startIndex = (page - 1) * limit;
