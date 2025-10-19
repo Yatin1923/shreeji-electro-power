@@ -199,7 +199,7 @@ export default function ProductPage() {
       // Apply main category filter
       if (catSel.length > 0) {
         filteredProducts = filteredProducts.filter(product =>
-          catSel.some(category => product.Type.toUpperCase().includes(category.toUpperCase()) )
+          catSel.some(category => product.Type.toUpperCase().includes(category.toUpperCase()))
         )
       }
 
@@ -236,9 +236,9 @@ export default function ProductPage() {
     const newSelection = cableSubcatSel.includes(subcategoryKey)
       ? cableSubcatSel.filter(item => item !== subcategoryKey)
       : [...cableSubcatSel, subcategoryKey];
-    
+
     setCableSubcatSel(newSelection);
-    
+
     // Auto-select parent category if any subcategory is selected
     if (newSelection.length > 0 && !catSel.includes("CABLES")) {
       setCatSel([...catSel, "CABLES"]);
@@ -248,13 +248,13 @@ export default function ProductPage() {
       setCatSel(catSel.filter(cat => cat !== "CABLES"));
     }
   };
-  
+
   const handleCategoryToggle = (category: string) => {
     if (category === "CABLES") {
       const isCurrentlySelected = catSel.includes(category);
       const allSubcategories = Object.keys(categoryStructure.CABLES?.subcategories || {});
       const hasAllSubcategories = cableSubcatSel.length === allSubcategories.length;
-      
+
       if (isCurrentlySelected && hasAllSubcategories) {
         // If fully selected, deselect everything
         setCatSel(catSel.filter(cat => cat !== category));
@@ -266,18 +266,18 @@ export default function ProductPage() {
       }
     } else {
       // Handle other categories normally
-      setCatSel(catSel.includes(category) 
+      setCatSel(catSel.includes(category)
         ? catSel.filter(cat => cat !== category)
         : [...catSel, category]
       );
     }
   };
-  
+
   const getCablesCheckboxState = () => {
     const allSubcategories = Object.keys(categoryStructure.CABLES?.subcategories || {});
     const selectedCount = cableSubcatSel.length;
     const totalCount = allSubcategories.length;
-    
+
     return {
       checked: selectedCount > 0 && selectedCount === totalCount,
       indeterminate: selectedCount > 0 && selectedCount < totalCount
@@ -427,7 +427,7 @@ export default function ProductPage() {
                             <Checkbox
                               size="small"
                               checked={cableSubcatSel.includes(key)}
-                              onChange={() => {toggle(key, cableSubcatSel, setCableSubcatSel); handleSubcategoryToggle(key)}}
+                              onChange={() => { toggle(key, cableSubcatSel, setCableSubcatSel); handleSubcategoryToggle(key) }}
                             />
                           }
                           label={<span className="text-[13px] text-neutral-600">{label}</span>}
@@ -451,12 +451,25 @@ export default function ProductPage() {
       <div className="mx-auto max-w-[1140px] px-6">
         {/* Breadcrumb row */}
         <div className="pt-6">
-          <Breadcrumbs separator="›" aria-label="breadcrumb" className="text-[13px] text-neutral-500">
-            <Link href="/" className="hover:underline">
-              Homepage
-            </Link>
-            <span className="text-neutral-700">Products</span>
-          </Breadcrumbs>
+          <div className="mb-8">
+            <Breadcrumbs
+              separator="›"
+              aria-label="breadcrumb"
+              className="text-sm text-gray-500"
+              sx={{
+                '& .MuiBreadcrumbs-separator': {
+                  mx: 1
+                }
+              }}
+            >
+              <Link href="/" className="hover:text-sky-600 transition-colors">
+                Home
+              </Link>
+              <Link href="/product" className="hover:text-sky-600 transition-colors">
+                Products
+              </Link>
+            </Breadcrumbs>
+          </div>
         </div>
 
         {/* Main layout: Fixed sidebar + Content area */}
