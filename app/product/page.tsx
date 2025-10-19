@@ -87,8 +87,8 @@ export default function ProductPage() {
   const initialBrand = searchParams.get("brand")
 
   const [brandSel, setBrandSel] = React.useState<string[]>(initialBrand ? [initialBrand] : [])
-  const [catSel, setCatSel] = React.useState<string[]>([]) // Main categories
-  const [cableSubcatSel, setCableSubcatSel] = React.useState<string[]>([]) // Cable subcategories
+  const [catSel, setCatSel] = React.useState<string[]>([])
+  const [cableSubcatSel, setCableSubcatSel] = React.useState<string[]>([])
   const [page, setPage] = React.useState(1)
   const [products, setProducts] = React.useState<Product[]>([])
   const [total, setTotal] = React.useState(0)
@@ -273,7 +273,6 @@ export default function ProductPage() {
     }
   };
   
-  
   const getCablesCheckboxState = () => {
     const allSubcategories = Object.keys(categoryStructure.CABLES?.subcategories || {});
     const selectedCount = cableSubcatSel.length;
@@ -284,6 +283,7 @@ export default function ProductPage() {
       indeterminate: selectedCount > 0 && selectedCount < totalCount
     };
   };
+
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE)
 
   // Get all selected filter labels for chips
@@ -320,7 +320,7 @@ export default function ProductPage() {
   }
 
   const filtersContent = (
-    <div className="w-[260px] p-4">
+    <div className="w-[280px] p-4 bg-white rounded-lg h-fit sticky top-6">
       <div className="mb-3 flex items-center justify-between gap-2 text-neutral-700">
         <span className="p-2! text-[15px] font-semibold">Filters</span>
         {(brandSel.length > 0 || catSel.length > 0 || cableSubcatSel.length > 0) && (
@@ -386,41 +386,34 @@ export default function ProductPage() {
         <Collapse in={catOpen}>
           <div className="mt-2 flex flex-col ju">
             {Object.keys(categoryStructure).map((category) => (
-              
-              <div key={category} className="" >
-                <div className="flex items-center justify-between cursor-pointer"  
-                  onClick={(e) => {
-                      e.stopPropagation()
-                      // setCablesSubOpen(!cablesSubOpen)
-                  }}
-                >
-                <FormControlLabel
-                  control={
-                    <Checkbox
+              <div key={category} className="">
+                <div className="flex items-center justify-between">
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        size="small"
+                        checked={category === "CABLES" ? getCablesCheckboxState().checked || catSel.includes(category) : catSel.includes(category)}
+                        indeterminate={category === "CABLES" ? getCablesCheckboxState().indeterminate : false}
+                        onChange={() => handleCategoryToggle(category)}
+                      />
+                    }
+                    label={
+                      <div className="w-full">
+                        <span className="text-[14px] text-neutral-700 flex justify-between">{category}</span>
+                      </div>
+                    }
+                  />
+                  {category === "CABLES" && Object.keys(categoryStructure.CABLES.subcategories).length > 0 && (
+                    <IconButton
                       size="small"
-                      // checked={catSel.includes(category)}
-                      checked={category === "CABLES" ? getCablesCheckboxState().checked || catSel.includes(category) : catSel.includes(category)}
-                      indeterminate={category === "CABLES" ? getCablesCheckboxState().indeterminate : false}
-                      onChange={() => handleCategoryToggle(category)}
-                    />
-                  }
-                  label={
-                    <div className="w-full">
-                      <span className="text-[14px] text-neutral-700 flex justify-between">{category}</span>
-                    </div>
-                  }
-                />
-                {category === "CABLES" && Object.keys(categoryStructure.CABLES.subcategories).length > 0 && (
-                  <IconButton
-                    size="small"
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      setCablesSubOpen(!cablesSubOpen)
-                    }}
-                  >
-                    {cablesSubOpen ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
-                  </IconButton>
-                )}
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setCablesSubOpen(!cablesSubOpen)
+                      }}
+                    >
+                      {cablesSubOpen ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
+                    </IconButton>
+                  )}
                 </div>
 
                 {/* Cable subcategories */}
@@ -466,168 +459,167 @@ export default function ProductPage() {
           </Breadcrumbs>
         </div>
 
-        {/* Search, chips, sort */}
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6">
-          <div className="hidden md:block" />
-          <div className="flex flex-wrap items-center gap-4">
-            <TextField
-              size="small"
-              placeholder="Search..."
-              value={searchQuery}
-              className="w-[260px] bg-white rounded-md"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <SearchIcon fontSize="small" />
-                  </InputAdornment>
-                ),
-              }}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <div className="flex flex-wrap gap-2">
-              {getAllSelectedFilters().map((filter, index) => (
-                <Chip
-                  key={`${filter.type}-${filter.value}-${index}`}
-                  label={filter.label}
-                  size="small"
-                  color="info"
-                  variant="outlined"
-                  onDelete={() => removeFilter(filter.type, filter.value)}
-                />
-              ))}
+        {/* Main layout: Fixed sidebar + Content area */}
+        <div className="mt-6 flex gap-6 min-h-[calc(100vh-200px)]">
+          {/* Fixed Sidebar */}
+          {!isMobile && (
+            <aside className="flex-shrink-0">
+              {filtersContent}
+            </aside>
+          )}
+
+          {/* Main Content Area */}
+          <div className="flex-1 min-w-0">
+            {/* Search, chips, sort */}
+            <div className="flex flex-wrap items-center gap-4 mb-4">
+              <TextField
+                size="small"
+                placeholder="Search..."
+                value={searchQuery}
+                className="w-[260px] bg-white rounded-md"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <SearchIcon fontSize="small" />
+                    </InputAdornment>
+                  ),
+                }}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <div className="flex flex-wrap gap-2">
+                {getAllSelectedFilters().map((filter, index) => (
+                  <Chip
+                    key={`${filter.type}-${filter.value}-${index}`}
+                    label={filter.label}
+                    size="small"
+                    color="info"
+                    variant="outlined"
+                    onDelete={() => removeFilter(filter.type, filter.value)}
+                  />
+                ))}
+              </div>
+              <div className="ml-auto flex gap-2">
+                {isMobile && (
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    startIcon={<SortIcon />}
+                    onClick={() => setMobileFiltersOpen(true)}
+                  >
+                    Filters
+                  </Button>
+                )}
+              </div>
             </div>
-            <div className="ml-auto flex gap-2">
-              {isMobile && (
-                <Button
-                  variant="outlined"
-                  size="small"
-                  startIcon={<SortIcon />}
-                  onClick={() => setMobileFiltersOpen(true)}
-                >
-                  Filters
-                </Button>
+
+            {/* Results summary */}
+            <div className="text-sm text-neutral-600 mb-6">
+              {loading ? 'Loading...' : `Showing ${products.length} of ${total} results`}
+              {(searchDebounce || brandSel.length > 0 || catSel.length > 0 || cableSubcatSel.length > 0) && (
+                <span className="ml-2">
+                  {searchDebounce && `for "${searchDebounce}"`}
+                  {(brandSel.length > 0 || catSel.length > 0 || cableSubcatSel.length > 0) && ' (filtered)'}
+                </span>
               )}
             </div>
-          </div>
-        </div>
 
-        {/* Results summary */}
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6">
-          <div className="hidden md:block" />
-          <div className="text-sm text-neutral-600">
-            {loading ? 'Loading...' : `Showing ${products.length} of ${total} results`}
-            {(searchDebounce || brandSel.length > 0 || catSel.length > 0 || cableSubcatSel.length > 0) && (
-              <span className="ml-2">
-                {searchDebounce && `for "${searchDebounce}"`}
-                {(brandSel.length > 0 || catSel.length > 0 || cableSubcatSel.length > 0) && ' (filtered)'}
-              </span>
-            )}
-          </div>
-        </div>
-
-        {/* Main content: sidebar + grid */}
-        <div className="mt-6 flex gap-6">
-          {!isMobile && <aside>{filtersContent}</aside>}
-
-          {/* Product grid */}
-          <section className="flex-1">
-            {loading ? (
-              <div className="flex justify-center items-center h-64">
-                <div className="text-neutral-500">Loading products...</div>
-              </div>
-            ) : products.length === 0 ? (
-              <div className="text-center py-12">
-                <div className="text-neutral-500 mb-2">No products found</div>
-                <Button
-                  onClick={() => {
-                    setSearchQuery('')
-                    setBrandSel([])
-                    setCatSel([])
-                    setCableSubcatSel([])
-                  }}
-                >
-                  Clear filters
-                </Button>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {products.map((p) => {
-                  const primaryImg = p.Image_Path
-                  return (
-                    <Card key={p.Cable_Name} elevation={0} className="rounded-xl border border-neutral-200 shadow-sm bg-white">
-                      <div className="relative p-4">
-                        {/* <IconButton className="!absolute right-2 top-2" size="small" aria-label="favorite">
-                          <FavoriteBorderIcon fontSize="small" />
-                        </IconButton> */}
-                        <Link href={`/product/${encodeURIComponent(p.Cable_Name)}`} className="block">
-                          <div className="mx-auto h-[180px] w-full overflow-hidden rounded-md bg-[#f4f6f8] flex items-center justify-center">
-                            <img
-                              src={primaryImg || "/placeholder.svg"}
-                              alt={p.Cable_Name}
-                              className="h-[160px] w-auto object-contain"
-                            />
-                          </div>
-                        </Link>
-                      </div>
-                      <CardContent className="pt-0">
-                        <Link
-                          href={`/product/${encodeURIComponent(p.Cable_Name)}`}
-                          className="text-[14px] font-semibold text-sky-700 hover:underline"
-                        >
-                          {p.Cable_Name}
-                        </Link>
-                        <br />
-                        <Typography variant={"caption"} className="text-neutral-400">
-                          {p.Short_Description}
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  )
-                })}
-              </div>
-            )}
-
-            {/* Pagination */}
-            {totalPages > 1 && (
-              <div className="mt-8 flex items-center justify-between sticky bottom-0 bg-[#f5f8fb] py-4">
-                <div className="flex items-center gap-2">
+            {/* Product grid */}
+            <section>
+              {loading ? (
+                <div className="flex justify-center items-center h-64">
+                  <div className="text-neutral-500">Loading products...</div>
+                </div>
+              ) : products.length === 0 ? (
+                <div className="text-center py-12">
+                  <div className="text-neutral-500 mb-2">No products found</div>
                   <Button
-                    variant="outlined"
-                    size="small"
-                    className="!min-w-[42px] rounded-md normal-case bg-sky-600 text-white hover:bg-sky-700 hover:border-sky-700"
+                    onClick={() => {
+                      setSearchQuery('')
+                      setBrandSel([])
+                      setCatSel([])
+                      setCableSubcatSel([])
+                    }}
                   >
-                    {String(page).padStart(2, "0")}
-                  </Button>
-                  <span className="text-[13px] text-neutral-500">of {totalPages}</span>
-                  <Button
-                    variant="outlined"
-                    size="small"
-                    className="rounded-md min-w-0"
-                    aria-label="prev"
-                    onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
-                    disabled={page === 1 || loading}
-                  >
-                    <KeyboardArrowLeftIcon fontSize="small" />
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    size="small"
-                    className="rounded-md min-w-0"
-                    aria-label="next"
-                    onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
-                    disabled={page === totalPages || loading}
-                  >
-                    <KeyboardArrowRightIcon fontSize="small" />
+                    Clear filters
                   </Button>
                 </div>
-                <div className="text-sm text-neutral-500">
-                  Showing {((page - 1) * ITEMS_PER_PAGE) + 1} to {Math.min(page * ITEMS_PER_PAGE, total)} of {total}
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {products.map((p) => {
+                    const primaryImg = p.Image_Path
+                    return (
+                      <Card key={p.Cable_Name} elevation={0} className="rounded-xl border border-neutral-200 shadow-sm bg-white">
+                        <div className="relative p-4">
+                          <Link href={`/product/${encodeURIComponent(p.Cable_Name)}`} className="block">
+                            <div className="mx-auto h-[180px] w-full overflow-hidden rounded-md bg-[#f4f6f8] flex items-center justify-center">
+                              <img
+                                src={primaryImg || "/placeholder.svg"}
+                                alt={p.Cable_Name}
+                                className="h-[160px] w-auto object-contain"
+                              />
+                            </div>
+                          </Link>
+                        </div>
+                        <CardContent className="pt-0">
+                          <Link
+                            href={`/product/${encodeURIComponent(p.Cable_Name)}`}
+                            className="text-[14px] font-semibold text-sky-700 hover:underline"
+                          >
+                            {p.Cable_Name}
+                          </Link>
+                          <br />
+                          <Typography variant={"caption"} className="text-neutral-400">
+                            {p.Short_Description}
+                          </Typography>
+                        </CardContent>
+                      </Card>
+                    )
+                  })}
                 </div>
-              </div>
-            )}
+              )}
 
-            <div className="h-12" />
-          </section>
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="mt-8 flex items-center justify-between sticky bottom-0 bg-[#f5f8fb] py-4">
+                  <div className="flex items-center gap-2">
+                    <Button
+                      variant="outlined"
+                      size="small"
+                      className="!min-w-[42px] rounded-md normal-case bg-sky-600 text-white hover:bg-sky-700 hover:border-sky-700"
+                    >
+                      {String(page).padStart(2, "0")}
+                    </Button>
+                    <span className="text-[13px] text-neutral-500">of {totalPages}</span>
+                    <Button
+                      variant="outlined"
+                      size="small"
+                      className="rounded-md min-w-0"
+                      aria-label="prev"
+                      onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+                      disabled={page === 1 || loading}
+                    >
+                      <KeyboardArrowLeftIcon fontSize="small" />
+                    </Button>
+                    <Button
+                      variant="outlined"
+                      size="small"
+                      className="rounded-md min-w-0"
+                      aria-label="next"
+                      onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
+                      disabled={page === totalPages || loading}
+                    >
+                      <KeyboardArrowRightIcon fontSize="small" />
+                    </Button>
+                  </div>
+                  <div className="text-sm text-neutral-500">
+                    Showing {((page - 1) * ITEMS_PER_PAGE) + 1} to {Math.min(page * ITEMS_PER_PAGE, total)} of {total}
+                  </div>
+                </div>
+              )}
+
+              <div className="h-12" />
+            </section>
+          </div>
         </div>
       </div>
 
