@@ -320,7 +320,7 @@ export default function ProductPage() {
   }
 
   const filtersContent = (
-    <div className="w-[280px] p-4 bg-white rounded-lg h-fit sticky top-6">
+    <div className="w-[280px] p-4 bg-white rounded-lg h-fit sticky top-25">
       <div className="mb-3 flex items-center justify-between gap-2 text-neutral-700">
         <span className="p-2! text-[15px] font-semibold">Filters</span>
         {(brandSel.length > 0 || catSel.length > 0 || cableSubcatSel.length > 0) && (
