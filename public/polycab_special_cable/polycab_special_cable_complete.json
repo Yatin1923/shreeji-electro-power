@@ -1,0 +1,30 @@
+[
+  {
+    "Cable_Name": "Polycab NMB Cable UL 719 600V",
+    "Product_Type": "Special Cable",
+    "Standards": "UL 719",
+    "Certifications": "CE, UL",
+    "Key_Features": "Heat resistant, Flame retardant, Sunlight resistant, Moisture resistant",
+    "Short_Description": "Solid or stranded copper conductor with THHN/THWN-2 insulation, copper grounding conductor between two insulated core wrapped with flame retrdant paper and PVC sheathed flat cable",
+    "Full_Description": "POLYCAB Type NM-B (Non-Metallic sheath cable) is suitable to use in indoor residential wiring including branch circuit for luminaries, outlets and switches. It may be installed in both exposed and concealed work where such area is not subjected to excessive moisture or dampness.",
+    "Product_URL": "https://polycab.com/polycab-nmb-cable-ul-719-600v/pt-13206/p-54967",
+    "Image_Path": "polycab_special_cable/images/Polycab_NMB_Cable_UL_719_600V_image.png",
+    "Brochure_Path": "polycab_special_cable/brochures/Polycab_NMB_Cable_UL_719_600V_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  },
+  {
+    "Cable_Name": "Polycab UFB Cable UL 493 600V",
+    "Product_Type": "Special Cable",
+    "Standards": "UL 493",
+    "Certifications": "CE, UL",
+    "Key_Features": "Heat resistant, Flame retardant, Sunlight resistant, Moisture resistant",
+    "Short_Description": "Solid or stranded copper conductor with THHN/THWN-2 insulation, bare grounding conductor and PVC sheathed flat cable",
+    "Full_Description": "POLYCAB Type UF-B stranded copper conductor THHN/THWN-2 insulated and PVC sheathed cable is suitable to use as underground feeder and branch circuit wiring in wet, dry & corrosive location as specified in NEC article no 340. It may also be used as feeder to outside post lamps, pumps and other equipment.",
+    "Product_URL": "https://polycab.com/polycab-ufb-cable-ul-493-600v/pt-13206/p-54965",
+    "Image_Path": "polycab_special_cable/images/Polycab_UFB_Cable_UL_493_600V_image.png",
+    "Brochure_Path": "polycab_special_cable/brochures/Polycab_UFB_Cable_UL_493_600V_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "Cable_Name": "Polycab IGNIS 210",
+    "Product_Type": "Fire Protection Cable",
+    "Standards": "BS 7846",
+    "Certifications": "CE, FQC",
+    "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
+    "Short_Description": "Stranded copper conductor,Heat barrier mica taped, XLPE Insulation, laid up core, LSZH Inner sheathed & GI armoured & LSZH Outer sheathed FS cable",
+    "Full_Description": "POLYCAB FS-YL Multicore core Armoured cable is suitable to use in various indoor & outdoor applications where continuity of power supply during the event of fire, is highly essential and corrosive gas evaluation could be a cause of hazard to the people or the precision instruments in high rise building, schools, hospitals, hotels, Malls, Subways etc.",
+    "Product_URL": "https://polycab.com/polycab-ignis-210/pt-13195/p-54866",
+    "Image_Path": "polycab_fire_protection_cable/images/Polycab_IGNIS_210_image.png",
+    "Brochure_Path": "polycab_fire_protection_cable/brochures/Polycab_IGNIS_210_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  },
+  {
+    "Cable_Name": "Polycab IGNIS 200",
+    "Product_Type": "Fire Protection Cable",
+    "Standards": "BS 7846",
+    "Certifications": "CE, FQC",
+    "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
+    "Short_Description": "Stranded copper conductor,Heat barrier mica taped, XLPE Insulation, laid up core, FRLS Inner sheathed & GI armoured & FRLS PVC Outer sheathed FS cable",
+    "Full_Description": "POLYCAB FS-YL Multicore core Armoured cable is suitable to use in various indoor & outdoor applications where continuity of power supply during the event of fire, is highly essential and corrosive gas evaluation could be a cause of hazard to the people or the precision instruments in high rise building, schools, hospitals, hotels, Malls, Subways etc.",
+    "Product_URL": "https://polycab.com/polycab-ignis-200/pt-13195/p-54864",
+    "Image_Path": "polycab_fire_protection_cable/images/Polycab_IGNIS_200_image.png",
+    "Brochure_Path": "polycab_fire_protection_cable/brochures/Polycab_IGNIS_200_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  },
+  {
+    "Cable_Name": "Polycab IGNIS 220",
+    "Product_Type": "Fire Protection Cable",
+    "Standards": "BS 7846",
+    "Certifications": "CE, FQC",
+    "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
+    "Short_Description": "Stranded copper conductor,Heat barrier mica taped, EBXL Insulation, laid up core, LSZH Inner sheathed & GI armoured & LSZH Outer sheathed FS cable",
+    "Full_Description": "POLYCAB FS P Multicore core Armoured cable is suitable to use in various indoor & outdoor applications where continuity of power supply during the event of fire, is highly essential and corrosive gas evaluation could be a cause of hazard to the people or the precision instruments in high rise building, schools, hospitals, hotels, Malls, Subways etc.",
+    "Product_URL": "https://polycab.com/polycab-ignis-220/pt-13195/p-54868",
+    "Image_Path": "polycab_fire_protection_cable/images/Polycab_IGNIS_220_image.png",
+    "Brochure_Path": "polycab_fire_protection_cable/brochures/Polycab_IGNIS_220_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  },
+  {
+    "Cable_Name": "Polycab Firealarm Shielded Unarmoured Cable",
+    "Product_Type": "Fire Protection Cable",
+    "Standards": "BSEN 50288-7",
+    "Certifications": "CE, FQC",
+    "Key_Features": "High current carrying capacity, Low leakage current, High insulation resistance, High data transmission",
+    "Short_Description": "Two Core copper, XLPE Insulation, Ovrl Screened,FRLS PVC Outer sheathed cable",
+    "Full_Description": "POLYCAB Fire alarm signal cable stranded copper conductor, XLPE insulated, cores twisted, shielded & FRLS PVC sheathed cable is designed to use for conveying signal from fire/smoke sensor to the firefighting equipment panels in hospital, schools commercial complex & industries for security systems.",
+    "Product_URL": "https://polycab.com/polycab-firealarm-shielded-unarmoured-cable/pt-13195/p-54792",
+    "Image_Path": "polycab_fire_protection_cable/images/Polycab_Firealarm_Shielded_Unarmoured_Cable_image.png",
+    "Brochure_Path": "polycab_fire_protection_cable/brochures/Polycab_Firealarm_Shielded_Unarmoured_Cable_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  },
+  {
+    "Cable_Name": "Polycab IGNIS 241",
+    "Product_Type": "Fire Protection Cable",
+    "Standards": "BS 7211",
+    "Certifications": "CE, FQC",
+    "Key_Features": "High Resistant to Fire, Halogen Free, Reduced Flame Propagation, Low toxicity, Fire barrier",
+    "Short_Description": "Stranded copper conductor,Heat barrier mica taped, Cross-linked Halogen Free Flame Retardant Insulation & Cross-linked Low Smoke Halogen Free Flame Retardant Sheath Single core FS cable",
+    "Full_Description": "POLYCAB FS Single Core Sheathed cable is suitable to use in various indoor & outdoor applications such as tunnels, high rise building, schools, hospitals, hotels, Malls, Subways for emergency lighting during the event of fire.",
+    "Product_URL": "https://polycab.com/polycab-ignis-241/pt-13195/p-54884",
+    "Image_Path": "polycab_fire_protection_cable/images/Polycab_IGNIS_241_image.png",
+    "Brochure_Path": "polycab_fire_protection_cable/brochures/Polycab_IGNIS_241_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  }
+]
