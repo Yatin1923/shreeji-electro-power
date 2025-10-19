@@ -233,6 +233,7 @@ export default function ProductPage() {
     setPage(1)
   }, [brandSel, catSel, cableSubcatSel, searchDebounce])
   const handleSubcategoryToggle = (subcategoryKey: string) => {
+    toggle(subcategoryKey, cableSubcatSel, setCableSubcatSel);
     const newSelection = cableSubcatSel.includes(subcategoryKey)
       ? cableSubcatSel.filter(item => item !== subcategoryKey)
       : [...cableSubcatSel, subcategoryKey];
@@ -255,7 +256,7 @@ export default function ProductPage() {
       const allSubcategories = Object.keys(categoryStructure.CABLES?.subcategories || {});
       const hasAllSubcategories = cableSubcatSel.length === allSubcategories.length;
 
-      if (isCurrentlySelected && hasAllSubcategories) {
+      if (isCurrentlySelected) {
         // If fully selected, deselect everything
         setCatSel(catSel.filter(cat => cat !== category));
         setCableSubcatSel([]);
@@ -306,6 +307,7 @@ export default function ProductPage() {
   }
 
   const removeFilter = (filterType: string, value: string) => {
+    debugger;
     switch (filterType) {
       case 'brand':
         toggle(value, brandSel, setBrandSel)
@@ -314,13 +316,15 @@ export default function ProductPage() {
         handleCategoryToggle(value)
         break
       case 'cableSubcategory':
-        toggle(value, cableSubcatSel, setCableSubcatSel)
+        handleSubcategoryToggle(value)
         break
     }
   }
 
   const filtersContent = (
     <div className="w-[280px] p-4 bg-white rounded-lg h-fit sticky top-25">
+      <div className="max-h-[80vh] overflow-auto">
+
       <div className="mb-3 flex items-center justify-between gap-2 text-neutral-700">
         <span className="p-2! text-[15px] font-semibold">Filters</span>
         {(brandSel.length > 0 || catSel.length > 0 || cableSubcatSel.length > 0) && (
@@ -427,7 +431,7 @@ export default function ProductPage() {
                             <Checkbox
                               size="small"
                               checked={cableSubcatSel.includes(key)}
-                              onChange={() => { toggle(key, cableSubcatSel, setCableSubcatSel); handleSubcategoryToggle(key) }}
+                              onChange={() => {  handleSubcategoryToggle(key) }}
                             />
                           }
                           label={<span className="text-[13px] text-neutral-600">{label}</span>}
@@ -441,6 +445,8 @@ export default function ProductPage() {
           </div>
         </Collapse>
       </div>
+      </div>
+
     </div>
   )
 
