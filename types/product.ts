@@ -1,5 +1,7 @@
 // types/product.ts
 export interface Product {
+    Type: string;
+    Brand: string;
     Cable_Name: string;
     Product_Type: string;
     Standards: string;

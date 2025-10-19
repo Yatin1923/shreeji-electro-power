@@ -175,7 +175,6 @@ export default function ProductPage() {
     try {
       const allProducts = polycabProductService.getAllProducts()
       let filteredProducts = [...allProducts]
-      debugger;
       // Apply search filter
       if (searchDebounce) {
         const searchTerm = searchDebounce.toLowerCase()
@@ -192,7 +191,7 @@ export default function ProductPage() {
       if (brandSel.length > 0) {
         filteredProducts = filteredProducts.filter(product =>
           brandSel.some(brand =>
-            product.Cable_Name.toUpperCase().includes(brand.toUpperCase())
+            product.Brand.toUpperCase().includes(brand.toUpperCase())
           )
         )
       }
@@ -200,15 +199,7 @@ export default function ProductPage() {
       // Apply main category filter
       if (catSel.length > 0) {
         filteredProducts = filteredProducts.filter(product =>
-          catSel.some(category => {
-            const categoryUpper = category.toUpperCase()
-            return (
-              product.Product_Type.toUpperCase().includes(categoryUpper) ||
-              product.Cable_Name.toUpperCase().includes(categoryUpper) ||
-              (categoryUpper.includes('CABLE') && product.Product_Type.includes('Cable')) ||
-              (categoryUpper.includes('WIRE') && product.Cable_Name.toUpperCase().includes('WIRE'))
-            )
-          })
+          catSel.some(category => product.Type.toUpperCase().includes(category.toUpperCase()) )
         )
       }
 
@@ -241,7 +232,7 @@ export default function ProductPage() {
   React.useEffect(() => {
     setPage(1)
   }, [brandSel, catSel, cableSubcatSel, searchDebounce])
-  const handleSubcategoryToggle = (subcategoryKey:string) => {
+  const handleSubcategoryToggle = (subcategoryKey: string) => {
     const newSelection = cableSubcatSel.includes(subcategoryKey)
       ? cableSubcatSel.filter(item => item !== subcategoryKey)
       : [...cableSubcatSel, subcategoryKey];
@@ -258,16 +249,20 @@ export default function ProductPage() {
     }
   };
   
-  const handleCategoryToggle = (category:string) => {
+  const handleCategoryToggle = (category: string) => {
     if (category === "CABLES") {
       const isCurrentlySelected = catSel.includes(category);
-      if (isCurrentlySelected) {
-        // Deselecting CABLES also deselects all subcategories
+      const allSubcategories = Object.keys(categoryStructure.CABLES?.subcategories || {});
+      const hasAllSubcategories = cableSubcatSel.length === allSubcategories.length;
+      
+      if (isCurrentlySelected && hasAllSubcategories) {
+        // If fully selected, deselect everything
         setCatSel(catSel.filter(cat => cat !== category));
         setCableSubcatSel([]);
       } else {
-        // Selecting CABLES
-        setCatSel([...catSel, category]);
+        // If not selected or partially selected, select everything
+        setCatSel([...catSel.filter(cat => cat !== category), category]);
+        setCableSubcatSel(allSubcategories);
       }
     } else {
       // Handle other categories normally
@@ -277,15 +272,18 @@ export default function ProductPage() {
       );
     }
   };
-  // Handle main category selection - if CABLES is deselected, clear subcategories
-  // const handleCategoryToggle = (category: string) => {
-  //   if (category === "CABLES" && catSel.includes("CABLES")) {
-  //     // If deselecting CABLES, also clear all cable subcategories
-  //     setCableSubcatSel([])
-  //   }
-  //   toggle(category, catSel, setCatSel)
-  // }
-
+  
+  
+  const getCablesCheckboxState = () => {
+    const allSubcategories = Object.keys(categoryStructure.CABLES?.subcategories || {});
+    const selectedCount = cableSubcatSel.length;
+    const totalCount = allSubcategories.length;
+    
+    return {
+      checked: selectedCount > 0 && selectedCount === totalCount,
+      indeterminate: selectedCount > 0 && selectedCount < totalCount
+    };
+  };
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE)
 
   // Get all selected filter labels for chips
@@ -393,14 +391,16 @@ export default function ProductPage() {
                 <div className="flex items-center justify-between cursor-pointer"  
                   onClick={(e) => {
                       e.stopPropagation()
-                      setCablesSubOpen(!cablesSubOpen)
+                      // setCablesSubOpen(!cablesSubOpen)
                   }}
                 >
                 <FormControlLabel
                   control={
                     <Checkbox
                       size="small"
-                      checked={catSel.includes(category)}
+                      // checked={catSel.includes(category)}
+                      checked={category === "CABLES" ? getCablesCheckboxState().checked || catSel.includes(category) : catSel.includes(category)}
+                      indeterminate={category === "CABLES" ? getCablesCheckboxState().indeterminate : false}
                       onChange={() => handleCategoryToggle(category)}
                     />
                   }
@@ -556,9 +556,9 @@ export default function ProductPage() {
                   return (
                     <Card key={p.Cable_Name} elevation={0} className="rounded-xl border border-neutral-200 shadow-sm bg-white">
                       <div className="relative p-4">
-                        <IconButton className="!absolute right-2 top-2" size="small" aria-label="favorite">
+                        {/* <IconButton className="!absolute right-2 top-2" size="small" aria-label="favorite">
                           <FavoriteBorderIcon fontSize="small" />
-                        </IconButton>
+                        </IconButton> */}
                         <Link href={`/product/${encodeURIComponent(p.Cable_Name)}`} className="block">
                           <div className="mx-auto h-[180px] w-full overflow-hidden rounded-md bg-[#f4f6f8] flex items-center justify-center">
                             <img
