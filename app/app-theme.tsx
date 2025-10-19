@@ -2,7 +2,6 @@
 
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material"
 import { ReactNode } from "react"
-
 const lightTheme = createTheme({
   palette: {
     mode: "light", 
