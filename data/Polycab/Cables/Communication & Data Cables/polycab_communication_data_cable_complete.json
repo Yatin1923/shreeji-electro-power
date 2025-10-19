@@ -1,0 +1,58 @@
+[
+  {
+    "Cable_Name": "Polycab RS 485 300/500V AC Armoured Cable",
+    "Product_Type": "Communication & Data Cable",
+    "Standards": "RS 485",
+    "Certifications": "CE",
+    "Key_Features": "Low capacitance, Interference free performance, High speed data transmission, Long service life",
+    "Short_Description": "Annealed stranded tinned copper conductor, HDPE insulated,paired, twisted, Al mylar shielded, ATC braided, PVC innersheath, GS round wire armored Overall PVC Sheathed 500V RS 485 data cable",
+    "Full_Description": "POLYCAB RS 485 armoured will be used at machine interference for data and signal transmission in the low frequency range. This is suitable to use in control, regulation & measurement and can be used in dry, dump or wet environment with medium mechanical stress.",
+    "Product_URL": "https://polycab.com/polycab-rs-485-300500v-ac-armoured-cable/pt-13196/p-55654",
+    "Image_Path": "polycab_communication_data_cable/images/Polycab_RS_485_300500V_AC_Armoured_Cable_image.png",
+    "Brochure_Path": "polycab_communication_data_cable/brochures/Polycab_RS_485_300500V_AC_Armoured_Cable_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  },
+  {
+    "Cable_Name": "Polycab CCTV Cable",
+    "Product_Type": "Communication & Data Cable",
+    "Standards": "Polycab standard",
+    "Certifications": "CE, FQC",
+    "Key_Features": "Clear video signal transmission, Low EMI, Better power transmission, Low capacitance, Low signal loss",
+    "Short_Description": "Co-axial(RG 59F) +3 Core copper ,HDPE Insulated, assembled, flooded with jelly,PVC Sheathed Cable",
+    "Full_Description": "Polycab CCTV cable is designed to use in close circuit camera system for safety and security management in industries, Malls, hospitals, shops, Roads and offices",
+    "Product_URL": "https://polycab.com/polycab-cctv-cable/pt-13196/p-54804",
+    "Image_Path": "polycab_communication_data_cable/images/Polycab_CCTV_Cable_image.png",
+    "Brochure_Path": "polycab_communication_data_cable/brochures/Polycab_CCTV_Cable_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  },
+  {
+    "Cable_Name": "Polycab Speaker Cable",
+    "Product_Type": "Communication & Data Cable",
+    "Standards": "Polycab standard",
+    "Certifications": "CE, FQC",
+    "Key_Features": "Noise free signal transmission, High bass signal transmission, Low loss, Polarity reversal feature, Extremely durable",
+    "Short_Description": "Two core copper,Transparent PVC Insulated",
+    "Full_Description": "Polycab Speaker cables are designed to use in connecting receivers or power amplifier to speakers for clear, trouble free and distortion free voice with low signal loss. Polycab speaker cable is Ideal for both Hi-Fi speaker system, home theatre application,public address system and broadcasting application.",
+    "Product_URL": "https://polycab.com/polycab-speaker-cable/pt-13196/p-54802",
+    "Image_Path": "polycab_communication_data_cable/images/Polycab_Speaker_Cable_image.png",
+    "Brochure_Path": "polycab_communication_data_cable/brochures/Polycab_Speaker_Cable_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  },
+  {
+    "Cable_Name": "Polycab RS 485 300/500V AC Unarmoured Cable",
+    "Product_Type": "Communication & Data Cable",
+    "Standards": "RS 485",
+    "Certifications": "CE",
+    "Key_Features": "Low capacitance, Interference free performance, High speed data transmission, Long service life",
+    "Short_Description": "Annealed stranded tinned copper conductor, HDPE insulated,paired, twisted, Al mylar shielded, ATC braided Overall PVC Sheathed 500V RS 485 data cable",
+    "Full_Description": "POLYCAB RS 485 unarmoured will be used at machine interference for data and signal transmission in the low frequency range. This is suitable to use in control, regulation & measurement and can be used in dry, dump or wet environment with medium mechanical stress.",
+    "Product_URL": "https://polycab.com/polycab-rs-485-300500v-ac-unarmoured-cable/pt-13196/p-55652",
+    "Image_Path": "polycab_communication_data_cable/images/Polycab_RS_485_300500V_AC_Unarmoured_Cable_image.png",
+    "Brochure_Path": "polycab_communication_data_cable/brochures/Polycab_RS_485_300500V_AC_Unarmoured_Cable_datasheet.pdf",
+    "Image_Download_Status": "Downloaded",
+    "Brochure_Download_Status": "Downloaded"
+  }
+]
