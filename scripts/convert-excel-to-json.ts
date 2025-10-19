@@ -1,17 +1,9 @@
 // scripts/convert-excel-to-json.ts
+import { Product } from "@/app/models";
 import * as fs from "fs";
 import * as XLSX from "xlsx";
 
-export type Product = {
-  id: number;
-  name: string;
-  brand?: string;
-  category?: string;
-  description?:string;
-  images: string[];
-  rating: number;
-  reviews: number;
-};
+
 export type EhvCable = {
   id: number;
   name: string;

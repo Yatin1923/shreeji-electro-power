@@ -1,3 +1,4 @@
+from bs4 import BeautifulSoup
 import requests
 import re
 from urllib.parse import urljoin, urlparse
@@ -42,13 +43,6 @@ class PolycabComprehensiveExtractor:
                 "Polycab_MV_SC_Cu_EPR_ICEA_NEMA_25kV_Datasheet.pdf": "https://cms.polycab.com/media/todk30ms/iamv00257_ds_01.pdf",
                 "Polycab_MV_IS_7098_II_3C_A2XWY_A2XFY_6_35_11kV_E_Datasheet.pdf": "https://cms.polycab.com/media/0xibfdde/ismv00208_ds_01.pdf",
                 "Polycab_MV_3C_Cu_EPR_ICEA_NEMA_5kV_Datasheet.pdf": "https://cms.polycab.com/media/qw2ewi0v/iamv00264_ds_01.pdf",
-                "Polycab_MV_IS_7098_II_3C_A2XWY_A2XFY_1_9_3_3kV_E_Datasheet.pdf": "https://cms.polycab.com/media/ctwcjagv/ismv00204_ds_01.pdf",
-                "Polycab_MV_Cu_BS_6622_12_7_22kV_Datasheet.pdf": "https://cms.polycab.com/media/05pnp42w/bsmv00147_ds_01.pdf",
-                "Polycab_MV_AL_BS_7835_19_33_36kV_Datasheet.pdf": "https://cms.polycab.com/media/rr1hpql2/bsmv00125_ds_01.pdf",
-                "Polycab_MV_1T_Cu_XLPE_AS_NZS_6_35_11kV_Datasheet.pdf": "https://cms.polycab.com/media/sqcdw33r/anmv00245_ds_01.pdf",
-                "Polycab_MV_SC_AL_XLPE_AS_NZS_3_8_6_6kV_Datasheet.pdf": "https://cms.polycab.com/media/lzjl5mbb/anmv00216_ds_01.pdf",
-                "Polycab_MV_1_9_3_3kV_E_Single_Core_AL_Armoured_Datasheet.pdf": "https://cms.polycab.com/media/0p2a34fx/ismv00187_ds_01.pdf",
-                "Polycab_MV_3_3_3_3kV_UE_Single_Core_AL_Armoured_Datasheet.pdf": "https://cms.polycab.com/media/wntb4o5h/ismv00188_ds_01.pdf"
             }
         }
     
@@ -73,6 +67,7 @@ class PolycabComprehensiveExtractor:
                 if response.status_code == 200 and len(response.text) > 100:
                     print(f"✅ Page {page}: Got {len(response.text)} characters")
                     
+                    # Extract href URLs from HTML response
                     href_patterns = self._get_url_patterns()
                     
                     page_urls = set()
@@ -120,9 +115,132 @@ class PolycabComprehensiveExtractor:
         clean_text = clean_text[:100]  # Limit length
         return f"{clean_text}{extension}"
     
+    def extract_image_url(self, html_content: str) -> str:
+        """Extract main product image URL from HTML with improved patterns"""
+        # More comprehensive image extraction patterns
+        image_patterns = [
+            # Primary product images
+            r'<img[^>]*class=["\'][^"\']*product[^"\']*["\'][^>]*src=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp|gif))["\']',
+            r'<img[^>]*src=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp|gif))["\'][^>]*class=["\'][^"\']*product[^"\']*["\']',
+            
+            # Main hero images
+            r'<img[^>]*class=["\'][^"\']*hero[^"\']*["\'][^>]*src=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp|gif))["\']',
+            
+            # Featured images
+            r'<img[^>]*class=["\'][^"\']*featured[^"\']*["\'][^>]*src=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp|gif))["\']',
+            
+            # Any cms.polycab.com image (broader pattern)
+            r'<img[^>]*src=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp|gif))["\']',
+            
+            # Background images in CSS
+            r'background-image:\s*url\(["\']?([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp|gif))["\']?\)',
+            
+            # Data attributes for lazy loading
+            r'data-src=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp|gif))["\']',
+            r'data-image=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp|gif))["\']',
+            
+            # JSON embedded in HTML
+            r'"image":\s*"([^"]*cms\.polycab\.com[^"]*\.(?:png|jpg|jpeg|webp|gif))"',
+            r'"imageUrl":\s*"([^"]*cms\.polycab\.com[^"]*\.(?:png|jpg|jpeg|webp|gif))"',
+            r'"productImage":\s*"([^"]*cms\.polycab\.com[^"]*\.(?:png|jpg|jpeg|webp|gif))"',
+            
+            # Specific CMS patterns found on Polycab
+            r'https://cms\.polycab\.com/media/[a-z0-9]{8}/[^"\']*\.(?:png|jpg|jpeg|webp|gif)',
+            
+            # Meta tags
+            r'<meta[^>]*property=["\']og:image["\'][^>]*content=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp|gif))["\']',
+            
+            # Picture elements
+            r'<source[^>]*srcset=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp|gif))["\']',
+        ]
+        
+        for pattern in image_patterns:
+            matches = re.findall(pattern, html_content, re.IGNORECASE)
+            for match in matches:
+                image_url = match.strip()
+                if image_url:
+                    # Make sure the URL is absolute
+                    if not image_url.startswith('http'):
+                        image_url = urljoin(self.base_url, image_url)
+                    
+                    # Verify it's a valid image URL
+                    if self.is_valid_image_url(image_url):
+                        print(f"🖼️  Found image URL: {image_url}")
+                        return image_url
+        
+        print("⚠️  No image URL found in HTML content")
+        return ""
+    
+    def is_valid_image_url(self, url: str) -> bool:
+        """Quick check if URL looks like a valid image"""
+        try:
+            parsed = urlparse(url)
+            if not parsed.netloc:
+                return False
+            
+            # Check file extension
+            path = parsed.path.lower()
+            valid_extensions = ['.png', '.jpg', '.jpeg', '.webp', '.gif']
+            
+            return any(path.endswith(ext) for ext in valid_extensions)
+        except:
+            return False
+    
+    def download_image(self, product_name: str, image_url: str) -> str:
+        """Download product image and return local path"""
+        try:
+            print(f"🔽 Attempting to download image for: {product_name}")
+            print(f"🔗 Image URL: {image_url}")
+            
+            # Clean filename
+            filename = self.clean_filename(product_name, '_image')
+            
+            # Get file extension from URL
+            parsed_url = urlparse(image_url)
+            file_ext = os.path.splitext(parsed_url.path)[1] or '.png'
+            filename += file_ext
+            
+            filepath = os.path.join(self.images_dir, filename)
+            
+            # Download with specific headers for images
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.9',
+                'Referer': 'https://polycab.com/',
+            }
+            
+            response = self.session.get(image_url, stream=True, timeout=30, headers=headers)
+            response.raise_for_status()
+            
+            # Check content type
+            content_type = response.headers.get('content-type', '').lower()
+            print(f"📄 Content-Type: {content_type}")
+            
+            if not any(img_type in content_type for img_type in ['image/', 'octet-stream']):
+                print(f"⚠️  Warning: Unexpected content type: {content_type}")
+            
+            with open(filepath, 'wb') as file:
+                for chunk in response.iter_content(chunk_size=8192):
+                    if chunk:
+                        file.write(chunk)
+            
+            file_size = os.path.getsize(filepath)
+            if file_size < 500:  # Less than 500 bytes, probably not valid
+                os.remove(filepath)
+                print(f"❌ Removed {filename} - too small ({file_size} bytes)")
+                return ""
+            
+            print(f"✅ Downloaded image: {filename} ({file_size/1024:.1f} KB)")
+            return filepath
+            
+        except Exception as e:
+            print(f"❌ Failed to download image for {product_name}: {e}")
+            return ""
+    
     def extract_product_details(self, product_url: str) -> Dict[str, str]:
         """Extract detailed product information from a product page"""
-        print(f"📄 Extracting: {product_url.split('/')[-1]}")
+        print(f"\n📄 Extracting: {product_url}")
         
         product_data = {
             'Cable_Name': '',
@@ -157,6 +275,7 @@ class PolycabComprehensiveExtractor:
             product_data['Full_Description'] = full_desc
             
             # Extract and download image
+            print(f"🔍 Looking for images for: {cable_name}")
             image_url = self.extract_image_url(html_content)
             if image_url:
                 image_path = self.download_image(cable_name, image_url)
@@ -165,8 +284,11 @@ class PolycabComprehensiveExtractor:
                     product_data['Image_Download_Status'] = 'Downloaded'
                 else:
                     product_data['Image_Download_Status'] = 'Failed'
+            else:
+                print("⚠️  No image URL found")
             
             # Extract and download brochure
+            print(f"📚 Looking for brochures for: {cable_name}")
             brochure_url = self.extract_brochure_url(html_content, cable_name)
             if brochure_url:
                 brochure_path = self.download_brochure(cable_name, brochure_url)
@@ -175,6 +297,8 @@ class PolycabComprehensiveExtractor:
                     product_data['Brochure_Download_Status'] = 'Downloaded'
                 else:
                     product_data['Brochure_Download_Status'] = 'Failed'
+            else:
+                print("⚠️  No brochure URL found")
             
             print(f"✅ Extracted: {cable_name[:50]}...")
             
@@ -184,26 +308,6 @@ class PolycabComprehensiveExtractor:
         
         return product_data
     
-    def extract_image_url(self, html_content: str) -> str:
-        """Extract main product image URL from HTML"""
-        image_patterns = [
-            r'<img[^>]*src=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp))["\'][^>]*product',
-            r'<img[^>]*src=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp))["\'][^>]*main',
-            r'<img[^>]*src=["\']([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp))["\']',
-            r'background-image:\s*url\(["\']?([^"\']*cms\.polycab\.com[^"\']*\.(?:png|jpg|jpeg|webp))["\']?\)',
-            r'"image":\s*"([^"]*cms\.polycab\.com[^"]*\.(?:png|jpg|jpeg|webp))"'
-        ]
-        
-        for pattern in image_patterns:
-            match = re.search(pattern, html_content, re.IGNORECASE)
-            if match:
-                image_url = match.group(1)
-                if not image_url.startswith('http'):
-                    image_url = urljoin(self.base_url, image_url)
-                return image_url
-        
-        return ""
-    
     def extract_brochure_url(self, html_content: str, product_name: str) -> str:
         """Extract brochure/datasheet URL from HTML"""
         # First try to find brochure in the HTML content
@@ -211,7 +315,10 @@ class PolycabComprehensiveExtractor:
             r'href=["\']([^"\']*\.pdf[^"\']*)["\'][^>]*(?:download|datasheet|brochure)',
             r'href=["\']([^"\']*cms\.polycab\.com[^"\']*\.pdf[^"\']*)["\']',
             r'"download":\s*"([^"]*\.pdf[^"]*)"',
-            r'href=["\']([^"\']*_ds_01\.pdf[^"\']*)["\']'
+            r'href=["\']([^"\']*_ds_01\.pdf[^"\']*)["\']',
+            r'data-href=["\']([^"\']*\.pdf[^"\']*)["\']',
+            # More specific patterns for Polycab
+            r'https://cms\.polycab\.com/media/[a-z0-9]{8}/[^"\']*\.pdf',
         ]
         
         for pattern in brochure_patterns:
@@ -220,6 +327,7 @@ class PolycabComprehensiveExtractor:
                 brochure_url = match.group(1)
                 if not brochure_url.startswith('http'):
                     brochure_url = urljoin(self.base_url, brochure_url)
+                print(f"📄 Found brochure URL: {brochure_url}")
                 return brochure_url
         
         # If not found in HTML, try known datasheets for this cable type
@@ -228,59 +336,34 @@ class PolycabComprehensiveExtractor:
             # Try to match by product name
             for filename, url in datasheets.items():
                 if any(word in product_name.upper() for word in filename.upper().split('_')[2:5]):  # Match key terms
+                    print(f"📄 Using known datasheet: {filename}")
                     return url
         
         return ""
     
-    def download_image(self, product_name: str, image_url: str) -> str:
-        """Download product image and return local path"""
-        try:
-            filename = self.clean_filename(product_name, '_image')
-            
-            # Get file extension from URL
-            parsed_url = urlparse(image_url)
-            file_ext = os.path.splitext(parsed_url.path)[1] or '.png'
-            filename += file_ext
-            
-            filepath = os.path.join(self.images_dir, filename)
-            
-            response = self.session.get(image_url, stream=True, timeout=30)
-            response.raise_for_status()
-            
-            with open(filepath, 'wb') as file:
-                for chunk in response.iter_content(chunk_size=8192):
-                    if chunk:
-                        file.write(chunk)
-            
-            file_size = os.path.getsize(filepath)
-            if file_size < 1024:  # Less than 1KB, probably not valid
-                os.remove(filepath)
-                return ""
-            
-            print(f"🖼️  Downloaded image: {filename} ({file_size/1024:.1f} KB)")
-            return filepath
-            
-        except Exception as e:
-            print(f"❌ Failed to download image for {product_name}: {e}")
-            return ""
-    
     def download_brochure(self, product_name: str, brochure_url: str) -> str:
         """Download product brochure/datasheet and return local path"""
         try:
+            print(f"🔽 Attempting to download brochure for: {product_name}")
+            print(f"🔗 Brochure URL: {brochure_url}")
+            
             filename = self.clean_filename(product_name, '_datasheet.pdf')
             filepath = os.path.join(self.brochures_dir, filename)
             
             response = self.session.get(brochure_url, stream=True, timeout=30)
             
             if response.status_code == 404:
+                print("❌ Brochure not found (404)")
                 return ""
             
             response.raise_for_status()
             
             # Check if it's actually a PDF
             content_type = response.headers.get('content-type', '').lower()
+            print(f"📄 Content-Type: {content_type}")
+            
             if 'pdf' not in content_type and 'octet-stream' not in content_type:
-                return ""
+                print(f"⚠️  Warning: Unexpected content type: {content_type}")
             
             with open(filepath, 'wb') as file:
                 for chunk in response.iter_content(chunk_size=8192):
@@ -290,9 +373,10 @@ class PolycabComprehensiveExtractor:
             file_size = os.path.getsize(filepath)
             if file_size < 1024:  # Less than 1KB, probably not valid
                 os.remove(filepath)
+                print(f"❌ Removed {filename} - too small ({file_size} bytes)")
                 return ""
             
-            print(f"📄 Downloaded brochure: {filename} ({file_size/1024/1024:.2f} MB)")
+            print(f"✅ Downloaded brochure: {filename} ({file_size/1024/1024:.2f} MB)")
             return filepath
             
         except Exception as e:
@@ -324,26 +408,31 @@ class PolycabComprehensiveExtractor:
         
         return title.strip() if title_match else 'Unknown Cable'
     
+    from bs4 import BeautifulSoup
+    import re
+
     def extract_standards(self, html_content: str) -> str:
-        """Extract standards from HTML"""
+        """Extract standards from HTML using HTML parsing"""
+        soup = BeautifulSoup(html_content, 'html.parser')
         standards = []
-        standard_patterns = [
-            r'IEC\s+\d+[-/]\d+(?:-\d+)?',
-            r'IS\s+\d+[-/]\d+(?:-\d+)?',
-            r'BS\s+\d+[-/]?\d*',
-            r'UL\s+\d+',
-            r'AS[/-]NZS\s+[\d./]+',
-            r'ASTM\s+\w+\d+',
-            r'ICEA\s+\S+',
-            r'NEMA\s+\S+'
-        ]
         
-        for pattern in standard_patterns:
-            matches = re.findall(pattern, html_content, re.IGNORECASE)
-            standards.extend([match.strip() for match in matches])
+        # Method 1: Look for "Standards" section specifically
+        feature_divs = soup.find_all('div', class_='feature')
         
-        unique_standards = list(dict.fromkeys(standards))[:5]
-        return ', '.join(unique_standards)
+        for feature in feature_divs:
+            title = feature.find('h3', class_='feature__title')
+            if title and 'standards' in title.get_text().lower():
+                body = feature.find('p', class_='feature__body')
+                if body:
+                    standard_text = body.get_text().strip()
+                    if standard_text:
+                        # Split by common separators and clean
+                        parts = re.split(r'[,;]', standard_text)
+                        standards.extend([part.strip() for part in parts if part.strip()])
+        
+        print(f"🔍 Found standards section, extracted: {standards}")
+        return ', '.join(standards[:5])  # Limit to 5 standards
+
     
     def extract_certifications(self, html_content: str) -> str:
         """Extract certifications from HTML"""
@@ -368,62 +457,75 @@ class PolycabComprehensiveExtractor:
         return ', '.join(unique_certs) if unique_certs else 'Various (CE, BIS, CPRI)'
     
     def extract_features(self, html_content: str) -> str:
-        """Extract key features from HTML"""
+        """Extract key features from HTML using HTML parsing"""
+        soup = BeautifulSoup(html_content, 'html.parser')
         features = []
-        feature_map = {
-            'flame retardant': 'Flame Retardant',
-            'uv resistant': 'UV Resistant',
-            'sunlight resistant': 'Sunlight Resistant',
-            'oil resistant': 'Oil Resistant',
-            'moisture resistant': 'Moisture Resistant',
-            'high life': 'High Life',
-            'long life': 'Long Life',
-            'weather resistant': 'Weather Resistant',
-            'termite resistant': 'Termite Resistant',
-            'chemical resistant': 'Chemical Resistant',
-            'corona resistant': 'Corona Resistant',
-            'treeing resistant': 'Treeing Resistant',
-            'low smoke': 'Low Smoke',
-            'zero halogen': 'Zero Halogen',
-            'fire resistant': 'Fire Resistant'
-        }
         
-        content_lower = html_content.lower()
-        for keyword, display_name in feature_map.items():
-            if keyword in content_lower:
-                features.append(display_name)
+        # Method 1: Look for structured highlights section
+        highlight_elements = soup.find_all('p', class_='prod__highlight')
         
-        return ', '.join(features[:6])
+        for element in highlight_elements:
+            feature_text = element.get_text().strip()
+            if feature_text:
+                # Clean and standardize the text
+                cleaned_feature = self._clean_feature_text(feature_text)
+                if cleaned_feature:
+                    features.append(cleaned_feature)
+        
+        # Remove duplicates while preserving order
+        unique_features = list(dict.fromkeys(features))
+        print(f"🔍 Extracted features: {unique_features}")
+        
+        return ', '.join(unique_features)
+
+    def _clean_feature_text(self, text: str) -> str:
+        """Clean and standardize feature text"""
+        # Remove trailing periods and extra whitespace
+        cleaned = text.strip().rstrip('.')
+        
+        # Capitalize first letter if needed
+        if cleaned and cleaned[0].islower():
+            cleaned = cleaned[0].upper() + cleaned[1:]
+        
+        return cleaned
+
     
+
     def extract_descriptions(self, html_content: str) -> tuple:
-        """Extract short and full descriptions"""
-        desc_patterns = [
-            r'<p[^>]*>([^<]*POLYCAB[^<]*suitable[^<]*cable[^<]*)</p>',
-            r'<p[^>]*>([^<]*cable[^<]*suitable[^<]*network[^<]*)</p>',
-            r'<p[^>]*>([^<]*insulated[^<]*conductor[^<]*cable[^<]*)</p>',
-            r'<p[^>]*>([^<]*cable[^<]*kV[^<]*)</p>',
-            r'<p[^>]*>([^<]*conductor[^<]*cable[^<]*applications[^<]*)</p>'
-        ]
+        """Extract short and full descriptions using HTML parsing"""
+        soup = BeautifulSoup(html_content, 'html.parser')
         
-        descriptions = []
-        for pattern in desc_patterns:
-            matches = re.findall(pattern, html_content, re.IGNORECASE | re.DOTALL)
-            for match in matches:
-                clean_desc = re.sub(r'<[^>]+>', '', match).strip()
-                clean_desc = re.sub(r'\s+', ' ', clean_desc)
-                if 30 < len(clean_desc) < 300:
-                    descriptions.append(clean_desc)
+        short_description = ''
+        full_description = ''
         
-        unique_descriptions = []
-        for desc in descriptions:
-            if desc not in unique_descriptions:
-                unique_descriptions.append(desc)
+        # Extract short description
+        short_desc_elem = soup.find('p', class_='prod__short')
+        if not short_desc_elem:
+            # Fallback: look for other possible short description classes
+            short_desc_elem = soup.find('p', class_=lambda x: x and 'short' in x)
         
-        short_description = unique_descriptions[0] if unique_descriptions else ''
-        full_description = ' '.join(unique_descriptions[:3])
+        if short_desc_elem:
+            short_description = short_desc_elem.get_text().strip()
+            # Clean up extra whitespace
+            short_description = ' '.join(short_description.split())
+        
+        # Extract full/long description  
+        long_desc_elem = soup.find('p', class_='prod__longdesc')
+        if not long_desc_elem:
+            # Fallback: look for other possible long description classes
+            long_desc_elem = soup.find('p', class_=lambda x: x and ('long' in x or 'desc' in x))
+        
+        if long_desc_elem:
+            full_description = long_desc_elem.get_text().strip()
+            # Clean up extra whitespace
+            full_description = ' '.join(full_description.split())
+        
+        # If no full description found, use short description as fallback
+        if not full_description and short_description:
+            full_description = short_description
         
         return short_description, full_description
-    
+
     def save_to_excel(self, products_data: List[Dict[str, str]], filename: str = None):
         """Save data to Excel file with enhanced formatting"""
         if filename is None:
@@ -485,19 +587,29 @@ class PolycabComprehensiveExtractor:
                 print("❌ No product URLs found!")
                 return
             
+            # Show discovered URLs
+            print("\n📋 Discovered URLs:")
+            for i, url in enumerate(product_urls[:5], 1):  # Show first 5
+                print(f"  {i}. {url}")
+            
+            if len(product_urls) > 5:
+                print(f"  ... and {len(product_urls) - 5} more")
+            
             # 2. Extract comprehensive product data
             all_products_data = []
             
             for i, url in enumerate(product_urls, 1):
-                print(f"\n[{i}/{len(product_urls)}] Processing...")
+                print(f"\n{'='*60}")
+                print(f"[{i}/{len(product_urls)}] Processing Product {i}")
+                print(f"{'='*60}")
                 product_data = self.extract_product_details(url)
                 all_products_data.append(product_data)
                 
                 # Be respectful to the server
                 time.sleep(3)
                 
-                # Save intermediate results every 10 products
-                if i % 10 == 0:
+                # Save intermediate results every 5 products
+                if i % 5 == 0:
                     temp_filename = f'polycab_{self.cable_type_slug.replace("-", "_")}_partial_{i}.json'
                     temp_path = os.path.join(self.base_dir, temp_filename)
                     with open(temp_path, 'w', encoding='utf-8') as f:
@@ -588,7 +700,7 @@ def main():
     print(f"\n🎯 Selected: {display_name} ({cable_slug})")
     print("\n📋 This will extract:")
     print("  ✅ Product details (name, standards, features, etc.)")
-    print("  🖼️  Product images")
+    print("  🖼️  Product images (with improved detection)")
     print("  📄 Product brochures/datasheets")
     print("  💾 Save everything to Excel with file paths")
     
