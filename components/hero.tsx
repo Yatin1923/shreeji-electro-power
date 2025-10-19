@@ -28,7 +28,8 @@ export function Hero() {
   return (
     <section className="bg-slate-50 ">
       <Box className="container mx-auto min-h-[95vh] flex items-center px-4 py-10">
-        <div className="xl:flex justify-center items-center h-full">
+      <div className="flex justify-center items-center pb-30 xl:pt-0 xl:pb-0 h-full">
+
           {/* Left copy */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }} className="flex flex-col justify-center gap-5">
             <Typography

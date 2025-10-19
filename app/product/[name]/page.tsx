@@ -151,20 +151,20 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                     {/* Left: Product Image */}
                     <div className="space-y-6">
                         <div className="bg-white border border-gray-200 rounded-lg p-8 flex items-center justify-center min-h-[400px]">
-                            {/* <Image
+                            <Image
                                 src={getImageUrl(product.Image_Path)}
                                 alt={product.Cable_Name}
                                 width={400}
                                 height={400}
-                                className="max-w-full h-auto object-contain"
+                                className="lg:hidden max-w-full h-auto object-contain"
                                 priority
-                            /> */}
+                            />
                              <MagnifyingImage
                                 src={getImageUrl(product.Image_Path)}
                                 alt={product.Cable_Name}
                                 width={400}
                                 height={400}
-                                className="max-w-full h-auto object-contain"
+                                className=" hidden lg:block max-w-full h-auto object-contain"
                             />
                         </div>
 

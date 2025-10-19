@@ -15,8 +15,14 @@ export default function Page() {
       <main className="bg-white">
         <Navbar active="Home" />
         <Hero />
-        <Clients />
-        <Products />
+        <div className="xl:hidden">
+          <Products />
+          <Clients />
+        </div>
+        <div className="hidden xl:block">
+          <Clients />
+          <Products />
+        </div>
         <WhyChooseUs />
         <Blogs />
         <Testimonials />
