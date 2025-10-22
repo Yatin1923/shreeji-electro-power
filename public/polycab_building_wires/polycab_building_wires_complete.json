@@ -1,6 +1,6 @@
 [
   {
-    "Cable_Name": "Polycab HFFR-01Z-R/03XZ-R SC 1100V AC IS 17048",
+    "Name": "Polycab HFFR-01Z-R/03XZ-R SC 1100V AC IS 17048",
     "Product_Type": "Building Wires",
     "Standards": "IS 17048",
     "Certifications": "CE, BIS, FQC",
@@ -14,7 +14,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab HFFR-04XZ-R SC 1100V AC IS 17048",
+    "Name": "Polycab HFFR-04XZ-R SC 1100V AC IS 17048",
     "Product_Type": "Building Wires",
     "Standards": "IS 17048",
     "Certifications": "CE, BIS, FQC",
@@ -28,7 +28,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab ETIRA FR 1100V AC IS 694",
+    "Name": "Polycab ETIRA FR 1100V AC IS 694",
     "Product_Type": "Building Wires",
     "Standards": "IS 694",
     "Certifications": "CE, BIS, FQC",
@@ -42,7 +42,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab HR-FR-LSH-LF Green Wire 1100V AC IS 694",
+    "Name": "Polycab HR-FR-LSH-LF Green Wire 1100V AC IS 694",
     "Product_Type": "Building Wires",
     "Standards": "IS 694",
     "Certifications": "CE, BIS, FQC",
@@ -56,7 +56,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab HFFR-04XZ-K 1100V AC IS 17048",
+    "Name": "Polycab HFFR-04XZ-K 1100V AC IS 17048",
     "Product_Type": "Building Wires",
     "Standards": "IS 17048",
     "Certifications": "CE, BIS, FQC",
@@ -70,7 +70,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab HFFR-01Z-K/03XZ-K 1100V AC IS 17048",
+    "Name": "Polycab HFFR-01Z-K/03XZ-K 1100V AC IS 17048",
     "Product_Type": "Building Wires",
     "Standards": "IS 17048",
     "Certifications": "CE, BIS, FQC",
@@ -84,12 +84,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab ETIRA FRLSH 1100V AC IS 694",
+    "Name": "Polycab ETIRA FRLSH 1100V AC IS 694",
     "Product_Type": "Building Wires",
     "Standards": "IS 694",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Flexible, Flame retardant, Moisture resistant, Abrasion resistance, Resistant to acid and alkaly",
-    "Short_Description": "Annealed flexible bare copper conductor , PVC FRLSH insulated 1100 V Cable",
+    "Short_Description": "Annealed flexible bare copper conductor , PVC FRLSH insulated 1100 V Product",
     "Full_Description": "ETIRA FR LSH wire is suitable for use where high flexibility is of prime importance. This is also suitable for indoor installation in industries, house hold appliances and building electrification.",
     "Product_URL": "https://polycab.com/polycab-etira-frlsh-1100v-ac-is-694/pt-13204/p-55660",
     "Image_Path": "polycab_building_wires/images/Polycab_ETIRA_FRLSH_1100V_AC_IS_694_image.png",
@@ -98,7 +98,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab FR-LF 1100V AC IS 694",
+    "Name": "Polycab FR-LF 1100V AC IS 694",
     "Product_Type": "Building Wires",
     "Standards": "IS 694",
     "Certifications": "CE, BIS, FQC",
@@ -112,7 +112,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab FR-LSH 1100V AC IS 694",
+    "Name": "Polycab FR-LSH 1100V AC IS 694",
     "Product_Type": "Building Wires",
     "Standards": "IS 694",
     "Certifications": "CE, BIS, FQC",

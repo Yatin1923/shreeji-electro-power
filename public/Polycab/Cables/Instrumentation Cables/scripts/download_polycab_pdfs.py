@@ -20,7 +20,7 @@ def download_pdfs():
     if not os.path.exists("polycab_cables"):
         os.makedirs("polycab_cables")
     
-    print("🚀 Starting Polycab Cable Brochures Download...\n")
+    print("🚀 Starting Polycab Product Brochures Download...\n")
     
     for filename, url in pdfs.items():
         try:

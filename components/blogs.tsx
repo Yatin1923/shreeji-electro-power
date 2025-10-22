@@ -27,7 +27,7 @@ const blogs: Blog[] = [
   },
   {
     id: 2,
-    title: "5 Hacks To Use Your Pedestal Fan Efficiently",
+    title: "5 Hacks To Use Your Pedestal Product Efficiently",
     date: "June 20, 2025",
     readTime: "4 min read",
     image: "/assets/blogs/blog2.png",

@@ -25,7 +25,7 @@ def download_images():
     if not os.path.exists("polycab_images"):
         os.makedirs("polycab_images")
     
-    print("🖼️  Starting Polycab Cable Images Download...\n")
+    print("🖼️  Starting Polycab Product Images Download...\n")
     print(f"📊 Total images to download: {len(product_images)}\n")
     
     for filename, url in product_images.items():

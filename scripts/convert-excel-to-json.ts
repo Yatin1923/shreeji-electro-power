@@ -46,7 +46,7 @@ function main() {
   }));
   const ehvCables: EhvCable[] = rows.map((row, i) => ({
     id: i + 1,
-    name: row.Cable_Name || '',
+    name: row.Name || '',
     brand: 'Polycab', 
     category: 'EHV Power Cables', 
     productType: row.Product_Type || '',

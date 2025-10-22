@@ -1,6 +1,6 @@
 [
   {
-    "Cable_Name": "Polycab HFFR-01Z-R/03XZ-R SC 1100V AC IS 17048",
+    "Name": "Polycab HFFR-01Z-R/03XZ-R SC 1100V AC IS 17048",
     "Product_Type": "Building Wires",
     "Standards": "IS 17048",
     "Certifications": "CE, BIS, FQC",
@@ -14,7 +14,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab HFFR-04XZ-R SC 1100V AC IS 17048",
+    "Name": "Polycab HFFR-04XZ-R SC 1100V AC IS 17048",
     "Product_Type": "Building Wires",
     "Standards": "IS 17048",
     "Certifications": "CE, BIS, FQC",
@@ -28,7 +28,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab ETIRA FR 1100V AC IS 694",
+    "Name": "Polycab ETIRA FR 1100V AC IS 694",
     "Product_Type": "Building Wires",
     "Standards": "IS 694",
     "Certifications": "CE, BIS, FQC",
@@ -42,7 +42,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab HR-FR-LSH-LF Green Wire 1100V AC IS 694",
+    "Name": "Polycab HR-FR-LSH-LF Green Wire 1100V AC IS 694",
     "Product_Type": "Building Wires",
     "Standards": "IS 694",
     "Certifications": "CE, BIS, FQC",
@@ -56,7 +56,7 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab HFFR-04XZ-K 1100V AC IS 17048",
+    "Name": "Polycab HFFR-04XZ-K 1100V AC IS 17048",
     "Product_Type": "Building Wires",
     "Standards": "IS 17048",
     "Certifications": "CE, BIS, FQC",

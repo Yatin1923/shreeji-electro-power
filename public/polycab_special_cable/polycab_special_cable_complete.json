@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab NMB Cable UL 719 600V",
-    "Product_Type": "Special Cable",
+    "Name": "Polycab NMB Product UL 719 600V",
+    "Product_Type": "Special Product",
     "Standards": "UL 719",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Sunlight resistant, Moisture resistant",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab UFB Cable UL 493 600V",
-    "Product_Type": "Special Cable",
+    "Name": "Polycab UFB Product UL 493 600V",
+    "Product_Type": "Special Product",
     "Standards": "UL 493",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Sunlight resistant, Moisture resistant",

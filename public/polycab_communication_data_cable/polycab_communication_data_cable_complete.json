@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab RS 485 300/500V AC Armoured Cable",
-    "Product_Type": "Communication & Data Cable",
+    "Name": "Polycab RS 485 300/500V AC Armoured Product",
+    "Product_Type": "Communication & Data Product",
     "Standards": "RS 485",
     "Certifications": "CE",
     "Key_Features": "Low capacitance, Interference free performance, High speed data transmission, Long service life",
@@ -14,12 +14,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab CCTV Cable",
-    "Product_Type": "Communication & Data Cable",
+    "Name": "Polycab CCTV Product",
+    "Product_Type": "Communication & Data Product",
     "Standards": "Polycab standard",
     "Certifications": "CE, FQC",
     "Key_Features": "Clear video signal transmission, Low EMI, Better power transmission, Low capacitance, Low signal loss",
-    "Short_Description": "Co-axial(RG 59F) +3 Core copper ,HDPE Insulated, assembled, flooded with jelly,PVC Sheathed Cable",
+    "Short_Description": "Co-axial(RG 59F) +3 Core copper ,HDPE Insulated, assembled, flooded with jelly,PVC Sheathed Product",
     "Full_Description": "Polycab CCTV cable is designed to use in close circuit camera system for safety and security management in industries, Malls, hospitals, shops, Roads and offices",
     "Product_URL": "https://polycab.com/polycab-cctv-cable/pt-13196/p-54804",
     "Image_Path": "polycab_communication_data_cable/images/Polycab_CCTV_Cable_image.png",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Speaker Cable",
-    "Product_Type": "Communication & Data Cable",
+    "Name": "Polycab Speaker Product",
+    "Product_Type": "Communication & Data Product",
     "Standards": "Polycab standard",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High bass signal transmission, Low loss, Polarity reversal feature, Extremely durable",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RS 485 300/500V AC Unarmoured Cable",
-    "Product_Type": "Communication & Data Cable",
+    "Name": "Polycab RS 485 300/500V AC Unarmoured Product",
+    "Product_Type": "Communication & Data Product",
     "Standards": "RS 485",
     "Certifications": "CE",
     "Key_Features": "Low capacitance, Interference free performance, High speed data transmission, Long service life",

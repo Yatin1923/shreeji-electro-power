@@ -2,7 +2,9 @@
 // Place your JSON array here (the data you provided)
 
 // data/products.ts
-import productsData from './products.json';
-import { Product } from '../types/product';
+import cablesData from './cables.json';
+import fansData from './fans.json';
+import { Product } from '@/types/common';
 
-export const products: Product[] = productsData;
+export const cables: Product[] = cablesData;
+export const fans: Product[] = fansData;

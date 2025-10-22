@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 PVC-Twist",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 PVC-Twist",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, High Life, UV, Ozone resistance, Hydrolysis resistance",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab AL Solar UL 4703 2000V AC",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab AL Solar UL 4703 2000V AC",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "UL 4703",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Oil resistant, UV & Ozone resistant, Moisture resistant",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar H1Z2Z2-K BSEN 50618-Twin",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar H1Z2Z2-K BSEN 50618-Twin",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "BSEN 50618",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, E-beam cross linked, High temperature resistance",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 XLPO-Twist",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 XLPO-Twist",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, E-beam cross linked, High temperature resistance",
@@ -56,8 +56,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 XLPO-Twist AT",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 XLPO-Twist AT",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, E-beam cross linked, High temperature resistance, Termite resistance",
@@ -70,8 +70,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 PVC-Twist AT",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 PVC-Twist AT",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, High Life, UV, Ozone resistance, Hydrolysis resistance, Termite resistance",
@@ -84,8 +84,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 XLPO",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 XLPO",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, E-beam cross linked, High temperature resistance",
@@ -98,8 +98,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Cu Solar UL 4703 2000V AC",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Cu Solar UL 4703 2000V AC",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "UL 4703",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Oil resistant, UV & Ozone resistant, Moisture resistant",
@@ -112,8 +112,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 XLPO-AT",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 XLPO-AT",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, E-beam cross linked, High temperature resistance, Termite resistance",
@@ -126,8 +126,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar H1Z2Z2-K BSEN 50618-AT",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar H1Z2Z2-K BSEN 50618-AT",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "BSEN 50618",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, E-beam cross linked, High temperature resistance, Termite resistance",
@@ -140,8 +140,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 RFH",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 RFH",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, High Life, UV, Ozone resistance, Hydrolysis resistance, Weather proof",
@@ -154,8 +154,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar H1Z2Z2-K BSEN 50618",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar H1Z2Z2-K BSEN 50618",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "BSEN 50618",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, E-beam cross linked, High temperature resistance",
@@ -168,8 +168,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 PVC-AT",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 PVC-AT",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, High Life, UV, Ozone resistance, Hydrolysis resistance, Termite resistance",
@@ -182,8 +182,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 PVC",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 PVC",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, High Life, UV, Ozone resistance, Hydrolysis resistance",
@@ -196,8 +196,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar H1Z2Z2-K BSEN 50618-Twin AT",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar H1Z2Z2-K BSEN 50618-Twin AT",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "BSEN 50618",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, E-beam cross linked, High temperature resistance, Termite resistance",
@@ -210,8 +210,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 RFH-AT",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 RFH-AT",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, Weather proof, Termite resistant",
@@ -224,8 +224,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 RFH-Twist",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 RFH-Twist",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, Weather proof",
@@ -238,8 +238,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Solar AS NZS 5000 RFH-Twist AT",
-    "Product_Type": "Renewable Energy Cable",
+    "Name": "Polycab Solar AS NZS 5000 RFH-Twist AT",
+    "Product_Type": "Renewable Energy Product",
     "Standards": "AS NZS 5000",
     "Certifications": "CE",
     "Key_Features": "Halogen Free, High Life, UV, Ozone resistance, Hydrolysis resistance, Weather proof, Termite resistant",

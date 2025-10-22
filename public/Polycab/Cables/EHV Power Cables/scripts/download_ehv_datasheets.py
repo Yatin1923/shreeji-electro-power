@@ -11,7 +11,7 @@ def clean_filename(filename):
     cleaned = re.sub(r'\s+', '_', cleaned)
     return cleaned.strip()
 
-# EHV Cable product page URLs for dynamic extraction
+# EHV Product product page URLs for dynamic extraction
 ehv_product_urls = {
     "Polycab_EHV_Cu_Al_COR_110kV": "https://polycab.com/polycab-ehv-cu-al-cor-110kv/pt-13207/p-55353",
     "Polycab_EHV_Cu_CS+PAL_110kV": "https://polycab.com/polycab-ehv-cu-cspluspal-110kv/pt-13207/p-55337",
@@ -45,7 +45,7 @@ ehv_product_urls = {
     "Polycab_EHV_AL_PB_220kV": "https://polycab.com/polycab-ehv-al-pb-220kv/pt-13207/p-55395"
 }
 
-# Corrected/Confirmed EHV Cable Data Sheet URLs (extracted from actual product pages)
+# Corrected/Confirmed EHV Product Data Sheet URLs (extracted from actual product pages)
 confirmed_ehv_datasheets = {
     "Polycab_EHV_Cu_Al_COR_110kV_Image.pdf": "https://cms.polycab.com/media/mbol5dj1/iceh00329_img_01.pdf",
     "Polycab_EHV_Cu_Al_COR_110kV_DataSheet.pdf": "https://cms.polycab.com/media/b3knrekt/iceh00329_ds_01.pdf",
@@ -99,7 +99,7 @@ def download_confirmed_datasheets():
     if not os.path.exists("polycab_ehv_datasheets_confirmed"):
         os.makedirs("polycab_ehv_datasheets_confirmed")
     
-    print("📄 Starting Polycab EHV Power Cable Data Sheets Download (Confirmed URLs)...\n")
+    print("📄 Starting Polycab EHV Power Product Data Sheets Download (Confirmed URLs)...\n")
     print(f"📊 Total confirmed documents to download: {len(confirmed_ehv_datasheets)}\n")
     
     success_count = 0
@@ -159,7 +159,7 @@ def dynamic_download_all():
     if not os.path.exists("polycab_ehv_datasheets_dynamic"):
         os.makedirs("polycab_ehv_datasheets_dynamic")
     
-    print("🔄 Dynamic EHV Power Cable Data Sheets Download...\n")
+    print("🔄 Dynamic EHV Power Product Data Sheets Download...\n")
     print(f"📊 Total products to check: {len(ehv_product_urls)}\n")
     
     all_pdfs = {}

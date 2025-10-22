@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab RR-P MC 1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab RR-P MC 1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine Instrumentation Pair 250V ISOS IEC 60092-376",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine Instrumentation Pair 250V ISOS IEC 60092-376",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-376",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07BB-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H07BB-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05RR-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H05RR-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Oil Resistant, Chemical resistant",
@@ -56,8 +56,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H03S-K BSEN 50525-2-41 SC 300/300V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H03S-K BSEN 50525-2-41 SC 300/300V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -70,8 +70,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR (Reinforced)1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab RR (Reinforced)1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -84,8 +84,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab SiR 1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab SiR 1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -98,8 +98,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine IEC 60092-353 0.6/1.0kV FS Uarmoured Cable",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine IEC 60092-353 0.6/1.0kV FS Uarmoured Product",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-353",
     "Certifications": "CE, FQC",
     "Key_Features": "Fire Resistant, Halogen Free, Reduced Flame Propagation, Flame retardant, Low smoke emission",
@@ -112,8 +112,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07RN-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H07RN-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Highly Flexible, Oil Resistance, High insulation resistance, Chemical resistant",
@@ -126,8 +126,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR-C MC 1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab RR-C MC 1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -140,8 +140,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05BB-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H05BB-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -154,8 +154,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Hydro Type TC-ER/ITC-ER CIC-TC(Type SP-OS)",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab Hydro Type TC-ER/ITC-ER CIC-TC(Type SP-OS)",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "UL 2250",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Sunlight resistance, Moisture resistant, Chemical resistant, Flame retardant",
@@ -168,8 +168,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR-E 1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab RR-E 1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -182,8 +182,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07BQ-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H07BQ-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -196,8 +196,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine IEC 60092-353 0.6/1.0kV FS Armoured Cable",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine IEC 60092-353 0.6/1.0kV FS Armoured Product",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-353",
     "Certifications": "CE, FQC",
     "Key_Features": "Fire Resistant, Halogen Free, Reduced Flame Propagation, Flame retardant, Low smoke emission",
@@ -210,8 +210,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine IEC 60092-353 1.8/3.0kV VFD Cable",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine IEC 60092-353 1.8/3.0kV VFD Product",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-353",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -224,8 +224,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05BN4-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H05BN4-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -238,8 +238,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine Instrumentation Pair 250V OS IEC 60092-376",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine Instrumentation Pair 250V OS IEC 60092-376",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-376",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -252,8 +252,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine IEC 60092-353 0.6/1.0kV Armoured Cable",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine IEC 60092-353 0.6/1.0kV Armoured Product",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-353",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -266,8 +266,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab SiR-G 1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab SiR-G 1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -280,8 +280,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05GG-F/H05GGH2-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H05GG-F/H05GGH2-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -294,8 +294,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Hydro Type TC-ER/ITC-ER CIC-TC(Type P-OS)",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab Hydro Type TC-ER/ITC-ER CIC-TC(Type P-OS)",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "UL 2250",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Sunlight resistance, Moisture resistant, Chemical resistant, Flame retardant",
@@ -308,8 +308,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine IEC 60092-353 0.6/1.0kV Uarmoured Cable",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine IEC 60092-353 0.6/1.0kV Uarmoured Product",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-353",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -322,8 +322,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab SiR-SC 1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab SiR-SC 1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -336,8 +336,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine Instrumentation Pair 250V FS OS IEC 60092-376",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine Instrumentation Pair 250V FS OS IEC 60092-376",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-376",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -350,8 +350,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine Instrumentation Pair 250V Br Scr IEC 60092-376",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine Instrumentation Pair 250V Br Scr IEC 60092-376",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-376",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -364,8 +364,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Hydro Type LSXLPO MC IEEE 1580 0.6/1kV OR 2kV",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab Hydro Type LSXLPO MC IEEE 1580 0.6/1kV OR 2kV",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEEE 1580",
     "Certifications": "CE",
     "Key_Features": "Oil resistant, Low smoke Zero halogen, Chemical resistant, Long service life, Flame retardant",
@@ -378,8 +378,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine IEC 60092-353 1.8/3.0kV Armoured Cable",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine IEC 60092-353 1.8/3.0kV Armoured Product",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-353",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -392,8 +392,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05BQ-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H05BQ-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -406,8 +406,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07BN4-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H07BN4-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -420,8 +420,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05SS-K BSEN 50525-2-41 SC 300/500V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H05SS-K BSEN 50525-2-41 SC 300/500V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -434,8 +434,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine IEC 60092-353 0.6/1.0kV VFD Cable",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine IEC 60092-353 0.6/1.0kV VFD Product",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-353",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -448,8 +448,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05SJ-U/H05SJ-K BSEN 50525-2-41 SC 300/500V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H05SJ-U/H05SJ-K BSEN 50525-2-41 SC 300/500V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -462,8 +462,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine Instrumentation Pair 250V FS Br ISOS IEC 60092-376",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine Instrumentation Pair 250V FS Br ISOS IEC 60092-376",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-376",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -476,8 +476,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine Instrumentation Pair 250V Br ISOS IEC 60092-376",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine Instrumentation Pair 250V Br ISOS IEC 60092-376",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-376",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -490,8 +490,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Hydro Type LSXLPO SC IEEE 1580 0.6/1kV OR 2kV",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab Hydro Type LSXLPO SC IEEE 1580 0.6/1kV OR 2kV",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEEE 1580",
     "Certifications": "CE",
     "Key_Features": "Oil resistant, Low smoke Zero halogen, Chemical resistant, Long service life, Flame retardant",
@@ -504,8 +504,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR-P 1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab RR-P 1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -518,8 +518,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05S-U/H05S-K BSEN 50525-2-41 SC 300/500V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H05S-U/H05S-K BSEN 50525-2-41 SC 300/500V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -532,8 +532,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab SiR-S 1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab SiR-S 1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -546,8 +546,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine IEC 60092-354 6/10kV",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine IEC 60092-354 6/10kV",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-354",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -560,8 +560,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05RN-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab H05RN-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Highly Flexible, Oil Resistance, High insulation resistance, Chemical resistant",
@@ -574,8 +574,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine IEC 60092-354 8.7/15kV",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine IEC 60092-354 8.7/15kV",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-354",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -588,8 +588,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine Instrumentation Pair 250V FS Br Scr IEC 60092-376",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine Instrumentation Pair 250V FS Br Scr IEC 60092-376",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-376",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -602,8 +602,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR-E MC 1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab RR-E MC 1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -616,8 +616,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine IEC 60092-354 12/20kV",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine IEC 60092-354 12/20kV",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-354",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",
@@ -630,8 +630,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Hydro Type LSXLPO 0.6/1kV OR 2kV",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab Hydro Type LSXLPO 0.6/1kV OR 2kV",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEEE 1580",
     "Certifications": "CE",
     "Key_Features": "Oil resistant, Low smoke Zero halogen, Chemical resistant, Long service life, Flame retardant",
@@ -644,8 +644,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR-C 1100V AC IS 9968-1",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polycab RR-C 1100V AC IS 9968-1",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -658,8 +658,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polymarine Instrumentation Pair 250V FS ISOS IEC 60092-376",
-    "Product_Type": "Marine & Offshore/Onshore Cable",
+    "Name": "Polymarine Instrumentation Pair 250V FS ISOS IEC 60092-376",
+    "Product_Type": "Marine & Offshore/Onshore Product",
     "Standards": "IEC 60092-376",
     "Certifications": "CE, FQC",
     "Key_Features": "Halogen Free, Reduced flame Propagation, Flame retardant, Low smoke emission",

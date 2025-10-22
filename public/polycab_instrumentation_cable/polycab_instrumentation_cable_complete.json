@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab BMS 500 MC-A7",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab BMS 500 MC-A7",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, Low smoke emission/Density, EMC compatible, Heat resistant, Ozone resistant",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab BMS 300 MC-C4",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab BMS 300 MC-C4",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, Low smoke emission/Density, EMC compatible, Heat resistant, Ozone resistant",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Instrumentation 500 T(ST)",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab Instrumentation 500 T(ST)",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High shielding efficiency, Low capacitance, EMC Compactable, Ease termination",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Instrumentation 300 (ST)TiMF",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab Instrumentation 300 (ST)TiMF",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High shielding efficiency, Low capacitance, EMC Compactable, Ease termination",
@@ -56,8 +56,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Instrumentation 300 MC(ST)",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab Instrumentation 300 MC(ST)",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High shielding efficiency, Low capacitance, EMC Compactable, Ease termination",
@@ -70,8 +70,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Instrumentation 500 P(ST)",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab Instrumentation 500 P(ST)",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High shielding efficiency, Low capacitance, EMC Compactable, Ease termination",
@@ -84,8 +84,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Instrumentation 300 P(ST)",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab Instrumentation 300 P(ST)",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High shielding efficiency, Low capacitance, EMC Compactable, Ease termination",
@@ -98,8 +98,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab BMS 300 MC-A7",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab BMS 300 MC-A7",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, Low smoke emission/Density, EMC compatible, Heat resistant, Ozone resistant",
@@ -112,8 +112,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab BMS 500 MC-C4",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab BMS 500 MC-C4",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, Low smoke emission/Density, EMC compatible, Heat resistant, Ozone resistant",
@@ -126,8 +126,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Instrumentation 500 (ST)TiMF",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab Instrumentation 500 (ST)TiMF",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High shielding efficiency, Low capacitance, EMC Compactable, Ease termination",
@@ -140,8 +140,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Instrumentation 500 MC(ST)",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab Instrumentation 500 MC(ST)",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High shielding efficiency, Low capacitance, EMC Compactable, Ease termination",
@@ -154,8 +154,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Instrumentation 300 (ST)PiMF",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab Instrumentation 300 (ST)PiMF",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High shielding efficiency, Low capacitance, EMC Compactable, Ease termination",
@@ -168,8 +168,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Instrumentation 300 T(ST)",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab Instrumentation 300 T(ST)",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High shielding efficiency, Low capacitance, EMC Compactable, Ease termination",
@@ -182,8 +182,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Instrumentation 500 (ST)PiMF",
-    "Product_Type": "Instrumentation Cable",
+    "Name": "Polycab Instrumentation 500 (ST)PiMF",
+    "Product_Type": "Instrumentation Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Noise free signal transmission, High shielding efficiency, Low capacitance, EMC Compactable, Ease termination",
