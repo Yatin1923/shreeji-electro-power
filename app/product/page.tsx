@@ -28,8 +28,8 @@ import React from "react"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import ExpandLessIcon from "@mui/icons-material/ExpandLess"
 import { useSearchParams } from "next/navigation"
-import { Product } from "@/types/product"
-import { polycabProductService } from '../../services/polycab-product-service';
+import { unifiedProductService } from "@/services/unified-product-service"
+import { Product } from "@/types/common"
 
 const brands = [
   // "CABSEAL",
@@ -44,30 +44,30 @@ const brands = [
 const categoryStructure = {
   "CABLES": {
     subcategories: {
-      'lv-power-cable': 'LV Power Cable',
-      'mv-power-cable': 'MV Power Cable',
-      'ehv-power-cable': 'EHV Power Cable',
-      'instrumentation-cable': 'Instrumentation Cable',
-      'communication-data-cable': 'Communication & Data Cable',
-      'renewable-energy': 'Renewable Energy Cable',
-      'control-cable': 'Control Cable',
-      'fire-protection-cable': 'Fire Protection Cable',
-      'industrial-cable': 'Industrial Cable',
-      'rubber-cable': 'Rubber Cable',
-      'marine-offshoreonshore-cable': 'Marine & Offshore/Onshore Cable',
-      'high-temperature-cable': 'High Temperature Cable',
-      'defence': 'Defence Cable',
-      'domestic-appliance-and-lighting-cable': 'Domestic Appliance and Lighting Cable',
+      'lv-power-cable': 'LV Power Product',
+      'mv-power-cable': 'MV Power Product',
+      'ehv-power-cable': 'EHV Power Product',
+      'instrumentation-cable': 'Instrumentation Product',
+      'communication-data-cable': 'Communication & Data Product',
+      'renewable-energy': 'Renewable Energy Product',
+      'control-cable': 'Control Product',
+      'fire-protection-cable': 'Fire Protection Product',
+      'industrial-cable': 'Industrial Product',
+      'rubber-cable': 'Rubber Product',
+      'marine-offshoreonshore-cable': 'Marine & Offshore/Onshore Product',
+      'high-temperature-cable': 'High Temperature Product',
+      'defence': 'Defence Product',
+      'domestic-appliance-and-lighting-cable': 'Domestic Appliance and Lighting Product',
       'building-wires': 'Building Wires',
-      'special-cable': 'Special Cable',
-      'aerial-bunched-cable': 'Aerial Bunched Cable',
+      'special-cable': 'Special Product',
+      'aerial-bunched-cable': 'Aerial Bunched Product',
     }
   },
   // "COMMUNICATION CABLES": {},
   // "ENERGY CABLES": {},
   // "SPECIAL CABLES": {},
   // "CONDUITS & ACCESSORIES": {},
-  // "FANS": {},
+  "FANS": {},
   // "HOME-SMARTAUTOMATION": {},
   // "HOMEAPPLIANCE": {},
   // "LIGHTS & LUMINARIES": {},
@@ -118,7 +118,7 @@ export default function ProductPage() {
   // Function to map cable subcategory to product matching
   const matchesCableSubcategory = (product: Product, subcategoryKey: string): boolean => {
     const subcategoryName = categoryStructure.CABLES.subcategories[subcategoryKey as keyof typeof categoryStructure.CABLES.subcategories]
-    const productName = product.Cable_Name.toLowerCase()
+    const productName = product.Name.toLowerCase()
     const productType = product.Product_Type.toLowerCase()
     const shortDesc = product.Short_Description.toLowerCase()
 
@@ -173,17 +173,18 @@ export default function ProductPage() {
   const loadProductsEnhanced = React.useCallback(async () => {
     setLoading(true)
     try {
-      const allProducts = polycabProductService.getAllProducts()
+      // const allProducts = polycabCableService.getAllProducts()
+      const allProducts = unifiedProductService.getAllProducts();
       let filteredProducts = [...allProducts]
       // Apply search filter
       if (searchDebounce) {
         const searchTerm = searchDebounce.toLowerCase()
         filteredProducts = filteredProducts.filter(product =>
-          product.Cable_Name.toLowerCase().includes(searchTerm) ||
+          product.Name.toLowerCase().includes(searchTerm) ||
           product.Short_Description.toLowerCase().includes(searchTerm) ||
           product.Full_Description.toLowerCase().includes(searchTerm) ||
           product.Key_Features.toLowerCase().includes(searchTerm) ||
-          product.Standards.toLowerCase().includes(searchTerm)
+          product.Standards?.toLowerCase().includes(searchTerm)
         )
       }
 
@@ -221,6 +222,7 @@ export default function ProductPage() {
       console.error('Error loading products:', error)
     } finally {
       setLoading(false)
+      console.log(products);
     }
   }, [page, brandSel, catSel, cableSubcatSel, searchDebounce])
 
@@ -307,7 +309,6 @@ export default function ProductPage() {
   }
 
   const removeFilter = (filterType: string, value: string) => {
-    debugger;
     switch (filterType) {
       case 'brand':
         toggle(value, brandSel, setBrandSel)
@@ -325,126 +326,126 @@ export default function ProductPage() {
     <div className="w-[280px] p-4 bg-white rounded-lg h-fit sticky top-25">
       <div className="max-h-[80vh] overflow-auto">
 
-      <div className="mb-3 flex items-center justify-between gap-2 text-neutral-700">
-        <span className="p-2! text-[15px] font-semibold">Filters</span>
-        {(brandSel.length > 0 || catSel.length > 0 || cableSubcatSel.length > 0) && (
-          <Button
-            size="small"
-            onClick={() => {
-              setBrandSel([])
-              setCatSel([])
-              setCableSubcatSel([])
-            }}
-            className="ml-auto text-xs p-2!"
+        <div className="mb-3 flex items-center justify-between gap-2 text-neutral-700">
+          <span className="p-2! text-[15px] font-semibold">Filters</span>
+          {(brandSel.length > 0 || catSel.length > 0 || cableSubcatSel.length > 0) && (
+            <Button
+              size="small"
+              onClick={() => {
+                setBrandSel([])
+                setCatSel([])
+                setCableSubcatSel([])
+              }}
+              className="ml-auto text-xs p-2!"
+            >
+              Clear All
+            </Button>
+          )}
+        </div>
+
+        {/* Brand filter */}
+        <div className="border-t pt-4">
+          <div
+            className="flex items-center justify-between cursor-pointer"
+            onClick={() => setBrandOpen(!brandOpen)}
           >
-            Clear All
-          </Button>
-        )}
-      </div>
-
-      {/* Brand filter */}
-      <div className="border-t pt-4">
-        <div
-          className="flex items-center justify-between cursor-pointer"
-          onClick={() => setBrandOpen(!brandOpen)}
-        >
-          <span className="text-[13px] uppercase tracking-wide text-neutral-500">
-            Brand {brandSel.length > 0 && `(${brandSel.length})`}
-          </span>
-          <IconButton size="small">
-            {brandOpen ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
-          </IconButton>
-        </div>
-        <Collapse in={brandOpen}>
-          <div className="mt-2 flex flex-col">
-            {brands.map((b) => (
-              <FormControlLabel
-                key={b}
-                control={
-                  <Checkbox
-                    size="small"
-                    checked={brandSel.includes(b)}
-                    onChange={() => toggle(b, brandSel, setBrandSel)}
-                  />
-                }
-                label={<span className="text-[14px] text-neutral-700">{b}</span>}
-              />
-            ))}
+            <span className="text-[13px] uppercase tracking-wide text-neutral-500">
+              Brand {brandSel.length > 0 && `(${brandSel.length})`}
+            </span>
+            <IconButton size="small">
+              {brandOpen ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
+            </IconButton>
           </div>
-        </Collapse>
-      </div>
-
-      {/* Category filter with subcategories */}
-      <div className="mt-6 border-t pt-4">
-        <div
-          className="flex items-center justify-between cursor-pointer!"
-          onClick={() => setCatOpen(!catOpen)}
-        >
-          <span className="text-[13px] uppercase tracking-wide text-neutral-500">
-            Category {(catSel.length > 0 || cableSubcatSel.length > 0) && `(${catSel.length + cableSubcatSel.length})`}
-          </span>
-          <IconButton size="small">
-            {catOpen ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
-          </IconButton>
-        </div>
-        <Collapse in={catOpen}>
-          <div className="mt-2 flex flex-col ju">
-            {Object.keys(categoryStructure).map((category) => (
-              <div key={category} className="">
-                <div className="flex items-center justify-between">
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        size="small"
-                        checked={category === "CABLES" ? getCablesCheckboxState().checked || catSel.includes(category) : catSel.includes(category)}
-                        indeterminate={category === "CABLES" ? getCablesCheckboxState().indeterminate : false}
-                        onChange={() => handleCategoryToggle(category)}
-                      />
-                    }
-                    label={
-                      <div className="w-full">
-                        <span className="text-[14px] text-neutral-700 flex justify-between">{category}</span>
-                      </div>
-                    }
-                  />
-                  {category === "CABLES" && Object.keys(categoryStructure.CABLES.subcategories).length > 0 && (
-                    <IconButton
+          <Collapse in={brandOpen}>
+            <div className="mt-2 flex flex-col">
+              {brands.map((b) => (
+                <FormControlLabel
+                  key={b}
+                  control={
+                    <Checkbox
                       size="small"
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        setCablesSubOpen(!cablesSubOpen)
-                      }}
-                    >
-                      {cablesSubOpen ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
-                    </IconButton>
+                      checked={brandSel.includes(b)}
+                      onChange={() => toggle(b, brandSel, setBrandSel)}
+                    />
+                  }
+                  label={<span className="text-[14px] text-neutral-700">{b}</span>}
+                />
+              ))}
+            </div>
+          </Collapse>
+        </div>
+
+        {/* Category filter with subcategories */}
+        <div className="mt-6 border-t pt-4">
+          <div
+            className="flex items-center justify-between cursor-pointer!"
+            onClick={() => setCatOpen(!catOpen)}
+          >
+            <span className="text-[13px] uppercase tracking-wide text-neutral-500">
+              Category {(catSel.length > 0 || cableSubcatSel.length > 0) && `(${catSel.length + cableSubcatSel.length})`}
+            </span>
+            <IconButton size="small">
+              {catOpen ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
+            </IconButton>
+          </div>
+          <Collapse in={catOpen}>
+            <div className="mt-2 flex flex-col ju">
+              {Object.keys(categoryStructure).map((category) => (
+                <div key={category} className="">
+                  <div className="flex items-center justify-between">
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          size="small"
+                          checked={category === "CABLES" ? getCablesCheckboxState().checked || catSel.includes(category) : catSel.includes(category)}
+                          indeterminate={category === "CABLES" ? getCablesCheckboxState().indeterminate : false}
+                          onChange={() => handleCategoryToggle(category)}
+                        />
+                      }
+                      label={
+                        <div className="w-full">
+                          <span className="text-[14px] text-neutral-700 flex justify-between">{category}</span>
+                        </div>
+                      }
+                    />
+                    {category === "CABLES" && Object.keys(categoryStructure.CABLES.subcategories).length > 0 && (
+                      <IconButton
+                        size="small"
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setCablesSubOpen(!cablesSubOpen)
+                        }}
+                      >
+                        {cablesSubOpen ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
+                      </IconButton>
+                    )}
+                  </div>
+
+                  {/* Product subcategories */}
+                  {category === "CABLES" && (
+                    <Collapse in={cablesSubOpen}>
+                      <div className="ml-8 mt-1 flex flex-col">
+                        {Object.entries(categoryStructure.CABLES.subcategories).map(([key, label]) => (
+                          <FormControlLabel
+                            key={key}
+                            control={
+                              <Checkbox
+                                size="small"
+                                checked={cableSubcatSel.includes(key)}
+                                onChange={() => { handleSubcategoryToggle(key) }}
+                              />
+                            }
+                            label={<span className="text-[13px] text-neutral-600">{label}</span>}
+                          />
+                        ))}
+                      </div>
+                    </Collapse>
                   )}
                 </div>
-
-                {/* Cable subcategories */}
-                {category === "CABLES" && (
-                  <Collapse in={cablesSubOpen}>
-                    <div className="ml-8 mt-1 flex flex-col">
-                      {Object.entries(categoryStructure.CABLES.subcategories).map(([key, label]) => (
-                        <FormControlLabel
-                          key={key}
-                          control={
-                            <Checkbox
-                              size="small"
-                              checked={cableSubcatSel.includes(key)}
-                              onChange={() => {  handleSubcategoryToggle(key) }}
-                            />
-                          }
-                          label={<span className="text-[13px] text-neutral-600">{label}</span>}
-                        />
-                      ))}
-                    </div>
-                  </Collapse>
-                )}
-              </div>
-            ))}
-          </div>
-        </Collapse>
-      </div>
+              ))}
+            </div>
+          </Collapse>
+        </div>
       </div>
 
     </div>
@@ -564,16 +565,16 @@ export default function ProductPage() {
                 </div>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {products.map((p) => {
-                    const primaryImg = p.Image_Path
+                  {products.map((p, i) => {
+                    const primaryImg = p.Image_Path.split(";")[0].trim()
                     return (
-                      <Card key={p.Cable_Name} elevation={0} className="rounded-xl border border-neutral-200 shadow-sm bg-white">
+                      <Card key={p.Name + i} elevation={0} className="rounded-xl border border-neutral-200 shadow-sm bg-white">
                         <div className="relative p-4">
-                          <Link href={`/product/${encodeURIComponent(p.Cable_Name)}`} className="block">
+                          <Link href={`/product/${encodeURIComponent(p.Name)}`} className="block">
                             <div className="mx-auto h-[180px] w-full overflow-hidden rounded-md bg-[#f4f6f8] flex items-center justify-center">
                               <img
                                 src={primaryImg || "/placeholder.svg"}
-                                alt={p.Cable_Name}
+                                alt={p.Name}
                                 className="h-[160px] w-auto object-contain"
                               />
                             </div>
@@ -581,15 +582,33 @@ export default function ProductPage() {
                         </div>
                         <CardContent className="pt-0">
                           <Link
-                            href={`/product/${encodeURIComponent(p.Cable_Name)}`}
+                            href={`/product/${encodeURIComponent(p.Name)}`}
                             className="text-[14px] font-semibold text-sky-700 hover:underline"
                           >
-                            {p.Cable_Name}
+                            {p.Name}
                           </Link>
                           <br />
                           <Typography variant={"caption"} className="text-neutral-400">
                             {p.Short_Description}
                           </Typography>
+                          {'Sweep_Size' in p  &&
+<>
+                          <br />
+                          <Typography variant={"caption"} className="text-neutral-400">
+                            Sweep Size: {p.Sweep_Size} 
+                          </Typography>
+                          <br />
+                          <Typography variant={"caption"} className="text-neutral-400">
+                            Number of Blades: {p.Number_of_Blades}
+                          </Typography>
+                          <br />
+                          <Typography variant="body2" className=" mt-2! text-[14px] font-semibold! text-sky-700">
+                            {p.Price && `Price: ${p.Price}`}
+                          </Typography>
+</>
+
+                          }
+
                         </CardContent>
                       </Card>
                     )

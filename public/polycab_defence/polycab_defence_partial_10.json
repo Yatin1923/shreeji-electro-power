@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab H07RN-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "Defence Cable",
+    "Name": "Polycab H07RN-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "Defence Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Highly Flexible, Oil Resistance, High insulation resistance, Chemical resistant",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab SiR-SC 1100V AC IS 9968-1",
-    "Product_Type": "Defence Cable",
+    "Name": "Polycab SiR-SC 1100V AC IS 9968-1",
+    "Product_Type": "Defence Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05RR-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Defence Cable",
+    "Name": "Polycab H05RR-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Defence Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Oil Resistant, Chemical resistant",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05SJ-U/H05SJ-K BSEN 50525-2-41 SC 300/500V AC",
-    "Product_Type": "Defence Cable",
+    "Name": "Polycab H05SJ-U/H05SJ-K BSEN 50525-2-41 SC 300/500V AC",
+    "Product_Type": "Defence Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -56,8 +56,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05GG-F/H05GGH2-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Defence Cable",
+    "Name": "Polycab H05GG-F/H05GGH2-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Defence Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -70,8 +70,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05RN-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Defence Cable",
+    "Name": "Polycab H05RN-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Defence Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Highly Flexible, Oil Resistance, High insulation resistance, Chemical resistant",
@@ -84,8 +84,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H03S-K BSEN 50525-2-41 SC 300/300V AC",
-    "Product_Type": "Defence Cable",
+    "Name": "Polycab H03S-K BSEN 50525-2-41 SC 300/300V AC",
+    "Product_Type": "Defence Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -98,8 +98,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05BB-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Defence Cable",
+    "Name": "Polycab H05BB-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Defence Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -112,8 +112,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05S-U/H05S-K BSEN 50525-2-41 SC 300/500V AC",
-    "Product_Type": "Defence Cable",
+    "Name": "Polycab H05S-U/H05S-K BSEN 50525-2-41 SC 300/500V AC",
+    "Product_Type": "Defence Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -126,8 +126,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab SiR 1100V AC IS 9968-1",
-    "Product_Type": "Defence Cable",
+    "Name": "Polycab SiR 1100V AC IS 9968-1",
+    "Product_Type": "Defence Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",

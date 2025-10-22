@@ -2,9 +2,12 @@
 import Link from "next/link"
 import Image from "next/image"
 import Navbar from "@/components/navbar"
-import { Breadcrumbs } from "@mui/material"
-import { polycabProductService } from "@/services/polycab-product-service"
+import { Breadcrumbs, Typography } from "@mui/material"
 import { useRef, useState } from "react"
+import { polycabCableService } from "@/services/product-service-factory"
+import { unifiedProductService } from "@/services/unified-product-service"
+import { Product } from "@/types/common"
+
 const MagnifyingImage = ({ src, alt, width, height, className }: {
     src: string;
     alt: string;
@@ -74,8 +77,12 @@ const MagnifyingImage = ({ src, alt, width, height, className }: {
         </div>
     )
 }
+
 export default function ProductDetailPage({ params }: { params: { name: string } }) {
-    const product = polycabProductService.getProductByName(decodeURIComponent(params.name))
+    let product: Product | undefined = unifiedProductService.getProductByName(decodeURIComponent(params.name))
+    console.log(product);
+    // Add state for selected color
+    const [selectedColorIndex, setSelectedColorIndex] = useState(0)
 
     if (!product) {
         return (
@@ -91,30 +98,103 @@ export default function ProductDetailPage({ params }: { params: { name: string }
         )
     }
 
-    // Get image URL helper
+    // Helper functions
     const getImageUrl = (imagePath: string | undefined) => {
         if (!imagePath) return "/placeholder.svg"
         return imagePath.startsWith('/') ? imagePath : `/${imagePath}`
     }
 
-    // Parse key features from string
     const parseKeyFeatures = (featuresString: string) => {
         if (!featuresString) return []
         return featuresString.split(',').map(feature => feature.trim()).filter(feature => feature.length > 0)
     }
+
     const getCertificationIconUrl = (certName: string) => {
-        // Convert certification name to lowercase and replace spaces with hyphens
         const formattedCertName = certName.toLowerCase().replace(/\s+/g, '-')
         return `/assets/${formattedCertName}-certification-icon.webp`
     }
-    // Parse certifications from string
+
     const parseCertifications = (certificationsString: string) => {
         if (!certificationsString) return []
         return certificationsString.split(',').map(cert => cert.trim()).filter(cert => cert.length > 0)
     }
 
+    // Parse colors and images
+    const parseColors = (colorsString: string) => {
+        if (!colorsString) return []
+        return colorsString.split(',').map(color => color.trim()).filter(color => color.length > 0)
+    }
+
+    const parseImages = (imagesString: string) => {
+        if (!imagesString) return []
+        return imagesString.split(';').map(img => img.trim()).filter(img => img.length > 0)
+    }
+
+    // Parse specifications
+    const parseSpecifications = (specificationsString: string) => {
+        if (!specificationsString) return []
+        return specificationsString.split(',').map(spec => {
+            const [key, ...valueParts] = spec.split(':')
+            if (key && valueParts.length > 0) {
+                return {
+                    key: key.trim(),
+                    value: valueParts.join(':').trim()
+                }
+            }
+            return null
+        }).filter(spec => spec !== null)
+    }
+
+    // Get comprehensive specifications
+    const getSpecifications = () => {
+        const specs: { key: string; value: string }[] = []
+        
+        // First, add parsed specifications from the Specifications string
+        const parsedSpecs = parseSpecifications(product?.Specifications || "")
+        specs.push(...parsedSpecs)
+        
+        // Then add individual fields that might not be in the Specifications string
+        // const individualSpecs = [
+        //     { key: 'Model Number', value: product?.Model_Number },
+        //     { key: 'Sweep Size (mm)', value: product?.Sweep_Size },
+        //     { key: 'Speed (RPM)', value: product?.RPM },
+        //     { key: 'Power Consumption (Watt)', value: product?.Power_Consumption },
+        //     { key: 'Air Delivery (CMM)', value: product?.Air_Delivery },
+        //     { key: 'BEE Rating', value: product?.BEE_Rating },
+        //     { key: 'Number of Blades', value: product?.Number_of_Blades },
+        //     { key: 'Blade Material', value: product?.Blade_Material },
+        //     { key: 'Body Material', value: product?.Body_Material },
+        //     { key: 'Motor Winding', value: product?.Motor_Winding },
+        //     { key: 'Warranty', value: product?.Warranty },
+        //     { key: 'Price', value: product?.Price },
+        //     { key: 'Available Colors', value: product?.Colors },
+        // ]
+        
+        // // Add individual specs that are not already in parsed specs
+        // individualSpecs.forEach(spec => {
+        //     if (spec.value && !specs.some(existing => 
+        //         existing.key.toLowerCase().replace(/\s+/g, '') === spec.key.toLowerCase().replace(/\s+/g, '')
+        //     )) {
+        //         specs.push({ key: spec.key, value: spec.value })
+        //     }
+        // })
+        
+        return specs.filter(spec => spec.value && spec.value.trim() !== '')
+    }
+
+    const colors = parseColors(product.Colors || "")
+    const images = parseImages(product.Image_Path || "")
     const keyFeatures = parseKeyFeatures(product.Key_Features || "")
     const certifications = parseCertifications(product.Certifications || "")
+    const specifications = getSpecifications()
+
+    // Get current image based on selected color
+    const getCurrentImage = () => {
+        if (images.length > selectedColorIndex) {
+            return getImageUrl(images[selectedColorIndex])
+        }
+        return getImageUrl(images[0] || "")
+    }
 
     return (
         <main className="bg-white min-h-screen">
@@ -141,7 +221,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                         <Link href="/product" className="hover:text-sky-600 transition-colors">
                             Products
                         </Link>
-                        <span className="text-gray-700">{product.Cable_Name}</span>
+                        <span className="text-gray-700">{product.Name}</span>
                     </Breadcrumbs>
                 </div>
 
@@ -152,35 +232,73 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                     <div className="space-y-6">
                         <div className="bg-white border border-gray-200 rounded-lg p-8 flex items-center justify-center min-h-[400px]">
                             <Image
-                                src={getImageUrl(product.Image_Path)}
-                                alt={product.Cable_Name}
+                                src={getCurrentImage()}
+                                alt={`${product.Name} - ${colors[selectedColorIndex] || ''}`}
                                 width={400}
                                 height={400}
                                 className="lg:hidden max-w-full h-auto object-contain"
                                 priority
                             />
-                             <MagnifyingImage
-                                src={getImageUrl(product.Image_Path)}
-                                alt={product.Cable_Name}
+                            <MagnifyingImage
+                                src={getCurrentImage()}
+                                alt={`${product.Name} - ${colors[selectedColorIndex] || ''}`}
                                 width={400}
                                 height={400}
-                                className=" hidden lg:block max-w-full h-auto object-contain"
+                                className="hidden lg:block max-w-full h-auto object-contain"
                             />
                         </div>
 
-
+                        {/* Color Selection Section */}
+                        {colors.length > 1 && (
+                            <div className="bg-white border border-gray-200 rounded-lg p-6">
+                                <h3 className="text-lg font-semibold text-gray-900 mb-4">Available Colors</h3>
+                                <div className="space-y-4">
+                                    {/* Selected Color Display */}
+                                    <div className="text-sm text-gray-600">
+                                        Selected: <span className="font-medium text-gray-900">{colors[selectedColorIndex]}</span>
+                                    </div>
+                                    
+                                    {/* Color Options Grid */}
+                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                        {colors.map((color, index) => (
+                                            <button
+                                                key={index}
+                                                onClick={() => setSelectedColorIndex(index)}
+                                                className={`p-3 text-left text-sm border rounded-lg transition-all hover:bg-gray-50 ${
+                                                    selectedColorIndex === index 
+                                                        ? 'border-sky-500 bg-sky-50 text-sky-700' 
+                                                        : 'border-gray-200 text-gray-700'
+                                                }`}
+                                            >
+                                                <div className="flex items-center space-x-2">
+                                                    {images[index] && (
+                                                        <div className="w-8 h-8 border border-gray-200 rounded overflow-hidden flex-shrink-0">
+                                                            <Image
+                                                                src={getImageUrl(images[index])}
+                                                                alt={color}
+                                                                width={32}
+                                                                height={32}
+                                                                className="w-full h-full object-cover"
+                                                            />
+                                                        </div>
+                                                    )}
+                                                    <span className="font-medium">{color}</span>
+                                                </div>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     {/* Right: Product Details */}
                     <div className="space-y-6">
-
                         <div className="flex flex-col gap-4">
                             <h1 className="text-3xl font-bold text-sky-600 mb-2">
-                                {product.Cable_Name}
+                                {product.Name}
                             </h1>
-                            {/* {product.Brand && (
-                                <p className="text-sky-600 font-medium mb-2">{product.Brand}</p>
-                            )} */}
+                            
                             {/* Download PDF Button */}
                             {product.Brochure_Path && (
                                 <a
@@ -188,17 +306,22 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                                     download
                                     className="flex items-center underline gap-2 text-gray-600 hover:text-sky-600 transition-colors"
                                 >
-                                    <img src="/assets/pdf.jpg">
-                                    </img>
+                                    <img src="/assets/pdf.jpg" alt="PDF" />
                                     Download Data Sheet
                                 </a>
                             )}
+                            
                             {product.Short_Description && (
                                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
                                     {product.Short_Description}
                                 </p>
                             )}
-
+                            
+                            {product.Price && (
+                                <Typography variant="h6" className="text-sky-600 font-bold!">
+                                    Price : <span className="">{product.Price}</span>
+                                </Typography>
+                            )}
                         </div>
 
                         {/* Key Features */}
@@ -207,8 +330,8 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Key Features</h3>
                                 <div className="grid grid-cols-2 gap-3">
                                     {keyFeatures.map((feature, index) => (
-                                        <div key={index} className="">
-                                            <div className="w-[37px] h-[6px] bg-sky-600 rounded-full mb-5"></div>
+                                        <div key={index} className="flex gap-3">
+                                            <div className="w-[6px] h-[30px] bg-sky-600 rounded-full mb-5 "></div>
                                             <div className="text-gray-700 leading-relaxed">{feature}</div>
                                         </div>
                                     ))}
@@ -220,76 +343,81 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                         </p>
                     </div>
                 </div>
+                {product.Certifications &&
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        {/* Product Type */}
+                        <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Product Type</h3>
+                            <p className="text-gray-600">{product.Product_Type || "N/A"}</p>
+                        </div>
 
-                {/* Product Information Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-
-                    {/* Product Type */}
-                    <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Product Type</h3>
-                        <p className="text-gray-600">{product.Product_Type || "N/A"}</p>
-                    </div>
-
-                    {/* Certifications */}
-                    <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4">Certifications</h3>
-                        {certifications.length > 0 ? (
-                            <div className="flex items-center justify-center">
-                                {certifications.map((cert, index) => (
-                                    <div key={index} className="flex flex-col items-center justify-center p-3 rounded-lg">
-                                        <div className="w-12 h-12 mb-2 relative">
-                                            <Image
-                                                src={getCertificationIconUrl(cert)}
-                                                alt={`${cert} certification`}
-                                                fill
-                                                className="object-contain"
-                                                onError={(e) => {
-                                                    // Fallback to text if image doesn't exist
-                                                    const target = e.target as HTMLElement;
-                                                    target.style.display = 'none';
-                                                }}
-                                            />
+                        {/* Certifications */}
+                        <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-4">Certifications</h3>
+                            {certifications.length > 0 ? (
+                                <div className="flex items-center justify-center">
+                                    {certifications.map((cert, index) => (
+                                        <div key={index} className="flex flex-col items-center justify-center p-3 rounded-lg">
+                                            <div className="w-12 h-12 mb-2 relative">
+                                                <Image
+                                                    src={getCertificationIconUrl(cert)}
+                                                    alt={`${cert} certification`}
+                                                    fill
+                                                    className="object-contain"
+                                                    onError={(e) => {
+                                                        const target = e.target as HTMLElement;
+                                                        target.style.display = 'none';
+                                                    }}
+                                                />
+                                            </div>
                                         </div>
-                                        {/* <span className="text-xs font-medium text-gray-600 text-center">
-                                            {cert}
-                                        </span> */}
-                                    </div>
-                                ))}
-                            </div>
-                        ) : null}
-                    </div>
-
-                    {/* Standards */}
-                    <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Standards</h3>
-                        <p className="text-gray-600">{product.Standards || "N/A"}</p>
-                    </div>
-                </div>
-
-
-
-                {/* Similar Products Section */}
-                {/* <section>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-8">Similar Cables</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                        {Array.from({ length: 8 }).map((_, index) => (
-                            <div key={index} className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow">
-                                <div className="aspect-square bg-gray-50 rounded-lg mb-4 flex items-center justify-center">
-                                    <Image
-                                        src="/placeholder.svg"
-                                        alt="Similar product"
-                                        width={150}
-                                        height={150}
-                                        className="object-contain"
-                                    />
+                                    ))}
                                 </div>
-                                <h3 className="text-sm font-medium text-gray-900 line-clamp-2">
-                                    Similar Product {index + 1}
-                                </h3>
-                            </div>
-                        ))}
+                            ) : null}
+                        </div>
+
+                        {/* Standards */}
+                        <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Standards</h3>
+                            <p className="text-gray-600">{product.Standards || "N/A"}</p>
+                        </div>
                     </div>
-                </section> */}
+                }
+
+                {/* Specifications Table */}
+                {specifications.length > 0 && (
+                    <div className="mb-12">
+                        <h2 className="text-2xl font-bold text-sky-600 mb-6">Specifications</h2>
+                        <div className=" rounded-lg overflow-hidden">
+                            <div className="overflow-x-auto">
+                                <table className="w-full">
+                                    {/* <thead className="">
+                                        <tr>
+                                            <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900  border-gray-200">
+                                                Specification
+                                            </th>
+                                            <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900  border-gray-200">
+                                                Value
+                                            </th>
+                                        </tr>
+                                    </thead> */}
+                                    <tbody className="divide-y divide-gray-200">
+                                        {specifications.map((spec, index) => (
+                                            <tr key={index} className="hover:bg-gray-50 transition-colors">
+                                                <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                                                    {spec.key}
+                                                </td>
+                                                <td className="px-6 py-4 text-sm text-gray-600">
+                                                    {spec.value}
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </main>
     )

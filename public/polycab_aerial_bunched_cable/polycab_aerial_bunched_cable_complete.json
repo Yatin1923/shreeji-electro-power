@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab Aerial Bunched Cable 19/33kV AC (ABC)",
-    "Product_Type": "Aerial Bunched Cable",
+    "Name": "Polycab Aerial Bunched Product 19/33kV AC (ABC)",
+    "Product_Type": "Aerial Bunched Product",
     "Standards": "Polycab standard",
     "Certifications": "CE",
     "Key_Features": "Long Life, High Reliability, Moisture resistant, Better electrical,mechanical, And thermal properties",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Aerial Bunched Cable 1.9/3.3kV AC(ABC)",
-    "Product_Type": "Aerial Bunched Cable",
+    "Name": "Polycab Aerial Bunched Product 1.9/3.3kV AC(ABC)",
+    "Product_Type": "Aerial Bunched Product",
     "Standards": "IS 14255",
     "Certifications": "CE",
     "Key_Features": "Long Life, High Reliability, Moisture resistant, Better electrical,mechanical, And thermal properties",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Aerial Bunched Cable 1100V AC (ABC)",
-    "Product_Type": "Aerial Bunched Cable",
+    "Name": "Polycab Aerial Bunched Product 1100V AC (ABC)",
+    "Product_Type": "Aerial Bunched Product",
     "Standards": "IS 14255",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Long Life, High Reliability, Moisture resistant, Better electrical,mechanical, And thermal properties",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Aerial Bunched Cable 6.35/11kV AC (ABC)",
-    "Product_Type": "Aerial Bunched Cable",
+    "Name": "Polycab Aerial Bunched Product 6.35/11kV AC (ABC)",
+    "Product_Type": "Aerial Bunched Product",
     "Standards": "Polycab standard",
     "Certifications": "CE",
     "Key_Features": "Long Life, High Reliability, Moisture resistant, Better electrical,mechanical, And thermal properties",

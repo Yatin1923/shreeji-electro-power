@@ -60,7 +60,7 @@ def extract_products_from_html(html_content):
     
     return products
 
-# EHV Power Cable product images - extracted from the API
+# EHV Power Product product images - extracted from the API
 product_images = {
     "Polycab_EHV_Cu_Al_COR_110kV.png": "https://cms.polycab.com/media/251neydq/iceh00329_img_01.png",
     "Polycab_EHV_Cu_CS+PAL_110kV.png": "https://cms.polycab.com/media/ksgpdwwh/iceh00321_img_01.png",
@@ -100,7 +100,7 @@ def download_images():
     if not os.path.exists("polycab_ehv_images"):
         os.makedirs("polycab_ehv_images")
     
-    print("⚡ Starting Polycab EHV Power Cable Images Download...\n")
+    print("⚡ Starting Polycab EHV Power Product Images Download...\n")
     print(f"📊 Total images to download: {len(product_images)}\n")
     
     success_count = 0

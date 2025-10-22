@@ -11,7 +11,7 @@ const META = {
 }
 
 export default function BlogPostPage({ params }: PageProps) {
-  const title = "5 Hacks to use your Pedestal Fan for additional cooling"
+  const title = "5 Hacks to use your Pedestal Product for additional cooling"
 
   return (
     <main className="bg-white">
@@ -57,7 +57,7 @@ export default function BlogPostPage({ params }: PageProps) {
         </p>
 
         <h2 className="mt-10 text-2xl font-semibold text-slate-900">
-          Enhance Your Cooling Experience with These Pedestal Fan Hacks
+          Enhance Your Cooling Experience with These Pedestal Product Hacks
         </h2>
         <p className="mt-2 leading-relaxed text-slate-700">
           The long‑lasting pedestal fans are sleek and portable, and their position can be conveniently adjusted in
@@ -67,7 +67,7 @@ export default function BlogPostPage({ params }: PageProps) {
         </p>
 
         <h3 className="mt-10 text-xl font-semibold text-slate-900">
-          Hack #1: Positioning Your Pedestal Fan for Maximum Airflow
+          Hack #1: Positioning Your Pedestal Product for Maximum Airflow
         </h3>
         <p className="mt-2 leading-relaxed text-slate-700">
           The way a pedestal fan is positioned can make a huge difference in how effectively it cools a room. To
@@ -77,7 +77,7 @@ export default function BlogPostPage({ params }: PageProps) {
         </p>
 
         <h3 className="mt-8 text-xl font-semibold text-slate-900">
-          Hack #2: Using Your Pedestal Fan with a Cross Breeze for Efficient Air Circulation
+          Hack #2: Using Your Pedestal Product with a Cross Breeze for Efficient Air Circulation
         </h3>
         <p className="mt-2 leading-relaxed text-slate-700">
           This hack is one of the most prominent pedestal fan cooling tips. It is especially effective in the evenings
@@ -90,7 +90,7 @@ export default function BlogPostPage({ params }: PageProps) {
         </ul>
 
         <h3 className="mt-8 text-xl font-semibold text-slate-900">
-          Hack #3: Cleaning Your Pedestal Fan for Better Performance
+          Hack #3: Cleaning Your Pedestal Product for Better Performance
         </h3>
         <p className="mt-2 leading-relaxed text-slate-700">
           Dust particles that accumulate over a long period on the fan blades can reduce the shelf life of long‑lasting
@@ -107,7 +107,7 @@ export default function BlogPostPage({ params }: PageProps) {
         </ol>
 
         <h3 className="mt-8 text-xl font-semibold text-slate-900">
-          Hack #4: Enhance Cooling by Placing Ice or Cold Water in front of the Fan
+          Hack #4: Enhance Cooling by Placing Ice or Cold Water in front of the Product
         </h3>
         <p className="mt-2 leading-relaxed text-slate-700">
           Placing the pedestal fan with a bucket of ice is a well‑known technique among room cooling tips. It has almost
@@ -121,7 +121,7 @@ export default function BlogPostPage({ params }: PageProps) {
         </ul>
 
         <h3 className="mt-8 text-xl font-semibold text-slate-900">
-          Hack #5: Setting Your Pedestal Fan on a Timer for Continuous Cooling
+          Hack #5: Setting Your Pedestal Product on a Timer for Continuous Cooling
         </h3>
         <p className="mt-2 leading-relaxed text-slate-700">
           Keeping a pedestal fan running all night can harm it in the long run. Using a timer for continuous cooling is

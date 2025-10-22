@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab Classic 110 SY Screened 300/500V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 110 SY Screened 300/500V AC",
+    "Product_Type": "Control Product",
     "Standards": "Polycab standard",
     "Certifications": "CE",
     "Key_Features": "Sunlight resistance, Ozone Resistant, Electromagnetic compatible, Flame retardant",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 100 SY 450/750V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 100 SY 450/750V AC",
+    "Product_Type": "Control Product",
     "Standards": "BS EN 50525-2-51",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, UV resistant, Moisture resistant, Low transfer impedance",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Type CK BS 6231 Switch Gear &amp; Control Gear Wiring 0.6/1kV AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Type CK BS 6231 Switch Gear &amp; Control Gear Wiring 0.6/1kV AC",
+    "Product_Type": "Control Product",
     "Standards": "BS 6231",
     "Certifications": "CE, FQC",
     "Key_Features": "Flexible, High insulation resistance, Low capacitance, Smooth & glossy surface, Heat resistant",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Cu Type TC/TC-ER THHN/THWN-2 16 AWG Tray Cable",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Cu Type TC/TC-ER THHN/THWN-2 16 AWG Tray Product",
+    "Product_Type": "Control Product",
     "Standards": "UL 1277",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Oil resistant, Sunlight resistant, Moisture resistant",
@@ -56,12 +56,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV 2.5 Cu IEC 60502-1 0.6/1kV MC SWA",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV 2.5 Cu IEC 60502-1 0.6/1kV MC SWA",
+    "Product_Type": "Control Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up,PVC/Polyethylene/Halogen free Inner covering, Armoured, ,PVC/Polyethylene/Halogen free PVC sheathed LV Cable",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up,PVC/Polyethylene/Halogen free Inner covering, Armoured, ,PVC/Polyethylene/Halogen free PVC sheathed LV Product",
     "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering, GI wire Armoured,PVC/Polyethylene/Halogen free sheathed cable. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
     "Product_URL": "https://polycab.com/polycab-lv-25-cu-iec-60502-1-061kv-mc-swa/pt-13193/p-55313",
     "Image_Path": "polycab_control_cable/images/Polycab_LV_25_Cu_IEC_60502-1_061kV_MC_SWA_image.png",
@@ -70,12 +70,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV 1.5 Cu IEC 60502-1 0.6/1kV MC SWA",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV 1.5 Cu IEC 60502-1 0.6/1kV MC SWA",
+    "Product_Type": "Control Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up,PVC/Polyethylene/Halogen free Inner covering, Armoured,PVC/Polyethylene/Halogen free PVC sheathed LV Cable",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up,PVC/Polyethylene/Halogen free Inner covering, Armoured,PVC/Polyethylene/Halogen free PVC sheathed LV Product",
     "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering, GI wire Armoured,PVC/Polyethylene/Halogen free sheathed cable. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
     "Product_URL": "https://polycab.com/polycab-lv-15-cu-iec-60502-1-061kv-mc-swa/pt-13193/p-55307",
     "Image_Path": "polycab_control_cable/images/Polycab_LV_15_Cu_IEC_60502-1_061kV_MC_SWA_image.png",
@@ -84,8 +84,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 110 300/500V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 110 300/500V AC",
+    "Product_Type": "Control Product",
     "Standards": "Polycab standard",
     "Certifications": "CE",
     "Key_Features": "Cold Resistant, Weather Resistant, Heat resistant, Flame retardant",
@@ -98,8 +98,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I MC 1.5 2XWY",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV IS-7098-I MC 1.5 2XWY",
+    "Product_Type": "Control Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher current carrying capacity, Higher insulation resistance, Better resistance to chemicals, Thermo setting in nature, High resistant to moisture",
@@ -112,8 +112,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab 110 CY IEC 60227-7 Screened control Cable 300/500V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab 110 CY IEC 60227-7 Screened control Product 300/500V AC",
+    "Product_Type": "Control Product",
     "Standards": "IEC 60227-7",
     "Certifications": "CE, FQC",
     "Key_Features": "Electromagnetic compatible, Flexible, High conductivity electrolytic copper conductor, Long service life",
@@ -126,8 +126,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 110 CY Screened 300/500V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 110 CY Screened 300/500V AC",
+    "Product_Type": "Control Product",
     "Standards": "Polycab standard",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, Low transfer impedance, UV resistant, Moisture resistant",
@@ -140,8 +140,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 100 CY 450/750V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 100 CY 450/750V AC",
+    "Product_Type": "Control Product",
     "Standards": "BS EN 50525-2-51",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, UV resistant, Moisture resistant, Low transfer impedance",
@@ -154,8 +154,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 110 Orange 300/500V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 110 Orange 300/500V AC",
+    "Product_Type": "Control Product",
     "Standards": "Polycab standard",
     "Certifications": "CE",
     "Key_Features": "Sunlight resistance, Long life, Heat resistant, Flame retardant",
@@ -168,8 +168,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I MC 1.5 2XY",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV IS-7098-I MC 1.5 2XY",
+    "Product_Type": "Control Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher current carrying capacity, Higher insulation resistance, Better resistance to chemicals, Thermo setting in nature, High resistant to moisture",
@@ -182,8 +182,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Type BK BS 6231 Switch Gear &amp; Control Gear Wiring 0.6/1kV AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Type BK BS 6231 Switch Gear &amp; Control Gear Wiring 0.6/1kV AC",
+    "Product_Type": "Control Product",
     "Standards": "BS 6231",
     "Certifications": "CE, FQC",
     "Key_Features": "Flexible, High insulation resistance, Low capacitance, Smooth & glossy surface",
@@ -196,8 +196,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05Z1Z1-F BSEN 50525-3-11 300/500V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab H05Z1Z1-F BSEN 50525-3-11 300/500V AC",
+    "Product_Type": "Control Product",
     "Standards": "BSEN 50525-3-11",
     "Certifications": "CE, FQC",
     "Key_Features": "Low smoke zero halogen, High dielectric strength, Flexible, High abrasion resistant, Long service life",
@@ -210,12 +210,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV 1.5 Cu IEC 60502-1 0.6/1kV MC SFA",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV 1.5 Cu IEC 60502-1 0.6/1kV MC SFA",
+    "Product_Type": "Control Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, PVC/Polyethylene/Halogen free Inner covering, Armoured, , PVC/Polyethylene/Halogen free PVC sheathed LV Cable",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, PVC/Polyethylene/Halogen free Inner covering, Armoured, , PVC/Polyethylene/Halogen free PVC sheathed LV Product",
     "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering, GS flat strip armoured,PVC/Polyethylene/Halogen free sheathed. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
     "Product_URL": "https://polycab.com/polycab-lv-15-cu-iec-60502-1-061kv-mc-sfa/pt-13193/p-55305",
     "Image_Path": "polycab_control_cable/images/Polycab_LV_15_Cu_IEC_60502-1_061kV_MC_SFA_image.png",
@@ -224,8 +224,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 110 Black 600/1000V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 110 Black 600/1000V AC",
+    "Product_Type": "Control Product",
     "Standards": "Polycab standard",
     "Certifications": "CE",
     "Key_Features": "Sunlight resistance, Ozone Resistant, Heat resistant, Flame retardant",
@@ -238,8 +238,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 100 SY 300/500V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 100 SY 300/500V AC",
+    "Product_Type": "Control Product",
     "Standards": "BS EN 50525-2-51",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, UV resistant, Moisture resistant, Low transfer impedance",
@@ -252,8 +252,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I MC 1.5 2XFY",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV IS-7098-I MC 1.5 2XFY",
+    "Product_Type": "Control Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher current carrying capacity, Higher insulation resistance, Better resistance to chemicals, Thermo setting in nature, High resistant to moisture",
@@ -266,8 +266,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I MC 2.5 2XWY",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV IS-7098-I MC 2.5 2XWY",
+    "Product_Type": "Control Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher current carrying capacity, Higher insulation resistance, Better resistance to chemicals, Thermo setting in nature, High resistant to moisture",
@@ -280,13 +280,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV 2.5 Cu IEC 60502-1 0.6/1kV MC UA",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV 2.5 Cu IEC 60502-1 0.6/1kV MC UA",
+    "Product_Type": "Control Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, PVC/Polyethylene/Halogen free Inner covering, unarmoured,PVC/Polyethylene/Halogen free PVC sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering,unarmoured,PVC/Polyethylene/Halogen free sheathed Cable. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) .",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, PVC/Polyethylene/Halogen free Inner covering, unarmoured,PVC/Polyethylene/Halogen free PVC sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering,unarmoured,PVC/Polyethylene/Halogen free sheathed Product. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) .",
     "Product_URL": "https://polycab.com/polycab-lv-25-cu-iec-60502-1-061kv-mc-ua/pt-13193/p-55309",
     "Image_Path": "polycab_control_cable/images/Polycab_LV_25_Cu_IEC_60502-1_061kV_MC_UA_image.png",
     "Brochure_Path": "polycab_control_cable/brochures/Polycab_LV_25_Cu_IEC_60502-1_061kV_MC_UA_datasheet.pdf",
@@ -294,12 +294,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV 2.5 Cu IEC 60502-1 0.6/1kV MC SFA",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV 2.5 Cu IEC 60502-1 0.6/1kV MC SFA",
+    "Product_Type": "Control Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up,PVC/Polyethylene/Halogen free Inner covering, Armoured, PVC/Polyethylene/Halogen free PVC sheathed LV Cable",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up,PVC/Polyethylene/Halogen free Inner covering, Armoured, PVC/Polyethylene/Halogen free PVC sheathed LV Product",
     "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering, GS flat strip armoured,PVC/Polyethylene/Halogen free sheathed. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
     "Product_URL": "https://polycab.com/polycab-lv-25-cu-iec-60502-1-061kv-mc-sfa/pt-13193/p-55311",
     "Image_Path": "polycab_control_cable/images/Polycab_LV_25_Cu_IEC_60502-1_061kV_MC_SFA_image.png",
@@ -308,8 +308,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 100 BK 600/1000V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 100 BK 600/1000V AC",
+    "Product_Type": "Control Product",
     "Standards": "BS 6231",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, UV resistant, Moisture resistant",
@@ -322,8 +322,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 110 BK 300/500V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 110 BK 300/500V AC",
+    "Product_Type": "Control Product",
     "Standards": "Polycab standard",
     "Certifications": "CE",
     "Key_Features": "Sunlight resistance, Oil Resistance, Heat resistant, Flame retardant",
@@ -336,13 +336,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV 1.5 Cu IEC 60502-1 0.6/1kV MC UA",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV 1.5 Cu IEC 60502-1 0.6/1kV MC UA",
+    "Product_Type": "Control Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up,PVC/Polyethylene/Halogen free Inner covering, unarmoured,PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering,unarmoured,PVC/Polyethylene/Halogen free sheathed Cable. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) .",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up,PVC/Polyethylene/Halogen free Inner covering, unarmoured,PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering,unarmoured,PVC/Polyethylene/Halogen free sheathed Product. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) .",
     "Product_URL": "https://polycab.com/polycab-lv-15-cu-iec-60502-1-061kv-mc-ua/pt-13193/p-55303",
     "Image_Path": "polycab_control_cable/images/Polycab_LV_15_Cu_IEC_60502-1_061kV_MC_UA_image.png",
     "Brochure_Path": "polycab_control_cable/brochures/Polycab_LV_15_Cu_IEC_60502-1_061kV_MC_UA_datasheet.pdf",
@@ -350,8 +350,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Type DK BS 6231 Switch Gear &amp; Control Gear Wiring 0.6/1kV AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Type DK BS 6231 Switch Gear &amp; Control Gear Wiring 0.6/1kV AC",
+    "Product_Type": "Control Product",
     "Standards": "BS 6231",
     "Certifications": "CE, FQC",
     "Key_Features": "Flexible, High insulation resistance, Low capacitance, Smooth & glossy surface, Heat resistant",
@@ -364,8 +364,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I MC 2.5 2XY",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV IS-7098-I MC 2.5 2XY",
+    "Product_Type": "Control Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher current carrying capacity, Higher insulation resistance, Better resistance to chemicals, Thermo setting in nature, High resistant to moisture",
@@ -378,8 +378,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 100 450/750V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 100 450/750V AC",
+    "Product_Type": "Control Product",
     "Standards": "BS EN 50525-2-51",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, UV resistant, Moisture resistant, Low transfer impedance",
@@ -392,8 +392,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 100 300/500V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 100 300/500V AC",
+    "Product_Type": "Control Product",
     "Standards": "BS EN 50525-2-51",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, UV resistant, Moisture resistant, Low temperature withstand capacity",
@@ -406,8 +406,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I MC 2.5 2XFY",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab LV IS-7098-I MC 2.5 2XFY",
+    "Product_Type": "Control Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher current carrying capacity, Higher insulation resistance, Better resistance to chemicals, Thermo setting in nature, High resistant to moisture",
@@ -420,8 +420,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Classic 100 CY 300/500V AC",
-    "Product_Type": "Control Cable",
+    "Name": "Polycab Classic 100 CY 300/500V AC",
+    "Product_Type": "Control Product",
     "Standards": "BS EN 50525-2-51",
     "Certifications": "CE",
     "Key_Features": "Flame Retardant, UV resistant, Moisture resistant, Low transfer impedance",

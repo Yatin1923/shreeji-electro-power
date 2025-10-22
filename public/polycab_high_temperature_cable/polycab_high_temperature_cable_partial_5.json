@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab H07BN4-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "High Temperature Cable",
+    "Name": "Polycab H07BN4-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "High Temperature Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05BN4-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "High Temperature Cable",
+    "Name": "Polycab H05BN4-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "High Temperature Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05RR-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "High Temperature Cable",
+    "Name": "Polycab H05RR-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "High Temperature Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Oil Resistant, Chemical resistant",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05RN-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "High Temperature Cable",
+    "Name": "Polycab H05RN-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "High Temperature Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Highly Flexible, Oil Resistance, High insulation resistance, Chemical resistant",
@@ -56,8 +56,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07RN-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "High Temperature Cable",
+    "Name": "Polycab H07RN-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "High Temperature Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Highly Flexible, Oil Resistance, High insulation resistance, Chemical resistant",

@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab 01Y-R SC 1100V AC IS 694",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab 01Y-R SC 1100V AC IS 694",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "IS 694",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Fire Resistant, Low emission of toxic gases, Low carbon emission, High conductivity electrolytic copper conductor, Low volatile organic content",
@@ -14,12 +14,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H03VVH2-F BSEN 50525-2-11 MC 300/300V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H03VVH2-F BSEN 50525-2-11 MC 300/300V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-11",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Resistant to weather exposure, Flexible, Long service life",
-    "Short_Description": "Annealed plain flexible conductor , PVC insulated , PVC sheathed 300V Cable",
+    "Short_Description": "Annealed plain flexible conductor , PVC insulated , PVC sheathed 300V Product",
     "Full_Description": "Multicore H03VVH2-F multicore flexible flat cable insulated and sheathed with thermoplastic compound. This cable fulfils the requirements as per EN 50525-2-11 , cable intended to use for connection of domestic appliances to the fixed supply.",
     "Product_URL": "https://polycab.com/polycab-h03vvh2-f-bsen-50525-2-11-mc-300300v-ac/pt-13203/p-55540",
     "Image_Path": "polycab_domestic_appliance_and_lighting_cable/images/Polycab_H03VVH2-F_BSEN_50525-2-11_MC_300300V_AC_image.png",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Type MC Cu Conductor UL 1569 600V",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab Type MC Cu Conductor UL 1569 600V",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "UL 1569",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Sunlight resistant, Moisture resistant",
@@ -42,12 +42,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05V2V2-F&amp;H05V2V2H2-F BSEN 50525-2-11 MC 300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H05V2V2-F&amp;H05V2V2H2-F BSEN 50525-2-11 MC 300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-11",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Resistant to weather exposure, Flexible, Long service life",
-    "Short_Description": "Annealed plain flexible conductor , PVC insulated , PVC sheathed 500V Cable",
+    "Short_Description": "Annealed plain flexible conductor , PVC insulated , PVC sheathed 500V Product",
     "Full_Description": "POLYCAB H05V2V2-F & H05V2V2H2-F Multicore Flexible cable insulated and sheathed with thermoplastic compound. Thos cable fulfils the requirements as per EN 50525-2-11, cables intended to use for connection of domestic appliances to the fixed supply.",
     "Product_URL": "https://polycab.com/polycab-h05v2v2-fh05v2v2h2-f-bsen-50525-2-11-mc-300500v-ac/pt-13203/p-55548",
     "Image_Path": "polycab_domestic_appliance_and_lighting_cable/images/Polycab_H05V2V2-FampH05V2V2H2-F_BSEN_50525-2-11_MC_300500V_AC_image.png",
@@ -56,13 +56,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05VVH2-F BSEN 50525-2-11 MC 300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H05VVH2-F BSEN 50525-2-11 MC 300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-11",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Resistant to weather exposure, Flexible, Long service life",
-    "Short_Description": "Annealed plain flexible conductor , PVC insulated , PVC sheathed 500V Cable",
-    "Full_Description": "POLYCAB H05VVH2-F two core flexible cable insulated and sheathed with thermoplastic compound. This Cable fulfils the requirements as per EN 50525-2-11, cable is intended to use for connection of domestic appliances to the fixed supply.",
+    "Short_Description": "Annealed plain flexible conductor , PVC insulated , PVC sheathed 500V Product",
+    "Full_Description": "POLYCAB H05VVH2-F two core flexible cable insulated and sheathed with thermoplastic compound. This Product fulfils the requirements as per EN 50525-2-11, cable is intended to use for connection of domestic appliances to the fixed supply.",
     "Product_URL": "https://polycab.com/polycab-h05vvh2-f-bsen-50525-2-11-mc-300500v-ac/pt-13203/p-55544",
     "Image_Path": "polycab_domestic_appliance_and_lighting_cable/images/Polycab_H05VVH2-F_BSEN_50525-2-11_MC_300500V_AC_image.png",
     "Brochure_Path": "polycab_domestic_appliance_and_lighting_cable/brochures/Polycab_H05VVH2-F_BSEN_50525-2-11_MC_300500V_AC_datasheet.pdf",
@@ -70,8 +70,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07V-K BSEN 50525-2-31 SC 450/750V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H07V-K BSEN 50525-2-31 SC 450/750V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-31",
     "Certifications": "CE, FQC",
     "Key_Features": "High insulation resistance, Flexible, High abrasion resistant, Long service life",
@@ -84,8 +84,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab 6181B BS 7211 SC 450/750V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab 6181B BS 7211 SC 450/750V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BS 7211",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Low smoke emission, Halogen Free, Long service life",
@@ -98,8 +98,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab 6181Y BS 6004 SC 300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab 6181Y BS 6004 SC 300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BS 6004",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Heat Resistance, UV stability, Long service life",
@@ -112,8 +112,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Type MC AL Conductor UL 1569 600V",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab Type MC AL Conductor UL 1569 600V",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "UL 1569",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Sunlight resistant, Moisture resistant",
@@ -126,8 +126,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07V-U/H07V-R BSEN 50525-2-31 SC 450/750V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H07V-U/H07V-R BSEN 50525-2-31 SC 450/750V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-31",
     "Certifications": "CE, FQC",
     "Key_Features": "High insulation resistance, Flexible, High abrasion resistant, Long service life",
@@ -140,8 +140,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05V-U/H05V-R/H05V-K BSEN 50525-2-31 SC 300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H05V-U/H05V-R/H05V-K BSEN 50525-2-31 SC 300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-31",
     "Certifications": "CE, FQC",
     "Key_Features": "High insulation resistance, Flexible, Heat resistant, Long service life",
@@ -154,8 +154,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab 01Y-K SC 1100V AC IS 694",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab 01Y-K SC 1100V AC IS 694",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "IS 694",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Fire Resistant, Low emission of toxic gases, Low carbon emission, High conductivity electrolytic copper conductor, Low volatile organic content",
@@ -168,8 +168,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H03Z1Z1H2-F/H05Z1Z1H2-F BSEN 50525-3-11 300/300V&amp;300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H03Z1Z1H2-F/H05Z1Z1H2-F BSEN 50525-3-11 300/300V&amp;300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-3-11",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Low smoke emission, Halogen free, Flame retardant",
@@ -182,8 +182,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab 6192Y/6193Y BS 6004 MC 300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab 6192Y/6193Y BS 6004 MC 300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BS 6004",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Heat Resistance, UV stability, Long service life",
@@ -196,8 +196,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Cu XHHW-2 Type MC Steel Armoured PVC Jacket UL 1569 600V",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab Cu XHHW-2 Type MC Steel Armoured PVC Jacket UL 1569 600V",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "UL 1569",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Oil resistant, Sunlight resistant, Moisture resistant",
@@ -210,8 +210,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab 3192A/3182A/3183A/3184A/3185A BS 6004 MC 300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab 3192A/3182A/3183A/3184A/3185A BS 6004 MC 300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BS 6004",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Heat Resistance, UV stability, Long service life",
@@ -224,12 +224,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05V2V2D3-F BSEN 50525-2-11 MC 300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H05V2V2D3-F BSEN 50525-2-11 MC 300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-11",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Resistant to weather exposure, Flexible, Long service life",
-    "Short_Description": "Annealed plain flexible conductor , PVC insulated ,steel strain member with anti corrosion layer, PVC sheathed 500V Cable",
+    "Short_Description": "Annealed plain flexible conductor , PVC insulated ,steel strain member with anti corrosion layer, PVC sheathed 500V Product",
     "Full_Description": "POLYCAB H05V2V2D3-F multicore flexible cableinsulated and sheathed with thermoplastic compound. This cable fulfils the requirements as per EN 50525-2-11, cable intended to use for connection of domestic appliances to the fixed supply.",
     "Product_URL": "https://polycab.com/polycab-h05v2v2d3-f-bsen-50525-2-11-mc-300500v-ac/pt-13203/p-55542",
     "Image_Path": "polycab_domestic_appliance_and_lighting_cable/images/Polycab_H05V2V2D3-F_BSEN_50525-2-11_MC_300500V_AC_image.png",
@@ -238,8 +238,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Al XHHW-2 Type MC AL Armoured PVC Jacket UL 1569 600V",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab Al XHHW-2 Type MC AL Armoured PVC Jacket UL 1569 600V",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "UL 1569",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Oil resistant, Sunlight resistant, Moisture resistant",
@@ -252,8 +252,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab 6181B/6182B/6183B/6184B/6185B BS 7211 450/750V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab 6181B/6182B/6183B/6184B/6185B BS 7211 450/750V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BS 7211",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Low smoke emission, Halogen Free, Long service life",
@@ -266,12 +266,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H03V2V2-F&amp;H03V2V2H2-F BSEN 50525-2-11 MC 300/300V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H03V2V2-F&amp;H03V2V2H2-F BSEN 50525-2-11 MC 300/300V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-11",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Resistant to weather exposure, Flexible, Long service life",
-    "Short_Description": "Annealed plain flexible conductor , PVC insulated , PVC sheathed 300V Cable",
+    "Short_Description": "Annealed plain flexible conductor , PVC insulated , PVC sheathed 300V Product",
     "Full_Description": "POLYCAB, H03V2V2-F & H03V2V2H2-F multicore Flexible cable insulated and sheathed with thermoplastic compound. This cable fulfils the requirements as per EN 50525-2-11, cable intend to use for connection of domestic appliances to the fixed supply.",
     "Product_URL": "https://polycab.com/polycab-h03v2v2-fh03v2v2h2-f-bsen-50525-2-11-mc-300300v-ac/pt-13203/p-55546",
     "Image_Path": "polycab_domestic_appliance_and_lighting_cable/images/Polycab_H03V2V2-FampH03V2V2H2-F_BSEN_50525-2-11_MC_300300V_AC_image.png",
@@ -280,12 +280,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H03VV-F BSEN 50525-2-11 MC 300/300V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H03VV-F BSEN 50525-2-11 MC 300/300V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-11",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Resistant to weather exposure, Flexible, Long service life",
-    "Short_Description": "Annealed plain flexible conductor , PVC insulated , PVC sheathed 300V Cable",
+    "Short_Description": "Annealed plain flexible conductor , PVC insulated , PVC sheathed 300V Product",
     "Full_Description": "POLYCAB H03VV-F PVC insulated and Sheathed multicore flexible fulfils the requirements as per EN 50525-2-11. This cable is intended to use for connection of domestic appliances to the fixed supply.",
     "Product_URL": "https://polycab.com/polycab-h03vv-f-bsen-50525-2-11-mc-300300v-ac/pt-13203/p-55538",
     "Image_Path": "polycab_domestic_appliance_and_lighting_cable/images/Polycab_H03VV-F_BSEN_50525-2-11_MC_300300V_AC_image.png",
@@ -294,8 +294,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab 6241B/6242B/6243B BS 7211 MC 300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab 6241B/6242B/6243B BS 7211 MC 300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BS 7211",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Low smoke emission, Halogen Free, Long service life",
@@ -308,8 +308,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Type MC PVC Jacketed AL Conductor UL 1569 600V",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab Type MC PVC Jacketed AL Conductor UL 1569 600V",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "UL 1596",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Oil resistant, Sunlight resistant, Moisture resistant",
@@ -322,8 +322,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05VV-F BSEN 50525-2-11 MC 300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H05VV-F BSEN 50525-2-11 MC 300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-11",
     "Certifications": "CE, FQC",
     "Key_Features": "High dielectric strength, Flexible, High abrasion resistant, Long service life",
@@ -336,8 +336,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05V2-K/H07V2-K BSEN 50525-2-31 SC 300/500V&amp;450/750V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H05V2-K/H07V2-K BSEN 50525-2-31 SC 300/500V&amp;450/750V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-31",
     "Certifications": "CE, FQC",
     "Key_Features": "High insulation resistance, Flexible, Heat resistant, Long service life",
@@ -350,8 +350,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05V2-U/H05V2-R/H07V2-U/H07V2-R BSEN 50525-2-31 SC 300/500V&amp;450/750V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H05V2-U/H05V2-R/H07V2-U/H07V2-R BSEN 50525-2-31 SC 300/500V&amp;450/750V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-2-31",
     "Certifications": "CE, FQC",
     "Key_Features": "High insulation resistance, Flexible, High abrasion resistant, Long service life",
@@ -364,8 +364,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab 6241Y/6242Y/6243Y BS 6004 MC 300/500V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab 6241Y/6242Y/6243Y BS 6004 MC 300/500V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BS 6004",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Heat Resistance, UV stability, Long service life",
@@ -378,8 +378,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H03Z1Z1-F BSEN 50525-3-11 300/300V AC",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab H03Z1Z1-F BSEN 50525-3-11 300/300V AC",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "BSEN 50525-3-11",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Low smoke emission, Halogen free, Flame retardant",
@@ -392,8 +392,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Type MC PVC Jacketed Cu Conductor UL 1569 600V",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab Type MC PVC Jacketed Cu Conductor UL 1569 600V",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "UL 1569",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Sunlight resistant, Moisture resistant",
@@ -406,8 +406,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Cu Type TC/TC-ER THHN/THWN-2 16 AWG Tray Cable",
-    "Product_Type": "Domestic Appliance and Lighting Cable",
+    "Name": "Polycab Cu Type TC/TC-ER THHN/THWN-2 16 AWG Tray Product",
+    "Product_Type": "Domestic Appliance and Lighting Product",
     "Standards": "UL 1277",
     "Certifications": "CE, UL",
     "Key_Features": "Heat resistant, Flame retardant, Oil resistant, Sunlight resistant, Moisture resistant",

@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab RR-P 1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab RR-P 1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07BB-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H07BB-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab MV Cu IS 9968-2 6.35/11(E) or 6.6/6.6(UE)kV",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab MV Cu IS 9968-2 6.35/11(E) or 6.6/6.6(UE)kV",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-2",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Flexible, High life, UV resistant, Oil Resistant, Chemical resistant",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR-C 1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab RR-C 1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -56,8 +56,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07BN4-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H07BN4-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -70,8 +70,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05BQ-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H05BQ-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -84,8 +84,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR-E 1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab RR-E 1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -98,13 +98,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab AL HOFR IS 9857 Welding Cable",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab AL HOFR IS 9857 Welding Product",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9857",
     "Certifications": "CE, BIS",
     "Key_Features": "Long life, Heat Resistance, Flame retardant, Highly flexible",
     "Short_Description": "Flexible bunched aluminium conductor, HOFR SE3 insulated cable",
-    "Full_Description": "POLYCAB HOFR Welding Cable IS 9857 ,These cables are designed to use in machine welding & hand welding to work at dry and wet locations as well as outdoor use. This is also suitable for automatic welding.",
+    "Full_Description": "POLYCAB HOFR Welding Product IS 9857 ,These cables are designed to use in machine welding & hand welding to work at dry and wet locations as well as outdoor use. This is also suitable for automatic welding.",
     "Product_URL": "https://polycab.com/polycab-al-hofr-is-9857-welding-cable/pt-13198/p-55638",
     "Image_Path": "polycab_rubber_cable/images/Polycab_AL_HOFR_IS_9857_Welding_Cable_image.png",
     "Brochure_Path": "polycab_rubber_cable/brochures/Polycab_AL_HOFR_IS_9857_Welding_Cable_datasheet.pdf",
@@ -112,8 +112,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05GG-F/H05GGH2-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H05GG-F/H05GGH2-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -126,8 +126,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR-C MC 1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab RR-C MC 1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -140,8 +140,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07RN8-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H07RN8-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -154,8 +154,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab MV Cu IS 9968-2 12.7/22(E) or 11/11(UE)kV",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab MV Cu IS 9968-2 12.7/22(E) or 11/11(UE)kV",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-2",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Flexible, High life, UV resistant, Oil Resistant, Chemical resistant",
@@ -168,8 +168,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab SiR-S 1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab SiR-S 1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -182,8 +182,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05SS-K BSEN 50525-2-41 SC 300/500V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H05SS-K BSEN 50525-2-41 SC 300/500V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -196,13 +196,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Cu HOFR IS 9857 Welding Cable",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab Cu HOFR IS 9857 Welding Product",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9857",
     "Certifications": "CE, BIS",
     "Key_Features": "Long life, Heat Resistance, Flame retardant, Highly flexible",
     "Short_Description": "Annealed plain flexible bunched electrolytic grade copper conductor, HOFR SE3 insulated cable",
-    "Full_Description": "POLYCAB HOFR Welding Cable IS 9857 ,These cables are designed to use in machine welding & hand welding to work at dry and wet locations as well as outdoor use. This is also suitable for automatic welding.",
+    "Full_Description": "POLYCAB HOFR Welding Product IS 9857 ,These cables are designed to use in machine welding & hand welding to work at dry and wet locations as well as outdoor use. This is also suitable for automatic welding.",
     "Product_URL": "https://polycab.com/polycab-cu-hofr-is-9857-welding-cable/pt-13198/p-55636",
     "Image_Path": "polycab_rubber_cable/images/Polycab_Cu_HOFR_IS_9857_Welding_Cable_image.png",
     "Brochure_Path": "polycab_rubber_cable/brochures/Polycab_Cu_HOFR_IS_9857_Welding_Cable_datasheet.pdf",
@@ -210,8 +210,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR (Reinforced)1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab RR (Reinforced)1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -224,8 +224,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05RR-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H05RR-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Oil Resistant, Chemical resistant",
@@ -238,8 +238,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab SiR-SC 1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab SiR-SC 1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -252,8 +252,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR-P MC 1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab RR-P MC 1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -266,8 +266,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05RN-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H05RN-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Highly Flexible, Oil Resistance, High insulation resistance, Chemical resistant",
@@ -280,8 +280,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05BN4-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H05BN4-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -294,8 +294,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07RN-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H07RN-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Highly Flexible, Oil Resistance, High insulation resistance, Chemical resistant",
@@ -308,8 +308,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab SiR 1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab SiR 1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -322,8 +322,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab MV Cu IS 9968-2 3.8/6.6(E)kV",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab MV Cu IS 9968-2 3.8/6.6(E)kV",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-2",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Flexible, High life, UV resistant, Oil Resistant, Chemical resistant",
@@ -336,8 +336,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab RR-E MC 1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab RR-E MC 1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -350,8 +350,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab MV Cu IS 9968-2 1.9/3.3(E) or 3.3/3.3(UE)kV",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab MV Cu IS 9968-2 1.9/3.3(E) or 3.3/3.3(UE)kV",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-2",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Flexible, High life, UV resistant, Oil Resistant, Chemical resistant",
@@ -364,8 +364,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05S-U/H05S-K BSEN 50525-2-41 SC 300/500V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H05S-U/H05S-K BSEN 50525-2-41 SC 300/500V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -378,8 +378,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05SJ-U/H05SJ-K BSEN 50525-2-41 SC 300/500V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H05SJ-U/H05SJ-K BSEN 50525-2-41 SC 300/500V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -392,8 +392,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H05BB-F BSEN 50525-2-21 MC 300/500V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H05BB-F BSEN 50525-2-21 MC 300/500V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "High Insulation Resistance, Highly Flexible, Long life, Fire resistance",
@@ -406,8 +406,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H07BQ-F BSEN 50525-2-21 MC 450/750V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H07BQ-F BSEN 50525-2-21 MC 450/750V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-21",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life, Flame retardant",
@@ -420,8 +420,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab H03S-K BSEN 50525-2-41 SC 300/300V AC",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab H03S-K BSEN 50525-2-41 SC 300/300V AC",
+    "Product_Type": "Rubber Product",
     "Standards": "BSEN 50525-2-41",
     "Certifications": "CE, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",
@@ -434,8 +434,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab SiR-G 1100V AC IS 9968-1",
-    "Product_Type": "Rubber Cable",
+    "Name": "Polycab SiR-G 1100V AC IS 9968-1",
+    "Product_Type": "Rubber Product",
     "Standards": "IS 9968-1",
     "Certifications": "CE, BIS, FQC",
     "Key_Features": "Heat resistant, Highly Flexible, Long life",

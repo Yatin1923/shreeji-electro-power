@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab IGNIS 210",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 210",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7846",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 200",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 200",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7846",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 220",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 220",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7846",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Firealarm Shielded Unarmoured Cable",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab Firealarm Shielded Unarmoured Product",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "High current carrying capacity, Low leakage current, High insulation resistance, High data transmission",
@@ -56,8 +56,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 241",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 241",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7211",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Halogen Free, Reduced Flame Propagation, Low toxicity, Fire barrier",
@@ -70,8 +70,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 215",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 215",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7629-1",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -84,8 +84,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 212",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 212",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7629-1",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -98,8 +98,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Firealarm Armoured Cable",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab Firealarm Armoured Product",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 5467",
     "Certifications": "CE, FQC",
     "Key_Features": "High current carrying capacity, Low leakage current, High insulation resistance, High data transmission, Good mechanical strength",
@@ -112,8 +112,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 240",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 240",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 8592",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Halogen Free, Reduced Flame Propagation, Low toxicity, Fire barrier",
@@ -126,8 +126,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 213",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 213",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7629-1",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -140,8 +140,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Firealarm Shielded Armoured Cable",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab Firealarm Shielded Armoured Product",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "High current carrying capacity, Low leakage current, High insulation resistance, High data transmission, Good mechanical strength",
@@ -154,8 +154,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 211",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 211",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7629-1",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -168,8 +168,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 214",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 214",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7629-1",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -182,8 +182,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 230",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 230",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7846",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -196,8 +196,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 242",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 242",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 6724",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Halogen Free, Reduced Flame Propagation, Low toxicity, Fire barrier",
@@ -210,8 +210,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Firealarm Unarmoured Cable",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab Firealarm Unarmoured Product",
+    "Product_Type": "Fire Protection Product",
     "Standards": "Polycab standard",
     "Certifications": "CE, FQC",
     "Key_Features": "High current carrying capacity, Low leakage current, High insulation resistance, High data transmission",

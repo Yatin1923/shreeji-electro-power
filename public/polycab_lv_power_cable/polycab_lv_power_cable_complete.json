@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab LV IS-7098-I 1C-2XY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 1C-2XY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -14,13 +14,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-2 UA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-2 UA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-2-ua/pt-13191/p-55259",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-2_UA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_MC-2_UA_datasheet.pdf",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3C 2XFY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3C 2XFY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3C A2XWY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3C A2XWY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -56,8 +56,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab BS 6724 MC SWA LSZH 0.6/1kV AC",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab BS 6724 MC SWA LSZH 0.6/1kV AC",
+    "Product_Type": "LV Power Product",
     "Standards": "BS 6724",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Low smoke emission, High life, Halogen Free",
@@ -70,13 +70,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-4 UA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-4 UA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor, XLPE insulation, Laid up, Inner covering, Armoured,PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded copper conductor, XLPE insulation, Laid up, Inner covering, Armoured,PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-4-ua/pt-13191/p-55301",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-4_UA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_MC-4_UA_datasheet.pdf",
@@ -84,13 +84,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-4 SWA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-4 SWA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-4-swa/pt-13191/p-55299",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-4_SWA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_MC-4_SWA_datasheet.pdf",
@@ -98,13 +98,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3 SWA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3 SWA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free inner & Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free inner & Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-3-swa/pt-13191/p-55287",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-3_SWA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_MC-3_SWA_datasheet.pdf",
@@ -112,8 +112,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 1C-A2XY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 1C-A2XY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -126,13 +126,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV SC SFA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV SC SFA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Single core stranded AL conductor,XLPE/EPR/HEPR insulation, Aluminium strip armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Single core stranded Aluminium conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner Sheathed, Aluminium strip armored & PVC/Polyethylene/Halogen free Outer sheathed Cable. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
+    "Short_Description": "Single core stranded AL conductor,XLPE/EPR/HEPR insulation, Aluminium strip armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Single core stranded Aluminium conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner Sheathed, Aluminium strip armored & PVC/Polyethylene/Halogen free Outer sheathed Product. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-sc-sfa/pt-13191/p-55247",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_SC_SFA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_SC_SFA_datasheet.pdf",
@@ -140,13 +140,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-4 SWA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-4 SWA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPRE insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPRE insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-4-swa/pt-13191/p-55293",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-4_SWA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_MC-4_SWA_datasheet.pdf",
@@ -154,13 +154,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-2 SFA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-2 SFA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
     "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cablee",
-    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI flat strip,PVC/Polyethylene/Halogen free sheathed Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI flat strip,PVC/Polyethylene/Halogen free sheathed Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-2-sfa/pt-13191/p-55255",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-2_SFA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_MC-2_SFA_datasheet.pdf",
@@ -168,13 +168,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV SC UA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV SC UA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Single core stranded AL conductor,XLPE/EPR/HEPR insulation, unarmoured,PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Single core stranded Aluminium conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner & outer sheathed Cable. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
+    "Short_Description": "Single core stranded AL conductor,XLPE/EPR/HEPR insulation, unarmoured,PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Single core stranded Aluminium conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner & outer sheathed Product. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-sc-ua/pt-13191/p-55243",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_SC_UA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_SC_UA_datasheet.pdf",
@@ -182,13 +182,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV SC AWA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV SC AWA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Single core stranded AL conductor,XLPE/EPR/HEPR insulation,Aluminium armoured,PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Single core stranded Aluminium conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner, Aluminium wire armored & outer sheathed Cable. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
+    "Short_Description": "Single core stranded AL conductor,XLPE/EPR/HEPR insulation,Aluminium armoured,PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Single core stranded Aluminium conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner, Aluminium wire armored & outer sheathed Product. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-sc-awa/pt-13191/p-55245",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_SC_AWA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_SC_AWA_datasheet.pdf",
@@ -196,12 +196,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3 SFA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3 SFA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured,PVC/Polyethylene/Halogen free inner & Outer sheathed LV Cable",
+    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured,PVC/Polyethylene/Halogen free inner & Outer sheathed LV Product",
     "Full_Description": "Multicore stranded Aluminium conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI flat strip armoured,PVC/Polyethylene/Halogen free sheathed. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-3-sfa/pt-13191/p-55279",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-3_SFA_image.png",
@@ -210,12 +210,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3.5 SFA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3.5 SFA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
     "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI flat strip armoured,PVC/Polyethylene/Halogen free sheathed. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-35-sfa/pt-13191/p-55273",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-35_SFA_image.png",
@@ -224,13 +224,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3.5 SWA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3.5 SWA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-35-swa/pt-13191/p-55275",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-35_SWA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_MC-35_SWA_datasheet.pdf",
@@ -238,12 +238,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-4 SFA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-4 SFA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured,PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
+    "Short_Description": "Multi core stranded AL conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured,PVC/Polyethylene/Halogen free Outer sheathed LV Product",
     "Full_Description": "Multicore stranded Aluminium conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI flat strip armoured,PVC/Polyethylene/Halogen free sheathed. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-4-sfa/pt-13191/p-55291",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-4_SFA_image.png",
@@ -252,8 +252,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 4C 2XFY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 4C 2XFY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -266,12 +266,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3.5 SFA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3.5 SFA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
+    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
     "Full_Description": "Multicore stranded Aluminium conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI flat strip armoured,PVC/Polyethylene/Halogen free sheathed. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-35-sfa/pt-13191/p-55267",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-35_SFA_image.png",
@@ -280,13 +280,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV SC SFA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV SC SFA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Single core stranded Copper conductor,XLPE/EPR/HEPR insulation, Aluminium strip armoured unarmoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Single core stranded Copper conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner Sheathed, Aluminium strip armored & PVC/Polyethylene/Halogen free Outer sheathed Cable. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
+    "Short_Description": "Single core stranded Copper conductor,XLPE/EPR/HEPR insulation, Aluminium strip armoured unarmoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Single core stranded Copper conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner Sheathed, Aluminium strip armored & PVC/Polyethylene/Halogen free Outer sheathed Product. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-sc-sfa/pt-13191/p-55251",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_SC_SFA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_SC_SFA_datasheet.pdf",
@@ -294,8 +294,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3.5C 2XWY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3.5C 2XWY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -308,13 +308,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-4 UA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-4 UA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-4-ua/pt-13191/p-55295",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-4_UA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_MC-4_UA_datasheet.pdf",
@@ -322,13 +322,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3.5 SWA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3.5 SWA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-35-swa/pt-13191/p-55269",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-35_SWA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_MC-35_SWA_datasheet.pdf",
@@ -336,13 +336,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3 UA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3 UA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded AL conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-3-ua/pt-13191/p-55283",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-3_UA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_MC-3_UA_datasheet.pdf",
@@ -350,8 +350,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3.5C-2XY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3.5C-2XY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher insulation resistance, Better resistance to surge currents, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -364,13 +364,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3.5 UA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3.5 UA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded AL conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-35-ua/pt-13191/p-55271",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-35_UA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_MC-35_UA_datasheet.pdf",
@@ -378,8 +378,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3C A2XFY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3C A2XFY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -392,8 +392,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3C-2XY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3C-2XY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher insulation resistance, Better resistance to surge currents, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -406,8 +406,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 4C-A2XY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 4C-A2XY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher insulation resistance, Better resistance to surge currents, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -420,13 +420,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-2 SWA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-2 SWA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering GI wire armored,PVC/Polyethylene/Halogen free sheathed Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded copper conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering GI wire armored,PVC/Polyethylene/Halogen free sheathed Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-2-swa/pt-13191/p-55263",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-2_SWA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_MC-2_SWA_datasheet.pdf",
@@ -434,13 +434,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3 UA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3 UA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen frer Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen frer Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-3-ua/pt-13191/p-55289",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-3_UA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_MC-3_UA_datasheet.pdf",
@@ -448,8 +448,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 4C 2XWY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 4C 2XWY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -462,13 +462,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV SC UA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV SC UA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Single core stranded copper conductor,XLPE/EPR/HEPR insulation, unarmoured,PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Single core stranded Copper conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner & outer sheathed Cable. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
+    "Short_Description": "Single core stranded copper conductor,XLPE/EPR/HEPR insulation, unarmoured,PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Single core stranded Copper conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner & outer sheathed Product. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-sc-ua/pt-13191/p-55253",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_SC_UA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_SC_UA_datasheet.pdf",
@@ -476,8 +476,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3.5C A2XWY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3.5C A2XWY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -490,8 +490,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 4C A2XFY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 4C A2XFY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -504,13 +504,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3 SWA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-3 SWA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor, XLPE insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded AL conductor, XLPE insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-3-swa/pt-13191/p-55281",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-3_SWA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_MC-3_SWA_datasheet.pdf",
@@ -518,8 +518,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3.5C A2XFY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3.5C A2XFY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -532,13 +532,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-2 SFA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-2 SFA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering GI flat strip armored,PVC/Polyethylene/Halogen free sheathed Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded copper conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering GI flat strip armored,PVC/Polyethylene/Halogen free sheathed Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-2-sfa/pt-13191/p-55261",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-2_SFA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_MC-2_SFA_datasheet.pdf",
@@ -546,8 +546,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3.5C-A2XY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3.5C-A2XY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher insulation resistance, Better resistance to surge currents, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -560,8 +560,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 2C-2XY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 2C-2XY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher insulation resistance, Better resistance to surge currents, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -574,8 +574,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 1C-A2XFaY-A2XWaY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 1C-A2XFaY-A2XWaY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -588,8 +588,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3C-A2XY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3C-A2XY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher insulation resistance, Better resistance to surge currents, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -602,13 +602,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-2 UA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-2 UA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded copper conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-2-ua/pt-13191/p-55265",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-2_UA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_MC-2_UA_datasheet.pdf",
@@ -616,12 +616,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3 SFA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3 SFA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
+    "Short_Description": "Multi core stranded copper conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
     "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI flat strip armoured,PVC/Polyethylene/Halogen free sheathed. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-3-sfa/pt-13191/p-55285",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-3_SFA_image.png",
@@ -630,12 +630,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab BS 5467 MC 0.6/1kV AC",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab BS 5467 MC 0.6/1kV AC",
+    "Product_Type": "LV Power Product",
     "Standards": "BS 5467",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Low smoke emission, High life, Resistant to weather exposure",
-    "Short_Description": "Stranded copper conductor, XLPE/EPR Insulated, Extruded Polymeric Bedding, GS round wire armoured,PVC FRLS Outer Sheathed 0.6/1 kV LV Cable",
+    "Short_Description": "Stranded copper conductor, XLPE/EPR Insulated, Extruded Polymeric Bedding, GS round wire armoured,PVC FRLS Outer Sheathed 0.6/1 kV LV Product",
     "Full_Description": "POLYCAB BS 5467 MC stranded copper conductor thermosetting material insulated Multi core armoured cable fulfils the requirement as per BS EN 5467. These cables are suitable for fixed installation in industrial area, buildings, Power network in underground, outdoor, indoor and similar application where mechanical protection is required.",
     "Product_URL": "https://polycab.com/polycab-bs-5467-mc-061kv-ac/pt-13191/p-55467",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_BS_5467_MC_061kV_AC_image.png",
@@ -644,8 +644,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 1C-2XFaY-2XWaY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 1C-2XFaY-2XWaY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -658,8 +658,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 4C A2XWY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 4C A2XWY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -672,8 +672,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 2C-A2XY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 2C-A2XY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher insulation resistance, Better resistance to surge currents, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -686,8 +686,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3.5C 2XFY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3.5C 2XFY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -700,8 +700,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 2C 2XWY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 2C 2XWY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -714,13 +714,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV SC AWA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV SC AWA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Single core stranded Copper conductor,XLPE/EPR/HEPR insulation, Aluminium wire armoured,PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Single core stranded copper conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner, Aluminium wire armored & outer sheathed Cable. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
+    "Short_Description": "Single core stranded Copper conductor,XLPE/EPR/HEPR insulation, Aluminium wire armoured,PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Single core stranded copper conductor, XLPE/EPR/HEPR insulation,PVC/Polyethylene/Halogen free Inner, Aluminium wire armored & outer sheathed Product. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV).",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-sc-awa/pt-13191/p-55249",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_SC_AWA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_SC_AWA_datasheet.pdf",
@@ -728,8 +728,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 3C 2XWY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 3C 2XWY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -742,8 +742,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 4C-2XY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 4C-2XY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher insulation resistance, Better resistance to surge currents, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -756,8 +756,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 2C A2XFY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 2C A2XFY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -770,8 +770,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab BS 5467 SC 0.6/1kV AC",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab BS 5467 SC 0.6/1kV AC",
+    "Product_Type": "LV Power Product",
     "Standards": "BS 5467",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Low smoke emission, High life, Resistant to weather exposure",
@@ -784,13 +784,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3.5 UA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-3.5 UA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable",
-    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded copper conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product",
+    "Full_Description": "Multicore stranded Copper, XLPE/EPR/HEPR insulation, Laid up, inner covering,PVC/Polyethylene/Halogen free sheathed unarmored Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-35-ua/pt-13191/p-55277",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-35_UA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_Cu_IEC_60502-1_061kV_MC-35_UA_datasheet.pdf",
@@ -798,12 +798,12 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-4 SFA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV Cu IEC 60502-1 0.6/1kV MC-4 SFA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded copper conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free i Outer sheathed LV Cable",
+    "Short_Description": "Multi core stranded copper conductor, XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free i Outer sheathed LV Product",
     "Full_Description": "Multicore stranded Copper conductor, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI flat strip armoured,PVC/Polyethylene/Halogen free sheathed. suitable for fixed installation such as distribution network or industrial installation. These cable cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-cu-iec-60502-1-061kv-mc-4-sfa/pt-13191/p-55297",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_Cu_IEC_60502-1_061kV_MC-4_SFA_image.png",
@@ -812,13 +812,13 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-2 SWA",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV AL IEC 60502-1 0.6/1kV MC-2 SWA",
+    "Product_Type": "LV Power Product",
     "Standards": "IEC 60502-1",
     "Certifications": "CE, FQC",
     "Key_Features": "Higher dielectric strength, Better electrical, mechanical, And thermal properties, UV resistant, Long service life, Low smoke emission",
-    "Short_Description": "Multi core stranded AL conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Cable sheathed LV Cable",
-    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Cable suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
+    "Short_Description": "Multi core stranded AL conductor,XLPE/EPR/HEPR insulation, Laid up, Inner covering, Armoured, PVC/Polyethylene/Halogen free Outer sheathed LV Product sheathed LV Product",
+    "Full_Description": "Multicore stranded Aluminium, XLPE/EPR/HEPR insulation, Laid up, inner covering,GI wire,PVC/Polyethylene/Halogen free sheathed Product suitable for fixed installation such as distribution network or industrial installation.These cables are designed for systems with rated AC voltage 1KV (Um=1.2 KV) between two live conductor.",
     "Product_URL": "https://polycab.com/polycab-lv-al-iec-60502-1-061kv-mc-2-swa/pt-13191/p-55257",
     "Image_Path": "polycab_lv_power_cable/images/Polycab_LV_AL_IEC_60502-1_061kV_MC-2_SWA_image.png",
     "Brochure_Path": "polycab_lv_power_cable/brochures/Polycab_LV_AL_IEC_60502-1_061kV_MC-2_SWA_datasheet.pdf",
@@ -826,8 +826,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 2C A2XWY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 2C A2XWY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -840,8 +840,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab LV IS-7098-I 2C 2XFY",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab LV IS-7098-I 2C 2XFY",
+    "Product_Type": "LV Power Product",
     "Standards": "IS 7098-I",
     "Certifications": "CE, BIS, CPRI, FQC",
     "Key_Features": "Higher Current rating, Higher insulation resistance, Better resistance to surge current, Low dielectric losses, Long service life, Higher short circuit rating",
@@ -854,8 +854,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab BS 6724 SC AWA LSZH 0.6/1kV AC",
-    "Product_Type": "LV Power Cable",
+    "Name": "Polycab BS 6724 SC AWA LSZH 0.6/1kV AC",
+    "Product_Type": "LV Power Product",
     "Standards": "BS 6724",
     "Certifications": "CE, FQC",
     "Key_Features": "Low flame propagation, Low smoke emission, High life, Halogen Free",

@@ -1,7 +1,7 @@
 [
   {
-    "Cable_Name": "Polycab IGNIS 210",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 210",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7846",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -14,8 +14,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 200",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 200",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7846",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -28,8 +28,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 220",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 220",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7846",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Reduced flame Propagation, Heat resistant, Low toxicity, Fire barrier",
@@ -42,8 +42,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab Firealarm Shielded Unarmoured Cable",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab Firealarm Shielded Unarmoured Product",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BSEN 50288-7",
     "Certifications": "CE, FQC",
     "Key_Features": "High current carrying capacity, Low leakage current, High insulation resistance, High data transmission",
@@ -56,8 +56,8 @@
     "Brochure_Download_Status": "Downloaded"
   },
   {
-    "Cable_Name": "Polycab IGNIS 241",
-    "Product_Type": "Fire Protection Cable",
+    "Name": "Polycab IGNIS 241",
+    "Product_Type": "Fire Protection Product",
     "Standards": "BS 7211",
     "Certifications": "CE, FQC",
     "Key_Features": "High Resistant to Fire, Halogen Free, Reduced Flame Propagation, Low toxicity, Fire barrier",

@@ -29,7 +29,7 @@ def download_images():
     if not os.path.exists("polycab_renewable_images"):
         os.makedirs("polycab_renewable_images")
     
-    print("🔋 Starting Polycab Renewable Energy Cable Images Download...\n")
+    print("🔋 Starting Polycab Renewable Energy Product Images Download...\n")
     print(f"📊 Total images to download: {len(product_images)}\n")
     
     success_count = 0
