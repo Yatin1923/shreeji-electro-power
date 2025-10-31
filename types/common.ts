@@ -10,7 +10,7 @@ export interface Product {
     Full_Description: string;
     Image_Path: string;
     
-    // Product
+    // Fan
     Model_Number?: string;
     Specifications?: string;
     Colors?: string;
@@ -27,13 +27,16 @@ export interface Product {
     Price?: string;
     
 
-    // Product
+    // Cable
     Standards?: string;
     Certifications?: string;
     Product_URL?: string;
     Brochure_Path?: string;
     Image_Download_Status?: string;
     Brochure_Download_Status?: string;
+
+    // Lighting
+    Wattage?: any;
   }
   
   export interface SearchFilters {

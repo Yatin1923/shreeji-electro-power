@@ -10,7 +10,7 @@ import pandas as pd
 from collections import defaultdict
 
 class PolycabFansExtractor:
-    def __init__(self, fan_type_slug: str = "ceiling-fan", fan_display_name: str = "Ceiling Product"):
+    def __init__(self, fan_type_slug: str = "ceiling-fan", fan_display_name: str = "Ceiling Fan"):
         """
         Initialize the comprehensive fan extractor with configurable fan type
         """

@@ -1,4 +1,5 @@
 // services/unified-product-service.ts
+import { cables, fans, lightings } from '@/data/products';
 import { CableStrategy } from './polycab-cable-service';
 import { FanStrategy } from './polycab-fan-service';
 import { Product, UnifiedSearchFilters, UnifiedSearchResult } from '@/types/common';
@@ -23,19 +24,8 @@ export class UnifiedProductService {
 
   // Get all products from all categories
   public getAllProducts():Product[]{
-    const cables = this.cableStrategy.getAllProducts()
-    // .map(cable => ({
-    //   product: cable as Product,
-    //   productType: 'cable' as const
-    // }));
-    
-    const fans = this.fanStrategy.getAllProducts()
-    // .map(fan => ({
-    //   product: fan as Product,
-    //   productType: 'fan' as const
-    // }));
-
-    return [...cables, ...fans];
+    return [...cables, ...fans,...lightings];
+    return [...lightings];
   }
 
   // Get total count of all products
@@ -44,16 +34,19 @@ export class UnifiedProductService {
     breakdown: {
       cables: number;
       fans: number;
+      lightings:number;
     };
   } {
-    const cables = this.cableStrategy.getAllProducts().length;
-    const fans = this.fanStrategy.getAllProducts().length;
+    // const cables = this.cableStrategy.getAllProducts().length;
+    // const fans = this.fanStrategy.getAllProducts().length;
 
     return {
-      total: cables + fans,
+      total: cables.length + fans.length,
       breakdown: {
-        cables,
-        fans
+        cables:cables.length,
+        fans:fans.length,
+        lightings:lightings.length
+
       }
     };
   }
@@ -121,15 +114,24 @@ export class UnifiedProductService {
   // Get product by name across all types
   public getProductByName(name: string):Product | undefined {
     // Try cables first
-    const cable = this.cableStrategy.getProductByName(name);
+    const cable = cables.find(cable => 
+      cable.Name.toLowerCase() === name.toLowerCase());
     if (cable) {
       return cable;
     }
 
     // Try fans
-    const fan = this.fanStrategy.getProductByName(name);
+    const fan = fans.find(fan => 
+      fan.Name.toLowerCase() === name.toLowerCase());
     if (fan) {
       return fan;
+    }
+    console.log("name",name);
+    const lighting = lightings.find(lighting => 
+      lighting.Name.toLowerCase() == name.toLowerCase());
+      console.log("lightings",lightings);
+    if (lighting) {
+      return lighting;
     }
 
     return undefined;
