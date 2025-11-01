@@ -9,7 +9,7 @@
 //   export interface Product extends Product {
 //     Model_Number: string;
 //     Specifications: string;
-//     Colors: string;
+//     Color: string;
 //     Sweep_Size: string;
 //     RPM: string;
 //     Power_Consumption: string;

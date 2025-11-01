@@ -95,7 +95,10 @@ const categoryStructure = {
   },
   "SWITCHGEAR": {
     subcategories: SWITCHGEAR_SUBCATEGORIES
-  }
+  },
+  "WIRE": {
+    subcategories: null
+  },
 };
 
 const ITEMS_PER_PAGE = 9;
@@ -137,37 +140,23 @@ export default function ProductPage() {
 
   // Simplified function to match subcategories using display names
   const matchesSubcategory = (product: Product, category: string, subcategoryValue: string): boolean => {
-    const productName = product.Name.toLowerCase()
     const productType = product.Product_Type.toLowerCase()
-    const shortDesc = product.Short_Description?.toLowerCase() || ''
     const subcategoryLower = subcategoryValue.toLowerCase()
-
     // Direct product type match
+    console.log('Matching product:', product, 'Type:', product.Product_Type, 'Subcategory:', subcategoryValue);
     if (productType === subcategoryLower) {
       return true
     }
-
-    // Check if product type contains key words from subcategory
-    const subcategoryWords = subcategoryLower.split(' ')
-    const productTypeWords = productType.split(' ')
-
-    // If all words from subcategory are found in product type
-    const hasAllWords = subcategoryWords.every(word =>
-      productTypeWords.some(ptWord => ptWord.includes(word)) ||
-      productName.includes(word) ||
-      shortDesc.includes(word)
-    )
-
-    return hasAllWords
+    return false
   }
-
+  
   // Enhanced product loading with subcategory filtering
   const loadProductsEnhanced = React.useCallback(async () => {
     setLoading(true)
     try {
       const allProducts = unifiedProductService.getAllProducts();
       let filteredProducts = [...allProducts]
-
+  
       // Apply search filter
       if (searchDebounce) {
         const searchTerm = searchDebounce.toLowerCase()
@@ -179,7 +168,7 @@ export default function ProductPage() {
           product.Standards?.toLowerCase().includes(searchTerm)
         )
       }
-
+  
       // Apply brand filter
       if (brandSel.length > 0) {
         filteredProducts = filteredProducts.filter(product =>
@@ -188,30 +177,38 @@ export default function ProductPage() {
           )
         )
       }
-
+  
       // Apply main category filter
       if (catSel.length > 0) {
         filteredProducts = filteredProducts.filter(product =>
           catSel.some(category => product.Type.toUpperCase().includes(category.toUpperCase()))
         )
       }
-
-      // Apply subcategory filters for all categories
+  
+      // Apply subcategory filters with proper handling for categories without subcategories
       const hasSubcategoryFilters = Object.values(subcategorySel).some(arr => arr.length > 0)
       if (hasSubcategoryFilters) {
         filteredProducts = filteredProducts.filter(product => {
+          const productCategory = product.Type?.toUpperCase()
+          const categoryHasSubcategories = categoryStructure[productCategory as keyof typeof categoryStructure]?.subcategories??[].length > 0
+          if (!categoryHasSubcategories) {
+            return catSel.length === 0 || catSel.some(category => 
+              product.Type.toUpperCase().includes(category.toUpperCase())
+            )
+          }
           return Object.entries(subcategorySel).some(([category, selectedSubcats]) => {
             if (selectedSubcats.length === 0) return false
+            if (product.Type.toUpperCase() !== category.toUpperCase()) return false
             return selectedSubcats.some(subcatValue => matchesSubcategory(product, category, subcatValue))
           })
         })
       }
-
+  
       // Apply pagination
       const startIndex = (page - 1) * ITEMS_PER_PAGE
       const endIndex = startIndex + ITEMS_PER_PAGE
       const paginatedProducts = filteredProducts.slice(startIndex, endIndex)
-
+  
       setProducts(paginatedProducts)
       setTotal(filteredProducts.length)
     } catch (error) {
@@ -220,7 +217,7 @@ export default function ProductPage() {
       setLoading(false)
     }
   }, [page, brandSel, catSel, subcategorySel, searchDebounce])
-
+  
   React.useEffect(() => {
     loadProductsEnhanced()
   }, [loadProductsEnhanced])
@@ -698,7 +695,7 @@ const handlePageChange = (newPage: number) => {
                                     </Typography>
                                     <br />
                                     <Typography variant={"caption"} className="text-neutral-400">
-                                      {p.Colors}
+                                      {p.Color}
                                     </Typography>
                                   </motion.div>
                                 )}

@@ -350,8 +350,8 @@ class PolycabFansExtractor:
         # Get all colors from variants
         all_colors = set()
         for variant in variants:
-            colors = variant.get('Colors', '')
-            if colors and colors != 'Available in Multiple Colors':
+            colors = variant.get('Color', '')
+            if colors and colors != 'Available in Multiple Color':
                 # Split multiple colors and add to set
                 color_list = [c.strip().lower() for c in colors.split(',')]
                 all_colors.update(color_list)
@@ -377,9 +377,9 @@ class PolycabFansExtractor:
         image_paths = []
         
         for variant in variants:
-            # Extract colors from Colors field
-            variant_colors = variant.get('Colors', '')
-            if variant_colors and variant_colors != 'Available in Multiple Colors':
+            # Extract colors from Color field
+            variant_colors = variant.get('Color', '')
+            if variant_colors and variant_colors != 'Available in Multiple Color':
                 # Split multiple colors if comma-separated
                 color_list = [c.strip() for c in variant_colors.split(',')]
                 colors.extend(color_list)
@@ -400,7 +400,7 @@ class PolycabFansExtractor:
         
         # Update merged data
         print(f"  🖌️  Merging colors: {', '.join(unique_colors) if unique_colors else 'N/A'}")
-        merged['Colors'] = ', '.join(unique_colors) if unique_colors else 'Multiple Colors Available'
+        merged['Color'] = ', '.join(unique_colors) if unique_colors else 'Multiple Color Available'
         merged['Price'] = self._consolidate_prices(prices)
         merged['Image_Path'] = '; '.join(image_paths) if image_paths else ''
         
@@ -473,7 +473,7 @@ class PolycabFansExtractor:
             'Model_Number': '',
             'Specifications': '',
             'Key_Features': '',
-            'Colors': '',
+            'Color': '',
             'Sweep_Size': '',
             'RPM': '',
             'Power_Consumption': '',
@@ -517,13 +517,13 @@ class PolycabFansExtractor:
             fan_data.update(specs)
             
             # Extract colors from name and page
-            fan_data['Colors'] = self._extract_colors_from_page(soup, fan_name)
+            fan_data['Color'] = self._extract_colors_from_page(soup, fan_name)
             
             # Extract and download image
             print(f"🔍 Looking for images for: {fan_name}")
             image_url = self._extract_image_url(soup)
             if image_url:
-                image_path = self.download_image(fan_name+"_"+fan_data['Colors'], image_url)
+                image_path = self.download_image(fan_name+"_"+fan_data['Color'], image_url)
                 if image_path:
                     fan_data['Image_Path'] = image_path
                     fan_data['Image_Download_Status'] = 'Downloaded'
@@ -812,7 +812,7 @@ class PolycabFansExtractor:
         if colors:
             return ', '.join(sorted(colors))
         else:
-            return 'Available in Multiple Colors'
+            return 'Available in Multiple Color'
 
     def _extract_image_url(self, soup: BeautifulSoup) -> str:
         """Extract main product image URL"""
@@ -901,7 +901,7 @@ class PolycabFansExtractor:
             # Reorder columns for better presentation
             column_order = [
                 'Name', 'Product_Type', 'Type', 'Brand', 'Model_Number',
-                'Short_Description', 'Price', 'Colors', 'Sweep_Size', 'Number_of_Blades', 'RPM',
+                'Short_Description', 'Price', 'Color', 'Sweep_Size', 'Number_of_Blades', 'RPM',
                 'Air_Delivery', 'Power_Consumption', 'BEE_Rating',
                 'Body_Material', 'Blade_Material', 'Motor_Winding',
                 'Warranty', 'Specifications', 'Key_Features', 'Full_Description',

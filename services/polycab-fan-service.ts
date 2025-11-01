@@ -70,7 +70,7 @@ export class FanStrategy implements ProductStrategy<Product, FansSearchFilters, 
 
     // Filter by colors
     if (filters.colors && filters.colors.length > 0) {
-      const fanColors = fan.Colors?.toLowerCase().split(',').map(c => c.trim());
+      const fanColors = fan.Color?.toLowerCase().split(',').map(c => c.trim());
       const hasColor = filters.colors.some(color =>
         fanColors?.some(fc => fc.includes(color.toLowerCase()))
       );
@@ -186,9 +186,9 @@ export class FanStrategy implements ProductStrategy<Product, FansSearchFilters, 
       types.add(fan.Type);
       
       // Extract colors
-      fan.Colors?.split(',').forEach(color => {
+      fan.Color?.split(',').forEach(color => {
         const trimmedColor = color.trim();
-        if (trimmedColor && trimmedColor !== 'Available in Multiple Colors') {
+        if (trimmedColor && trimmedColor !== 'Available in Multiple Color') {
           colors.add(trimmedColor);
         }
       });

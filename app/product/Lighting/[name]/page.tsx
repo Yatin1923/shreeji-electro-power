@@ -88,7 +88,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
         return specs.filter(spec => spec.value && spec.value.trim() !== '')
     }
 
-    const colors = parseColors(product.Colors || "")
+    const colors = parseColors(product.Color || "")
     const images = parseImages(product.Image_Path || "")
     const keyFeatures = parseKeyFeatures(product.Key_Features || "")
     const certifications = parseCertifications(product.Certifications || "")
@@ -174,7 +174,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                                 </a>
                             )}
                             <Typography className="text-gray-600 text-sm leading-relaxed">
-                                {product.Wattage} Wattage | {product.Colors}
+                                {product.Wattage} Wattage | {product.Color}
                             </Typography>
                             {product.Short_Description && (
                                 <p className="text-gray-600 text-sm leading-relaxed mb-4">

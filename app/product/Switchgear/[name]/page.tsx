@@ -109,7 +109,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
         return specs.filter(spec => spec.value && spec.value.trim() !== '')
     }
 
-    const colors = parseColors(product.Colors || "")
+    const colors = parseColors(product.Color || "")
     const images = parseImages(product.Image_Path || "")
     const keyFeatures = parseKeyFeatures(product.Key_Features || "")
     const certifications = parseCertifications(product.Certifications || "")

@@ -347,8 +347,8 @@ class PolycabSwitchgearExtractor:
             if module and module not in ['N/A', '']:
                 all_modules.add(module.lower())
                 
-            # Colours
-            colour = variant.get('Colour', '')
+            # Color
+            colour = variant.get('Color', '')
             if colour and colour not in ['N/A', '']:
                 all_colours.add(colour.lower())
         
@@ -363,7 +363,7 @@ class PolycabSwitchgearExtractor:
         print(f"    ⚡ Amperages found: {len(all_amperages)} - {', '.join(sorted(all_amperages)) if all_amperages else 'None'}")
         print(f"    🎯 Sensitivities found: {len(all_sensitivities)} - {', '.join(sorted(all_sensitivities)) if all_sensitivities else 'None'}")
         print(f"    📦 Modules found: {len(all_modules)} - {', '.join(sorted(all_modules)) if all_modules else 'None'}")
-        print(f"    🎨 Colours found: {len(all_colours)} - {', '.join(sorted(all_colours)) if all_colours else 'None'}")
+        print(f"    🎨 Color found: {len(all_colours)} - {', '.join(sorted(all_colours)) if all_colours else 'None'}")
         print(f"    🤔 Should consolidate: {should_consolidate}")
         
         return should_consolidate
@@ -495,7 +495,7 @@ class PolycabSwitchgearExtractor:
             'Mounting_Type': '',  # DIN Rail, Surface, etc.
             'Warranty': '',
             'Module': '',     # For modular products (1, 2 Module)
-            'Colour': '',     # White, Magnesium Grey, etc.
+            'Color': '',     # White, Magnesium Grey, etc.
             'Price': 'N/A',
             'Full_Description': '',
             'Short_Description': '',
@@ -531,7 +531,7 @@ class PolycabSwitchgearExtractor:
             if image_url:
                 if(switchgear_data.get('Poles', '')=='N/A'):
                     image_path = "/Polycab/Switchgear/"+self.download_image(
-                        switchgear_data['Name'] + "_" + switchgear_data.get('Colour', ''),
+                        switchgear_data['Name'] + "_" + switchgear_data.get('Color', ''),
                         image_url
                     )
                 else:
@@ -718,7 +718,7 @@ class PolycabSwitchgearExtractor:
             'Mounting_Type': 'N/A',
             'Warranty': 'N/A',
             'Module': 'N/A',  # For modular products
-            'Colour': 'N/A'   # For aesthetic variants
+            'Color': 'N/A'   # For aesthetic variants
         }
         
         # Find specifications table - Polycab uses a simple table structure
@@ -998,7 +998,7 @@ class PolycabSwitchgearExtractor:
                 'Name', 'Product_Type', 'Type', 'Brand', 'Model_Number',
                 'Short_Description', 'Price', 'Amperage', 'Voltage', 'Poles',
                 'Breaking_Capacity', 'Trip_Curve', 'Sensitivity', 'Application', 
-                'MCB_Type', 'Module', 'Colour', 'IP_Rating',
+                'MCB_Type', 'Module', 'Color', 'IP_Rating',
                 'Operating_Temperature', 'Body_Material', 'Contact_Material',
                 'Standards', 'Mounting_Type', 'Warranty',
                 'Specifications', 'Key_Features', 'Full_Description',

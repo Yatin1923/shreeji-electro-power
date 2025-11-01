@@ -237,14 +237,14 @@ class PolycabLightingExtractor:
                             colors = set()
                             wattages = set()
                             for v in spec_variants:
-                                if v.get('Colors'):
-                                    colors.update([c.strip() for c in v['Colors'].split(',')])
+                                if v.get('Color'):
+                                    colors.update([c.strip() for c in v['Color'].split(',')])
                                 if v.get('Wattage'):
                                     wattages.add(v['Wattage'])
                             
                             print(f"  🔗 Consolidated {len(spec_variants)} variants of: {base_name}")
                             if colors:
-                                print(f"    🎨 Colors: {', '.join(sorted(colors))}")
+                                print(f"    🎨 Color: {', '.join(sorted(colors))}")
                             if wattages:
                                 print(f"    ⚡ Wattages: {', '.join(sorted(wattages))}")
                         else:
@@ -323,8 +323,8 @@ class PolycabLightingExtractor:
         all_wattages = set()
         
         for variant in variants:
-            # Colors
-            colors = variant.get('Colors', '')
+            # Color
+            colors = variant.get('Color', '')
             if colors and colors not in ['N/A', '']:
                 color_list = [c.strip().lower() for c in colors.split(',')]
                 all_colors.update(color_list)
@@ -340,7 +340,7 @@ class PolycabLightingExtractor:
         
         should_consolidate = has_multiple_colors or has_multiple_wattages
         
-        print(f"    🎨 Colors found: {len(all_colors)} - {', '.join(sorted(all_colors)) if all_colors else 'None'}")
+        print(f"    🎨 Color found: {len(all_colors)} - {', '.join(sorted(all_colors)) if all_colors else 'None'}")
         print(f"    ⚡ Wattages found: {len(all_wattages)} - {', '.join(sorted(all_wattages)) if all_wattages else 'None'}")
         print(f"    🤔 Should consolidate: {should_consolidate}")
         
@@ -360,8 +360,8 @@ class PolycabLightingExtractor:
         image_paths = []
         
         for variant in variants:
-            # Colors
-            variant_colors = variant.get('Colors', '')
+            # Color
+            variant_colors = variant.get('Color', '')
             if variant_colors and variant_colors not in ['N/A', '']:
                 colors.extend([c.strip() for c in variant_colors.split(',') if c.strip()])
             
@@ -392,7 +392,7 @@ class PolycabLightingExtractor:
         unique_color_temps = list(dict.fromkeys(color_temperatures))
         
         # Update merged data with consolidated information
-        merged['Colors'] = ', '.join(unique_colors) if unique_colors else 'Multiple Colors Available'
+        merged['Color'] = ', '.join(unique_colors) if unique_colors else 'Multiple Color Available'
         merged['Wattage'] = ', '.join(unique_wattages) if unique_wattages else 'N/A'
         merged['Lumens'] = ', '.join(unique_lumens) if unique_lumens else 'N/A'
         merged['Color_Temperature'] = ', '.join(unique_color_temps) if unique_color_temps else 'N/A'
@@ -443,7 +443,7 @@ class PolycabLightingExtractor:
             'Model_Number': '',
             'Specifications': '',
             'Key_Features': '',
-            'Colors': '',
+            'Color': '',
             'Wattage': '',
             'Lumens': '',
             'Color_Temperature': '',
@@ -483,13 +483,13 @@ class PolycabLightingExtractor:
             lighting_data.update(specs)
             
             # Extract colors from page
-            lighting_data['Colors'] = self._extract_colors_from_page(soup, lighting_data['Name'])
+            lighting_data['Color'] = self._extract_colors_from_page(soup, lighting_data['Name'])
             
             # Extract and download image
             print(f"🔍 Looking for images for: {lighting_data['Name']}")
             image_url = self._extract_image_url(soup)
             if image_url:
-                image_path = "/Polycab/Lighting/"+self.download_image(lighting_data['Name'] + "_" + lighting_data.get('Colors', ''), image_url)
+                image_path = "/Polycab/Lighting/"+self.download_image(lighting_data['Name'] + "_" + lighting_data.get('Color', ''), image_url)
                 if image_path:
                     lighting_data['Image_Path'] = image_path
                     lighting_data['Image_Download_Status'] = 'Downloaded'
@@ -869,7 +869,7 @@ class PolycabLightingExtractor:
             # Reorder columns for better presentation
             column_order = [
                 'Name', 'Product_Type', 'Type', 'Brand', 'Model_Number',
-                'Short_Description', 'Price', 'Colors', 'Wattage', 'Lumens', 'Color_Temperature',
+                'Short_Description', 'Price', 'Color', 'Wattage', 'Lumens', 'Color_Temperature',
                 'Base_Type', 'Beam_Angle', 'IP_Rating', 'Operating_Temperature',
                 'Body_Material', 'Lens_Material', 'Warranty', 'Dimmable', 'Shape', 'Usage',
                 'Specifications', 'Key_Features', 'Full_Description',
@@ -1048,8 +1048,8 @@ def main():
     print(f"\n🔧 Consolidation Strategy:")
     print("  📝 Group products by base name (removing color/wattage)")
     print("  🔍 Match core specifications (Type, Base, Material, etc.)")
-    print("  🎨 Merge variants with same specs but different Colors/Wattages")
-    print("  📊 Create comma-separated lists: Colors, Wattages, Lumens, Color Temperatures")
+    print("  🎨 Merge variants with same specs but different Color/Wattages")
+    print("  📊 Create comma-separated lists: Color, Wattages, Lumens, Color Temperatures")
     print("  💡 Example: '9W LED Bulb' + '12W LED Bulb' → 'LED Bulb (9W, 12W)'")
     
     # Confirmation

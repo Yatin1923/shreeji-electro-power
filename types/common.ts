@@ -13,7 +13,7 @@ export interface Product {
     // Fan
     Model_Number?: string;
     Specifications?: string;
-    Colors?: string;
+    Color?: string;
     Sweep_Size?: string;
     RPM?: string;
     Power_Consumption?: string;
@@ -52,8 +52,26 @@ export interface Product {
     Contact_Material?: string;
     Mounting_Type?: string;
     Module?: string;
-    Colour?: string;
+    Color?: string;
     GenCurrentRating?: string;
+
+    // Wire
+    Product_Series?: string;
+    Size_Sq_MM?: string;
+    Length?: string;
+    Insulation_Type?: string;
+    Heat_Resistance?: string;
+    Copper_Grade?: string;
+    Technology?: string;
+    Fire_Safety?: string;
+    Moisture_Resistance?: string;
+    Abrasion_Resistance?: string;
+    Eco_Certifications?: string;
+    Current_Carrying_Capacity?: string;
+    Product_Life?: string;
+    Voltage_Rating?: string;
+    Conductor_Type?: string;
+
   }
   
   export interface SearchFilters {

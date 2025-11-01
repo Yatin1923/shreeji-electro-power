@@ -25,7 +25,6 @@ export class UnifiedProductService {
   // Get all products from all categories
   public getAllProducts():Product[]{
     return [...allProducts];
-    return [...switchgears];
   }
 
   // Get total count of all products
@@ -203,7 +202,7 @@ export class UnifiedProductService {
     }
 
     if (filters.colors?.length) {
-      const fanColors = fan.Colors?.toLowerCase().split(',').map(c => c.trim());
+      const fanColors = fan.Color?.toLowerCase().split(',').map(c => c.trim());
       const hasColor = filters.colors.some(color =>
         fanColors?.some(fc => fc.includes(color.toLowerCase()))
       );

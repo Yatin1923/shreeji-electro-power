@@ -88,7 +88,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
         return specs.filter(spec => spec.value && spec.value.trim() !== '')
     }
 
-    const colors = parseColors(product.Colors || "")
+    const colors = parseColors(product.Color || "")
     const images = parseImages(product.Image_Path || "")
     const keyFeatures = parseKeyFeatures(product.Key_Features || "")
     const certifications = parseCertifications(product.Certifications || "")
@@ -157,7 +157,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                         {/* Color Selection Section */}
                         {colors.length > 1 && (
                             <div className="bg-white border border-gray-200 rounded-lg p-6">
-                                <h3 className="text-lg font-semibold text-gray-900 mb-4">Available Colors</h3>
+                                <h3 className="text-lg font-semibold text-gray-900 mb-4">Available Color</h3>
                                 <div className="space-y-4">
                                     {/* Selected Color Display */}
                                     <div className="text-sm text-gray-600">
