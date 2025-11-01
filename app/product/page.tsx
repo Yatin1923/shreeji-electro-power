@@ -163,7 +163,7 @@ export default function ProductPage() {
         filteredProducts = filteredProducts.filter(product =>
           product.Name.toLowerCase().includes(searchTerm) ||
           product.Short_Description?.toLowerCase().includes(searchTerm) ||
-          product.Full_Description?.toLowerCase().includes(searchTerm) ||
+          // product.Full_Description?.toLowerCase().includes(searchTerm) ||
           product.Key_Features?.toLowerCase().includes(searchTerm) ||
           product.Standards?.toLowerCase().includes(searchTerm)
         )
@@ -538,6 +538,9 @@ const handlePageChange = (newPage: number) => {
                 size="small"
                 placeholder="Search..."
                 value={searchQuery}
+                inputProps={{
+                  style: { color: 'black' }
+                }}
                 className="w-[260px] bg-white rounded-md"
                 InputProps={{
                   startAdornment: (
