@@ -42,4 +42,13 @@ export const brands = [
     'Outdoor Lights',
     'Rope and Strip Lights'
   ] as const;
+  export const SWITCHGEAR_SUBCATEGORIES = [
+    'RCBO',
+    'RCCB',
+    'ACCL',
+    'ISOLATOR',
+    'MCB Changeover Switch',
+    'MCB (Miniature Circuit Breaker)',
+    'Distribution Board'
+  ] as const;
   

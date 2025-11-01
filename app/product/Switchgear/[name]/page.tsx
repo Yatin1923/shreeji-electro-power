@@ -7,80 +7,16 @@ import { useRef, useState } from "react"
 import { polycabCableService } from "@/services/product-service-factory"
 import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
+import { useProduct } from "../../context/product-context"
+import { MagnifyingImage } from "@/components/magnifyingImage"
 
-const MagnifyingImage = ({ src, alt, width, height, className }: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-    className?: string;
-}) => {
-    const [showMagnifier, setShowMagnifier] = useState(false)
-    const [magnifierPosition, setMagnifierPosition] = useState({ x: 0, y: 0 })
-    const [imgPosition, setImgPosition] = useState({ x: 0, y: 0 })
-    const imgRef = useRef<HTMLDivElement>(null)
 
-    const handleMouseEnter = () => {
-        setShowMagnifier(true)
-    }
-
-    const handleMouseLeave = () => {
-        setShowMagnifier(false)
-    }
-
-    const handleMouseMove = (e: React.MouseEvent) => {
-        if (imgRef.current) {
-            const rect = imgRef.current.getBoundingClientRect()
-            const x = e.clientX - rect.left
-            const y = e.clientY - rect.top
-            
-            setMagnifierPosition({ x: e.clientX, y: e.clientY })
-            setImgPosition({ x, y })
-        }
-    }
-
-    return (
-        <div className="relative">
-            <div
-                ref={imgRef}
-                className="relative overflow-hidden cursor-crosshair"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                onMouseMove={handleMouseMove}
-            >
-                <Image
-                    src={src}
-                    alt={alt}
-                    width={width}
-                    height={height}
-                    className={className}
-                    priority
-                />
-            </div>
-
-            {/* Magnifier */}
-            {showMagnifier && (
-                <div
-                    className="fixed pointer-events-none z-50 border-2 border-gray-300 rounded-full shadow-lg bg-white"
-                    style={{
-                        left: `${magnifierPosition.x - 100}px`,
-                        top: `${magnifierPosition.y - 100}px`,
-                        width: "200px",
-                        height: "200px",
-                        backgroundImage: `url(${src})`,
-                        backgroundSize: `${width * 2}px ${height * 2}px`,
-                        backgroundPosition: `-${imgPosition.x * 2 - 100}px -${imgPosition.y * 2 - 100}px`,
-                        backgroundRepeat: "no-repeat",
-                    }}
-                />
-            )}
-        </div>
-    )
-}
 
 export default function ProductDetailPage({ params }: { params: { name: string } }) {
-    let product: Product | undefined = unifiedProductService.getProductByName(decodeURIComponent(params.name))
-    console.log(product);
+    const { selectedProduct } = useProduct();
+    let product: Product | null = selectedProduct
+
+    console.log("Selected Product from Context:", selectedProduct);
     // Add state for selected color
     const [selectedColorIndex, setSelectedColorIndex] = useState(0)
 
@@ -133,9 +69,27 @@ export default function ProductDetailPage({ params }: { params: { name: string }
     // Parse specifications
     const parseSpecifications = (specificationsString: string) => {
         if (!specificationsString) return []
-        return specificationsString.split(',').map(spec => {
+        return specificationsString.split(';').map(spec => {
             const [key, ...valueParts] = spec.split(':')
             if (key && valueParts.length > 0) {
+                if (key.trim().toLowerCase() === "amperage") {
+                    return {
+                        key: "Ampere",
+                        value: selectedProduct?.Amperage || ''
+                    }
+                }
+                if (key.trim().toLowerCase() == "gen (dg) current rating (a)") {
+                    return {
+                        key: "Gen (Dg) Current Rating (A)",
+                        value: selectedProduct?.GenCurrentRating || ''
+                    }
+                }
+                if (key.trim().toLowerCase() === "sensitivity") {
+                    return {
+                        key: "Sensitivity",
+                        value: selectedProduct?.Sensitivity || ''
+                    }
+                }
                 return {
                     key: key.trim(),
                     value: valueParts.join(':').trim()
@@ -148,7 +102,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
     // Get comprehensive specifications
     const getSpecifications = () => {
         const specs: { key: string; value: string }[] = []
-        
+
         // First, add parsed specifications from the Specifications string
         const parsedSpecs = parseSpecifications(product?.Specifications || "")
         specs.push(...parsedSpecs)
@@ -194,7 +148,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                         <Link href="/product" className="hover:text-sky-600 transition-colors">
                             Products
                         </Link>
-                        <span className="text-gray-700">{product.Name}</span>
+                        <span className="text-gray-700">{product.Name.toUpperCase()}</span>
                     </Breadcrumbs>
                 </div>
 
@@ -220,58 +174,15 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                                 className="hidden lg:block max-w-full h-auto object-contain"
                             />
                         </div>
-
-                        {/* Color Selection Section */}
-                        {colors.length > 1 && (
-                            <div className="bg-white border border-gray-200 rounded-lg p-6">
-                                <h3 className="text-lg font-semibold text-gray-900 mb-4">Available Colors</h3>
-                                <div className="space-y-4">
-                                    {/* Selected Color Display */}
-                                    <div className="text-sm text-gray-600">
-                                        Selected: <span className="font-medium text-gray-900">{colors[selectedColorIndex]}</span>
-                                    </div>
-                                    
-                                    {/* Color Options Grid */}
-                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                        {colors.map((color, index) => (
-                                            <button
-                                                key={index}
-                                                onClick={() => setSelectedColorIndex(index)}
-                                                className={`p-3 text-left text-sm border rounded-lg transition-all hover:bg-gray-50 ${
-                                                    selectedColorIndex === index 
-                                                        ? 'border-sky-500 bg-sky-50 text-sky-700' 
-                                                        : 'border-gray-200 text-gray-700'
-                                                }`}
-                                            >
-                                                <div className="flex items-center space-x-2">
-                                                    {images[index] && (
-                                                        <div className="w-8 h-8 border border-gray-200 rounded overflow-hidden flex-shrink-0">
-                                                            <Image
-                                                                src={getImageUrl(images[index])}
-                                                                alt={color}
-                                                                width={32}
-                                                                height={32}
-                                                                className="w-full h-full object-cover"
-                                                            />
-                                                        </div>
-                                                    )}
-                                                    <span className="font-medium">{color}</span>
-                                                </div>
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        )}
                     </div>
 
                     {/* Right: Product Details */}
                     <div className="space-y-6">
                         <div className="flex flex-col gap-4">
                             <h1 className="text-3xl font-bold text-sky-600 mb-2">
-                                {product.Name}
+                                {product.Name.toUpperCase()}
                             </h1>
-                            
+
                             {/* Download PDF Button */}
                             {product.Brochure_Path && (
                                 <a
@@ -283,13 +194,22 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                                     Download Data Sheet
                                 </a>
                             )}
-                            
+                            {product.Poles || product.Breaking_Capacity  && (
+                                <span className="text-gray-600 text-sm leading-relaxed">
+                                {product.Poles && product.Poles  + "Pole "} {product.Breaking_Capacity && "| "+ product.Breaking_Capacity + "Breaking Capacity "} 
+                            </span>
+                            )}
+                            {product.Breaking_Capacity != '' && product.Breaking_Capacity?.trim() !="" && (
+                            <span className="text-gray-600 text-sm leading-relaxed">
+                               {product.Breaking_Capacity} Breaking Capacity
+                            </span>
+                            )}
                             {product.Short_Description && (
                                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
                                     {product.Short_Description}
                                 </p>
                             )}
-                            
+
                             {/* {product.Price && (
                                 <Typography variant="h6" className="text-sky-600 font-bold!">
                                     Price : <span className="">{product.Price}</span>
@@ -321,7 +241,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                         {/* Product Type */}
                         <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
                             <h3 className="text-lg font-semibold text-gray-900 mb-2">Product Type</h3>
-                            <p className="text-gray-600">{product.Product_Type || "N/A"}</p>
+                            <p className="text-gray-600">{product.Product_Type}</p>
                         </div>
 
                         {/* Certifications */}
@@ -352,7 +272,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                         {/* Standards */}
                         <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
                             <h3 className="text-lg font-semibold text-gray-900 mb-2">Standards</h3>
-                            <p className="text-gray-600">{product.Standards || "N/A"}</p>
+                            <p className="text-gray-600">{product.Standards}</p>
                         </div>
                     </div>
                 }

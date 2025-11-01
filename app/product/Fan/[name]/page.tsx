@@ -7,76 +7,9 @@ import { useRef, useState } from "react"
 import { polycabCableService } from "@/services/product-service-factory"
 import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
+import { MagnifyingImage } from "@/components/magnifyingImage"
 
-const MagnifyingImage = ({ src, alt, width, height, className }: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-    className?: string;
-}) => {
-    const [showMagnifier, setShowMagnifier] = useState(false)
-    const [magnifierPosition, setMagnifierPosition] = useState({ x: 0, y: 0 })
-    const [imgPosition, setImgPosition] = useState({ x: 0, y: 0 })
-    const imgRef = useRef<HTMLDivElement>(null)
 
-    const handleMouseEnter = () => {
-        setShowMagnifier(true)
-    }
-
-    const handleMouseLeave = () => {
-        setShowMagnifier(false)
-    }
-
-    const handleMouseMove = (e: React.MouseEvent) => {
-        if (imgRef.current) {
-            const rect = imgRef.current.getBoundingClientRect()
-            const x = e.clientX - rect.left
-            const y = e.clientY - rect.top
-            
-            setMagnifierPosition({ x: e.clientX, y: e.clientY })
-            setImgPosition({ x, y })
-        }
-    }
-
-    return (
-        <div className="relative">
-            <div
-                ref={imgRef}
-                className="relative overflow-hidden cursor-crosshair"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                onMouseMove={handleMouseMove}
-            >
-                <Image
-                    src={src}
-                    alt={alt}
-                    width={width}
-                    height={height}
-                    className={className}
-                    priority
-                />
-            </div>
-
-            {/* Magnifier */}
-            {showMagnifier && (
-                <div
-                    className="fixed pointer-events-none z-50 border-2 border-gray-300 rounded-full shadow-lg bg-white"
-                    style={{
-                        left: `${magnifierPosition.x - 100}px`,
-                        top: `${magnifierPosition.y - 100}px`,
-                        width: "200px",
-                        height: "200px",
-                        backgroundImage: `url(${src})`,
-                        backgroundSize: `${width * 2}px ${height * 2}px`,
-                        backgroundPosition: `-${imgPosition.x * 2 - 100}px -${imgPosition.y * 2 - 100}px`,
-                        backgroundRepeat: "no-repeat",
-                    }}
-                />
-            )}
-        </div>
-    )
-}
 
 export default function ProductDetailPage({ params }: { params: { name: string } }) {
     let product: Product | undefined = unifiedProductService.getProductByName(decodeURIComponent(params.name))
@@ -321,7 +254,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                         {/* Product Type */}
                         <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
                             <h3 className="text-lg font-semibold text-gray-900 mb-2">Product Type</h3>
-                            <p className="text-gray-600">{product.Product_Type || "N/A"}</p>
+                            <p className="text-gray-600">{product.Product_Type}</p>
                         </div>
 
                         {/* Certifications */}
@@ -352,7 +285,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                         {/* Standards */}
                         <div className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
                             <h3 className="text-lg font-semibold text-gray-900 mb-2">Standards</h3>
-                            <p className="text-gray-600">{product.Standards || "N/A"}</p>
+                            <p className="text-gray-600">{product.Standards}</p>
                         </div>
                     </div>
                 }

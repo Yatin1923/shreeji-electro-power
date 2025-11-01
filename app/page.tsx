@@ -1,3 +1,4 @@
+"use client"
 import Navbar from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Clients } from "@/components/clients"
@@ -11,7 +12,6 @@ import { Providers } from "./app-theme"
 
 export default function Page() {
   return (
-    <Providers>
       <main className="bg-white">
         <Navbar active="Home" />
         <Hero />
@@ -29,7 +29,5 @@ export default function Page() {
         <Contact />
         <SiteFooter />
       </main>
-    </Providers>
-
   )
 }

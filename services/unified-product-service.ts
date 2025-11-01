@@ -1,5 +1,5 @@
 // services/unified-product-service.ts
-import { cables, fans, lightings } from '@/data/products';
+import { allProducts, cables, fans, lightings, switchgears } from '@/data/products';
 import { CableStrategy } from './polycab-cable-service';
 import { FanStrategy } from './polycab-fan-service';
 import { Product, UnifiedSearchFilters, UnifiedSearchResult } from '@/types/common';
@@ -24,8 +24,8 @@ export class UnifiedProductService {
 
   // Get all products from all categories
   public getAllProducts():Product[]{
-    return [...cables, ...fans,...lightings];
-    return [...lightings];
+    return [...allProducts];
+    return [...switchgears];
   }
 
   // Get total count of all products
@@ -35,81 +35,22 @@ export class UnifiedProductService {
       cables: number;
       fans: number;
       lightings:number;
+      switchgears:number;
     };
   } {
-    // const cables = this.cableStrategy.getAllProducts().length;
-    // const fans = this.fanStrategy.getAllProducts().length;
 
     return {
-      total: cables.length + fans.length,
+      total: allProducts.length,
       breakdown: {
         cables:cables.length,
         fans:fans.length,
-        lightings:lightings.length
+        lightings:lightings.length,
+        switchgears:switchgears.length
 
       }
     };
   }
 
-  // Search across all product types
-  // public searchAllProducts(
-  //   filters: UnifiedSearchFilters = {},
-  //   page: number = 1,
-  //   limit: number = 10
-  // ): UnifiedSearchResult {
-  //   let allProducts = this.getAllProducts();
-
-  //   // Filter by product types if specified
-  //   if (filters.productTypes && filters.productTypes.length > 0) {
-  //     allProducts = allProducts.filter(item => 
-  //       filters.productTypes!.includes(item.productType)
-  //     );
-  //   }
-
-  //   // Apply global text search
-  //   if (filters.search) {
-  //     allProducts = allProducts.filter(item => {
-  //       return this.matchesGlobalSearch(item, filters.search!);
-  //     });
-  //   }
-
-  //   // Filter by brands
-  //   if (filters.brands && filters.brands.length > 0) {
-  //     allProducts = allProducts.filter(item => 
-  //       filters.brands!.includes(item.product.Brand)
-  //     );
-  //   }
-
-  //   // Apply product-specific filters
-  //   allProducts = allProducts.filter(item => {
-  //     if (item.productType === 'cable') {
-  //       return this.matchesCableFilters(item.product as Product, filters);
-  //     } else if (item.productType === 'fan') {
-  //       return this.matchesFanFilters(item.product as Product, filters);
-  //     }
-  //     return true;
-  //   });
-
-  //   // Calculate breakdown
-  //   const breakdown = {
-  //     cables: allProducts.filter(item => item.productType === 'cable').length,
-  //     fans: allProducts.filter(item => item.productType === 'fan').length,
-  //   };
-
-  //   // Pagination
-  //   const startIndex = (page - 1) * limit;
-  //   const endIndex = startIndex + limit;
-  //   const paginatedProducts = allProducts.slice(startIndex, endIndex);
-
-  //   return {
-  //     products: paginatedProducts,
-  //     total: allProducts.length,
-  //     page,
-  //     limit,
-  //     breakdown,
-  //     filters: this.getUnifiedFilterOptions(allProducts.map(item => item.product))
-  //   };
-  // }
 
   // Get product by name across all types
   public getProductByName(name: string):Product | undefined {
@@ -126,12 +67,15 @@ export class UnifiedProductService {
     if (fan) {
       return fan;
     }
-    console.log("name",name);
     const lighting = lightings.find(lighting => 
       lighting.Name.toLowerCase() == name.toLowerCase());
-      console.log("lightings",lightings);
     if (lighting) {
       return lighting;
+    }
+    const switchgear = switchgears.find(switchgear => 
+      switchgear.Name.toLowerCase() == name.toLowerCase());
+    if (switchgear) {
+      return switchgear;
     }
 
     return undefined;

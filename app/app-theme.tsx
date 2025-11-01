@@ -2,6 +2,7 @@
 
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material"
 import { ReactNode } from "react"
+import { ProductProvider } from "./product/context/product-context"
 const lightTheme = createTheme({
   palette: {
     mode: "light", 
@@ -40,9 +41,11 @@ const lightTheme = createTheme({
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
+    <ProductProvider>
     <ThemeProvider theme={lightTheme}>
       <CssBaseline /> {/* resets default MUI styles */}
       {children}
     </ThemeProvider>
+      </ProductProvider>
   )
 }

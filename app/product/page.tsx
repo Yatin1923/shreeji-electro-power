@@ -30,8 +30,9 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess"
 import { useSearchParams } from "next/navigation"
 import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
-import { brands, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES } from "@/constants/polycab"
+import { brands, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES } from "@/constants/polycab"
 import { motion, AnimatePresence, Variants } from "framer-motion"
+import { useProduct } from "./context/product-context"
 
 // Add this before your component or in a separate file
 const cardVariants: Variants = {
@@ -91,6 +92,9 @@ const categoryStructure = {
   },
   "LIGHTING": {
     subcategories: LIGHTING_SUBCATEGORIES
+  },
+  "SWITCHGEAR": {
+    subcategories: SWITCHGEAR_SUBCATEGORIES
   }
 };
 
@@ -120,7 +124,9 @@ export default function ProductPage() {
 
   const [searchQuery, setSearchQuery] = React.useState("")
   const [searchDebounce, setSearchDebounce] = React.useState("")
-
+  const [isEditingPage, setIsEditingPage] = React.useState(false);
+  const [tempPage, setTempPage] = React.useState(page.toString());
+  
   // Debounce search query
   React.useEffect(() => {
     const timer = setTimeout(() => {
@@ -245,7 +251,9 @@ export default function ProductPage() {
       setCatSel(catSel.filter(cat => cat !== category))
     }
   }
-
+const handlePageChange = (newPage: number) => {
+  setPage(newPage);
+}
   // Simplified category toggle function
   const handleCategoryToggle = (category: string) => {
     const categoryConfig = categoryStructure[category as keyof typeof categoryStructure]
@@ -344,6 +352,15 @@ export default function ProductPage() {
         break
     }
   }
+  const { setSelectedProduct } = useProduct();
+
+  const handleProductClick = async (p: Product) => {
+    try {
+      setSelectedProduct(p);
+    } catch (error) {
+    }
+  };
+
 
   const filtersContent = (
     <div className="w-[280px] p-4 bg-white rounded-lg h-fit sticky top-25">
@@ -634,7 +651,9 @@ export default function ProductPage() {
                         >
                           <Card elevation={0} className="rounded-xl border border-neutral-200 shadow-sm bg-white h-full">
                             <div className="relative p-4">
-                              <Link href={`/product/${encodeURIComponent(p.Type)}/${encodeURIComponent(p.Name)}`} className="block">
+                              <Link href={`/product/${encodeURIComponent(p.Type)}/${encodeURIComponent(p.Name)}`}
+                                onClick={() => handleProductClick(p)}
+                                className="block">
                                 <motion.div
                                   className="mx-auto h-[180px] w-full overflow-hidden rounded-md bg-[#f4f6f8] flex items-center justify-center"
                                   whileHover={{ scale: 1.02 }}
@@ -654,6 +673,7 @@ export default function ProductPage() {
                             <CardContent className="pt-0">
                               <Link
                                 href={`/product/${encodeURIComponent(p.Type)}/${encodeURIComponent(p.Name)}`}
+                                onClick={() => handleProductClick(p)}
                                 className="text-[14px] font-semibold text-sky-700 hover:underline"
                               >
                                 <motion.div
@@ -662,7 +682,7 @@ export default function ProductPage() {
                                   transition={{ delay: 0.4 + i * 0.05 }}
                                 >
 
-                                  {p.Name}
+                                  {p.Name.toUpperCase()}
                                 </motion.div>
                               </Link>
                               <motion.div
@@ -682,6 +702,25 @@ export default function ProductPage() {
                                     </Typography>
                                   </motion.div>
                                 )}
+                                {p.Poles && (
+                                  <motion.div
+                                  >
+                                    <Typography variant={"caption"} className="text-neutral-400">
+                                      Pole: {p.Poles}
+                                    </Typography>
+                                  </motion.div>
+                                )}
+
+                                {p.Breaking_Capacity && (
+                                  <motion.div
+                                  >
+                                    <Typography variant={"caption"} className="text-neutral-400">
+                                      Breaking Capacity: {p.Breaking_Capacity}
+                                    </Typography>
+                                  </motion.div>
+                                )}
+
+
                                 <Typography variant={"caption"} className="text-neutral-400">
                                   {p.Short_Description}
                                 </Typography>
@@ -702,8 +741,8 @@ export default function ProductPage() {
                                   </Typography>
                                   <br />
                                   {/* <Typography variant="body2" className="mt-2! text-[14px] font-semibold! text-sky-700">
-                                    {p.Price && `Price: ${p.Price}`}
-                                  </Typography> */}
+                                      {p.Price && `Price: ${p.Price}`}
+                                    </Typography> */}
                                 </motion.div>
                               )}
 
@@ -732,13 +771,68 @@ export default function ProductPage() {
                       animate={{ scale: 1 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <Button
-                        variant="outlined"
-                        size="small"
-                        className="!min-w-[42px] rounded-md normal-case bg-sky-600 text-white hover:bg-sky-700 hover:border-sky-700"
-                      >
-                        {String(page).padStart(2, "0")}
-                      </Button>
+                      {isEditingPage ? (
+                        <TextField
+                          size="small"
+                          value={tempPage}
+                          onChange={(e) => {
+                            const value = e.target.value;
+                            if (value === '' || /^\d+$/.test(value)) {
+                              setTempPage(value);
+                            }
+                          }}
+                          onBlur={() => {
+                            const newPage = parseInt(tempPage, 10);
+                            if (isNaN(newPage) || newPage < 1) {
+                              handlePageChange(1);
+                            } else if (newPage > totalPages) {
+                              handlePageChange(totalPages);
+                            } else {
+                              handlePageChange(newPage);
+                            }
+                            setIsEditingPage(false);
+                          }}
+                          onKeyPress={(e:any) => {
+                            if (e.key === 'Enter') {
+                              e.target.blur();
+                            } else if (e.key === 'Escape') {
+                              setTempPage(page.toString());
+                              setIsEditingPage(false);
+                            }
+                          }}
+                          autoFocus
+                          sx={{
+                            '& .MuiOutlinedInput-root': {
+                              minWidth: '42px',
+                              width: '42px',
+                              height: '32px',
+                              '& input': {
+                                textAlign: 'center',
+                                padding: '4px',
+                                color: '#0284c7',
+                                fontSize: '14px',
+                              }
+                            }
+                          }}
+                          inputProps={{
+                            min: 1,
+                            max: totalPages,
+                            style: { textAlign: 'center' }
+                          }}
+                        />
+                      ) : (
+                        <Button
+                          variant="outlined"
+                          size="small"
+                          className="!min-w-[42px] rounded-md normal-case bg-sky-600 text-white hover:bg-sky-700 hover:border-sky-700"
+                          onClick={() => {
+                            setTempPage(page.toString());
+                            setIsEditingPage(true);
+                          }}
+                        >
+                          {String(page).padStart(2, "0")}
+                        </Button>
+                      )}
                     </motion.div>
                     <span className="text-[13px] text-neutral-500">of {totalPages}</span>
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -747,7 +841,7 @@ export default function ProductPage() {
                         size="small"
                         className="rounded-md min-w-0"
                         aria-label="prev"
-                        onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+                        onClick={() => handlePageChange(Math.max(page - 1, 1))}
                         disabled={page === 1 || loading}
                       >
                         <KeyboardArrowLeftIcon fontSize="small" />
@@ -759,7 +853,7 @@ export default function ProductPage() {
                         size="small"
                         className="rounded-md min-w-0"
                         aria-label="next"
-                        onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
+                        onClick={() => handlePageChange(Math.min(page + 1, totalPages))}
                         disabled={page === totalPages || loading}
                       >
                         <KeyboardArrowRightIcon fontSize="small" />

@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+import { Providers } from "./app-theme"
 
 export const metadata: Metadata = {
   title: "ShreejiElectroPower",
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
     <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
+      <Providers>
+          <Suspense fallback={null}>{children}</Suspense>
+          <Analytics />
+      </Providers>
     </body>
   </html>
   )

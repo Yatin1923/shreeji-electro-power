@@ -37,6 +37,23 @@ export interface Product {
 
     // Lighting
     Wattage?: any;
+
+    // Switchgear
+    Amperage?: string;
+    Voltage?: string;
+    Poles?: string;
+    Breaking_Capacity?: string;
+    Trip_Curve?: string;
+    Sensitivity?: string;
+    Application?: string;
+    MCB_Type?: string;
+    IP_Rating?: string;
+    Operating_Temperature?: string;
+    Contact_Material?: string;
+    Mounting_Type?: string;
+    Module?: string;
+    Colour?: string;
+    GenCurrentRating?: string;
   }
   
   export interface SearchFilters {
