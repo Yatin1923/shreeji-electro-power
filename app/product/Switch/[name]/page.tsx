@@ -36,8 +36,10 @@ export default function ProductDetailPage({ params }: { params: { name: string }
     // Helper functions
     const getImageUrl = (imagePath: string | undefined) => {
         if (!imagePath) return "/placeholder.svg"
+        imagePath = imagePath.includes('Polycab/Switches/') ? imagePath: "Polycab/Switches/"+imagePath;
         return imagePath.startsWith('/') ? imagePath : `/${imagePath}`
     }
+
 
     const parseKeyFeatures = (featuresString: string) => {
         if (!featuresString) return []

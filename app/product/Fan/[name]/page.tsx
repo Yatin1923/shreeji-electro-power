@@ -34,6 +34,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
     // Helper functions
     const getImageUrl = (imagePath: string | undefined) => {
         if (!imagePath) return "/placeholder.svg"
+        imagePath = imagePath.includes('Polycab/Fans/') ? imagePath: "Polycab/Fans/"+imagePath;
         return imagePath.startsWith('/') ? imagePath : `/${imagePath}`
     }
 
