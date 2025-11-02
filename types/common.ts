@@ -9,11 +9,11 @@ export interface Product {
     Short_Description: string;
     Full_Description: string;
     Image_Path: string;
+    Color?: string;
     
     // Fan
     Model_Number?: string;
     Specifications?: string;
-    Color?: string;
     Sweep_Size?: string;
     RPM?: string;
     Power_Consumption?: string;
@@ -52,7 +52,6 @@ export interface Product {
     Contact_Material?: string;
     Mounting_Type?: string;
     Module?: string;
-    Color?: string;
     GenCurrentRating?: string;
 
     // Wire

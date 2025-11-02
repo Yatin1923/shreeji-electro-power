@@ -30,7 +30,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess"
 import { useSearchParams } from "next/navigation"
 import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
-import { brands, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES } from "@/constants/polycab"
+import { brands, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCH_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES } from "@/constants/polycab"
 import { motion, AnimatePresence, Variants } from "framer-motion"
 import { useProduct } from "./context/product-context"
 
@@ -99,6 +99,9 @@ const categoryStructure = {
   "WIRE": {
     subcategories: null
   },
+  "SWITCH": {
+    subcategories: SWITCH_SUBCATEGORIES
+  }
 };
 
 const ITEMS_PER_PAGE = 9;

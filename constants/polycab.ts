@@ -51,4 +51,10 @@ export const brands = [
     'MCB (Miniature Circuit Breaker)',
     'Distribution Board'
   ] as const;
+  export const SWITCH_SUBCATEGORIES = [
+    'Levana',
+    'Etira',
+    'Accessories',
+    'Plastic Modular Boxes',
+  ] as const;
   
