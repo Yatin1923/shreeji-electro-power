@@ -10,8 +10,8 @@ import switchesData from './switches.json';
 import wiresData from './wires.json';
 import { Product } from '@/types/common';
 
-// export const allProducts: Product[] = [...cablesData, ...fansData, ...lightingsData, ...switchgearsData,...wiresData];
-export const allProducts: Product[] = [...switchesData];
+export const allProducts: Product[] = [...cablesData, ...fansData, ...lightingsData, ...switchgearsData,...wiresData,...switchesData];
+// export const allProducts: Product[] = [...switchesData];
 export const cables: Product[] = cablesData;
 export const fans: Product[] = fansData;
 export const lightings: Product[] = lightingsData;
