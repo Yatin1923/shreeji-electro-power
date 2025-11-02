@@ -96,12 +96,12 @@ const categoryStructure = {
   "SWITCHGEAR": {
     subcategories: SWITCHGEAR_SUBCATEGORIES
   },
+  "SWITCH": {
+    subcategories: SWITCH_SUBCATEGORIES
+  },
   "WIRE": {
     subcategories: null
   },
-  "SWITCH": {
-    subcategories: SWITCH_SUBCATEGORIES
-  }
 };
 
 const ITEMS_PER_PAGE = 9;
