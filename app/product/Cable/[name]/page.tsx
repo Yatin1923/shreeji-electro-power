@@ -34,6 +34,8 @@ export default function ProductDetailPage({ params }: { params: { name: string }
     // Helper functions
     const getImageUrl = (imagePath: string | undefined) => {
         if (!imagePath) return "/placeholder.svg"
+        imagePath = imagePath.includes('Polycab/Cables/') ? imagePath: "Polycab/Cables/"+imagePath;
+
         return imagePath.startsWith('/') ? imagePath : `/${imagePath}`
     }
 
