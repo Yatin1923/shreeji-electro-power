@@ -13,7 +13,6 @@ import { MagnifyingImage } from "@/components/magnifyingImage"
 
 export default function ProductDetailPage({ params }: { params: { name: string } }) {
     let product: Product | undefined = unifiedProductService.getProductByName(decodeURIComponent(params.name))
-    console.log(product);
     // Add state for selected color
     const [selectedColorIndex, setSelectedColorIndex] = useState(0)
 

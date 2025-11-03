@@ -15,8 +15,6 @@ import { MagnifyingImage } from "@/components/magnifyingImage"
 export default function ProductDetailPage({ params }: { params: { name: string } }) {
     const { selectedProduct } = useProduct();
     let product: Product | null = selectedProduct
-
-    console.log("Selected Product from Context:", selectedProduct);
     // Add state for selected color
     const [selectedColorIndex, setSelectedColorIndex] = useState(0)
 
@@ -68,7 +66,6 @@ export default function ProductDetailPage({ params }: { params: { name: string }
 
     // Parse specifications
     const parseSpecifications = (specificationsString: string) => {
-        console.log("Parsing spec:", specificationsString);
         if (!specificationsString) return []
         return specificationsString.split(';').map(spec => {
             const [key, ...valueParts] = spec.split(':')

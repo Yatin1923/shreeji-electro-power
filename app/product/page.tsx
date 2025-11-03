@@ -145,8 +145,6 @@ export default function ProductPage() {
   const matchesSubcategory = (product: Product, category: string, subcategoryValue: string): boolean => {
     const productType = product.Product_Type.toLowerCase()
     const subcategoryLower = subcategoryValue.toLowerCase()
-    // Direct product type match
-    console.log('Matching product:', product, 'Type:', product.Product_Type, 'Subcategory:', subcategoryValue);
     if (productType === subcategoryLower) {
       return true
     }

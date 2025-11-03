@@ -15,8 +15,6 @@ import { MagnifyingImage } from "@/components/magnifyingImage"
 export default function ProductDetailPage({ params }: { params: { name: string } }) {
     const { selectedProduct } = useProduct();
     let product: Product | null = selectedProduct
-
-    console.log("Selected Product from Context:", selectedProduct);
     const [selectedColorIndex, setSelectedColorIndex] = useState(0)
 
     if (!product) {
