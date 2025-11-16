@@ -1,6 +1,7 @@
 
-export const brands = [
+export const BRANDS = [
     "POLYCAB",
+    "Lauritz Knudsen"
   ]
   
   // Subcategory constants

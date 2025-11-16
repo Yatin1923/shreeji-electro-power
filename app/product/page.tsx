@@ -30,7 +30,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess"
 import { useSearchParams } from "next/navigation"
 import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
-import { brands, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCH_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES } from "@/constants/polycab"
+import { BRANDS, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCH_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES } from "@/constants/polycab"
 import { motion, AnimatePresence, Variants } from "framer-motion"
 import { useProduct } from "./context/product-context"
 
@@ -396,7 +396,7 @@ const handlePageChange = (newPage: number) => {
           </div>
           <Collapse in={brandOpen}>
             <div className="mt-2 flex flex-col">
-              {brands.map((b) => (
+              {BRANDS.map((b) => (
                 <FormControlLabel
                   key={b}
                   control={
@@ -723,7 +723,7 @@ const handlePageChange = (newPage: number) => {
 
 
                                 <Typography variant={"caption"} className="text-neutral-400">
-                                  {p.Short_Description}
+                                  {p.Short_Description?.length??0 > 150 ? p.Short_Description?.slice(0, 150) + "…" : p.Short_Description}
                                 </Typography>
                               </motion.div>
 

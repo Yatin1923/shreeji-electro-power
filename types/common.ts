@@ -5,10 +5,11 @@ export interface Product {
     Product_Type: string;
     Type: string;
     Brand: string;
-    Key_Features: string;
-    Short_Description: string;
-    Full_Description: string;
-    Image_Path: string;
+    Key_Features?: string;
+    Benefits?: string;
+    Short_Description?: string;
+    Full_Description?: string;
+    Image_Path?: string;
     Color?: string;
     
     // Fan
