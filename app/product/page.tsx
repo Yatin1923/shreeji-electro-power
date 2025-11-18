@@ -30,7 +30,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess"
 import { useSearchParams } from "next/navigation"
 import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
-import { BRANDS, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCH_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES } from "@/constants/polycab"
+import { BRANDS, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCH_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES, MEDIUM_VOLTAGE_SUBCATEGORIES, LV_IEC_PANELS_SUBCATEGORIES, POWER_DISTRIBUTION_PRODUCTS_SUBCATEGORIES, MOTOR_MANAGEMENT_CONTROL_SUBCATEGORIES, INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES, ENERGY_MANAGEMENT_PRODUCTS_SUBCATEGORIES, MCB_RCCB_DISTRIBUTION_BOARDS_SUBCATEGORIES, SWITCHES_ACCESSORIES_SUBCATEGORIES, PUMP_STARTERS_CONTROLLERS_SUBCATEGORIES, PANEL_ACCESSORIES_SUBCATEGORIES } from "@/constants/polycab"
 import { motion, AnimatePresence, Variants } from "framer-motion"
 import { useProduct } from "./context/product-context"
 
@@ -102,6 +102,39 @@ const categoryStructure = {
   "WIRE": {
     subcategories: null
   },
+  // "PANEL ACCESSORIES": {
+  //   subcategories: PANEL_ACCESSORIES_SUBCATEGORIES
+  // },
+  // "PUMP STARTERS CONTROLLERS": {
+  //   subcategories: PUMP_STARTERS_CONTROLLERS_SUBCATEGORIES
+  // },
+  // "MOTOR MANAGEMENT CONTROL": {
+  //   subcategories: MOTOR_MANAGEMENT_CONTROL_SUBCATEGORIES
+  // },
+  // "INDUSTRIAL AUTOMATION CONTROL": {
+  //   subcategories: INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES
+  // },
+  // "ENERGY MANAGEMENT PRODUCTS": {
+  //   subcategories: ENERGY_MANAGEMENT_PRODUCTS_SUBCATEGORIES
+  // },
+  // "MCB RCCB DISTRIBUTION BOARDS": {
+  //   subcategories: MCB_RCCB_DISTRIBUTION_BOARDS_SUBCATEGORIES
+  // },
+  // "SWITCHES ACCESSORIES": {
+  //   subcategories: SWITCHES_ACCESSORIES_SUBCATEGORIES
+  // },
+  // "POWER DISTRIBUTION PRODUCTS": {
+  //   subcategories: POWER_DISTRIBUTION_PRODUCTS_SUBCATEGORIES
+  // },
+  // "MEDIUM VOLTAGE": {
+  //   subcategories: MEDIUM_VOLTAGE_SUBCATEGORIES
+  // },
+  // "LV IEC PANELS": {
+  //   subcategories: LV_IEC_PANELS_SUBCATEGORIES
+  // },
+  // "INDUSTRIAL AUTOMATION": {
+  //   subcategories: INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES
+  // },
 };
 
 const ITEMS_PER_PAGE = 9;
@@ -132,7 +165,7 @@ export default function ProductPage() {
   const [searchDebounce, setSearchDebounce] = React.useState("")
   const [isEditingPage, setIsEditingPage] = React.useState(false);
   const [tempPage, setTempPage] = React.useState(page.toString());
-  
+
   // Debounce search query
   React.useEffect(() => {
     const timer = setTimeout(() => {
@@ -150,14 +183,14 @@ export default function ProductPage() {
     }
     return false
   }
-  
+
   // Enhanced product loading with subcategory filtering
   const loadProductsEnhanced = React.useCallback(async () => {
     setLoading(true)
     try {
       const allProducts = unifiedProductService.getAllProducts();
       let filteredProducts = [...allProducts]
-  
+
       // Apply search filter
       if (searchDebounce) {
         const searchTerm = searchDebounce.toLowerCase()
@@ -169,7 +202,7 @@ export default function ProductPage() {
           product.Standards?.toLowerCase().includes(searchTerm)
         )
       }
-  
+
       // Apply brand filter
       if (brandSel.length > 0) {
         filteredProducts = filteredProducts.filter(product =>
@@ -178,22 +211,22 @@ export default function ProductPage() {
           )
         )
       }
-  
+
       // Apply main category filter
       if (catSel.length > 0) {
         filteredProducts = filteredProducts.filter(product =>
           catSel.some(category => product.Type.toUpperCase().includes(category.toUpperCase()))
         )
       }
-  
+
       // Apply subcategory filters with proper handling for categories without subcategories
       const hasSubcategoryFilters = Object.values(subcategorySel).some(arr => arr.length > 0)
       if (hasSubcategoryFilters) {
         filteredProducts = filteredProducts.filter(product => {
           const productCategory = product.Type?.toUpperCase()
-          const categoryHasSubcategories = categoryStructure[productCategory as keyof typeof categoryStructure]?.subcategories??[].length > 0
+          const categoryHasSubcategories = categoryStructure[productCategory as keyof typeof categoryStructure]?.subcategories ?? [].length > 0
           if (!categoryHasSubcategories) {
-            return catSel.length === 0 || catSel.some(category => 
+            return catSel.length === 0 || catSel.some(category =>
               product.Type.toUpperCase().includes(category.toUpperCase())
             )
           }
@@ -204,12 +237,12 @@ export default function ProductPage() {
           })
         })
       }
-  
+
       // Apply pagination
       const startIndex = (page - 1) * ITEMS_PER_PAGE
       const endIndex = startIndex + ITEMS_PER_PAGE
       const paginatedProducts = filteredProducts.slice(startIndex, endIndex)
-  
+
       setProducts(paginatedProducts)
       setTotal(filteredProducts.length)
     } catch (error) {
@@ -218,7 +251,7 @@ export default function ProductPage() {
       setLoading(false)
     }
   }, [page, brandSel, catSel, subcategorySel, searchDebounce])
-  
+
   React.useEffect(() => {
     loadProductsEnhanced()
   }, [loadProductsEnhanced])
@@ -249,9 +282,9 @@ export default function ProductPage() {
       setCatSel(catSel.filter(cat => cat !== category))
     }
   }
-const handlePageChange = (newPage: number) => {
-  setPage(newPage);
-}
+  const handlePageChange = (newPage: number) => {
+    setPage(newPage);
+  }
   // Simplified category toggle function
   const handleCategoryToggle = (category: string) => {
     const categoryConfig = categoryStructure[category as keyof typeof categoryStructure]
@@ -341,7 +374,11 @@ const handlePageChange = (newPage: number) => {
         toggle(value, brandSel, setBrandSel)
         break
       case 'category':
-        handleCategoryToggle(value)
+        setCatSel(catSel.filter(cat => cat !== value))
+        setSubcategorySel(prev => ({
+          ...prev,
+          [value]: []
+        }))
         break
       case 'subcategory':
         if (category) {
@@ -639,7 +676,7 @@ const handlePageChange = (newPage: number) => {
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                   >
                     {products.map((p, i) => {
-                      const primaryImg = p.Image_Path.split(";")[0].trim()
+                      const primaryImg = p.Image_Path?.split(";")[0].trim()
                       return (
                         <motion.div
                           key={`${p.Name}-${i}`}
@@ -723,7 +760,7 @@ const handlePageChange = (newPage: number) => {
 
 
                                 <Typography variant={"caption"} className="text-neutral-400">
-                                  {p.Short_Description?.length??0 > 150 ? p.Short_Description?.slice(0, 150) + "…" : p.Short_Description}
+                                  {p.Short_Description?.length ?? 0 > 150 ? p.Short_Description?.slice(0, 150) + "…" : p.Short_Description}
                                 </Typography>
                               </motion.div>
 
@@ -793,7 +830,7 @@ const handlePageChange = (newPage: number) => {
                             }
                             setIsEditingPage(false);
                           }}
-                          onKeyPress={(e:any) => {
+                          onKeyPress={(e: any) => {
                             if (e.key === 'Enter') {
                               e.target.blur();
                             } else if (e.key === 'Escape') {
