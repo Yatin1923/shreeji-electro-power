@@ -102,6 +102,39 @@ const categoryStructure = {
   "WIRE": {
     subcategories: null
   },
+  "PANEL ACCESSORIES": {
+    subcategories: null
+  },
+  "PUMP STARTERS & CONTROLLERS": {
+    subcategories: null
+  },
+  "MOTOR MANAGEMENT & CONTROL": {
+    subcategories: null
+  },
+  "INDUSTRIAL AUTOMATION & CONTROL": {
+    subcategories: null
+  },
+  "ENERGY MANAGEMENT PRODUCTS": {
+    subcategories: null
+  },
+  "MCB, RCCB & DISTRIBUTION BOARDS": {
+    subcategories: null
+  },
+  "SWITCHES & ACCESSORIES": {
+    subcategories: null
+  },
+  "POWER DISTRIBUTION PRODUCTS": {
+    subcategories: null
+  },
+  "MEDIUM VOLTAGE": {
+    subcategories: null
+  },
+  "LV IEC PANELS": {
+    subcategories: null
+  },
+  "INDUSTRIAL AUTOMATION": {
+    subcategories: null
+  },
   // "PANEL ACCESSORIES": {
   //   subcategories: PANEL_ACCESSORIES_SUBCATEGORIES
   // },
@@ -137,7 +170,7 @@ const categoryStructure = {
   // },
 };
 
-const ITEMS_PER_PAGE = 9;
+const ITEMS_PER_PAGE = 12;
 
 export default function ProductPage() {
   const searchParams = useSearchParams()
@@ -398,7 +431,7 @@ export default function ProductPage() {
 
 
   const filtersContent = (
-    <div className="w-[280px] p-4 bg-white rounded-lg h-fit sticky top-25">
+    <div className="w-[380px] p-4 bg-white rounded-lg h-fit sticky top-25">
       <div className="max-h-[80vh] overflow-auto">
 
         <div className="mb-3 flex items-center justify-between gap-2 text-neutral-700">
@@ -535,7 +568,7 @@ export default function ProductPage() {
     <main className="bg-[#f5f8fb] min-h-screen">
       <Navbar active="Product" />
 
-      <div className="mx-auto max-w-[1140px] px-6">
+      <div className="mx-auto container px-6">
         {/* Breadcrumb row */}
         <div className="pt-6">
           <div className="mb-8">
@@ -563,13 +596,13 @@ export default function ProductPage() {
         <div className="mt-6 flex gap-6 min-h-[calc(100vh-200px)]">
           {/* Fixed Sidebar */}
           {!isMobile && (
-            <aside className="flex-shrink-0">
+            <aside className="flex-1">
               {filtersContent}
             </aside>
           )}
 
           {/* Main Content Area */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-2 min-w-0">
             {/* Search, chips, sort */}
             <div className="flex flex-wrap items-center gap-4 mb-4">
               <TextField
@@ -673,7 +706,7 @@ export default function ProductPage() {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6"
                   >
                     {products.map((p, i) => {
                       const primaryImg = p.Image_Path?.split(";")[0].trim()
