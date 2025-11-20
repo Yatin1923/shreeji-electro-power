@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Suspense } from "react"
 import "./globals.css"
 import { Providers } from "./app-theme"
@@ -19,12 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-    <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-      <Providers>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+        <Providers>
           <Suspense fallback={null}>{children}</Suspense>
           <Analytics />
-      </Providers>
-    </body>
-  </html>
+          <GoogleAnalytics gaId="G-XYZ" />
+        </Providers>
+      </body>
+    </html>
   )
 }
