@@ -136,3 +136,26 @@ export const PANEL_ACCESSORIES_SUBCATEGORIES = [
   'Monitoring Devices',
   'Push buttons & Indicating Lamps',
 ] as const;
+
+export const BRAND_CATEGORIES: Record<string, string[]> = {
+  "POLYCAB": [
+    "CABLE",
+    "FAN",
+    "LIGHTING",
+    "SWITCHGEAR",
+    "SWITCH",
+    "WIRE"
+  ],
+  "Lauritz Knudsen": [
+    "MEDIUM VOLTAGE",
+    "LV IEC PANELS",
+    "POWER DISTRIBUTION PRODUCTS",
+    "MOTOR MANAGEMENT & CONTROL",
+    "INDUSTRIAL AUTOMATION & CONTROL",
+    "ENERGY MANAGEMENT PRODUCTS",
+    "MCB, RCCB & DISTRIBUTION BOARDS",
+    "SWITCHES & ACCESSORIES",
+    "PUMP STARTERS & CONTROLLERS",
+    "PANEL ACCESSORIES"
+  ]
+};

@@ -30,7 +30,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess"
 import { useSearchParams } from "next/navigation"
 import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
-import { BRANDS, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCH_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES, MEDIUM_VOLTAGE_SUBCATEGORIES, LV_IEC_PANELS_SUBCATEGORIES, POWER_DISTRIBUTION_PRODUCTS_SUBCATEGORIES, MOTOR_MANAGEMENT_CONTROL_SUBCATEGORIES, INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES, ENERGY_MANAGEMENT_PRODUCTS_SUBCATEGORIES, MCB_RCCB_DISTRIBUTION_BOARDS_SUBCATEGORIES, SWITCHES_ACCESSORIES_SUBCATEGORIES, PUMP_STARTERS_CONTROLLERS_SUBCATEGORIES, PANEL_ACCESSORIES_SUBCATEGORIES } from "@/constants/polycab"
+import { BRANDS, BRAND_CATEGORIES, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCH_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES, MEDIUM_VOLTAGE_SUBCATEGORIES, LV_IEC_PANELS_SUBCATEGORIES, POWER_DISTRIBUTION_PRODUCTS_SUBCATEGORIES, MOTOR_MANAGEMENT_CONTROL_SUBCATEGORIES, INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES, ENERGY_MANAGEMENT_PRODUCTS_SUBCATEGORIES, MCB_RCCB_DISTRIBUTION_BOARDS_SUBCATEGORIES, SWITCHES_ACCESSORIES_SUBCATEGORIES, PUMP_STARTERS_CONTROLLERS_SUBCATEGORIES, PANEL_ACCESSORIES_SUBCATEGORIES } from "@/constants/polycab"
 import { motion, AnimatePresence, Variants } from "framer-motion"
 import { useProduct } from "./context/product-context"
 
@@ -429,6 +429,19 @@ export default function ProductPage() {
     }
   };
 
+  const visibleCategories = React.useMemo(() => {
+    if (brandSel.length === 0) return [];
+
+    const allowedCategories = new Set<string>();
+    brandSel.forEach(brand => {
+      const categories = BRAND_CATEGORIES[brand];
+      if (categories) {
+        categories.forEach(cat => allowedCategories.add(cat));
+      }
+    });
+
+    return Object.keys(categoryStructure).filter(cat => allowedCategories.has(cat));
+  }, [brandSel]);
 
   const filtersContent = (
     <div className="w-[380px] p-4 bg-white rounded-lg h-fit sticky top-25">
@@ -484,82 +497,102 @@ export default function ProductPage() {
         </div>
 
         {/* Category filter with subcategories - simplified */}
-        <div className="mt-6 border-t pt-4">
-          <div
-            className="flex items-center justify-between cursor-pointer!"
-            onClick={() => setCatOpen(!catOpen)}
-          >
-            <span className="text-[13px] uppercase tracking-wide text-neutral-500">
-              Category {(catSel.length > 0 || Object.values(subcategorySel).some(arr => arr.length > 0)) &&
-                `(${catSel.length + Object.values(subcategorySel).reduce((acc, arr) => acc + arr.length, 0)})`}
-            </span>
-            <IconButton size="small">
-              {catOpen ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
-            </IconButton>
-          </div>
-          <Collapse in={catOpen}>
-            <div className="mt-2 flex flex-col">
-              {Object.keys(categoryStructure).map((category) => {
-                const categoryConfig = categoryStructure[category as keyof typeof categoryStructure]
-                const checkboxState = getCategoryCheckboxState(category)
+        <AnimatePresence>
+          {brandSel.length > 0 && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className="overflow-hidden"
+            >
+              <div className="mt-6 border-t pt-4">
+                <div
+                  className="flex items-center justify-between cursor-pointer!"
+                  onClick={() => setCatOpen(!catOpen)}
+                >
+                  <span className="text-[13px] uppercase tracking-wide text-neutral-500">
+                    Category {(catSel.length > 0 || Object.values(subcategorySel).some(arr => arr.length > 0)) &&
+                      `(${catSel.length + Object.values(subcategorySel).reduce((acc, arr) => acc + arr.length, 0)})`}
+                  </span>
+                  <IconButton size="small">
+                    {catOpen ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
+                  </IconButton>
+                </div>
+                <Collapse in={catOpen}>
+                  <div className="mt-2 flex flex-col">
+                    <AnimatePresence mode="popLayout">
+                      {visibleCategories.map((category) => {
+                        const categoryConfig = categoryStructure[category as keyof typeof categoryStructure]
+                        const checkboxState = getCategoryCheckboxState(category)
 
-                return (
-                  <div key={category} className="">
-                    <div className="flex items-center justify-between">
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            size="small"
-                            checked={checkboxState.checked || catSel.includes(category)}
-                            indeterminate={checkboxState.indeterminate}
-                            onChange={() => handleCategoryToggle(category)}
-                          />
-                        }
-                        label={
-                          <div className="w-full">
-                            <span className="text-[14px] text-neutral-700 flex justify-between">{category}</span>
-                          </div>
-                        }
-                      />
-                      {categoryConfig?.subcategories && categoryConfig.subcategories.length > 0 && (
-                        <IconButton
-                          size="small"
-                          onClick={(e) => {
-                            e.stopPropagation()
-                            toggleSubcategoryOpen(category)
-                          }}
-                        >
-                          {subcategoryOpen[category] ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
-                        </IconButton>
-                      )}
-                    </div>
-
-                    {/* Subcategories - simplified since we just use the values */}
-                    {categoryConfig?.subcategories && (
-                      <Collapse in={subcategoryOpen[category]}>
-                        <div className="ml-8 mt-1 flex flex-col">
-                          {categoryConfig.subcategories.map((subcategoryValue) => (
-                            <FormControlLabel
-                              key={subcategoryValue}
-                              control={
-                                <Checkbox
+                        return (
+                          <motion.div
+                            key={category}
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="flex items-center justify-between">
+                              <FormControlLabel
+                                control={
+                                  <Checkbox
+                                    size="small"
+                                    checked={checkboxState.checked || catSel.includes(category)}
+                                    indeterminate={checkboxState.indeterminate}
+                                    onChange={() => handleCategoryToggle(category)}
+                                  />
+                                }
+                                label={
+                                  <div className="w-full">
+                                    <span className="text-[14px] text-neutral-700 flex justify-between">{category}</span>
+                                  </div>
+                                }
+                              />
+                              {categoryConfig?.subcategories && categoryConfig.subcategories.length > 0 && (
+                                <IconButton
                                   size="small"
-                                  checked={(subcategorySel[category] || []).includes(subcategoryValue)}
-                                  onChange={() => handleSubcategoryToggle(category, subcategoryValue)}
-                                />
-                              }
-                              label={<span className="text-[13px] text-neutral-600">{subcategoryValue}</span>}
-                            />
-                          ))}
-                        </div>
-                      </Collapse>
-                    )}
+                                  onClick={(e) => {
+                                    e.stopPropagation()
+                                    toggleSubcategoryOpen(category)
+                                  }}
+                                >
+                                  {subcategoryOpen[category] ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
+                                </IconButton>
+                              )}
+                            </div>
+
+                            {/* Subcategories - simplified since we just use the values */}
+                            {categoryConfig?.subcategories && (
+                              <Collapse in={subcategoryOpen[category]}>
+                                <div className="ml-8 mt-1 flex flex-col">
+                                  {categoryConfig.subcategories.map((subcategoryValue) => (
+                                    <FormControlLabel
+                                      key={subcategoryValue}
+                                      control={
+                                        <Checkbox
+                                          size="small"
+                                          checked={(subcategorySel[category] || []).includes(subcategoryValue)}
+                                          onChange={() => handleSubcategoryToggle(category, subcategoryValue)}
+                                        />
+                                      }
+                                      label={<span className="text-[13px] text-neutral-600">{subcategoryValue}</span>}
+                                    />
+                                  ))}
+                                </div>
+                              </Collapse>
+                            )}
+                          </motion.div>
+                        )
+                      })}
+                    </AnimatePresence>
                   </div>
-                )
-              })}
-            </div>
-          </Collapse>
-        </div>
+                </Collapse>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   )
