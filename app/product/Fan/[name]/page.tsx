@@ -8,11 +8,13 @@ import { polycabCableService } from "@/services/product-service-factory"
 import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
 import { MagnifyingImage } from "@/components/magnifyingImage"
+import { useProduct } from "../../context/product-context"
 
 
 
 export default function ProductDetailPage({ params }: { params: { name: string } }) {
-    let product: Product | undefined = unifiedProductService.getProductByName(decodeURIComponent(params.name))
+    const { selectedProduct } = useProduct();
+    let product: Product | null = selectedProduct
     // Add state for selected color
     const [selectedColorIndex, setSelectedColorIndex] = useState(0)
 
@@ -33,7 +35,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
     // Helper functions
     const getImageUrl = (imagePath: string | undefined) => {
         if (!imagePath) return "/placeholder.svg"
-        imagePath = imagePath.includes('Polycab/Fans/') ? imagePath: "Polycab/Fans/"+imagePath;
+        imagePath = imagePath.includes('Polycab/Fans/') ? imagePath : "Polycab/Fans/" + imagePath;
         return imagePath.startsWith('/') ? imagePath : `/${imagePath}`
     }
 
@@ -81,7 +83,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
     // Get comprehensive specifications
     const getSpecifications = () => {
         const specs: { key: string; value: string }[] = []
-        
+
         // First, add parsed specifications from the Specifications string
         const parsedSpecs = parseSpecifications(product?.Specifications || "")
         specs.push(...parsedSpecs)
@@ -163,18 +165,17 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                                     <div className="text-sm text-gray-600">
                                         Selected: <span className="font-medium text-gray-900">{colors[selectedColorIndex]}</span>
                                     </div>
-                                    
+
                                     {/* Color Options Grid */}
                                     <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                         {colors.map((color, index) => (
                                             <button
                                                 key={index}
                                                 onClick={() => setSelectedColorIndex(index)}
-                                                className={`p-3 text-left text-sm border rounded-lg transition-all hover:bg-gray-50 ${
-                                                    selectedColorIndex === index 
-                                                        ? 'border-sky-500 bg-sky-50 text-sky-700' 
+                                                className={`p-3 text-left text-sm border rounded-lg transition-all hover:bg-gray-50 ${selectedColorIndex === index
+                                                        ? 'border-sky-500 bg-sky-50 text-sky-700'
                                                         : 'border-gray-200 text-gray-700'
-                                                }`}
+                                                    }`}
                                             >
                                                 <div className="flex items-center space-x-2">
                                                     {images[index] && (
@@ -204,7 +205,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                             <h1 className="text-3xl font-bold text-sky-600 mb-2">
                                 {product.Name}
                             </h1>
-                            
+
                             {/* Download PDF Button */}
                             {product.Brochure_Path && (
                                 <a
@@ -216,13 +217,13 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                                     Download Data Sheet
                                 </a>
                             )}
-                            
+
                             {product.Short_Description && (
                                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
                                     {product.Short_Description}
                                 </p>
                             )}
-                            
+
                             {/* {product.Price && (
                                 <Typography variant="h6" className="text-sky-600 font-bold!">
                                     Price : <span className="">{product.Price}</span>

@@ -1,5 +1,5 @@
 export const BRANDS = {
-  "POLYCAB": "POLYCAB",
+  "Polycab": "POLYCAB",
   "Lauritz Knudsen": "LK",
   "Neptune": "NEPTUNE"
 };
@@ -157,5 +157,12 @@ export const BRAND_CATEGORIES: Record<string, string[]> = {
     "SWITCHES & ACCESSORIES",
     "PUMP STARTERS & CONTROLLERS",
     "PANEL ACCESSORIES"
+  ],
+  "NEPTUNE": [
+    "Industrial Plug & Sockets",
+    "LV Switchboards",
+    "Metering System",
+    "PF Correction",
+    "Power Quality"
   ]
 };

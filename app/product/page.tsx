@@ -135,6 +135,21 @@ const categoryStructure = {
   "INDUSTRIAL AUTOMATION": {
     subcategories: null
   },
+  "Industrial Plug & Sockets": {
+    subcategories: null
+  },
+  "LV Switchboards": {
+    subcategories: null
+  },
+  "Metering System": {
+    subcategories: null
+  },
+  "PF Correction": {
+    subcategories: null
+  },
+  "Power Quality": {
+    subcategories: null
+  },
   // "PANEL ACCESSORIES": {
   //   subcategories: PANEL_ACCESSORIES_SUBCATEGORIES
   // },
@@ -198,6 +213,49 @@ export default function ProductPage() {
   const [searchDebounce, setSearchDebounce] = React.useState("")
   const [isEditingPage, setIsEditingPage] = React.useState(false);
   const [tempPage, setTempPage] = React.useState(page.toString());
+
+  const [isRestored, setIsRestored] = React.useState(false)
+
+  // Load state from sessionStorage on mount
+  React.useEffect(() => {
+    // If there's an initial brand from URL (e.g. from Home page), don't load from storage
+    if (initialBrand) {
+      setIsRestored(true)
+      return
+    }
+
+    const savedState = sessionStorage.getItem('productPageFilters')
+    if (savedState) {
+      try {
+        const parsed = JSON.parse(savedState)
+        setBrandSel(parsed.brandSel || [])
+        setCatSel(parsed.catSel || [])
+        setSubcategorySel(parsed.subcategorySel || {})
+        setPage(parsed.page || 1)
+        if (parsed.searchQuery) {
+          setSearchQuery(parsed.searchQuery)
+          setSearchDebounce(parsed.searchQuery)
+        }
+      } catch (e) {
+        console.error('Failed to parse saved filters', e)
+      }
+    }
+    setIsRestored(true)
+  }, [initialBrand])
+
+  // Save state to sessionStorage whenever it changes
+  React.useEffect(() => {
+    if (!isRestored) return
+
+    const stateToSave = {
+      brandSel,
+      catSel,
+      subcategorySel,
+      page,
+      searchQuery: searchDebounce
+    }
+    sessionStorage.setItem('productPageFilters', JSON.stringify(stateToSave))
+  }, [brandSel, catSel, subcategorySel, page, searchDebounce, isRestored])
 
   // Debounce search query
   React.useEffect(() => {
@@ -289,10 +347,8 @@ export default function ProductPage() {
     loadProductsEnhanced()
   }, [loadProductsEnhanced])
 
-  // Reset to page 1 when filters change
-  React.useEffect(() => {
-    setPage(1)
-  }, [brandSel, catSel, subcategorySel, searchDebounce])
+  // Reset to page 1 when filters change - REMOVED
+  // Instead, we call setPage(1) in the handlers
 
   // Simplified subcategory toggle function using values
   const handleSubcategoryToggle = (category: string, subcategoryValue: string) => {
@@ -314,6 +370,7 @@ export default function ProductPage() {
     else if (newSubcats.length === 0 && catSel.includes(category)) {
       setCatSel(catSel.filter(cat => cat !== category))
     }
+    setPage(1)
   }
   const handlePageChange = (newPage: number) => {
     setPage(newPage);
@@ -350,6 +407,7 @@ export default function ProductPage() {
         : [...catSel, category]
       )
     }
+    setPage(1)
   }
 
   // Simplified checkbox state function
@@ -410,8 +468,10 @@ export default function ProductPage() {
         setCatSel(catSel.filter(cat => cat !== value))
         setSubcategorySel(prev => ({
           ...prev,
+          ...prev,
           [value]: []
         }))
+        setPage(1)
         break
       case 'subcategory':
         if (category) {
@@ -433,9 +493,8 @@ export default function ProductPage() {
     if (brandSel.length === 0) return [];
 
     const allowedCategories = new Set<string>();
-    console.log(brandSel);
     brandSel.forEach(brand => {
-      const categories = BRAND_CATEGORIES[brand];
+      const categories = BRAND_CATEGORIES[brand.toUpperCase()];
       if (categories) {
         categories.forEach(cat => allowedCategories.add(cat));
       }
@@ -443,6 +502,45 @@ export default function ProductPage() {
 
     return Object.keys(categoryStructure).filter(cat => allowedCategories.has(cat));
   }, [brandSel]);
+
+  // Effect to clean up selected categories when available categories change
+  React.useEffect(() => {
+    if (!isRestored) return
+
+    // If no brands are selected, clear all categories
+    if (brandSel.length === 0) {
+      if (catSel.length > 0 || Object.keys(subcategorySel).length > 0) {
+        setCatSel([])
+        setSubcategorySel({})
+        setPage(1)
+      }
+      return
+    }
+
+    // Filter out categories that are no longer visible
+    const newCatSel = catSel.filter(cat => visibleCategories.includes(cat))
+
+    // Check if changes are needed
+    if (newCatSel.length !== catSel.length) {
+      setCatSel(newCatSel)
+
+      // Clean up subcategories for removed categories
+      const newSubcategorySel = { ...subcategorySel }
+      let subcatChanged = false
+
+      Object.keys(subcategorySel).forEach(cat => {
+        if (!newCatSel.includes(cat)) {
+          delete newSubcategorySel[cat]
+          subcatChanged = true
+        }
+      })
+
+      if (subcatChanged) {
+        setSubcategorySel(newSubcategorySel)
+      }
+      setPage(1)
+    }
+  }, [visibleCategories, brandSel, isRestored, catSel, subcategorySel])
 
   const filtersContent = (
     <div className="w-[380px] p-4 bg-white rounded-lg h-fit sticky top-25">
@@ -457,6 +555,7 @@ export default function ProductPage() {
                 setBrandSel([])
                 setCatSel([])
                 setSubcategorySel({})
+                setPage(1)
               }}
               className="ml-auto text-xs p-2!"
             >
@@ -487,7 +586,10 @@ export default function ProductPage() {
                     <Checkbox
                       size="small"
                       checked={brandSel.includes(value)}
-                      onChange={() => toggle(value, brandSel, setBrandSel)}
+                      onChange={() => {
+                        toggle(value, brandSel, setBrandSel)
+                        setPage(1)
+                      }}
                     />
                   }
                   label={<span className="text-[14px] text-neutral-700">{key}</span>}
@@ -654,7 +756,10 @@ export default function ProductPage() {
                     </InputAdornment>
                   ),
                 }}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value)
+                  setPage(1)
+                }}
               />
               <div className="flex flex-wrap gap-2">
                 {getAllSelectedFilters().map((filter, index) => (
