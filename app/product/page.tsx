@@ -433,6 +433,7 @@ export default function ProductPage() {
     if (brandSel.length === 0) return [];
 
     const allowedCategories = new Set<string>();
+    console.log(brandSel);
     brandSel.forEach(brand => {
       const categories = BRAND_CATEGORIES[brand];
       if (categories) {
@@ -479,17 +480,17 @@ export default function ProductPage() {
           </div>
           <Collapse in={brandOpen}>
             <div className="mt-2 flex flex-col">
-              {BRANDS.map((b) => (
+              {Object.entries(BRANDS).map(([key, value]) => (
                 <FormControlLabel
-                  key={b}
+                  key={key}
                   control={
                     <Checkbox
                       size="small"
-                      checked={brandSel.includes(b)}
-                      onChange={() => toggle(b, brandSel, setBrandSel)}
+                      checked={brandSel.includes(value)}
+                      onChange={() => toggle(value, brandSel, setBrandSel)}
                     />
                   }
-                  label={<span className="text-[14px] text-neutral-700">{b}</span>}
+                  label={<span className="text-[14px] text-neutral-700">{key}</span>}
                 />
               ))}
             </div>
@@ -743,6 +744,9 @@ export default function ProductPage() {
                   >
                     {products.map((p, i) => {
                       const primaryImg = p.Image_Path?.split(";")[0].trim()
+                      const isPolycab = p.Brand?.toLowerCase().includes("polycab")
+                      const linkHref = `/product/${isPolycab ? p.Type : p.Brand}/${encodeURIComponent(p.Name)}`
+
                       return (
                         <motion.div
                           key={`${p.Name}-${i}`}
@@ -755,7 +759,7 @@ export default function ProductPage() {
                         >
                           <Card elevation={0} className="rounded-xl border border-neutral-200 shadow-sm bg-white h-full">
                             <div className="relative p-4">
-                              <Link href={`/product/${encodeURIComponent(p.Type)}/${encodeURIComponent(p.Name)}`}
+                              <Link href={linkHref}
                                 onClick={() => handleProductClick(p)}
                                 className="block">
                                 <motion.div
@@ -776,7 +780,7 @@ export default function ProductPage() {
                             </div>
                             <CardContent className="pt-0">
                               <Link
-                                href={`/product/${encodeURIComponent(p.Type)}/${encodeURIComponent(p.Name)}`}
+                                href={linkHref}
                                 onClick={() => handleProductClick(p)}
                                 className="text-[14px] font-semibold text-sky-700 hover:underline"
                               >

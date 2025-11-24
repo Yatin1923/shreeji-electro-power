@@ -1,7 +1,7 @@
 [
   {
     "Product_URL": "https://www.lk-ea.com/products/pump-starters-and-controllers/starter/mk-starter",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Pump Starters & Controllers",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -17,7 +17,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/pump-starters-and-controllers/controller/mr-gi-digital-single-phase-controller",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Pump Starters & Controllers",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -33,7 +33,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/pump-starters-and-controllers/solar-solutions/solar-drive-controller",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Pump Starters & Controllers",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -49,7 +49,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/pump-starters-and-controllers/pump-starter-and-controller-spare-accessories/m-power",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Pump Starters & Controllers",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -65,7 +65,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/medium-voltage/air-insulated-switchgear-ais/vh3h",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Medium Voltage",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -79,7 +79,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/medium-voltage/air-insulated-switchgear-ais/vh1h",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Medium Voltage",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -93,7 +93,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/medium-voltage/ring-main-unit-rmu/fr1-vi",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Medium Voltage",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -107,7 +107,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/medium-voltage/compact-sub-station-css-or-packaged-sub-stations-pss/nqube",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Medium Voltage",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -121,7 +121,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/medium-voltage/vacuum-circuit-breaker-vcb/vk-series",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Medium Voltage",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -135,7 +135,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/lv-iec-panels/pcc-and-mcc-panels/ti",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "LV IEC Panels",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -149,7 +149,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/lv-iec-panels/pcc-and-mcc-panels/enersys",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "LV IEC Panels",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -163,7 +163,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/lv-iec-panels/sub-main-distribution-board-smdb/enersys-s",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "LV IEC Panels",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -178,7 +178,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/power-distribution-products/air-circuit-breaker-acb/u-power-omega",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Power Distribution products",
     "Image_Download_Status": "Not Found on Category Page",
     "Brochure_Download_Status": "Downloaded",
@@ -192,7 +192,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/power-distribution-products/air-circuit-breaker-acb/c-power",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Power Distribution products",
     "Image_Download_Status": "Not Found on Category Page",
     "Brochure_Download_Status": "Downloaded",
@@ -207,7 +207,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/power-distribution-products/moulded-case-circuit-breaker-mccb/dz",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Power Distribution products",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -222,7 +222,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/power-distribution-products/moulded-case-circuit-breaker-mccb/dn",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Power Distribution products",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -238,7 +238,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/power-distribution-products/moulded-case-circuit-breaker-mccb/dy",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Power Distribution products",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -253,7 +253,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/power-distribution-products/moulded-case-circuit-breaker-mccb/du",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Power Distribution products",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -268,7 +268,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/power-distribution-products/switch-disconnectors-switch-disconnector-fuses-sdf/fn",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Power Distribution products",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -283,7 +283,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/power-distribution-products/busbar-trunking-bbt/s-line",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Power Distribution products",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -298,7 +298,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/motor-management-control/industrial-starter/mn-starter",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Motor Management & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -313,7 +313,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/motor-management-control/motor-protection-circuit-breaker/mog",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Motor Management & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -328,7 +328,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/motor-management-control/electronic-motor-protection-relays/immr",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Motor Management & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -343,7 +343,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/ac-drive/xd1000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -358,7 +358,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/ac-drive/xd2000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -373,7 +373,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/ac-drive/xd3000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -388,7 +388,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/ac-drive/xd4000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -403,7 +403,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/ac-drive/sx2000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -418,7 +418,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/ac-drive/fx2000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -433,7 +433,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/ac-drive/hx2000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -448,7 +448,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/ac-drive/nx2000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -463,7 +463,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/soft-starters/xs1000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -477,7 +477,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/soft-starters/xs2000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -491,7 +491,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/soft-starters/xs3000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -505,7 +505,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/industrial-automation-control/soft-starters/xs4000",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Industrial Automation & Control",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -519,7 +519,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/energy-management-products/power-quality-and-power-factor-correction/ultra-heavy-capacitors",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Energy Management Products",
     "Image_Download_Status": "Not Found on Category Page",
     "Brochure_Download_Status": "Downloaded",
@@ -534,7 +534,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/energy-management-products/power-quality-and-power-factor-correction/heavy-duty-capacitors",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Energy Management Products",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -549,7 +549,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/energy-management-products/power-quality-and-power-factor-correction/heavy-gas-filled-capacitors",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Energy Management Products",
     "Image_Download_Status": "Not Found on Category Page",
     "Brochure_Download_Status": "Downloaded",
@@ -564,7 +564,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/energy-management-products/apfc-relays/etasmart",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Energy Management Products",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -579,7 +579,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/miniature-circuit-breaker-mcb/exora",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "MCB, RCCB & Distribution Boards",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -594,7 +594,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/miniature-circuit-breaker-mcb/au",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "MCB, RCCB & Distribution Boards",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -609,7 +609,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/residual-current-operated-circuit-breaker-rcbo/au",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "MCB, RCCB & Distribution Boards",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -623,7 +623,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/residual-current-circuit-breaker-rccb/exora",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "MCB, RCCB & Distribution Boards",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -638,7 +638,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/1phase-3phase-automatic-changeover-with-current-limiter-accl/au",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "MCB, RCCB & Distribution Boards",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -653,7 +653,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/modular-contactor/au",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "MCB, RCCB & Distribution Boards",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -667,7 +667,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/surge-protective-devices-spd/au",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "MCB, RCCB & Distribution Boards",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -682,7 +682,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/isolators/exora",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "MCB, RCCB & Distribution Boards",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",
@@ -697,7 +697,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/panel-accessories/time-switches/fmqt",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Panel Accessories",
     "Image_Download_Status": "Not Found on Category Page",
     "Brochure_Download_Status": "Downloaded",
@@ -712,7 +712,7 @@
   },
   {
     "Product_URL": "https://www.lk-ea.com/products/panel-accessories/push-buttons-indicating-lamps/gen-next-pro-22.5-mm",
-    "Brand": "Lauritz Knudsen",
+    "Brand": "LK",
     "Type": "Panel Accessories",
     "Image_Download_Status": "Downloaded",
     "Brochure_Download_Status": "Downloaded",

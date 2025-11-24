@@ -1,8 +1,8 @@
-
-export const BRANDS = [
-  "POLYCAB",
-  "Lauritz Knudsen"
-]
+export const BRANDS = {
+  "POLYCAB": "POLYCAB",
+  "Lauritz Knudsen": "LK",
+  "Neptune": "NEPTUNE"
+};
 
 // Subcategory constants
 export const CABLE_SUBCATEGORIES = [
@@ -146,7 +146,7 @@ export const BRAND_CATEGORIES: Record<string, string[]> = {
     "SWITCH",
     "WIRE"
   ],
-  "Lauritz Knudsen": [
+  "LK": [
     "MEDIUM VOLTAGE",
     "LV IEC PANELS",
     "POWER DISTRIBUTION PRODUCTS",

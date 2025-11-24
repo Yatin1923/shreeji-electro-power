@@ -6,10 +6,10 @@ import { Product, UnifiedSearchFilters, UnifiedSearchResult } from '@/types/comm
 
 export class UnifiedProductService {
   private static instance: UnifiedProductService;
-  
+
   private cableStrategy: CableStrategy;
   private fanStrategy: FanStrategy;
-  
+
   public constructor() {
     this.cableStrategy = new CableStrategy();
     this.fanStrategy = new FanStrategy();
@@ -23,7 +23,7 @@ export class UnifiedProductService {
   }
 
   // Get all products from all categories
-  public getAllProducts():Product[]{
+  public getAllProducts(): Product[] {
     return [...allProducts];
   }
 
@@ -33,18 +33,18 @@ export class UnifiedProductService {
     breakdown: {
       cables: number;
       fans: number;
-      lightings:number;
-      switchgears:number;
+      lightings: number;
+      switchgears: number;
     };
   } {
 
     return {
       total: allProducts.length,
       breakdown: {
-        cables:cables.length,
-        fans:fans.length,
-        lightings:lightings.length,
-        switchgears:switchgears.length
+        cables: cables.length,
+        fans: fans.length,
+        lightings: lightings.length,
+        switchgears: switchgears.length
 
       }
     };
@@ -52,26 +52,26 @@ export class UnifiedProductService {
 
 
   // Get product by name across all types
-  public getProductByName(name: string):Product | undefined {
+  public getProductByName(name: string): Product | undefined {
     // Try cables first
-    const cable = cables.find(cable => 
+    const cable = cables.find(cable =>
       cable.Name.toLowerCase() === name.toLowerCase());
     if (cable) {
       return cable;
     }
 
     // Try fans
-    const fan = fans.find(fan => 
+    const fan = fans.find(fan =>
       fan.Name.toLowerCase() === name.toLowerCase());
     if (fan) {
       return fan;
     }
-    const lighting = lightings.find(lighting => 
+    const lighting = lightings.find(lighting =>
       lighting.Name.toLowerCase() == name.toLowerCase());
     if (lighting) {
       return lighting;
     }
-    const switchgear = switchgears.find(switchgear => 
+    const switchgear = switchgears.find(switchgear =>
       switchgear.Name.toLowerCase() == name.toLowerCase());
     if (switchgear) {
       return switchgear;
@@ -128,7 +128,7 @@ export class UnifiedProductService {
   public getAllProductStats() {
     const cableStats = this.cableStrategy.getProductStats?.() || {};
     const fanStats = this.fanStrategy.getFanFilterOptions?.() || {};
-    
+
     return {
       overview: this.getTotalProductCount(),
       cables: cableStats,
@@ -139,29 +139,29 @@ export class UnifiedProductService {
   // Helper methods
   private matchesGlobalSearch(item: { product: Product; productType: 'cable' | 'fan' }, searchTerm: string): boolean {
     const term = searchTerm.toLowerCase();
-    
+
     if (item.productType === 'cable') {
       const cable = item.product as Product;
       return (
         cable.Name.toLowerCase().includes(term) ||
-        cable.Short_Description.toLowerCase().includes(term) ||
-        cable.Full_Description.toLowerCase().includes(term) ||
-        cable.Key_Features.toLowerCase().includes(term) ||
-        cable.Product_Type.toLowerCase().includes(term) ||
-        cable.Brand.toLowerCase().includes(term)
+        cable.Short_Description?.toLowerCase().includes(term) ||
+        cable.Full_Description?.toLowerCase().includes(term) ||
+        cable.Key_Features?.toLowerCase().includes(term) ||
+        cable.Product_Type?.toLowerCase().includes(term) ||
+        cable.Brand?.toLowerCase().includes(term)
       );
     } else if (item.productType === 'fan') {
       const fan = item.product as Product;
       return (
         fan.Name.toLowerCase().includes(term) ||
-        fan.Short_Description.toLowerCase().includes(term) ||
-        fan.Full_Description.toLowerCase().includes(term) ||
-        fan.Key_Features.toLowerCase().includes(term) ||
-        fan.Type.toLowerCase().includes(term) ||
-        fan.Brand.toLowerCase().includes(term)
+        fan.Short_Description?.toLowerCase().includes(term) ||
+        fan.Full_Description?.toLowerCase().includes(term) ||
+        fan.Key_Features?.toLowerCase().includes(term) ||
+        fan.Type?.toLowerCase().includes(term) ||
+        fan.Brand?.toLowerCase().includes(term)
       );
     }
-    
+
     return false;
   }
 
@@ -183,7 +183,7 @@ export class UnifiedProductService {
 
     if (filters.features?.length) {
       const hasFeature = filters.features.some(feature =>
-        cable.Key_Features.toLowerCase().includes(feature.toLowerCase())
+        cable.Key_Features?.toLowerCase().includes(feature.toLowerCase())
       );
       if (!hasFeature) return false;
     }
@@ -210,11 +210,11 @@ export class UnifiedProductService {
     }
 
     if (filters.sweepSize?.length) {
-      if (!filters.sweepSize.includes(fan.Sweep_Size??"")) return false;
+      if (!filters.sweepSize.includes(fan.Sweep_Size ?? "")) return false;
     }
 
     // Add other fan filters as needed...
-    
+
     return true;
   }
 

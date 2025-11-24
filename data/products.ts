@@ -9,13 +9,15 @@ import switchgearsData from './switchgears.json';
 import switchesData from './switches.json';
 import lkData from './lk_ea_products.json';
 import wiresData from './wires.json';
+import neptuneData from './neptune.json';
 import { Product } from '@/types/common';
 
-export const allProducts: Product[] = [...cablesData, ...fansData, ...lightingsData, ...switchgearsData,...wiresData,...switchesData,...lkData];
-// export const allProducts: Product[] = [...lkData];
+export const allProducts: Product[] = [...cablesData, ...fansData, ...lightingsData, ...switchgearsData, ...wiresData, ...switchesData, ...lkData, ...neptuneData];
+// export const allProducts: Product[] = [...neptuneData];
 export const cables: Product[] = cablesData;
 export const fans: Product[] = fansData;
 export const lightings: Product[] = lightingsData;
 export const switchgears: Product[] = switchgearsData;
 export const lk: Product[] = lkData;
+export const neptune: Product[] = neptuneData;
 
