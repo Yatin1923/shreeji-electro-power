@@ -601,7 +601,7 @@ export default function ProductPage() {
 
         {/* Category filter with subcategories - simplified */}
         <AnimatePresence>
-          {brandSel.length > 0 && (
+          {brandSel.length > 0 && visibleCategories.length>0 && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}

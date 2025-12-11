@@ -1,7 +1,8 @@
 export const BRANDS = {
   "Polycab": "POLYCAB",
   "Lauritz Knudsen": "LK",
-  "Neptune": "NEPTUNE"
+  "Neptune": "NEPTUNE",
+  "Dowell": "DOWELL",
 };
 
 // Subcategory constants

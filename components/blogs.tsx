@@ -38,6 +38,7 @@ const blogs: Blog[] = [
 ]
 
 function BlogCard({ blog, index }: { blog: Blog; index: number }) {
+  console.log(blog);
   return (
     <motion.div
       variants={slideInLeft}
@@ -72,7 +73,7 @@ function BlogCard({ blog, index }: { blog: Blog; index: number }) {
 
 export function Blogs() {
   return (
-    <section id="blogs" className="bg-white">
+    <section id="blogs" className="bg-white scroll-mt-32">
       <div className="container mx-auto my-40 px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Left section */}
@@ -93,7 +94,7 @@ export function Blogs() {
           {/* Blog cards */}
           <div className="md:col-span-3 grid grid-cols-1 gap-6 md:grid-cols-3">
             {blogs.map((blog, index) => (
-              <BlogCard key={blog.id} blog={blog} index={index} />
+              <BlogCard key={blog.id} blog={blog} index={index}/>
             ))}
           </div>
         </div>
