@@ -59,8 +59,8 @@ export function Hero() {
             {/* Stats */}
             <div className="mt-8 flex gap-5">
               {[
-                { k: "20+", v: "Years of Expertise", img: "/assets/stats/experience.png" },
-                { k: "500+", v: "Products", img: "/assets/stats/totalproducts.png" },
+                { k: "25+", v: "Years of Expertise", img: "/assets/stats/experience.png" },
+                { k: "1500+", v: "Products", img: "/assets/stats/totalproducts.png" },
                 { k: "3000+", v: "Clients Served", img: "/assets/stats/clientserved.png" },
               ].map((s, idx) => (
                 <div key={s.k} className="flex items-center gap-3">
