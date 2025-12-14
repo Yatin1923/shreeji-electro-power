@@ -276,23 +276,49 @@ export default function ProductPage() {
       }
 
       // Apply subcategory filters with proper handling for categories without subcategories
-      const hasSubcategoryFilters = Object.values(subcategorySel).some(arr => arr.length > 0)
+      const hasSubcategoryFilters = Object.values(subcategorySel).some(
+        arr => arr.length > 0
+      )
+      
       if (hasSubcategoryFilters) {
         filteredProducts = filteredProducts.filter(product => {
-          const productCategory = product.Type?.toUpperCase()
-          const categoryHasSubcategories = categoryStructure[productCategory as keyof typeof categoryStructure]?.subcategories ?? [].length > 0
+          const productCategory = product.Type?.toLowerCase()
+          if (!productCategory) return false
+      
+          // Find matching category key from categoryStructure (case-insensitive)
+          const categoryKey = Object.keys(categoryStructure).find(
+            key => key.toLowerCase() === productCategory
+          )
+      
+          const categoryHasSubcategories =
+            categoryKey &&
+            Array.isArray(categoryStructure[categoryKey as keyof typeof categoryStructure].subcategories) &&
+            categoryStructure[categoryKey as keyof typeof categoryStructure].subcategories!.length > 0
+      
+          // Category has NO subcategories
           if (!categoryHasSubcategories) {
-            return catSel.length === 0 || catSel.some(category =>
-              product.Type.toUpperCase().includes(category.toUpperCase())
+            return (
+              catSel.length === 0 ||
+              catSel.some(category =>
+                productCategory.includes(category.toLowerCase())
+              )
             )
           }
-          return Object.entries(subcategorySel).some(([category, selectedSubcats]) => {
-            if (selectedSubcats.length === 0) return false
-            if (product.Type.toUpperCase() !== category.toUpperCase()) return false
-            return selectedSubcats.some(subcatValue => matchesSubcategory(product, category, subcatValue))
-          })
+      
+          // Category HAS subcategories
+          return Object.entries(subcategorySel).some(
+            ([category, selectedSubcats]) => {
+              if (selectedSubcats.length === 0) return false
+              if (productCategory !== category.toLowerCase()) return false
+      
+              return selectedSubcats.some(subcatValue =>
+                matchesSubcategory(product, category, subcatValue)
+              )
+            }
+          )
         })
       }
+      
 
       // Apply pagination
       const startIndex = (page - 1) * ITEMS_PER_PAGE
