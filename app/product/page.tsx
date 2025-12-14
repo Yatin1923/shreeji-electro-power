@@ -30,7 +30,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess"
 import { useSearchParams } from "next/navigation"
 import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
-import { BRANDS, BRAND_CATEGORIES, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCH_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES, MEDIUM_VOLTAGE_SUBCATEGORIES, LV_IEC_PANELS_SUBCATEGORIES, POWER_DISTRIBUTION_PRODUCTS_SUBCATEGORIES, MOTOR_MANAGEMENT_CONTROL_SUBCATEGORIES, INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES, ENERGY_MANAGEMENT_PRODUCTS_SUBCATEGORIES, MCB_RCCB_DISTRIBUTION_BOARDS_SUBCATEGORIES, SWITCHES_ACCESSORIES_SUBCATEGORIES, PUMP_STARTERS_CONTROLLERS_SUBCATEGORIES, PANEL_ACCESSORIES_SUBCATEGORIES } from "@/constants/polycab"
+import { BRANDS, BRAND_CATEGORIES, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCH_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES, MEDIUM_VOLTAGE_SUBCATEGORIES, LV_IEC_PANELS_SUBCATEGORIES, POWER_DISTRIBUTION_PRODUCTS_SUBCATEGORIES, MOTOR_MANAGEMENT_CONTROL_SUBCATEGORIES, INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES, ENERGY_MANAGEMENT_PRODUCTS_SUBCATEGORIES, MCB_RCCB_DISTRIBUTION_BOARDS_SUBCATEGORIES, SWITCHES_ACCESSORIES_SUBCATEGORIES, PUMP_STARTERS_CONTROLLERS_SUBCATEGORIES, INDUSTRIAL_SIGNALLING_PRODUCTS } from "@/constants/polycab"
 import { motion, AnimatePresence, Variants } from "framer-motion"
 import { useProduct } from "./context/product-context"
 
@@ -84,56 +84,53 @@ const containerVariants: Variants = {
 
 // Simplified category structure using just values
 const categoryStructure = {
-  "CABLE": {
+  "Cable": {
     subcategories: CABLE_SUBCATEGORIES
   },
-  "FAN": {
+  "Fan": {
     subcategories: FAN_SUBCATEGORIES
   },
-  "LIGHTING": {
+  "Lighting": {
     subcategories: LIGHTING_SUBCATEGORIES
   },
-  "SWITCHGEAR": {
+  "Switchgear": {
     subcategories: SWITCHGEAR_SUBCATEGORIES
   },
-  "SWITCH": {
+  "Switch": {
     subcategories: SWITCH_SUBCATEGORIES
   },
-  "WIRE": {
+  "Wire": {
     subcategories: null
   },
-  "PANEL ACCESSORIES": {
-    subcategories: null
+  "Industrial Signalling Products": {
+    subcategories: INDUSTRIAL_SIGNALLING_PRODUCTS
   },
-  "PUMP STARTERS & CONTROLLERS": {
-    subcategories: null
+  "Pump Starters & Controllers": {
+    subcategories: PUMP_STARTERS_CONTROLLERS_SUBCATEGORIES
   },
-  "MOTOR MANAGEMENT & CONTROL": {
-    subcategories: null
+  "Motor Management & Control": {
+    subcategories: MOTOR_MANAGEMENT_CONTROL_SUBCATEGORIES
   },
-  "INDUSTRIAL AUTOMATION & CONTROL": {
-    subcategories: null
+  "Industrial Automation & Control": {
+    subcategories: INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES
   },
-  "ENERGY MANAGEMENT PRODUCTS": {
-    subcategories: null
+  "Energy Management Products": {
+    subcategories: ENERGY_MANAGEMENT_PRODUCTS_SUBCATEGORIES
   },
-  "MCB, RCCB & DISTRIBUTION BOARDS": {
-    subcategories: null
+  "MCB, RCCB & Distribution Boards": {
+    subcategories: MCB_RCCB_DISTRIBUTION_BOARDS_SUBCATEGORIES
   },
-  "SWITCHES & ACCESSORIES": {
-    subcategories: null
+  "Power Distribution Products": {
+    subcategories: POWER_DISTRIBUTION_PRODUCTS_SUBCATEGORIES
   },
-  "POWER DISTRIBUTION PRODUCTS": {
-    subcategories: null
+  "Medium Voltage": {
+    subcategories: MEDIUM_VOLTAGE_SUBCATEGORIES
   },
-  "MEDIUM VOLTAGE": {
-    subcategories: null
+  "LV IEC Panels": {
+    subcategories: LV_IEC_PANELS_SUBCATEGORIES
   },
-  "LV IEC PANELS": {
-    subcategories: null
-  },
-  "INDUSTRIAL AUTOMATION": {
-    subcategories: null
+  "Industrial Automation": {
+    subcategories: INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES
   },
   "Industrial Plug & Sockets": {
     subcategories: null
@@ -149,41 +146,9 @@ const categoryStructure = {
   },
   "Power Quality": {
     subcategories: null
-  },
-  // "PANEL ACCESSORIES": {
-  //   subcategories: PANEL_ACCESSORIES_SUBCATEGORIES
-  // },
-  // "PUMP STARTERS CONTROLLERS": {
-  //   subcategories: PUMP_STARTERS_CONTROLLERS_SUBCATEGORIES
-  // },
-  // "MOTOR MANAGEMENT CONTROL": {
-  //   subcategories: MOTOR_MANAGEMENT_CONTROL_SUBCATEGORIES
-  // },
-  // "INDUSTRIAL AUTOMATION CONTROL": {
-  //   subcategories: INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES
-  // },
-  // "ENERGY MANAGEMENT PRODUCTS": {
-  //   subcategories: ENERGY_MANAGEMENT_PRODUCTS_SUBCATEGORIES
-  // },
-  // "MCB RCCB DISTRIBUTION BOARDS": {
-  //   subcategories: MCB_RCCB_DISTRIBUTION_BOARDS_SUBCATEGORIES
-  // },
-  // "SWITCHES ACCESSORIES": {
-  //   subcategories: SWITCHES_ACCESSORIES_SUBCATEGORIES
-  // },
-  // "POWER DISTRIBUTION PRODUCTS": {
-  //   subcategories: POWER_DISTRIBUTION_PRODUCTS_SUBCATEGORIES
-  // },
-  // "MEDIUM VOLTAGE": {
-  //   subcategories: MEDIUM_VOLTAGE_SUBCATEGORIES
-  // },
-  // "LV IEC PANELS": {
-  //   subcategories: LV_IEC_PANELS_SUBCATEGORIES
-  // },
-  // "INDUSTRIAL AUTOMATION": {
-  //   subcategories: INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES
-  // },
+  }
 };
+
 
 const ITEMS_PER_PAGE = 12;
 
@@ -491,17 +456,23 @@ export default function ProductPage() {
 
   const visibleCategories = React.useMemo(() => {
     if (brandSel.length === 0) return [];
-
+  
     const allowedCategories = new Set<string>();
+  
     brandSel.forEach(brand => {
       const categories = BRAND_CATEGORIES[brand.toUpperCase()];
       if (categories) {
-        categories.forEach(cat => allowedCategories.add(cat));
+        categories.forEach(cat =>
+          allowedCategories.add(cat.toLowerCase())
+        );
       }
     });
-
-    return Object.keys(categoryStructure).filter(cat => allowedCategories.has(cat));
+  
+    return Object.keys(categoryStructure).filter(
+      cat => allowedCategories.has(cat.toLowerCase())
+    );
   }, [brandSel]);
+  
 
   // Effect to clean up selected categories when available categories change
   React.useEffect(() => {
@@ -850,7 +821,8 @@ export default function ProductPage() {
                     {products.map((p, i) => {
                       const primaryImg = p.Image_Path?.split(";")[0].trim()
                       const isPolycab = p.Brand?.toLowerCase().includes("polycab")
-                      const linkHref = `/product/${isPolycab ? p.Type : p.Brand}/${encodeURIComponent(p.Name)}`
+                      const isLK = p.Brand?.toLowerCase().includes("lauritz knudsen")
+                      const linkHref = `/product/${isPolycab ? p.Type :isLK?"LK": p.Brand}/${encodeURIComponent(p.Name)}`
 
                       return (
                         <motion.div

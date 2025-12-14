@@ -58,44 +58,64 @@ class LKEAProductScraper:
     def extract_document_pdf_playwright(self, url: str):
         from playwright.sync_api import sync_playwright
         from pathlib import Path
+
+        documentPath = None  # ✅ initialize safely
+
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=False)
-            context = browser.new_context(
-                accept_downloads=True  # <-- enable automatic download
-            )
+            context = browser.new_context(accept_downloads=True)
             page = context.new_page()
 
             try:
-                page.goto(url)
-                page.locator('button:has-text("Documents")').click()
+                page.goto(url, timeout=30000)
+
+                # If Documents tab doesn't exist → return None
+                documents_btn = page.locator('button:has-text("Documents")')
+                if documents_btn.count() == 0:
+                    return None
+
+                documents_btn.click()
                 page.wait_for_timeout(2000)
+
                 anchors = page.locator('a[download$=".pdf"]')
-                print(f"Found {anchors.count()} document items.")
                 count = anchors.count()
+
+                if count == 0:
+                    return None  # ✅ no documents found → safe exit
+
                 for i in range(count):
                     a_tag = anchors.nth(i)
+
                     pdf_name = a_tag.get_attribute("download") or f"catalogue_{i+1}.pdf"
-                    pdf_name = pdf_name.replace(" ", "_")  # sanitize
-                    download_btn = a_tag.locator('xpath=following-sibling::button//button').nth(2)
+                    pdf_name = pdf_name.replace(" ", "_")
+
+                    download_btn = a_tag.locator(
+                        'xpath=following-sibling::button//button'
+                    ).nth(2)
+
                     with page.expect_download() as download_info:
                         download_btn.click()
+
                     download = download_info.value
                     download_path = self.output_dir / "brochures" / pdf_name
+                    download_path.parent.mkdir(parents=True, exist_ok=True)
+
                     download.save_as(download_path)
                     documentPath = str(download_path)
+
                     ok_btn = page.locator('button:has-text("OK")')
                     if ok_btn.count() > 0:
                         ok_btn.click()
-                        page.wait_for_timeout(500)  # small delay after click
-                        print("Clicked OK button")
+                        page.wait_for_timeout(500)
 
             except Exception as e:
-                print(f"Error fetching documents: {e}")
+                # ❗ log only — NEVER crash pipeline
+                logger.warning(f"⚠️ Document fetch skipped for {url}: {e}")
 
             finally:
                 browser.close()
 
-        return documentPath
+        return documentPath  # always defined
 
     def extract_product_categories(self) -> List[str]:
         """Extract all product category URLs"""
@@ -397,17 +417,18 @@ class LKEAProductScraper:
             img_path = self.output_dir / "images" / img_filename
 
             if self.download_file(category_image_url, img_path):
-                product['Image_Path'] = str(img_path.relative_to(self.output_dir))
+                product['Image_Path'] = "/LK/lk_ea_products/"+str(img_path.relative_to(self.output_dir))
                 product['Image_Download_Status'] = 'Downloaded'
         else:
             product['Image_Path'] = ""
             product['Image_Download_Status'] = "Not Found on Category Page"
 
         # Enhanced document extraction
-        doc_path = self.extract_document_pdf_playwright(product_url)
+        # doc_path = self.extract_document_pdf_playwright(product_url)
+        doc_path = None
         product['Brochure_Download_Status'] = 'Not Downloaded'
         if doc_path:
-            product['Brochure_Path'] = doc_path
+            product['Brochure_Path'] = "/LK/lk_ea_products/"+doc_path
             product['Brochure_Download_Status'] = 'Downloaded'
         return product
     
@@ -593,52 +614,136 @@ class LKEAProductScraper:
         for ptype, count in sorted(product_types.items()):
             print(f"{ptype}: {count} products")
 
+# def main():
+#     """Main execution function"""
+    
+#     # Install required packages if not already installed
+#     try:
+#         import requests
+#         import pandas as pd
+#         from bs4 import BeautifulSoup
+#     except ImportError:
+#         print("Installing required packages...")
+#         os.system("pip install requests pandas beautifulsoup4 openpyxl lxml")
+    
+#     # Create scraper instance
+#     scraper = LKEAProductScraper()
+    
+#     # Option to run a quick test on a few products first
+#     test_mode = input("Run in test mode (scrape only 5 products)? [y/N]: ").lower().strip() == 'y'
+    
+#     if test_mode:
+#         # Test with a few specific URLs including the one from your screenshot
+#         test_data = [
+#             ("https://www.lk-ea.com/products/pump-starters-and-controllers/starter/mk-starter",
+#              "https://www.lk-ea.com/products/pump-starters-and-controllers/starter"),
+#             ("https://www.lk-ea.com/products/medium-voltage/air-insulated-switchgear-ais/vh1h", 
+#              "https://www.lk-ea.com/products/medium-voltage/air-insulated-switchgear-ais"),
+#             ("https://www.lk-ea.com/products/medium-voltage/air-insulated-switchgear-ais/vh3h", 
+#              "https://www.lk-ea.com/products/medium-voltage/air-insulated-switchgear-ais"),
+#             ("https://www.lk-ea.com/products/mcb-rccb-distribution-boards/miniature-circuit-breaker-mcb/exora",
+#              "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/miniature-circuit-breaker-mcb"),
+#             ("https://www.lk-ea.com/products/mcb-rccb-distribution-boards/miniature-circuit-breaker-mcb/au",
+#              "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/miniature-circuit-breaker-mcb")
+#         ]
+        
+#         logger.info("Running in test mode with 5 products...")
+        
+#         for product_url, category_url in test_data:
+#             product_details = scraper.extract_product_details(product_url, category_url)
+#             if product_details:
+#                 scraper.products.append(product_details)
+#             time.sleep(1)
+#     else:
+#         # Full scraping
+#         scraper.scrape_all_products()
+    
+#     # Save the data
+#     scraper.save_data()
 def main():
-    """Main execution function"""
-    
-    # Install required packages if not already installed
-    try:
-        import requests
-        import pandas as pd
-        from bs4 import BeautifulSoup
-    except ImportError:
-        print("Installing required packages...")
-        os.system("pip install requests pandas beautifulsoup4 openpyxl lxml")
-    
+    """Main execution function using pre-generated JSON"""
+
+    import os
+    import json
+    import time
+    import logging
+
+    logger = logging.getLogger(__name__)
+
     # Create scraper instance
     scraper = LKEAProductScraper()
-    
-    # Option to run a quick test on a few products first
-    test_mode = input("Run in test mode (scrape only 5 products)? [y/N]: ").lower().strip() == 'y'
-    
+
+    product_url_json = "./lk_products_urls.json"
+    processed_products_json = "./products_updated.json"
+
+    if not os.path.exists(product_url_json):
+        print(f"❌ File not found: {product_url_json}")
+        return
+
+    if not os.path.exists(processed_products_json):
+        print(f"❌ File not found: {processed_products_json}")
+        return
+
+    # Load JSON files
+    with open(product_url_json, "r", encoding="utf-8") as f:
+        products = json.load(f)
+
+    with open(processed_products_json, "r", encoding="utf-8") as f:
+        processed_products = json.load(f)
+
+    # Build URL sets
+    processed_urls = {
+        item["Product_URL"].strip()
+        for item in processed_products
+        if item.get("Product_URL")
+    }
+
+    missing_urls = [
+        item for item in products
+        if item.get("url") and item["url"].strip() not in processed_urls
+    ]
+
+    print(f"📦 Total discovered URLs   : {len(products)}")
+    print(f"✅ Already processed URLs  : {len(processed_urls)}")
+    print(f"🔁 Missing URLs to process : {len(missing_urls)}")
+
+    # Optional test mode
+    test_mode = input("Run in test mode (process only 5 products)? [y/N]: ").lower().strip() == "y"
+
     if test_mode:
-        # Test with a few specific URLs including the one from your screenshot
-        test_data = [
-            ("https://www.lk-ea.com/products/pump-starters-and-controllers/starter/mk-starter",
-             "https://www.lk-ea.com/products/pump-starters-and-controllers/starter"),
-            ("https://www.lk-ea.com/products/medium-voltage/air-insulated-switchgear-ais/vh1h", 
-             "https://www.lk-ea.com/products/medium-voltage/air-insulated-switchgear-ais"),
-            ("https://www.lk-ea.com/products/medium-voltage/air-insulated-switchgear-ais/vh3h", 
-             "https://www.lk-ea.com/products/medium-voltage/air-insulated-switchgear-ais"),
-            ("https://www.lk-ea.com/products/mcb-rccb-distribution-boards/miniature-circuit-breaker-mcb/exora",
-             "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/miniature-circuit-breaker-mcb"),
-            ("https://www.lk-ea.com/products/mcb-rccb-distribution-boards/miniature-circuit-breaker-mcb/au",
-             "https://www.lk-ea.com/products/mcb-rccb-distribution-boards/miniature-circuit-breaker-mcb")
-        ]
-        
-        logger.info("Running in test mode with 5 products...")
-        
-        for product_url, category_url in test_data:
-            product_details = scraper.extract_product_details(product_url, category_url)
+        missing_urls = missing_urls[:5]
+        logger.info("🧪 Running in test mode with 5 products")
+
+    # Process ONLY missing URLs
+    for idx, product in enumerate(missing_urls, start=1):
+        product_url = product.get("url")
+        category_url = product.get("subcategory_url")
+
+        if not product_url or not category_url:
+            logger.warning(f"⚠️ Skipping invalid entry: {product}")
+            continue
+
+        logger.info(f"[{idx}/{len(missing_urls)}] Processing {product_url}")
+
+        try:
+            product_details = scraper.extract_product_details(
+                product_url,
+                category_url
+            )
+
             if product_details:
-                scraper.products.append(product_details)
-            time.sleep(1)
-    else:
-        # Full scraping
-        scraper.scrape_all_products()
-    
-    # Save the data
-    scraper.save_data()
+                processed_products.append(product_details)
+
+        except Exception as e:
+            logger.error(f"❌ Failed for {product_url}: {e}")
+
+        time.sleep(1)
+
+    # Save merged results
+    with open(processed_products_json, "w", encoding="utf-8") as f:
+        json.dump(processed_products, f, indent=2, ensure_ascii=False)
+
+    print("✅ Resume processing completed successfully")
 
 if __name__ == "__main__":
     main()

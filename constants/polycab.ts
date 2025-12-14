@@ -1,6 +1,6 @@
 export const BRANDS = {
   "Polycab": "POLYCAB",
-  "Lauritz Knudsen": "LK",
+  "Lauritz Knudsen": "Lauritz Knudsen",
   "Neptune": "NEPTUNE",
   "Dowell": "DOWELL",
 };
@@ -131,7 +131,7 @@ export const PUMP_STARTERS_CONTROLLERS_SUBCATEGORIES = [
   'Pump Starter and Controller Spare & Accessories',
 ] as const;
 
-export const PANEL_ACCESSORIES_SUBCATEGORIES = [
+export const INDUSTRIAL_SIGNALLING_PRODUCTS = [
   'Time Switches',
   'Timers',
   'Monitoring Devices',
@@ -147,7 +147,7 @@ export const BRAND_CATEGORIES: Record<string, string[]> = {
     "SWITCH",
     "WIRE"
   ],
-  "LK": [
+  "LAURITZ KNUDSEN": [
     "MEDIUM VOLTAGE",
     "LV IEC PANELS",
     "POWER DISTRIBUTION PRODUCTS",
@@ -157,7 +157,7 @@ export const BRAND_CATEGORIES: Record<string, string[]> = {
     "MCB, RCCB & DISTRIBUTION BOARDS",
     "SWITCHES & ACCESSORIES",
     "PUMP STARTERS & CONTROLLERS",
-    "PANEL ACCESSORIES"
+    "INDUSTRIAL SIGNALLING PRODUCTS"
   ],
   "NEPTUNE": [
     "Industrial Plug & Sockets",
