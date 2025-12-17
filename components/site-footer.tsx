@@ -26,7 +26,7 @@ export function SiteFooter() {
             <div className="mt-3 text-sm">
               <div>+91 9420654539</div>
               <div>+91 9054753539</div>
-              <div>support@shreejielectropower.com</div>
+              {/* <div>support@shreejielectropower.com</div> */}
               <div>inquiry@shreejielectropower.com</div>
             </div>
           </div>

@@ -847,8 +847,9 @@ export default function ProductPage() {
                     {products.map((p, i) => {
                       const primaryImg = p.Image_Path?.split(";")[0].trim()
                       const isPolycab = p.Brand?.toLowerCase().includes("polycab")
+                      const isDowell = p.Brand?.toLowerCase().includes("dowell's")
                       const isLK = p.Brand?.toLowerCase().includes("lauritz knudsen")
-                      const linkHref = `/product/${isPolycab ? p.Type :isLK?"LK": p.Brand}/${encodeURIComponent(p.Name)}`
+                      const linkHref = `/product/${isPolycab ? p.Type :isLK?"LK":isDowell?"Dowell": p.Brand}/${encodeURIComponent(p.Name)}`
 
                       return (
                         <motion.div

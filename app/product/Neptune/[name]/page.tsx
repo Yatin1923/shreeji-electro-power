@@ -8,6 +8,7 @@ import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
 import { MagnifyingImage } from "@/components/magnifyingImage"
 import { useProduct } from "../../context/product-context"
+import EnquireButton from "@/components/enquireButton"
 
 
 
@@ -269,6 +270,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                         <p className="text-gray-600 leading-relaxed">
                             {product.Full_Description}
                         </p>
+                        <EnquireButton productName={product.Name} />
                     </div>
                 </div>
                 {product.Certifications &&

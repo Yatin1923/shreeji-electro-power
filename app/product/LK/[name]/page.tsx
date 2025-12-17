@@ -9,6 +9,7 @@ import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
 import { useProduct } from "../../context/product-context"
 import { MagnifyingImage } from "@/components/magnifyingImage"
+import EnquireButton from "@/components/enquireButton"
 
 
 
@@ -208,6 +209,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                                     {product.Short_Description}
                                 </p>
                             )}
+                            <EnquireButton productName={product.Name} />
 
                             {/* {product.Price && (
                                 <Typography variant="h6" className="text-sky-600 font-bold!">

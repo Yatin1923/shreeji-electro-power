@@ -1,5 +1,5 @@
 "use client";
-
+import { MuiTelInput,matchIsValidTel } from "mui-tel-input";
 import { useState } from "react";
 import {
   Button,
@@ -20,10 +20,60 @@ export function Contact() {
 
   const [open, setOpen] = useState(false); // toastr
   const [loading, setLoading] = useState(false); // loader state
+  const [error, setError] = useState(false)
 
   const handleChange = (e: any) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+  const textFieldSx = {
+    // Outlined border
+    "& .MuiOutlinedInput-root": {
+      color: "white",
+  
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "white",
+      },
+  
+      "&:hover .MuiOutlinedInput-notchedOutline": {
+        borderColor: "white",
+      },
+  
+      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#1976d2",
+      },
+    },
+  
+    // 🔥 Phone number text
+    "& .MuiInputBase-input": {
+      color: "white",
+      WebkitTextFillColor: "white", // Safari fix
+    },
+  
+    // 🔥 Country calling code (+91)
+    "& .MuiInputAdornment-root": {
+      color: "white",
+  
+      "& span": {
+        color: "white",
+      },
+  
+      "& svg": {
+        color: "white", // dropdown icon
+      },
+    },
+  
+    // Label
+    "& .MuiInputLabel-root": {
+      color: "white",
+    },
+  
+    "& .MuiInputLabel-root.Mui-focused": {
+      color: "#1976d2",
+    },
+  };
+  
+  
+  
 const FORM_EMAIL="inquiry@shreejielectropower.com"
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -51,6 +101,7 @@ const FORM_EMAIL="inquiry@shreejielectropower.com"
         setForm({ name: "", email: "", phone: "", source: "" });
       }
     } catch (err) {
+      setForm({ name: "", email: "", phone: "", source: "" });
       console.error("FormSubmit Error:", err);
     }
 
@@ -71,6 +122,7 @@ const FORM_EMAIL="inquiry@shreejielectropower.com"
           <div>
             <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
               <TextField
+              sx={textFieldSx}
                 label="Full name"
                 name="name"
                 fullWidth
@@ -81,6 +133,7 @@ const FORM_EMAIL="inquiry@shreejielectropower.com"
               />
 
               <TextField
+                sx={textFieldSx}
                 label="Email"
                 name="email"
                 type="email"
@@ -91,7 +144,8 @@ const FORM_EMAIL="inquiry@shreejielectropower.com"
                 onChange={handleChange}
               />
 
-              <TextField
+              {/* <TextField
+                sx={textFieldSx}
                 label="Phone number"
                 name="phone"
                 type="tel"
@@ -99,9 +153,25 @@ const FORM_EMAIL="inquiry@shreejielectropower.com"
                 size="medium"
                 value={form.phone}
                 onChange={handleChange}
+              /> */}
+              <MuiTelInput
+                sx={textFieldSx}
+                label="Phone number"
+                fullWidth
+                forceCallingCode
+                defaultCountry="IN"
+                value={form.phone}
+                onChange={(value:any) =>{
+                    setForm({ ...form, phone: value })
+                    setError(!matchIsValidTel(value))
+                  }
+                }
+                error={error}
+                helperText={error ? "Please enter a valid phone number" : ""}
+                required
               />
-
               <TextField
+                sx={textFieldSx}
                 label="How did you find us?"
                 name="source"
                 fullWidth
@@ -151,7 +221,7 @@ const FORM_EMAIL="inquiry@shreejielectropower.com"
 
               <div>
                 <Typography className="font-semibold text-white">Email</Typography>
-                <Typography>support@shreejielectropower.com</Typography>
+                <Typography>inquiry@shreejielectropower.com</Typography>
               </div>
             </div>
           </div>

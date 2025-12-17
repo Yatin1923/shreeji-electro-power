@@ -2,13 +2,14 @@
 import Link from "next/link"
 import Image from "next/image"
 import Navbar from "@/components/navbar"
-import { Breadcrumbs, Typography } from "@mui/material"
+import { Breadcrumbs, Button, Typography } from "@mui/material"
 import { useRef, useState } from "react"
 import { polycabCableService } from "@/services/product-service-factory"
 import { unifiedProductService } from "@/services/unified-product-service"
 import { Product } from "@/types/common"
 import { MagnifyingImage } from "@/components/magnifyingImage"
 import { useProduct } from "../../context/product-context"
+import EnquireButton from "@/components/enquireButton"
 
 
 
@@ -203,16 +204,17 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                     {/* Right: Product Details */}
                     <div className="space-y-6">
                         <div className="flex flex-col gap-4">
+                                
                             <h1 className="text-3xl font-bold text-sky-600 mb-2">
                                 {product.Name}
                             </h1>
-
+                               
                             {/* Download PDF Button */}
                             {product.Brochure_Path && (
                                 <a
-                                    href={getImageUrl(product.Brochure_Path)}
-                                    download
-                                    className="flex items-center underline gap-2 text-gray-600 hover:text-sky-600 transition-colors"
+                                href={getImageUrl(product.Brochure_Path)}
+                                download
+                                className="flex items-center underline gap-2 text-gray-600 hover:text-sky-600 transition-colors"
                                 >
                                     <img src="/assets/pdf.jpg" alt="PDF" />
                                     Download Data Sheet
@@ -249,6 +251,7 @@ export default function ProductDetailPage({ params }: { params: { name: string }
                         <p className="text-gray-600 leading-relaxed">
                             {product.Full_Description}
                         </p>
+                        <EnquireButton productName={product.Name}/>
                     </div>
                 </div>
                 {product.Certifications &&
