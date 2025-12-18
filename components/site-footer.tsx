@@ -24,8 +24,10 @@ export function SiteFooter() {
               308/B/1A, Makarpura GIDC, Opp. Telephone Exchange, Vadodara - 390010 Gujarat, India
             </p>
             <div className="mt-3 text-sm">
-              <div>+91 9420654539</div>
-              <div>+91 9054753539</div>
+              <div>+91 79845 30546</div>
+              <div>+91 98795 74745</div>
+              <div>+91 74900 54539</div>
+              <div>+91 95129 74539</div>
               {/* <div>support@shreejielectropower.com</div> */}
               <div>inquiry@shreejielectropower.com</div>
             </div>

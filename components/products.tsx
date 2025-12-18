@@ -14,12 +14,12 @@ function ProductTile({ i }: { i: number }) {
   //   { src: "/assets/companyLogos/polycab.png", alt: "Polycab" },
   // ]
   const companyLogos = [
-    { src: "/assets/companyLogos/polycab.png", alt: "Polycab",brand: "Polycab",backgroundColor:"#FBE0E0" },
-    { src: "/assets/companyLogos/lauritz-knudsen.png", alt: "Lauritz Knudsen" ,brand: "L&K SWITCHGEAR",backgroundColor:"#C7DBE6" },
-    { src: "/assets/companyLogos/neptune.png", alt: "Neptune",brand: "Neptune",backgroundColor:"#D9F2FB" },
-    { src: "/assets/companyLogos/dowells.png", alt: "Dowell's",brand: "Dowell's",backgroundColor:"#FCDFED" },
-    { src: "/assets/companyLogos/hager.png", alt: "Hager",brand: "Hagers",backgroundColor: "#F7DCD7"},
-    { src: "/assets/companyLogos/cabseal.png", alt: "Cabseal",brand: "Cabseal",backgroundColor: "#C8D3E7"},
+    { src: "/assets/companyLogos/polycab.png", alt: "Polycab", brand: "Polycab", backgroundColor: "#FBE0E0" },
+    { src: "/assets/companyLogos/lauritz-knudsen.png", alt: "Lauritz Knudsen", brand: "Lauritz Knudsen", backgroundColor: "#C7DBE6" },
+    { src: "/assets/companyLogos/neptune.png", alt: "Neptune", brand: "Neptune", backgroundColor: "#D9F2FB" },
+    { src: "/assets/companyLogos/dowells.png", alt: "Dowell's", brand: "Dowell's", backgroundColor: "#FCDFED" },
+    { src: "/assets/companyLogos/hager.png", alt: "Hager", brand: "Hagers", backgroundColor: "#F7DCD7" },
+    { src: "/assets/companyLogos/cabseal.png", alt: "Cabseal", brand: "Cabseal", backgroundColor: "#C8D3E7" },
   ]
   // const cardColors = [
   //   "#FCDFED", 
@@ -33,7 +33,7 @@ function ProductTile({ i }: { i: number }) {
   const logo = companyLogos[i % companyLogos.length]
 
   return (
-    <Link href={`/product?brand=${encodeURIComponent(logo.brand.toUpperCase())}`}>
+    <Link href={`/product?brand=${encodeURIComponent(logo.brand)}`}>
     <Card elevation={12} className="!rounded-[20px] cursor-pointer shadow-2xl w-full max-w-[220px] aspect-[220/250]" style={{ backgroundColor:logo.backgroundColor }}>
       <CardContent className="flex justify-center items-center h-full ">
         <img src={logo.src || "/placeholder.svg"} alt={logo.alt} className="max-w-full max-h-80" />

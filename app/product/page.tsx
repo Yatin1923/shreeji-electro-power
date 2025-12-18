@@ -102,6 +102,9 @@ const categoryStructure = {
   "Wire": {
     subcategories: null
   },
+  "Solar":{
+    subcategories: null
+  },
   "Industrial Signalling Products": {
     subcategories: INDUSTRIAL_SIGNALLING_PRODUCTS
   },

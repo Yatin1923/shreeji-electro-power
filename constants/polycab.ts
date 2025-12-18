@@ -3,6 +3,7 @@ export const BRANDS = {
   "Lauritz Knudsen": "Lauritz Knudsen",
   "Neptune": "Neptune",
   "Dowell's": "Dowell's",
+  "Cabseal": "Cabseal",
 };
 
 // Subcategory constants
@@ -145,7 +146,8 @@ export const BRAND_CATEGORIES: Record<string, string[]> = {
     "LIGHTING",
     "SWITCHGEAR",
     "SWITCH",
-    "WIRE"
+    "WIRE",
+    "SOLAR",
   ],
   "LAURITZ KNUDSEN": [
     "MEDIUM VOLTAGE",

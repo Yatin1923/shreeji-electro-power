@@ -71,6 +71,9 @@ export interface Product {
   Product_Life?: string | null;
   Voltage_Rating?: string | null;
   Conductor_Type?: string | null;
+
+  // Solar
+  Power_Rating?: string | null;
 }
 
 export interface SearchFilters {

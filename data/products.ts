@@ -11,9 +11,11 @@ import lkData from './lk_ea_products.json';
 import wiresData from './wires.json';
 import neptuneData from './neptune.json';
 import dowellData from './dowell.json';
+import solarData from './solar.json';
+import cabsealData from './cabseal.json';
 import { Product } from '@/types/common';
 
-export const allProducts: Product[] = [...cablesData, ...fansData, ...lightingsData, ...switchgearsData, ...wiresData, ...switchesData, ...lkData, ...neptuneData, ...dowellData];
+export const allProducts: Product[] = [...cablesData, ...fansData, ...lightingsData, ...switchgearsData, ...wiresData,...solarData, ...switchesData, ...lkData, ...neptuneData, ...dowellData,...cabsealData];
 // export const allProducts: Product[] = [...dowellData];
 export const cables: Product[] = cablesData;
 export const fans: Product[] = fansData;
