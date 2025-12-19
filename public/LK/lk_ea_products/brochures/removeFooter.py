@@ -7,9 +7,10 @@ import fitz  # PyMuPDF
 # ============================================================
 
 CONTACT_KEYWORDS = [
+    # "Electrical Standard Products","Electrical","Products","Standard","(ESP)"
     "india", "uae", "qatar", "oman", "dubai",
     "mumbai", "chennai", "bangalore", "hyderabad",
-    "kolkata", "noida", "pune"
+    "kolkata", "noida", "pune","training","switchgear"
 ]
 
 DATA_KEYWORDS = [
@@ -28,6 +29,16 @@ FOOTER_HINT_KEYWORDS = [
 # ============================================================
 # CLASSIFICATION LOGIC
 # ============================================================
+def is_switchgear_training_page(page: fitz.Page) -> bool:
+    text = page.get_text("text").lower()
+
+    keywords = [
+        "switchgear training",
+        "switchgear training center",
+    ]
+
+    hits = sum(1 for k in keywords if k in text)
+    return hits >= 1
 
 def classify_last_page(page: fitz.Page) -> str:
     text = page.get_text("text").lower()
@@ -70,6 +81,15 @@ def process_pdf(input_pdf: str, output_pdf: str) -> bool:
     if len(doc) == 0:
         doc.close()
         return False
+    pages_to_delete = []
+    for i, page in enumerate(doc):
+        if is_switchgear_training_page(page):
+            pages_to_delete.append(i)
+
+    for i in reversed(pages_to_delete):
+        print(f"  🗑 Removing Switchgear Training Center page: {i + 1}")
+        doc.delete_page(i)
+        modified = True
 
     last_page = doc[-1]
     page_type = classify_last_page(last_page)
