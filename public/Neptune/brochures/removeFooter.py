@@ -3,51 +3,54 @@ import sys
 import fitz  # PyMuPDF
 
 # ============================================================
-# CONFIG (tune once if needed)
+# CONFIG
 # ============================================================
 
-# Area where Bals logo appears (top-right)
-LOGO_RECT_RATIO = {
-    "x0": 0.55,   # start from 55% width
-    "y0": 0.00,   # top
-    "x1": 1.00,   # right edge
-    "y1": 0.18    # top 18% height
+# ---- BALS LOGO (top-right) ----
+BALS_LOGO_RECT_RATIO = {
+    "x0": 0.55,
+    "y0": 0.00,
+    "x1": 1.00,
+    "y1": 0.18
+}
+
+# ---- NEPTUNE FOOTER (last page only) ----
+NEPTUNE_FOOTER_RATIO = {
+    "x0": 0.00,
+    "y0": 0.65,   # bottom 35%
+    "x1": 1.00,
+    "y1": 1.00
 }
 
 # ============================================================
-# DETECTION LOGIC
+# DETECTION
 # ============================================================
 
 def has_datasheet_header(page: fitz.Page) -> bool:
-    """
-    Detect 'Data sheet' text in top-left region
-    """
+    """Detect 'Data sheet' in top-left"""
     r = page.rect
-    header_rect = fitz.Rect(
-        0,
-        0,
-        r.width * 0.45,    # left 45%
-        r.height * 0.20    # top 20%
-    )
+    header_rect = fitz.Rect(0, 0, r.width * 0.45, r.height * 0.20)
 
     for w in page.get_text("words"):
-        word_rect = fitz.Rect(w[:4])
-        word_text = w[4].lower()
-
-        if "data" in word_text and header_rect.intersects(word_rect):
+        if "data" in w[4].lower() and header_rect.intersects(fitz.Rect(w[:4])):
             return True
-
     return False
 
 
+def has_neptune_footer(page: fitz.Page) -> bool:
+    """Detect Neptune branding text"""
+    text = page.get_text().lower()
+    return (
+        "neptune" in text or
+        "neptuneindia.com" in text or
+        "neptune india" in text
+    )
+
 # ============================================================
-# MODIFICATION LOGIC
+# MODIFICATIONS
 # ============================================================
 
-def remove_bals_logo_if_needed(doc: fitz.Document) -> bool:
-    """
-    Removes Bals logo ONLY if 'Data sheet' is detected
-    """
+def remove_bals_logo(doc: fitz.Document) -> bool:
     modified = False
 
     for page in doc:
@@ -56,23 +59,60 @@ def remove_bals_logo_if_needed(doc: fitz.Document) -> bool:
 
         r = page.rect
         logo_rect = fitz.Rect(
-            r.width * LOGO_RECT_RATIO["x0"],
-            r.height * LOGO_RECT_RATIO["y0"],
-            r.width * LOGO_RECT_RATIO["x1"],
-            r.height * LOGO_RECT_RATIO["y1"],
+            r.width * BALS_LOGO_RECT_RATIO["x0"],
+            r.height * BALS_LOGO_RECT_RATIO["y0"],
+            r.width * BALS_LOGO_RECT_RATIO["x1"],
+            r.height * BALS_LOGO_RECT_RATIO["y1"],
         )
 
         page.draw_rect(
             logo_rect,
-            color=(1, 1, 1),
             fill=(1, 1, 1),
+            color=(1, 1, 1),
             overlay=True
         )
-
         modified = True
 
     return modified
 
+
+def remove_neptune_footer(doc: fitz.Document) -> bool:
+    """
+    Dynamically crop Neptune footer from the last page
+    based on detected footer text position
+    """
+    last_page = doc[-1]
+    words = last_page.get_text("words")
+
+    footer_y_positions = []
+
+    for w in words:
+        text = w[4].lower()
+        if (
+            "neptune" in text or
+            "neptuneindia.com" in text or
+            "neptune india" in text
+        ):
+            footer_y_positions.append(w[1])  # y0 of word
+
+    if not footer_y_positions:
+        return False  # no Neptune footer found
+
+    footer_start_y = min(footer_y_positions)
+
+    r = last_page.rect
+
+    # Crop everything below footer_start_y
+    last_page.set_cropbox(
+        fitz.Rect(
+            0,
+            0,
+            r.width,
+            footer_start_y - 5  # small safety padding
+        )
+    )
+
+    return True
 
 # ============================================================
 # PIPELINE
@@ -80,19 +120,25 @@ def remove_bals_logo_if_needed(doc: fitz.Document) -> bool:
 
 def process_pdf(input_pdf: str, output_pdf: str) -> bool:
     doc = fitz.open(input_pdf)
+    modified = False
 
     print(f"  🔍 Checking: {input_pdf}")
-    modified = remove_bals_logo_if_needed(doc)
+
+    if remove_bals_logo(doc):
+        print("  ✔ Bals logo removed")
+        modified = True
+
+    if remove_neptune_footer(doc):
+        print("  ✔ Neptune footer removed (last page)")
+        modified = True
 
     if modified:
         doc.save(output_pdf)
-        print("  ✔ Bals logo removed")
     else:
-        print("  ⏭ No Datasheet header found")
+        print("  ⏭ No changes required")
 
     doc.close()
     return modified
-
 
 # ============================================================
 # MODES
@@ -134,7 +180,6 @@ def run_mode():
 
     print("✅ Run completed")
 
-
 # ============================================================
 # ENTRY
 # ============================================================
@@ -147,10 +192,9 @@ if __name__ == "__main__":
         sys.exit(1)
 
     mode = sys.argv[1].lower()
-
     if mode == "test":
         test_mode()
     elif mode == "run":
         run_mode()
     else:
-        print("❌ Invalid mode (use test or run)")
+        print("❌ Invalid mode")
