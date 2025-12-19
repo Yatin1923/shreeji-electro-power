@@ -14,9 +14,10 @@ import dowellData from './dowell.json';
 import solarData from './solar.json';
 import cabsealData from './cabseal.json';
 import sepplData from './sepplPanel.json';
+import pipeData from './pipes.json';
 import { Product } from '@/types/common';
 
-export const allProducts: Product[] = [...cablesData, ...fansData, ...lightingsData, ...switchgearsData, ...wiresData,...solarData, ...switchesData, ...lkData, ...neptuneData, ...dowellData,...cabsealData,...sepplData];
+export const allProducts: Product[] = [...cablesData, ...fansData, ...lightingsData, ...switchgearsData, ...wiresData,...solarData, ...switchesData, ...lkData, ...neptuneData, ...dowellData,...cabsealData,...sepplData,...pipeData];
 // export const allProducts: Product[] = [...dowellData];
 export const cables: Product[] = cablesData;
 export const fans: Product[] = fansData;

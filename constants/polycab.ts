@@ -149,6 +149,7 @@ export const BRAND_CATEGORIES: Record<string, string[]> = {
     "SWITCH",
     "WIRE",
     "SOLAR",
+    "PIPE"
   ],
   "LAURITZ KNUDSEN": [
     "MEDIUM VOLTAGE",

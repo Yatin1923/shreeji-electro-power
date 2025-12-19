@@ -108,6 +108,9 @@ const categoryStructure = {
   "Solar": {
     subcategories: null
   },
+  "Pipe":{
+    subcategories: null
+  },
   "Industrial Signalling Products": {
     subcategories: INDUSTRIAL_SIGNALLING_PRODUCTS
   },
@@ -493,6 +496,7 @@ export default function ProductPage() {
 
     brandSel.forEach(brand => {
       const categories = BRAND_CATEGORIES[brand.toUpperCase()];
+      console.log(categories);
       if (categories) {
         categories.forEach(cat =>
           allowedCategories.add(cat.toLowerCase())
