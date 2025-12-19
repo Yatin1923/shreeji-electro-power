@@ -8,18 +8,15 @@ import {
   CircularProgress,
   Snackbar,
   Alert,
-  useTheme,
-  useMediaQuery,
 } from "@mui/material";
 import { MuiTelInput, matchIsValidTel } from "mui-tel-input";
+import { finalization } from "process";
 
 type EnquireButtonProps = {
   productName?: string;
 };
 
 const EnquireButton: React.FC<EnquireButtonProps> = ({ productName }) => {
-  const theme = useTheme();
-
   const [open, setOpen] = useState(false);
   const [showToastr, setShowToastr] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -30,17 +27,21 @@ const EnquireButton: React.FC<EnquireButtonProps> = ({ productName }) => {
     email: "",
     phone: "",
     source: "",
+    quantity: 1,
+    message: "",
   });
 
   const FORM_EMAIL = "inquiry@shreejielectropower.com";
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (phoneError) return;
 
     setLoading(true);
@@ -58,6 +59,8 @@ const EnquireButton: React.FC<EnquireButtonProps> = ({ productName }) => {
           email: form.email,
           phone: form.phone,
           source: form.source,
+          quantity: form.quantity,
+          message: form.message,
           product_name: productName ?? "N/A",
           page_url: pageUrl,
         }),
@@ -67,11 +70,20 @@ const EnquireButton: React.FC<EnquireButtonProps> = ({ productName }) => {
 
       if (data.success === "true") {
         setShowToastr(true);
-        setForm({ name: "", email: "", phone: "", source: "" });
-        setOpen(false);
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          source: "",
+          quantity: 1,
+          message: "",
+        });
       }
     } catch (err) {
+      // setShowToastr(true);
       console.error("FormSubmit Error:", err);
+    }finally{
+      setOpen(false);
     }
 
     setLoading(false);
@@ -88,12 +100,7 @@ const EnquireButton: React.FC<EnquireButtonProps> = ({ productName }) => {
         Enquire now!
       </Button>
 
-      <Dialog
-        open={open}
-        onClose={() => setOpen(false)}
-        fullWidth
-        maxWidth="sm"
-      >
+      <Dialog open={open} onClose={() => setOpen(false)} fullWidth maxWidth="sm">
         <DialogTitle sx={{ lineHeight: 1.3 }}>
           Enquire about:
           <div className="font-bold text-sky-600 break-words">
@@ -121,8 +128,6 @@ const EnquireButton: React.FC<EnquireButtonProps> = ({ productName }) => {
               type="email"
               fullWidth
               required
-              inputMode="email"
-              autoComplete="email"
               value={form.email}
               onChange={handleChange}
               error={!!form.email && !/^\S+@\S+\.\S+$/.test(form.email)}
@@ -151,6 +156,27 @@ const EnquireButton: React.FC<EnquireButtonProps> = ({ productName }) => {
             />
 
             <TextField
+              label="Quantity"
+              name="quantity"
+              type="number"
+              fullWidth
+              required
+              inputProps={{ min: 1 }}
+              value={form.quantity}
+              onChange={handleChange}
+            />
+
+            <TextField
+              label="Message"
+              name="message"
+              fullWidth
+              multiline
+              minRows={3}
+              value={form.message}
+              onChange={handleChange}
+            />
+
+            <TextField
               label="How did you find us?"
               name="source"
               fullWidth
@@ -158,7 +184,6 @@ const EnquireButton: React.FC<EnquireButtonProps> = ({ productName }) => {
               onChange={handleChange}
             />
 
-            {/* Sticky button on mobile */}
             <div className="sticky bottom-0 bg-white dark:bg-neutral-900 py-3">
               <Button
                 type="submit"
