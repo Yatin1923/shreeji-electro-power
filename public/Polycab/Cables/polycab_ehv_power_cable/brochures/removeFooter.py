@@ -1,45 +1,63 @@
 import os
 import sys
-from pypdf import PdfReader, PdfWriter
+import fitz  # PyMuPDF
+import pytesseract
+from PIL import Image
 
-FOOTER_HEIGHT = 60  # points (adjust if needed)
+FOOTER_HEIGHT = 50  # slightly larger for OCR safety
 
 FOOTER_KEYWORDS = [
     "1800 267 0008",
     "enquiry@polycab.com",
-    "www.polycab.com"
+    "www.polycab.com",
+    "TOLL FREE"
 ]
 
 
-def has_footer(reader: PdfReader) -> bool:
+def footer_contains_keywords(pdf_path: str) -> bool:
     """
-    Check if any page contains expected footer text
+    OCR bottom part of page and check for footer keywords
     """
-    for page in reader.pages:
-        text = page.extract_text() or ""
-        if any(keyword in text for keyword in FOOTER_KEYWORDS):
+    doc = fitz.open(pdf_path)
+
+    for page in doc:
+        rect = page.rect
+
+        footer_rect = fitz.Rect(
+            0,
+            rect.height - FOOTER_HEIGHT,
+            rect.width,
+            rect.height
+        )
+
+        pix = page.get_pixmap(clip=footer_rect, dpi=300)
+        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+
+        text = pytesseract.image_to_string(img).lower()
+
+        if any(keyword.lower() in text for keyword in FOOTER_KEYWORDS):
+            doc.close()
             return True
+
+    doc.close()
     return False
 
 
-def remove_footer(input_path: str, output_path: str):
-    reader = PdfReader(input_path)
-
-    # 🔍 Footer validation
-    if not has_footer(reader):
-        print(f"⚠️  Footer NOT detected → Skipping: {input_path}")
+def remove_footer(input_pdf: str, output_pdf: str):
+    if not footer_contains_keywords(input_pdf):
+        print(f"⏭ Skipped (keywords not found): {input_pdf}")
         return False
 
-    writer = PdfWriter()
+    doc = fitz.open(input_pdf)
 
-    for page in reader.pages:
-        media_box = page.mediabox
-        media_box.lower_left = (0, FOOTER_HEIGHT)
-        writer.add_page(page)
+    for page in doc:
+        r = page.rect
+        page.set_cropbox(
+            fitz.Rect(0, 0, r.width, r.height - FOOTER_HEIGHT)
+        )
 
-    with open(output_path, "wb") as f:
-        writer.write(f)
-
+    doc.save(output_pdf)
+    doc.close()
     return True
 
 
@@ -56,16 +74,16 @@ def test_mode():
         print("❌ No PDFs found")
         return
 
-    pdf = pdfs[0]
-    output = pdf.replace(".pdf", "_NO_FOOTER_TEST.pdf")
+    pdf = pdfs[17]
+    out = pdf.replace(".pdf", "_NO_FOOTER_TEST.pdf")
 
     print("🧪 TEST MODE")
-    print(f"Checking footer in: {pdf}")
+    print(f"Scanning footer keywords in: {pdf}")
 
-    if remove_footer(pdf, output):
-        print(f"✅ Footer removed → {output}")
+    if remove_footer(pdf, out):
+        print(f"✅ Footer removed → {out}")
     else:
-        print("❌ Footer not found. No output generated.")
+        print("❌ Footer keywords not detected")
 
 
 def run_mode():
@@ -77,18 +95,16 @@ def run_mode():
     print(f"🚀 RUN MODE — scanning {len(pdfs)} PDFs")
 
     for pdf in pdfs:
-        temp = pdf + ".tmp"
+        tmp = pdf + ".tmp"
 
         print(f"→ Processing {pdf}")
-        updated = remove_footer(pdf, temp)
-
-        if updated:
-            os.replace(temp, pdf)
+        if remove_footer(pdf, tmp):
+            os.replace(tmp, pdf)
             print("  ✔ Updated")
         else:
-            if os.path.exists(temp):
-                os.remove(temp)
-            print("  ⏭ Skipped (footer not found)")
+            if os.path.exists(tmp):
+                os.remove(tmp)
+            print("  ⏭ Skipped")
 
     print("✅ Run completed")
 
@@ -101,10 +117,9 @@ if __name__ == "__main__":
         sys.exit(1)
 
     mode = sys.argv[1].lower()
-
     if mode == "test":
         test_mode()
     elif mode == "run":
         run_mode()
     else:
-        print("❌ Invalid mode. Use 'test' or 'run'")
+        print("❌ Invalid mode")
