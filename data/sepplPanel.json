@@ -1,0 +1,51 @@
+[
+    {
+        "Name": "Lighting Distribution Panel",
+        "Type": "Seppl Panel", 
+        "Product_Type": "Seppl Panel",
+        "Brand": "Seppl Panel",
+        "Image_Path": "/SepplPanel/images/LightingDistribution.png",
+        "Image_Download_Status": "Multiple"
+    },
+    {
+        "Name": "MCC Panel",
+        "Type": "Seppl Panel", 
+        "Product_Type": "Seppl Panel",
+        "Brand": "Seppl Panel",
+        "Image_Path": "/SepplPanel/images/MCC.png",
+        "Image_Download_Status": "Multiple"
+    },
+    {
+        "Name": "PCC APFC Panel",
+        "Type": "Seppl Panel", 
+        "Product_Type": "Seppl Panel",
+        "Brand": "Seppl Panel",
+        "Image_Path": "/SepplPanel/images/PCCAPFC.png",
+        "Image_Download_Status": "Multiple"
+    },
+    {
+        "Name": "Power Distribution Panel",
+        "Type": "Seppl Panel", 
+        "Product_Type": "Seppl Panel",
+        "Brand": "Seppl Panel",
+        "Image_Path": "/SepplPanel/images/PowerDistribution.png",
+        "Image_Download_Status": "Multiple"
+    },
+    {
+        "Name": "PDB Panel",
+        "Type": "Seppl Panel", 
+        "Product_Type": "Seppl Panel",
+        "Brand": "Seppl Panel",
+        "Image_Path": "/SepplPanel/images/PDB.png",
+        "Image_Download_Status": "Multiple"
+    },
+    {
+        "Name": "Hybrid Panel - RTPFC + SVG",
+        "Type": "Seppl Panel", 
+        "Product_Type": "Seppl Panel",
+        "Brand": "Seppl Panel",
+        "Image_Path": "/SepplPanel/images/HybridPanel.png",
+        "Image_Download_Status": "Multiple"
+    }
+   
+]

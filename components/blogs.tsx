@@ -1,54 +1,101 @@
 "use client"
 
-import { Button, Card, CardActions, CardContent } from "@mui/material"
-import NextLink from "next/link"
+import { Box, Button, Card, CardActions, CardContent, Typography } from "@mui/material"
+import { motion } from "motion/react"
+import { slideInLeft } from "./animations"
 
-function BlogCard() {
+type Blog = {
+  id: number
+  title: string
+  date: string
+  readTime: string
+  image: string
+  excerpt: string
+  href: string
+}
+
+const blogs: Blog[] = [
+  {
+    id: 1,
+    title: "How To Measure & Install Exhaust Fans For Your Bathroom & Kitchen",
+    date: "June 18, 2025",
+    readTime: "5 min read",
+    image: "/assets/blogs/blog1.png",
+    excerpt:
+      "Exhaust fans are the most convenient element at home and in well-ventilated rooms to improve air quality and remove odors. Here are the fundamentals and a simple checklist to get it done properly.",
+    href: "/blog/how-to-measure-and-install-exhaust-fans",
+  },
+  {
+    id: 2,
+    title: "5 Hacks To Use Your Pedestal Product Efficiently",
+    date: "June 20, 2025",
+    readTime: "4 min read",
+    image: "/assets/blogs/blog2.png",
+    excerpt:
+      "Pedestal fans are simple yet versatile. With these hacks, you can maximize their efficiency and cooling power during hot days.",
+    href: "/blog/5-hacks-to-use-your-pedestal-fan",
+  },
+]
+
+function BlogCard({ blog, index }: { blog: Blog; index: number }) {
+  console.log(blog);
   return (
-    <Card elevation={0} className="overflow-hidden rounded-xl border border-slate-200 bg-white">
-      <img
-        src={"/placeholder.svg?height=160&width=560&query=blog%20cover"}
-        alt="Blog cover"
-        className="h-40 w-full object-cover"
-      />
-      <CardContent className="p-5">
-        <div className="text-xs text-slate-500">June 18, 2025 · 5 min read</div>
-        <h3 className="mt-2 text-base font-semibold text-slate-900">
-          How To Measure & Install Exhaust Fans For Your Bathroom & Kitchen
-        </h3>
-        <p className="mt-2 line-clamp-3 text-sm text-slate-600">
-          Exhaust fans are the most convenient element at home and in well‑ventilated rooms to improve air quality and
-          remove odors. Here are the fundamentals and a simple checklist to get it done properly.
-        </p>
-      </CardContent>
-      <CardActions className="px-5 pb-5">
-        <Button
-          size="small"
-          component={NextLink}
-          href="/blog/5-hacks-to-use-your-pedestal-fan"
-          className="!bg-sky-600 !text-white !normal-case hover:!bg-sky-700"
-        >
-          Read more
-        </Button>
-      </CardActions>
-    </Card>
+    <motion.div
+      variants={slideInLeft}
+      initial="hidden"
+      whileInView="show"
+      custom={index}
+    >
+      <Card elevation={0} className="overflow-hidden !rounded-xl border border-slate-200 bg-white flex flex-col">
+        <img src={blog.image} alt="Blog cover" className="h-[50%] w-full object-cover" />
+        <CardContent className="!p-5 flex flex-col justify-between gap-5 h-[50%]">
+          <Box>
+            <div className="text-xs text-slate-500">
+              {blog.date} · {blog.readTime}
+            </div>
+            <Typography variant="body2" className="mt-2 text-base font-semibold text-slate-900">
+              {blog.title}
+            </Typography>
+            <Typography variant="caption" className="mt-2 line-clamp-3 text-sm text-slate-600">
+              {blog.excerpt}
+            </Typography>
+          </Box>
+          <CardActions className="!p-0">
+            <Button size="small" variant="contained" href={blog.href}>
+              Read more
+            </Button>
+          </CardActions>
+        </CardContent>
+      </Card>
+    </motion.div>
   )
 }
 
 export function Blogs() {
   return (
-    <section id="blogs" className="bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-12">
+    <section id="blogs" className="bg-white scroll-mt-32">
+      <div className="container mx-auto my-40 px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+          {/* Left section */}
           <div className="md:col-span-1">
-            <div className="text-xs uppercase tracking-wide text-slate-500">Our Articles & News</div>
-            <h2 className="mt-1 text-3xl font-bold leading-tight text-slate-900">Blogs</h2>
-            <button className="mt-6 rounded-md bg-slate-900 px-4 py-2 text-sm text-white">View all</button>
+            <Box>
+              <Typography variant="body1" className="text-xs uppercase tracking-wide text-slate-500">
+                Our Articles & News
+              </Typography>
+              <Typography variant="h4" className="mt-1 text-3xl font-bold leading-tight text-slate-900">
+                Blogs
+              </Typography>
+            </Box>
+            {/* <Button variant="contained" className="!mt-6 rounded-md !bg-slate-900 px-4 py-2 text-sm text-white">
+              View all
+            </Button> */}
           </div>
+
+          {/* Blog cards */}
           <div className="md:col-span-3 grid grid-cols-1 gap-6 md:grid-cols-3">
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
+            {blogs.map((blog, index) => (
+              <BlogCard key={blog.id} blog={blog} index={index}/>
+            ))}
           </div>
         </div>
       </div>

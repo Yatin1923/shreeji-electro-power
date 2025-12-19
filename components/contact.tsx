@@ -1,60 +1,246 @@
-"use client"
-
-import { Button, TextField } from "@mui/material"
+"use client";
+import { MuiTelInput,matchIsValidTel } from "mui-tel-input";
+import { useState } from "react";
+import {
+  Button,
+  TextField,
+  Typography,
+  Snackbar,
+  Alert,
+  CircularProgress
+} from "@mui/material";
 
 export function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    source: "",
+  });
+
+  const [open, setOpen] = useState(false); // toastr
+  const [loading, setLoading] = useState(false); // loader state
+  const [error, setError] = useState(false)
+
+  const handleChange = (e: any) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+  const textFieldSx = {
+    // Outlined border
+    "& .MuiOutlinedInput-root": {
+      color: "white",
+  
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "white",
+      },
+  
+      "&:hover .MuiOutlinedInput-notchedOutline": {
+        borderColor: "white",
+      },
+  
+      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#1976d2",
+      },
+    },
+  
+    // 🔥 Phone number text
+    "& .MuiInputBase-input": {
+      color: "white",
+      WebkitTextFillColor: "white", // Safari fix
+    },
+  
+    // 🔥 Country calling code (+91)
+    "& .MuiInputAdornment-root": {
+      color: "white",
+  
+      "& span": {
+        color: "white",
+      },
+  
+      "& svg": {
+        color: "white", // dropdown icon
+      },
+    },
+  
+    // Label
+    "& .MuiInputLabel-root": {
+      color: "white",
+    },
+  
+    "& .MuiInputLabel-root.Mui-focused": {
+      color: "#1976d2",
+    },
+  };
+  
+  
+  
+const FORM_EMAIL="inquiry@shreejielectropower.com"
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${FORM_EMAIL}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          source: form.source,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success === "true") {
+        setOpen(true);
+        setForm({ name: "", email: "", phone: "", source: "" });
+      }
+    } catch (err) {
+      setForm({ name: "", email: "", phone: "", source: "" });
+      console.error("FormSubmit Error:", err);
+    }
+
+    setLoading(false);
+  };
+
   return (
-    <section id="contact" className="bg-slate-900 text-slate-200">
+    <section id="contact" className="bg-slate-900 text-slate-200 rounded-t-4xl scroll-mt-32">
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
-        <h2 className="text-3xl font-bold leading-tight">
+
+        <Typography variant="h4" className="text-3xl font-bold leading-tight">
           Get in <span className="text-sky-400">Touch</span>
-        </h2>
+        </Typography>
 
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
-          {/* Left form */}
+
+          {/* LEFT FORM */}
           <div>
-            <form className="space-y-4">
-              <TextField label="Full name" fullWidth size="small" />
-              <TextField label="Email" type="email" fullWidth size="small" />
-              <TextField label="Phone number" type="tel" fullWidth size="small" />
-              <TextField label="How did you find us?" fullWidth size="small" />
+            <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
+              <TextField
+              sx={textFieldSx}
+                label="Full name"
+                name="name"
+                fullWidth
+                size="medium"
+                required
+                value={form.name}
+                onChange={handleChange}
+              />
+
+              <TextField
+                sx={textFieldSx}
+                label="Email"
+                name="email"
+                type="email"
+                fullWidth
+                size="medium"
+                required
+                value={form.email}
+                onChange={handleChange}
+              />
+
+              {/* <TextField
+                sx={textFieldSx}
+                label="Phone number"
+                name="phone"
+                type="tel"
+                fullWidth
+                size="medium"
+                value={form.phone}
+                onChange={handleChange}
+              /> */}
+              <MuiTelInput
+                sx={textFieldSx}
+                label="Phone number"
+                fullWidth
+                forceCallingCode
+                defaultCountry="IN"
+                value={form.phone}
+                onChange={(value:any) =>{
+                    setForm({ ...form, phone: value })
+                    setError(!matchIsValidTel(value))
+                  }
+                }
+                error={error}
+                helperText={error ? "Please enter a valid phone number" : ""}
+                required
+              />
+              <TextField
+                sx={textFieldSx}
+                label="How did you find us?"
+                name="source"
+                fullWidth
+                size="medium"
+                value={form.source}
+                onChange={handleChange}
+              />
+
               <Button
                 type="submit"
                 variant="contained"
+                size="large"
                 className="!bg-sky-600 hover:!bg-sky-700 !normal-case"
                 fullWidth
+                disabled={loading} // disable while sending
               >
-                Send
+                {loading ? (
+                  <CircularProgress size={26} color="inherit" />
+                ) : (
+                  "Send"
+                )}
               </Button>
             </form>
 
-            {/* quick contacts */}
-            <div className="mt-6 grid grid-cols-3 gap-4 text-xs text-slate-300">
+            {/* SUCCESS TOAST */}
+            <Snackbar
+              open={open}
+              autoHideDuration={3000}
+              onClose={() => setOpen(false)}
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            >
+              <Alert
+                severity="success"
+                variant="filled"
+                onClose={() => setOpen(false)}
+              >
+                Message sent successfully!
+              </Alert>
+            </Snackbar>
+
+            {/* QUICK CONTACTS */}
+            <div className="mt-6 md:flex md:gap-4 text-slate-300">
               <div>
-                <div className="font-semibold text-white">Phone</div>
-                <div>+91 9420654539</div>
+                <Typography className="font-semibold text-white">Phone</Typography>
+                <Typography>+91 9420654539</Typography>
               </div>
+
               <div>
-                <div className="font-semibold text-white">Fax</div>
-                <div>+91 265 1234</div>
-              </div>
-              <div>
-                <div className="font-semibold text-white">Email</div>
-                <div>support@shreejielectropower.com</div>
+                <Typography className="font-semibold text-white">Email</Typography>
+                <Typography>inquiry@shreejielectropower.com</Typography>
               </div>
             </div>
           </div>
 
-          {/* Right map */}
+          {/* RIGHT MAP */}
           <div className="overflow-hidden rounded-xl border border-white/10">
-            <img
-              src={"/placeholder.svg?height=360&width=640&query=map"}
-              alt="Map"
-              className="h-full w-full object-cover"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.6417902620733!2d73.18917607626365!3d22.253665944582306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc42d2d1ba5c3%3A0x40a4be2bf02f817d!2sSHREEJI%20ELECTRO%20POWER%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1757958350673!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+
         </div>
       </div>
     </section>
-  )
+  );
 }

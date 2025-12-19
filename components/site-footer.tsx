@@ -7,8 +7,10 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
-              <img src={"/placeholder.svg?height=28&width=28&query=logo"} alt="" className="h-7 w-7 rounded-full" />
-              <div className="font-semibold text-sky-400">SHREEJI ELECTRO POWER PVT. LTD.</div>
+              <div className="flex items-center gap-4">
+              <img src="/assets/logo.png" alt="Shreeji Electro Power Pvt. Ltd. Logo" className="h-12 w-auto" />
+            </div>
+              {/* <div className="font-semibold text-sky-400">SHREEJI ELECTRO POWER PVT. LTD.</div> */}
             </div>
             <p className="mt-3 text-sm leading-6 text-slate-400">
               Shreeji Electro Power Pvt. Ltd. has been involved in trading business as a distributor of electrical goods
@@ -22,28 +24,25 @@ export function SiteFooter() {
               308/B/1A, Makarpura GIDC, Opp. Telephone Exchange, Vadodara - 390010 Gujarat, India
             </p>
             <div className="mt-3 text-sm">
-              <div>+91 9420654539</div>
-              <div>+91 9054753539</div>
-              <div>support@shreejielectropower.com</div>
+              <div>+91 79845 30546</div>
+              <div>+91 98795 74745</div>
+              <div>+91 74900 54539</div>
+              <div>+91 95129 74539</div>
+              {/* <div>support@shreejielectropower.com</div> */}
               <div>inquiry@shreejielectropower.com</div>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <img
-              src={"/placeholder.svg?height=80&width=160&query=badge"}
+              src={"/assets/gst/gem.png"}
               alt="Badge"
-              className="h-20 w-full rounded-md bg-white/5 object-contain"
+              className="w-full rounded-md bg-white/5 object-contain"
             />
             <img
-              src={"/placeholder.svg?height=80&width=160&query=badge"}
+              src={"/assets/gst/msme.png"}
               alt="Badge"
-              className="h-20 w-full rounded-md bg-white/5 object-contain"
-            />
-            <img
-              src={"/placeholder.svg?height=80&width=160&query=badge"}
-              alt="Badge"
-              className="h-20 w-full rounded-md bg-white/5 object-contain"
+              className="w-full rounded-md bg-white/5 object-contain"
             />
           </div>
         </div>
