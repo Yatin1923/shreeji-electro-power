@@ -11,6 +11,9 @@ import { Providers } from "./app-theme"
 export const metadata: Metadata = {
   title: "ShreejiElectroPower",
   description: "",
+  icons:{
+    icon: "/assets/favicon.webp"
+  }
 }
 
 export default function RootLayout({
