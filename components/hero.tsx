@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Box, Button, Card, CardContent, Link, Typography } from "@mui/material"
+import { Box, Button, Card, CardContent, Link, Typography, useMediaQuery, useTheme } from "@mui/material"
 import { AnimatePresence, motion } from "motion/react"
 import { log } from "console"
 
@@ -21,7 +21,9 @@ export function BrandTile({ i }: { i: number }) {
     <Link href={`/product?brand=${encodeURIComponent(logo.brand)}`} className="no-underline! text-inherit h-[100%]">
       <Card
         elevation={12}
-        className="cursor-pointer opacity-90 !rounded-[20px] max-w-[220px] h-[100%] aspect-[220/250]"
+        
+        className="
+        cursor-pointer opacity-90 !rounded-[20px] max-w-[220px] h-[100%] aspect-[220/250]"
         style={{ backgroundColor: logo.backgroundColor }}
       >
         <CardContent className="flex justify-center items-center h-full">
@@ -29,14 +31,15 @@ export function BrandTile({ i }: { i: number }) {
             <img src={logo.src} alt={logo.alt} className="max-w-full max-h-80" />
           }
           {logo.brand === "Seppl" && (
-            <div className="flex flex-col items-center justify-center scale-110">
-              <span className="text-5xl font-black tracking-wide text-[#c23219]">
-                SEPPL
-              </span>
-              <span className="text-3xl font-black tracking-[0.35em] text-[#d8705e] mt-1 pl-[0.35em]">
-                PANEL
-              </span>
-            </div>
+            <div className="flex flex-col items-center justify-center scale-100 sm:scale-105">
+            <span className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-wide text-[#c23219]">
+              SEPPL
+            </span>
+            <span className="text-xl sm:text-2xl lg:text-3xl font-black tracking-[0.35em] text-[#d8705e] mt-1 pl-[0.35em]">
+              PANEL
+            </span>
+          </div>
+          
           )}
 
         </CardContent>
@@ -46,7 +49,10 @@ export function BrandTile({ i }: { i: number }) {
 }
 
 export function Hero() {
-  const heroSlides = [
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
+
+  const heroSlides = !isMobile ? [
     {
       image: "assets/hero-bg2.jpg",
       title: "Tired of managing multiple vendors for electrical supply?",
@@ -67,17 +73,19 @@ export function Hero() {
       theme: "light",
       overlay: "bg-black/40",
     },
-    // {
-    //   image: "assets/hero-bg1.jpg",
-    //   title: "Smart, safe, and sustainable electrical products",
-    //   subtitle:
-    //     "Innovative solutions designed to meet modern electrical standards.",
-    //   primaryCta: "Talk to an Expert",
-    //   secondaryCta: "Learn More",
-    //   theme: "light",
-    //   overlay: "bg-black/40",
-    // },
-  ]
+  ] :
+    [
+      {
+        image: "assets/hero-bg2.jpg",
+        title: "Tired of managing multiple vendors for electrical supply?",
+        subtitle:
+          "We bring India’s top electrical brands under one roof — with seamless service and expert support.",
+        primaryCta: "Contact us",
+        secondaryCta: "Our Products",
+        theme: "dark", // 👈 dark text
+        overlay: "bg-black/40",
+      },
+    ]
 
   const [bgIndex, setBgIndex] = useState(0)
   const currentSlide = heroSlides[bgIndex]
@@ -98,43 +106,49 @@ export function Hero() {
 
 
   useEffect(() => {
+    if (isMobile) return;
     const interval = setInterval(() => {
       setBgIndex((prev) => (prev + 1) % heroSlides.length)
     }, 5000)
     return () => clearInterval(interval)
-  }, [])
+  }, [isMobile])
 
   return (
     <section className="relative min-h-[95vh] overflow-hidden bg-slate-50">
 
-      <AnimatePresence>
-        <motion.div
-          key={bgIndex}
-          className="absolute inset-0 bg-cover bg-top pointer-events-none"
-          style={{
-            backgroundImage: `url(${heroSlides[bgIndex].image})`,
-            // backgroundSize: "contain",
-            // backgroundRepeat: "no-repeat",
-            // backgroundSize: "100% 100%",
-            zIndex: 0,
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-        />
-      </AnimatePresence>
+      {!isMobile ?
+        <>
+          <AnimatePresence>
+            <motion.div
+              key={bgIndex}
+              className="absolute inset-0 bg-cover bg-top pointer-events-none"
+              style={{
+                backgroundImage: `url(${heroSlides[bgIndex].image})`,
+                // backgroundSize: "contain",
+                // backgroundRepeat: "no-repeat",
+                // backgroundSize: "100% 100%",
+                zIndex: 0,
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+            />
+          </AnimatePresence>
 
 
-      {/* 🔹 OVERLAY */}
-      <div
-        className={`absolute inset-0 ${currentSlide.overlay} pointer-events-none`}
-        style={{ zIndex: 1 }}
-      />
+          {/* 🔹 OVERLAY */}
+          <div
+            className={`absolute inset-0 ${currentSlide.overlay} pointer-events-none`}
+            style={{ zIndex: 1 }}
+          />
+        </>
+
+        : null}
 
       {/* 🔹 CONTENT (STATIC) */}
       <Box
-        className="relative container mx-auto min-h-[95vh] flex items-center px-4 py-10"
+        className="relative container mx-auto min-h-[95vh] flex items-center"
         style={{ zIndex: 10 }}
       >
         <div className="flex justify-center items-center h-full">
@@ -161,32 +175,80 @@ export function Hero() {
               {heroSlides[bgIndex].subtitle}
             </Typography>
 
-            <div className="mt-6 flex gap-3">
-              <Button variant="contained" href="#contact" className={primaryBtnClass}>
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+              <Button
+                variant="contained"
+                href="#contact"
+                className={`
+      ${primaryBtnClass}
+      !text-sm sm:!text-base
+      !px-4 sm:!px-6
+      !py-2 sm:!py-3
+      whitespace-nowrap
+    `}
+              >
                 Contact us
               </Button>
-              <Button variant="outlined" href="product" className={secondaryBtnClass}>
+
+              <Button
+                variant="outlined"
+                href="product"
+                className={`
+      ${secondaryBtnClass}
+      !text-sm sm:!text-base
+      !px-4 sm:!px-6
+      !py-2 sm:!py-3
+      whitespace-nowrap
+    `}
+              >
                 Our Products
               </Button>
             </div>
 
-            <div className="mt-8 flex gap-6">
+
+            <div
+              className="
+              mt-8
+              grid grid-cols-2 gap-4
+              sm:flex sm:gap-6
+
+            "
+            >
               {[
                 { k: "25+", v: "Years of Expertise", img: "/assets/stats/experience.png" },
                 { k: "1500+", v: "Products", img: "/assets/stats/totalproducts.png" },
                 { k: "4000+", v: "Clients Served", img: "/assets/stats/clientserved.png" },
               ].map((s, idx) => (
-                <div key={s.k} className="flex items-center gap-3">
+                <div
+                  key={s.k}
+                  className={`
+        flex items-center gap-3 justify-center 
+        ${idx === 2 ? "col-span-2 justify-center sm:col-span-1 sm:justify-start" : ""}
+      `}
+                >
+                  {/* Icon */}
+                  <img
+                    src={s.img}
+                    alt={s.v}
+                    className="h-8 w-8 sm:h-10 sm:w-10 opacity-80 flex-shrink-0"
+                  />
+
+                  {/* Text */}
                   <div>
-                    <img src={s.img} className="h-full !min-h-8 !max-h-12 w-full !min-w-8 !max-w-12 opacity-80" />
-                  </div>
-                  <div>
-                    <Typography variant="h6" className={`text-base font-bold ${textColor}`}>{s.k}</Typography>
-                    <div className={subTextColor}>{s.v}</div>
+                    <Typography
+                      variant="h6"
+                      className={`text-base sm:text-lg font-bold ${textColor}`}
+                    >
+                      {s.k}
+                    </Typography>
+                    <div className={`text-sm sm:text-base ${subTextColor}`}>
+                      {s.v}
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
+
           </motion.div>
 
           {/* RIGHT GRID */}
