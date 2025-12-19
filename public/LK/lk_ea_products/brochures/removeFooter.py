@@ -14,12 +14,12 @@ CONTACT_KEYWORDS = [
 ]
 
 DATA_KEYWORDS = [
-    "specification", "specifications",
-    "features", "feature",
-    "technical", "mechanical", "electrical",
-    "rating", "ratings", "model", "models",
-    "dimensions", "capacity", "voltage", "current",
-    "frequency", "power", "kva", "kw", "hp"
+    # "specification", "specifications",
+    # "features", "feature",
+    # "technical", "mechanical", "electrical",
+    # "rating", "ratings", "model", "models",
+    # "dimensions", "capacity", "voltage", "current",
+    # "frequency", "power", "kva", "kw", "hp"
 ]
 
 FOOTER_HINT_KEYWORDS = [
@@ -98,7 +98,7 @@ def process_pdf(input_pdf: str, output_pdf: str) -> bool:
     modified = False
 
     if page_type == "CONTACT_ONLY":
-        print("  🗑 Removing entire last page")
+        print("  🗑 Removing entire last page",len(doc))
         doc.delete_page(len(doc) - 1)
         modified = True
 
