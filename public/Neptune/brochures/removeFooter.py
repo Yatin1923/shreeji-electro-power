@@ -6,7 +6,7 @@ import fitz  # PyMuPDF
 # CONFIG
 # ============================================================
 
-# ---- BALS LOGO (top-right) ----
+# ---- BALS LOGO (top-right overlay) ----
 BALS_LOGO_RECT_RATIO = {
     "x0": 0.55,
     "y0": 0.00,
@@ -14,16 +14,8 @@ BALS_LOGO_RECT_RATIO = {
     "y1": 0.18
 }
 
-# ---- NEPTUNE FOOTER (last page only) ----
-NEPTUNE_FOOTER_RATIO = {
-    "x0": 0.00,
-    "y0": 0.65,   # bottom 35%
-    "x1": 1.00,
-    "y1": 1.00
-}
-
 # ============================================================
-# DETECTION
+# DETECTION HELPERS
 # ============================================================
 
 def has_datasheet_header(page: fitz.Page) -> bool:
@@ -37,20 +29,50 @@ def has_datasheet_header(page: fitz.Page) -> bool:
     return False
 
 
-def has_neptune_footer(page: fitz.Page) -> bool:
-    """Detect Neptune branding text"""
-    text = page.get_text().lower()
-    return (
-        "neptune" in text or
-        "neptuneindia.com" in text or
-        "neptune india" in text
-    )
+def find_bals_footer_y(page: fitz.Page):
+    """Find Y-position where Bals footer starts"""
+    keywords = [
+        "bals elektrotechnik",
+        "www.bals.com",
+        "info@bals.com",
+        "kirchhundem",
+        "fax:",
+        "phone:"
+    ]
+
+    y_positions = []
+
+    for w in page.get_text("words"):
+        text = w[4].lower()
+        if any(k in text for k in keywords):
+            y_positions.append(w[1])  # y0
+
+    return min(y_positions) if y_positions else None
+
+
+def find_neptune_footer_y(page: fitz.Page):
+    """Find Y-position where Neptune footer starts"""
+    keywords = [
+        "neptune",
+        "neptuneindia.com",
+        "neptune india"
+    ]
+
+    y_positions = []
+
+    for w in page.get_text("words"):
+        text = w[4].lower()
+        if any(k in text for k in keywords):
+            y_positions.append(w[1])  # y0
+
+    return min(y_positions) if y_positions else None
+
 
 # ============================================================
 # MODIFICATIONS
 # ============================================================
 
-def remove_bals_logo(doc: fitz.Document) -> bool:
+def remove_bals_logo_and_footer(doc: fitz.Document) -> bool:
     modified = False
 
     for page in doc:
@@ -58,6 +80,8 @@ def remove_bals_logo(doc: fitz.Document) -> bool:
             continue
 
         r = page.rect
+
+        # ---- Remove Bals logo (overlay) ----
         logo_rect = fitz.Rect(
             r.width * BALS_LOGO_RECT_RATIO["x0"],
             r.height * BALS_LOGO_RECT_RATIO["y0"],
@@ -73,46 +97,80 @@ def remove_bals_logo(doc: fitz.Document) -> bool:
         )
         modified = True
 
+        # ---- Remove Bals footer (dynamic crop) ----
+        # footer_y = find_bals_footer_y(page)
+        # if footer_y:
+        #     page.set_cropbox(
+        #         fitz.Rect(
+        #             0,
+        #             0,
+        #             r.width,
+        #             footer_y - 5
+        #         )
+        #     )
+        #     modified = True
+
     return modified
 
-
-def remove_neptune_footer(doc: fitz.Document) -> bool:
+def remove_bals_footer_dynamically(page: fitz.Page) -> bool:
     """
-    Dynamically crop Neptune footer from the last page
-    based on detected footer text position
+    Dynamically crop Bals footer based on detected footer text position
     """
-    last_page = doc[-1]
-    words = last_page.get_text("words")
+    keywords = [
+        "bals elektrotechnik",
+        "www.bals.com",
+        "info@bals.com",
+        "kirchhundem",
+        "fax:",
+        "phone:"
+    ]
 
+    words = page.get_text("words")
     footer_y_positions = []
 
     for w in words:
         text = w[4].lower()
-        if (
-            "neptune" in text or
-            "neptuneindia.com" in text or
-            "neptune india" in text
-        ):
+        if any(k in text for k in keywords):
             footer_y_positions.append(w[1])  # y0 of word
 
     if not footer_y_positions:
-        return False  # no Neptune footer found
+        return False  # no footer detected
 
     footer_start_y = min(footer_y_positions)
-
-    r = last_page.rect
+    r = page.rect
 
     # Crop everything below footer_start_y
+    page.set_cropbox(
+        fitz.Rect(
+            0,
+            0,
+            r.width,
+            footer_start_y - 15  # small safety padding
+        )
+    )
+
+    return True
+
+def remove_neptune_footer(doc: fitz.Document) -> bool:
+    """Remove Neptune footer ONLY on last page"""
+    last_page = doc[-1]
+    footer_y = find_neptune_footer_y(last_page)
+
+    if not footer_y:
+        return False
+
+    r = last_page.rect
     last_page.set_cropbox(
         fitz.Rect(
             0,
             0,
             r.width,
-            footer_start_y - 5  # small safety padding
+            footer_y - 5
         )
     )
 
     return True
+
 
 # ============================================================
 # PIPELINE
@@ -124,21 +182,25 @@ def process_pdf(input_pdf: str, output_pdf: str) -> bool:
 
     print(f"  🔍 Checking: {input_pdf}")
 
-    if remove_bals_logo(doc):
-        print("  ✔ Bals logo removed")
+    if remove_bals_logo_and_footer(doc):
+        print("  ✔ Bals logo/footer handled")
         modified = True
 
     if remove_neptune_footer(doc):
-        print("  ✔ Neptune footer removed (last page)")
+        print("  ✔ Neptune footer handled")
         modified = True
-
-    if modified:
-        doc.save(output_pdf)
-    else:
-        print("  ⏭ No changes required")
+    for page in doc:
+        if remove_bals_footer_dynamically(page):
+            print("  ✔ Bals footer cropped dynamically")
+            modified = True
+        if modified:
+            doc.save(output_pdf)
+        else:
+            print("  ⏭ No changes required")
 
     doc.close()
     return modified
+
 
 # ============================================================
 # MODES
@@ -179,6 +241,7 @@ def run_mode():
                 os.remove(tmp)
 
     print("✅ Run completed")
+
 
 # ============================================================
 # ENTRY
