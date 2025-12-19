@@ -54,6 +54,8 @@ export class UnifiedProductService {
   // Get product by name across all types
   public getProductByName(name: string): Product | undefined {
     // Try cables first
+    const product = allProducts.find(prod =>prod.Name.toLowerCase() === name.toLowerCase());
+    if(product) return product;
     const cable = cables.find(cable =>
       cable.Name.toLowerCase() === name.toLowerCase());
     if (cable) {

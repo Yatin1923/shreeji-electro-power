@@ -852,8 +852,8 @@ export default function ProductPage() {
                       const isPolycab = p.Brand?.toLowerCase().includes("polycab")
                       const isDowell = p.Brand?.toLowerCase().includes("dowell's")
                       const isLK = p.Brand?.toLowerCase().includes("lauritz knudsen")
-                      const linkHref = `/product/${isPolycab ? p.Type :isLK?"LK":isDowell?"Dowell": p.Brand}/${encodeURIComponent(p.Name)}`
-
+                      const linkHref = p.Brand == 'Seppl'?'':`/product/${isPolycab ? p.Type :isLK?"LK":isDowell?"Dowell": p.Brand}/${encodeURIComponent(p.Name)}`
+                      
                       return (
                         <motion.div
                           key={`${p.Name}-${i}`}

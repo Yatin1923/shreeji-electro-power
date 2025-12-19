@@ -4,6 +4,7 @@ export const BRANDS = {
   "Neptune": "Neptune",
   "Dowell's": "Dowell's",
   "Cabseal": "Cabseal",
+  "Seppl": "Seppl",
 };
 
 // Subcategory constants

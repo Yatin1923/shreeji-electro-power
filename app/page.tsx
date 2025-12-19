@@ -9,10 +9,12 @@ import { Testimonials } from "@/components/testimonials"
 import { Contact } from "@/components/contact"
 import { SiteFooter } from "@/components/site-footer"
 import { Providers } from "./app-theme"
+import { LaunchConfetti } from "@/components/Launchconfetti"
 
 export default function Page() {
   return (
       <main className="bg-white">
+        <LaunchConfetti/>
         <Navbar active="Home" />
         <Hero />
         <div className="xl:hidden">

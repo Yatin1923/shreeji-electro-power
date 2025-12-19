@@ -1,67 +1,60 @@
-// app/product/context/product-context.tsx
-"use client";
+"use client"
 
-import { Product } from '@/types/common';
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react"
+import { usePathname } from "next/navigation"
+import { Product } from "@/types/common"
+import { unifiedProductService } from "@/services/unified-product-service"
 
 interface ProductContextType {
-  selectedProduct: Product | null;
-  setSelectedProduct: (product: Product | null) => void;
-  isLoading: boolean;
+  selectedProduct: Product | null
+  setSelectedProduct: (product: Product) => void
 }
 
-const ProductContext = createContext<ProductContextType | undefined>(undefined);
+const ProductContext = createContext<ProductContextType | null>(null)
 
-interface ProductProviderProps {
-  children: ReactNode;
-}
+export function ProductProvider({ children }: { children: React.ReactNode }) {
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+  const pathname = usePathname()
 
-export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) => {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Restore from sessionStorage on mount
   useEffect(() => {
-    const stored = sessionStorage.getItem('selectedProduct');
-    if (stored) {
-      try {
-        const product = JSON.parse(stored);
-        setSelectedProduct(product);
-      } catch (error) {
-        console.error('Failed to parse stored product:', error);
-        sessionStorage.removeItem('selectedProduct');
-      }
-    }
-    setIsLoading(false);
-  }, []);
+    if (selectedProduct) return
 
-  // Persist to sessionStorage whenever selectedProduct changes
-  const handleSetSelectedProduct = (product: Product | null) => {
-    setSelectedProduct(product);
+    /**
+     * Example path:
+     * /product/Wire/Polycabprimma
+     */
+    const segments = pathname.split("/").filter(Boolean)
+
+    const productName = segments[segments.length - 1]
+    if (!productName) return
+
+    const decodedName = decodeURIComponent(productName)
+
+    const product = unifiedProductService.getProductByName(decodedName)
+
     if (product) {
-      sessionStorage.setItem('selectedProduct', JSON.stringify(product));
-    } else {
-      sessionStorage.removeItem('selectedProduct');
+      setSelectedProduct(product)
     }
-  };
+  }, [pathname, selectedProduct])
 
   return (
-    <ProductContext.Provider value={{ 
-      selectedProduct, 
-      setSelectedProduct: handleSetSelectedProduct,
-      isLoading 
-    }}>
+    <ProductContext.Provider
+      value={{ selectedProduct, setSelectedProduct }}
+    >
       {children}
     </ProductContext.Provider>
-  );
-};
+  )
+}
 
-export const useProduct = (): ProductContextType => {
-  const context = useContext(ProductContext);
-  if (context === undefined) {
-    throw new Error('useProduct must be used within a ProductProvider');
+export function useProduct() {
+  const context = useContext(ProductContext)
+  if (!context) {
+    throw new Error("useProduct must be used within ProductProvider")
   }
-  return context;
-};
-
-export type { Product };
+  return context
+}

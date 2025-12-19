@@ -3,6 +3,7 @@
 import { Card, CardContent, Link, Typography } from "@mui/material"
 import { hover, motion } from "motion/react"
 import { fadeInUp } from "./animations"
+import { BrandTile } from "./hero"
 
 function ProductTile({ i }: { i: number }) {
   // const companyLogos = [
@@ -74,7 +75,7 @@ export function Products() {
           className="mt-15 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6 justify-items-center">
           {Array.from({ length: 6 }).map((_, i) => (
                 <motion.div key={i} variants={item} whileHover={{scale: 1.1}} className="">
-                  <ProductTile i={i} />
+                  <BrandTile i={i} />
                 </motion.div>
               ))}
         </motion.div>

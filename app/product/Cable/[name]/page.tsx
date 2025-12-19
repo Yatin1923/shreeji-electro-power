@@ -16,6 +16,8 @@ import EnquireButton from "@/components/enquireButton"
 export default function ProductDetailPage({ params }: { params: { name: string } }) {
     const { selectedProduct } = useProduct();
     let product: Product | null = selectedProduct
+    const decodedName = decodeURIComponent(params.name)
+    console.log('product',product,decodedName);
     // Add state for selected color
     const [selectedColorIndex, setSelectedColorIndex] = useState(0)
 
