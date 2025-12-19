@@ -2,52 +2,101 @@ import os
 import sys
 import fitz  # PyMuPDF
 
-# ---- ADJUST IF NEEDED ----
-TOP_CROP = 60     # removes Bals logo + www.bals.com
-BOTTOM_CROP = 70  # removes footer
-# --------------------------
+# ============================================================
+# CONFIG (tune once if needed)
+# ============================================================
 
-BALS_KEYWORDS = [
-    "bals",
-    "www.bals.com"
-]
+# Area where Bals logo appears (top-right)
+LOGO_RECT_RATIO = {
+    "x0": 0.55,   # start from 55% width
+    "y0": 0.00,   # top
+    "x1": 1.00,   # right edge
+    "y1": 0.18    # top 18% height
+}
 
+# ============================================================
+# DETECTION LOGIC
+# ============================================================
 
-def is_bals_pdf(pdf_path: str) -> bool:
-    """Lightweight safety check"""
-    doc = fitz.open(pdf_path)
-    for page in doc:
-        text = page.get_text().lower()
-        if any(k in text for k in BALS_KEYWORDS):
-            doc.close()
+def has_datasheet_header(page: fitz.Page) -> bool:
+    """
+    Detect 'Data sheet' text in top-left region
+    """
+    r = page.rect
+    header_rect = fitz.Rect(
+        0,
+        0,
+        r.width * 0.45,    # left 45%
+        r.height * 0.20    # top 20%
+    )
+
+    for w in page.get_text("words"):
+        word_rect = fitz.Rect(w[:4])
+        word_text = w[4].lower()
+
+        if "data" in word_text and header_rect.intersects(word_rect):
             return True
-    doc.close()
+
     return False
 
 
-def clean_bals_pdf(input_pdf: str, output_pdf: str):
-    if not is_bals_pdf(input_pdf):
-        print(f"⏭ Skipped (not a Bals PDF): {input_pdf}")
-        return False
+# ============================================================
+# MODIFICATION LOGIC
+# ============================================================
 
-    doc = fitz.open(input_pdf)
+def remove_bals_logo_if_needed(doc: fitz.Document) -> bool:
+    """
+    Removes Bals logo ONLY if 'Data sheet' is detected
+    """
+    modified = False
 
     for page in doc:
-        r = page.rect
+        if not has_datasheet_header(page):
+            continue
 
-        page.set_cropbox(
-            fitz.Rect(
-                0,
-                TOP_CROP,
-                r.width,
-                r.height - BOTTOM_CROP
-            )
+        r = page.rect
+        logo_rect = fitz.Rect(
+            r.width * LOGO_RECT_RATIO["x0"],
+            r.height * LOGO_RECT_RATIO["y0"],
+            r.width * LOGO_RECT_RATIO["x1"],
+            r.height * LOGO_RECT_RATIO["y1"],
         )
 
-    doc.save(output_pdf)
-    doc.close()
-    return True
+        page.draw_rect(
+            logo_rect,
+            color=(1, 1, 1),
+            fill=(1, 1, 1),
+            overlay=True
+        )
 
+        modified = True
+
+    return modified
+
+
+# ============================================================
+# PIPELINE
+# ============================================================
+
+def process_pdf(input_pdf: str, output_pdf: str) -> bool:
+    doc = fitz.open(input_pdf)
+
+    print(f"  🔍 Checking: {input_pdf}")
+    modified = remove_bals_logo_if_needed(doc)
+
+    if modified:
+        doc.save(output_pdf)
+        print("  ✔ Bals logo removed")
+    else:
+        print("  ⏭ No Datasheet header found")
+
+    doc.close()
+    return modified
+
+
+# ============================================================
+# MODES
+# ============================================================
 
 def get_pdfs():
     return sorted(
@@ -63,11 +112,10 @@ def test_mode():
         return
 
     pdf = pdfs[0]
-    out = pdf.replace(".pdf", "_CLEAN_TEST.pdf")
+    out = pdf.replace(".pdf", "_TEST.pdf")
 
     print("🧪 TEST MODE")
-    if clean_bals_pdf(pdf, out):
-        print(f"✅ Cleaned → {out}")
+    process_pdf(pdf, out)
 
 
 def run_mode():
@@ -76,11 +124,10 @@ def run_mode():
 
     for pdf in pdfs:
         tmp = pdf + ".tmp"
-
         print(f"→ Processing {pdf}")
-        if clean_bals_pdf(pdf, tmp):
+
+        if process_pdf(pdf, tmp):
             os.replace(tmp, pdf)
-            print("  ✔ Updated")
         else:
             if os.path.exists(tmp):
                 os.remove(tmp)
@@ -88,17 +135,22 @@ def run_mode():
     print("✅ Run completed")
 
 
+# ============================================================
+# ENTRY
+# ============================================================
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage:")
-        print("  python clean_bals_pdf.py test")
-        print("  python clean_bals_pdf.py run")
+        print("  python removeFooter.py test")
+        print("  python removeFooter.py run")
         sys.exit(1)
 
     mode = sys.argv[1].lower()
+
     if mode == "test":
         test_mode()
     elif mode == "run":
         run_mode()
     else:
-        print("❌ Invalid mode")
+        print("❌ Invalid mode (use test or run)")
