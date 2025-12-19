@@ -18,6 +18,8 @@ import {
   useMediaQuery,
   Drawer,
   Typography,
+  Box,
+  CardActions,
 } from "@mui/material"
 import SearchIcon from "@mui/icons-material/Search"
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"
@@ -33,6 +35,7 @@ import { Product } from "@/types/common"
 import { BRANDS, BRAND_CATEGORIES, CABLE_SUBCATEGORIES, FAN_SUBCATEGORIES, LIGHTING_SUBCATEGORIES, SWITCH_SUBCATEGORIES, SWITCHGEAR_SUBCATEGORIES, MEDIUM_VOLTAGE_SUBCATEGORIES, LV_IEC_PANELS_SUBCATEGORIES, POWER_DISTRIBUTION_PRODUCTS_SUBCATEGORIES, MOTOR_MANAGEMENT_CONTROL_SUBCATEGORIES, INDUSTRIAL_AUTOMATION_CONTROL_SUBCATEGORIES, ENERGY_MANAGEMENT_PRODUCTS_SUBCATEGORIES, MCB_RCCB_DISTRIBUTION_BOARDS_SUBCATEGORIES, SWITCHES_ACCESSORIES_SUBCATEGORIES, PUMP_STARTERS_CONTROLLERS_SUBCATEGORIES, INDUSTRIAL_SIGNALLING_PRODUCTS } from "@/constants/polycab"
 import { motion, AnimatePresence, Variants } from "framer-motion"
 import { useProduct } from "./context/product-context"
+import EnquireButton from "@/components/enquireButton"
 
 // Add this before your component or in a separate file
 const cardVariants: Variants = {
@@ -102,7 +105,7 @@ const categoryStructure = {
   "Wire": {
     subcategories: null
   },
-  "Solar":{
+  "Solar": {
     subcategories: null
   },
   "Industrial Signalling Products": {
@@ -282,22 +285,22 @@ export default function ProductPage() {
       const hasSubcategoryFilters = Object.values(subcategorySel).some(
         arr => arr.length > 0
       )
-      
+
       if (hasSubcategoryFilters) {
         filteredProducts = filteredProducts.filter(product => {
           const productCategory = product.Type?.toLowerCase()
           if (!productCategory) return false
-      
+
           // Find matching category key from categoryStructure (case-insensitive)
           const categoryKey = Object.keys(categoryStructure).find(
             key => key.toLowerCase() === productCategory
           )
-      
+
           const categoryHasSubcategories =
             categoryKey &&
             Array.isArray(categoryStructure[categoryKey as keyof typeof categoryStructure].subcategories) &&
             categoryStructure[categoryKey as keyof typeof categoryStructure].subcategories!.length > 0
-      
+
           // Category has NO subcategories
           if (!categoryHasSubcategories) {
             return (
@@ -307,13 +310,13 @@ export default function ProductPage() {
               )
             )
           }
-      
+
           // Category HAS subcategories
           return Object.entries(subcategorySel).some(
             ([category, selectedSubcats]) => {
               if (selectedSubcats.length === 0) return false
               if (productCategory !== category.toLowerCase()) return false
-      
+
               return selectedSubcats.some(subcatValue =>
                 matchesSubcategory(product, category, subcatValue)
               )
@@ -321,7 +324,7 @@ export default function ProductPage() {
           )
         })
       }
-      
+
 
       // Apply pagination
       const startIndex = (page - 1) * ITEMS_PER_PAGE
@@ -485,9 +488,9 @@ export default function ProductPage() {
 
   const visibleCategories = React.useMemo(() => {
     if (brandSel.length === 0) return [];
-  
+
     const allowedCategories = new Set<string>();
-  
+
     brandSel.forEach(brand => {
       const categories = BRAND_CATEGORIES[brand.toUpperCase()];
       if (categories) {
@@ -496,12 +499,12 @@ export default function ProductPage() {
         );
       }
     });
-  
+
     return Object.keys(categoryStructure).filter(
       cat => allowedCategories.has(cat.toLowerCase())
     );
   }, [brandSel]);
-  
+
 
   // Effect to clean up selected categories when available categories change
   React.useEffect(() => {
@@ -601,7 +604,7 @@ export default function ProductPage() {
 
         {/* Category filter with subcategories - simplified */}
         <AnimatePresence>
-          {brandSel.length > 0 && visibleCategories.length>0 && (
+          {brandSel.length > 0 && visibleCategories.length > 0 && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
@@ -852,8 +855,8 @@ export default function ProductPage() {
                       const isPolycab = p.Brand?.toLowerCase().includes("polycab")
                       const isDowell = p.Brand?.toLowerCase().includes("dowell's")
                       const isLK = p.Brand?.toLowerCase().includes("lauritz knudsen")
-                      const linkHref = p.Brand == 'Seppl'?'':`/product/${isPolycab ? p.Type :isLK?"LK":isDowell?"Dowell": p.Brand}/${encodeURIComponent(p.Name)}`
-                      
+                      const linkHref = p.Brand == 'Seppl Panel' ? '' : `/product/${isPolycab ? p.Type : isLK ? "LK" : isDowell ? "Dowell" : p.Brand}/${encodeURIComponent(p.Name)}`
+
                       return (
                         <motion.div
                           key={`${p.Name}-${i}`}
@@ -885,21 +888,24 @@ export default function ProductPage() {
                                 </motion.div>
                               </Link>
                             </div>
-                            <CardContent className="pt-0">
-                              <Link
-                                href={linkHref}
-                                onClick={() => handleProductClick(p)}
-                                className="text-[14px] font-semibold text-sky-700 hover:underline"
-                              >
-                                <motion.div
-                                  initial={{ opacity: 0, y: 10 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  transition={{ delay: 0.4 + i * 0.05 }}
-                                >
+                            <CardContent className="pt-0 relative">
 
-                                  {p.Name.toUpperCase()}
-                                </motion.div>
-                              </Link>
+                                <Link
+                                  href={linkHref}
+                                  onClick={() => handleProductClick(p)}
+                                  className="text-[14px] font-semibold text-sky-700 hover:underline"
+                                >
+                                  <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.4 + i * 0.05 }}
+                                  >
+
+                                    {p.Name.toUpperCase()}
+                                  </motion.div>
+                                </Link>
+                             
+
                               <motion.div
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -963,6 +969,11 @@ export default function ProductPage() {
 
 
                             </CardContent>
+                            <CardActions>
+                                  {p.Brand == "Seppl Panel" && (
+                                  <EnquireButton productName={p.Name}></EnquireButton>
+                                )}
+                            </CardActions>
                           </Card>
                         </motion.div>
                       )
