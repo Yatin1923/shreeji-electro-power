@@ -214,10 +214,10 @@ const FORM_EMAIL="inquiry@shreejielectropower.com"
 
             {/* QUICK CONTACTS */}
             <div className="mt-6 md:flex md:gap-4 text-slate-300">
-              <div>
+              {/* <div>
                 <Typography className="font-semibold text-white">Phone</Typography>
                 <Typography>+91 9420654539</Typography>
-              </div>
+              </div> */}
 
               <div>
                 <Typography className="font-semibold text-white">Email</Typography>
