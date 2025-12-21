@@ -27,7 +27,7 @@ export default function RootLayout({
         <Providers>
           <Suspense fallback={null}>{children}</Suspense>
           <Analytics />
-          <GoogleAnalytics gaId="G-XYZ" />
+          <GoogleAnalytics gaId="G-GFGLYJBHJ9" />
         </Providers>
       </body>
     </html>
